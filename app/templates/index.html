@@ -1,0 +1,97 @@
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+{% block extra_styles %}
+<link rel="stylesheet" href="/static/css/pages/index.css">
+{% endblock %}
+{% block content %}
+
+<section class="hero">
+    <div class="hero-content">
+
+        <div class="hero-label">
+            FDA APPROVED ONCOLOGY DRUGS
+        </div>
+
+        <h1>
+            Understanding <br>
+            Drug Resistance <br>
+            in Cancer Therapy
+        </h1>
+
+        <p>
+            A curated database of resistance mutations,
+            protein targets, and 3D structural data for
+            FDA-approved oncology drugs.
+        </p>
+
+        <div class="hero-buttons">
+            <a href="/drugs" class="btn primary">
+                Browse Drug Archive →
+            </a>
+
+            <a href="#" class="btn secondary">
+                Explore Targets
+            </a>
+        </div>
+
+    </div>
+</section>
+<!-- ── Stats strip ────────────────────────────────────────── -->
+<div class="stats-strip">
+    <div class="stat">
+        <span class="stat-num">169</span>
+        <span class="stat-lbl">Approved Drugs</span>
+    </div>
+    <div class="stat">
+        <span class="stat-num">232</span>
+        <span class="stat-lbl">Protein Targets</span>
+    </div>
+    <div class="stat">
+        <span class="stat-num">359+</span>
+        <span class="stat-lbl">Resistance Mutations</span>
+    </div>
+    <div class="stat">
+        <span class="stat-num">118</span>
+        <span class="stat-lbl">Drug–Target–PDB Triplets</span>
+    </div>
+</div>
+
+<!-- ── Feature cards ──────────────────────────────────────── -->
+<div class="features-section">
+<div class="features">
+
+    <div class="feature-card">
+        <span class="feature-icon">💊</span>
+        <h3>Drug Archive</h3>
+        <p>
+            Browse all FDA-approved oncology drugs with mechanisms
+            of action, approved indications, and known protein targets.
+        </p>
+        <a href="/drugs" class="btn secondary">Browse Drugs →</a>
+    </div>
+
+    <div class="feature-card">
+        <span class="feature-icon">🧬</span>
+        <h3>Protein Targets</h3>
+        <p>
+            Explore druggable oncology targets with UniProt annotations,
+            co-crystal structures, and cross-drug resistance profiles.
+        </p>
+        <a href="/targets" class="btn secondary">Browse Targets →</a>
+    </div>
+
+    <div class="feature-card">
+        <span class="feature-icon">🤖</span>
+        <h3>AI Assistant</h3>
+        <p>
+            Ask natural language questions about resistance mechanisms,
+            specific mutations, or drug comparisons — grounded in
+            COSMIC and PubMed data.
+        </p>
+        <a href="/chat" class="btn secondary">Open Chat →</a>
+    </div>
+
+</div>
+</div>
+
+{% endblock %}

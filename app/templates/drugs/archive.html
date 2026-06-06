@@ -1,0 +1,109 @@
+{% extends "base.html" %}
+{% block title %}Drug Archive{% endblock %}
+
+{% block extra_styles %}
+<link rel="stylesheet" href="/static/css/pages/archive.css">
+{% endblock %}
+
+{% block content %}
+<div class="archive-page">
+
+    <!-- ── Page header ──────────────────────────────────── -->
+    <div class="page-header">
+        <div class="page-header-left">
+            <h1>Drug Archive</h1>
+            <p>FDA-approved oncology drugs with resistance mutation data</p>
+        </div>
+        <span class="drug-count">{{ total }} drugs</span>
+    </div>
+
+    <!-- ── Filter bar ───────────────────────────────────── -->
+    <form class="filter-bar" method="get" action="/drugs">
+        <input
+            type="text"
+            name="search"
+            placeholder="Search by name or brand…"
+            value="{{ search_query }}"
+        >
+        <select name="drug_class" onchange="this.form.submit()">
+            <option value="">All classes</option>
+            {% for cls in drug_classes %}
+            <option value="{{ cls }}"
+                {% if cls == selected_class %}selected{% endif %}>
+                {{ cls }}
+            </option>
+            {% endfor %}
+        </select>
+        <button type="submit" class="btn secondary">Filter</button>
+        {% if search_query or selected_class %}
+        <a href="/drugs" class="btn secondary">Clear</a>
+        {% endif %}
+    </form>
+
+    <!-- ── Results ──────────────────────────────────────── -->
+    {% if drugs %}
+    <div class="table-wrap">
+        <table>
+            <thead>
+                <tr>
+                    <th>Drug Name</th>
+                    <th>Class</th>
+                    <th>Targets</th>
+                    <th>Resistance Mutations</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for drug in drugs %}
+                <tr>
+                    <td>
+                        <div class="drug-name">{{ drug.name }}</div>
+                        {% if drug.synonyms %}
+                        <div class="drug-synonyms">
+                            {{ drug.synonyms[:2] | join(', ') }}
+                            {% if drug.synonyms | length > 2 %}
+                            +{{ drug.synonyms | length - 2 }} more
+                            {% endif %}
+                        </div>
+                        {% endif %}
+                    </td>
+                    <td>
+                        {% if drug.drug_class and drug.drug_class != 'Other' %}
+                        <span class="class-badge">{{ drug.drug_class }}</span>
+                        {% else %}
+                        <span class="dim">—</span>
+                        {% endif %}
+                    </td>
+                    <td class="num-cell">{{ drug.target_count }}</td>
+                    <td>
+                        {% if drug.mutation_count > 0 %}
+                        <span class="mutation-badge">{{ drug.mutation_count }}</span>
+                        {% else %}
+                        <span class="dim">—</span>
+                        {% endif %}
+                    </td>
+                    <td>
+                        <a href="/drugs/{{ drug.drugbank_id }}"
+                           class="btn secondary view-btn">
+                            View →
+                        </a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    {% else %}
+    <!-- ── Empty state ──────────────────────────────────── -->
+    <div class="empty-state">
+        <div class="empty-icon">🔬</div>
+        <p>No drugs found matching your filters.</p>
+        <a href="/drugs" class="btn secondary" style="margin-top:1rem;">
+            Clear filters
+        </a>
+    </div>
+    {% endif %}
+
+</div>
+{% endblock %}

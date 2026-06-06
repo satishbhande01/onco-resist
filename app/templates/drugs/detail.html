@@ -1,0 +1,294 @@
+{% extends "base.html" %}
+{% block title %}{{ drug.name }}{% endblock %}
+
+{% block extra_styles %}
+<link rel="stylesheet" href="/static/css/pages/detail.css">
+{% endblock %}
+
+{% block content %}
+<div class="detail-page">
+
+    <!-- ── Breadcrumb ───────────────────────────────────── -->
+    <div class="breadcrumb">
+        <a href="/drugs">Drugs</a>
+        <span class="breadcrumb-sep">→</span>
+        <span>{{ drug.name }}</span>
+    </div>
+
+    <!-- ── Drug header ──────────────────────────────────── -->
+    <div class="drug-header">
+        <div class="drug-header-left">
+            <h1>{{ drug.name }}</h1>
+            {% if drug.drug_class and drug.drug_class != 'Other' %}
+            <span class="class-badge">{{ drug.drug_class }}</span>
+            {% endif %}
+        </div>
+        <div class="drug-header-right">
+            <span class="drugbank-id">{{ drug.drugbank_id }}</span>
+        </div>
+    </div>
+
+    <!-- ── Indication ───────────────────────────────────── -->
+    {% if drug.indication %}
+    <p class="indication">
+        {{ drug.indication[:250] }}{% if drug.indication|length > 250 %}…{% endif %}
+    </p>
+    {% endif %}
+
+    <!-- ── Stat chips ───────────────────────────────────── -->
+    <div class="stat-chips">
+        <div class="stat-chip">
+            <span class="chip-value">{{ drug.targets|length }}</span>
+            <span class="chip-label">Targets</span>
+        </div>
+        <div class="stat-chip">
+            <span class="chip-value">{{ drug.resistance_mutations|length }}</span>
+            <span class="chip-label">Resistance Mutations</span>
+        </div>
+        <div class="stat-chip">
+            <span class="chip-value">{{ drug.pubmed_ids|length }}</span>
+            <span class="chip-label">References</span>
+        </div>
+        {% if viewer_pdb_id %}
+        <div class="stat-chip">
+            <span class="chip-value mono">{{ viewer_pdb_id|upper }}</span>
+            <span class="chip-label">Structure Loaded</span>
+        </div>
+        {% endif %}
+    </div>
+
+    <!-- ── Main grid ────────────────────────────────────── -->
+    <div class="detail-grid">
+
+        <!-- Left: 3D viewer -->
+        <div class="viewer-card">
+            <div class="viewer-header">
+                <span class="viewer-title">3D Structure</span>
+                {% if viewer_pdb_id %}
+                <span class="viewer-pdb">PDB: {{ viewer_pdb_id|upper }}</span>
+                {% else %}
+                <span class="dim">No structure available</span>
+                {% endif %}
+            </div>
+
+            <div id="molstar-viewer">
+                {% if not viewer_pdb_id %}
+                <div class="no-structure">
+                    No co-crystal structure available
+                </div>
+                {% endif %}
+            </div>
+
+            {% if viewer_pdb_id %}
+            <div class="viewer-controls">
+                <span class="dim" style="font-size:0.78rem;">
+                    Switch structure:
+                </span>
+                <select class="pdb-select" onchange="loadStructure(this.value)">
+                    {% for target in drug.targets %}
+                        {% for pdb in target.pdb_ids %}
+                        <option value="{{ pdb }}"
+                            {% if pdb == viewer_pdb_id %}selected{% endif %}>
+                            {{ pdb|upper }} — {{ target.gene_name }}
+                        </option>
+                        {% endfor %}
+                    {% endfor %}
+                </select>
+                    <a id="rcsbLink"
+                       href="https://www.rcsb.org/structure/{{ viewer_pdb_id|upper }}"
+                       target="_blank"
+                       class="btn secondary"
+                       style="padding:0.3rem 0.7rem; font-size:0.78rem;">
+                        RCSB ↗
+                    </a>
+            </div>
+            {% endif %}
+        </div>
+
+        <!-- Right: drug info -->
+        <div class="info-column">
+
+            <!-- Targets -->
+            <div class="info-card">
+                <div class="info-card-title">Protein Targets</div>
+                <div class="target-pills">
+                    {% for target in drug.targets %}
+                    <a href="/targets/{{ target.uniprot_accession }}"
+                       class="target-pill {% if target.known_action == 'yes' %}confirmed{% endif %}">
+                        <span class="target-gene">{{ target.gene_name }}</span>
+                        <span class="target-uniprot">{{ target.uniprot_accession }}</span>
+                        {% if target.known_action == 'yes' %}
+                        <span class="confirmed-tick">✓</span>
+                        {% endif %}
+                        {% if target.pdb_ids %}
+                        <span class="pdb-count">{{ target.pdb_ids|length }} PDB</span>
+                        {% endif %}
+                    </a>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <!-- Mechanism -->
+            <div class="info-card">
+                <div class="info-card-title">Mechanism of Action</div>
+                <p class="mechanism-text">
+                    {{ drug.mechanism_of_action or 'Not available.' }}
+                </p>
+            </div>
+
+            <!-- Drug details -->
+            <div class="info-card">
+                <div class="info-card-title">Details</div>
+                <div class="details-grid">
+                    <div class="detail-item">
+                        <span class="detail-label">DrugBank ID</span>
+                        <span class="detail-value mono">{{ drug.drugbank_id }}</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Drug Class</span>
+                        <span class="detail-value">{{ drug.drug_class or '—' }}</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">ATC Codes</span>
+                        <span class="detail-value mono">
+                            {{ drug.atc_codes|join(', ') or '—' }}
+                        </span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Synonyms</span>
+                        <span class="detail-value">
+                            {{ drug.synonyms[:3]|join(', ') or '—' }}
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ── Resistance Mutations ──────────────────────────── -->
+    {% if drug.resistance_mutations %}
+    <div class="mutations-section">
+        <div class="section-title">Resistance Mutations</div>
+
+        {% set ns = namespace(current_gene=None) %}
+        {% for mut in drug.resistance_mutations %}
+
+            {% if mut.gene_symbol != ns.current_gene %}
+                {% if ns.current_gene != None %}
+                </div></div>
+                {% endif %}
+                {% set ns.current_gene = mut.gene_symbol %}
+                <div class="mutation-group">
+                    <div class="mutation-group-header">
+                        <span class="mutation-gene">{{ mut.gene_symbol }}</span>
+                        {% if mut.total_samples %}
+                        <span class="dim" style="font-size:0.78rem;">
+                            {{ mut.total_samples }} resistance samples
+                        </span>
+                        {% endif %}
+                    </div>
+                    <div class="mutation-chips">
+            {% endif %}
+
+            <span class="mut-chip">{{ mut.mutation_aa }}</span>
+
+        {% endfor %}
+        </div></div>
+
+        <p class="mutations-note">
+            Resistance mutations sourced from COSMIC Drug Resistance database.
+        </p>
+    </div>
+    {% endif %}
+
+    <!-- ── References ───────────────────────────────────── -->
+    {% if drug.pubmed_ids %}
+    <div class="references-section">
+        <div class="section-title">References</div>
+        <div class="pubmed-refs">
+            {% for pmid in drug.pubmed_ids[:20] %}
+            <a href="https://pubmed.ncbi.nlm.nih.gov/{{ pmid }}/"
+               target="_blank"
+               class="pmid-badge">
+                PMID:{{ pmid }}
+            </a>
+            {% endfor %}
+            {% if drug.pubmed_ids|length > 20 %}
+            <span class="dim" style="font-size:0.8rem;">
+                +{{ drug.pubmed_ids|length - 20 }} more
+            </span>
+            {% endif %}
+        </div>
+    </div>
+    {% endif %}
+
+</div>
+{% endblock %}
+
+{% block extra_scripts %}
+<script>
+    pageContext = "Viewing drug: {{ drug.name }} ({{ drug.drug_class }})";
+</script>
+
+{% if viewer_pdb_id %}
+<link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/molstar@latest/build/viewer/molstar.css"
+>
+<script src="https://cdn.jsdelivr.net/npm/molstar@latest/build/viewer/molstar.js"></script>
+<script>
+    let viewer = null;
+
+    async function initViewer() {
+        const element = document.getElementById('molstar-viewer');
+        const { Viewer } = molstar;
+
+        viewer = await Viewer.create(element, {
+            layoutIsExpanded:      false,
+            layoutShowControls:    false,
+            layoutShowRemoteState: false,
+            layoutShowSequence:    false,
+            layoutShowLog:         false,
+            layoutShowLeftPanel:   false,
+            viewportShowExpand:    false,
+            viewportShowAnimation: false,
+        });
+
+        await loadStructure('{{ viewer_pdb_id }}');
+    }
+
+        async function loadStructure(pdbId) {
+            if (!viewer) return;
+
+            const url = `https://files.rcsb.org/download/${pdbId.toUpperCase()}.cif`;
+
+            // Destroy and recreate the viewer completely
+            const element = document.getElementById('molstar-viewer');
+            element.innerHTML = '';
+            viewer = null;
+
+            const { Viewer } = molstar;
+            viewer = await Viewer.create(element, {
+                layoutIsExpanded:      false,
+                layoutShowControls:    false,
+                layoutShowRemoteState: false,
+                layoutShowSequence:    false,
+                layoutShowLog:         false,
+                layoutShowLeftPanel:   false,
+                viewportShowExpand:    false,
+                viewportShowAnimation: false,
+            });
+
+            await viewer.loadStructureFromUrl(url, 'mmcif', false);
+
+            // Update the RCSB link
+            const rcsbLink = document.getElementById('rcsbLink');
+            if (rcsbLink) {
+                rcsbLink.href = `https://www.rcsb.org/structure/${pdbId.toUpperCase()}`;
+            }
+        }
+    initViewer();
+</script>
+{% endif %}
+{% endblock %}

@@ -1,0 +1,241 @@
+{% extends "base.html" %}
+{% block title %}{{ target.gene_name }}{% endblock %}
+
+{% block extra_styles %}
+<link rel="stylesheet" href="/static/css/pages/target-detail.css">
+{% endblock %}
+
+{% block content %}
+<div class="target-detail-page">
+
+    <!-- ── Breadcrumb ───────────────────────────────────── -->
+    <div class="breadcrumb">
+        <a href="/targets">Targets</a>
+        <span class="breadcrumb-sep">→</span>
+        <span>{{ target.gene_name }}</span>
+    </div>
+
+    <!-- ── Target header ────────────────────────────────── -->
+    <div class="target-header">
+        <div class="target-header-left">
+            <h1 class="gene-title">{{ target.gene_name }}</h1>
+            <p class="protein-full-name">{{ target.protein_name }}</p>
+        </div>
+        <div class="target-header-right">
+            <a href="https://www.uniprot.org/uniprot/{{ target.uniprot_accession }}"
+               target="_blank"
+               class="uniprot-link">
+                {{ target.uniprot_accession }} ↗
+            </a>
+        </div>
+    </div>
+
+    <!-- ── Stat chips ───────────────────────────────────── -->
+    <div class="stat-chips">
+        <div class="stat-chip">
+            <span class="chip-value">{{ target.drugs|length }}</span>
+            <span class="chip-label">Targeting Drugs</span>
+        </div>
+        <div class="stat-chip">
+            <span class="chip-value">{{ target.resistance_mutations|length }}</span>
+            <span class="chip-label">Resistance Mutations</span>
+        </div>
+        {% if target.viewer_pdb_id %}
+        <div class="stat-chip">
+            <span class="chip-value mono">{{ target.viewer_pdb_id|upper }}</span>
+            <span class="chip-label">Structure Loaded</span>
+        </div>
+        {% endif %}
+    </div>
+
+    <!-- ── Main grid ────────────────────────────────────── -->
+    <div class="target-grid">
+
+        <!-- Left: 3D viewer -->
+        <div class="viewer-card">
+            <div class="viewer-header">
+                <span class="viewer-title">3D Structure</span>
+                {% if target.viewer_pdb_id %}
+                <span class="viewer-pdb">
+                    PDB: {{ target.viewer_pdb_id|upper }}
+                </span>
+                {% else %}
+                <span class="dim">No structure available</span>
+                {% endif %}
+            </div>
+
+            <div id="molstar-viewer">
+                {% if not target.viewer_pdb_id %}
+                <div class="no-structure">
+                    No structure available for this target
+                </div>
+                {% endif %}
+            </div>
+
+            {% if target.viewer_pdb_id %}
+            <div class="viewer-controls">
+                <a id="rcsbLink"
+                   href="https://www.rcsb.org/structure/{{ target.viewer_pdb_id|upper }}"
+                   target="_blank"
+                   class="btn secondary"
+                   style="font-size:0.78rem; padding:0.3rem 0.7rem;">
+                    View on RCSB ↗
+                </a>
+                <a href="https://www.uniprot.org/uniprot/{{ target.uniprot_accession }}"
+                   target="_blank"
+                   class="btn secondary"
+                   style="font-size:0.78rem; padding:0.3rem 0.7rem;">
+                    UniProt ↗
+                </a>
+            </div>
+            {% endif %}
+        </div>
+
+        <!-- Right: protein info -->
+        <div class="info-column">
+
+            <!-- Protein information -->
+            <div class="info-card">
+                <div class="info-card-title">Protein Information</div>
+                <div class="protein-info-grid">
+                    <div class="info-item">
+                        <span class="info-label">UniProt Accession</span>
+                        <a href="https://www.uniprot.org/uniprot/{{ target.uniprot_accession }}"
+                           target="_blank"
+                           class="info-value mono accent">
+                            {{ target.uniprot_accession }} ↗
+                        </a>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Gene Name</span>
+                        <span class="info-value gene-color">
+                            {{ target.gene_name }}
+                        </span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Cellular Location</span>
+                        <span class="info-value">
+                            {{ target.cellular_location or '—' }}
+                        </span>
+                    </div>
+                    <div class="info-item full-width">
+                        <span class="info-label">General Function</span>
+                        <span class="info-value">
+                            {{ target.general_function or '—' }}
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Drugs targeting this protein -->
+            <div class="info-card">
+                <div class="info-card-title">
+                    Targeting Drugs
+                    <span class="count-pill">{{ target.drugs|length }}</span>
+                </div>
+                <div class="drug-list">
+                    {% for drug in target.drugs %}
+                    <a href="/drugs/{{ drug.drugbank_id }}"
+                       class="drug-item">
+                        <div class="drug-item-left">
+                            <span class="drug-item-name">{{ drug.name }}</span>
+                            {% if drug.drug_class and drug.drug_class != 'Other' %}
+                            <span class="drug-item-class">{{ drug.drug_class }}</span>
+                            {% endif %}
+                        </div>
+                        <div class="drug-item-right">
+                            {% if drug.known_action == 'yes' %}
+                            <span class="confirmed-badge">confirmed</span>
+                            {% endif %}
+                            <span class="arrow-icon">→</span>
+                        </div>
+                    </a>
+                    {% endfor %}
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ── Resistance mutations ──────────────────────────── -->
+    {% if target.resistance_mutations %}
+    <div class="mutations-section">
+        <div class="section-title">
+            Resistance Mutations Across All Drugs
+        </div>
+        <div class="table-wrap">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Mutation</th>
+                        <th>Drug</th>
+                        <th>Source</th>
+                        <th>Resistance Samples</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for mut in target.resistance_mutations %}
+                    <tr>
+                        <td>
+                            <span class="mut-code">{{ mut.mutation_aa }}</span>
+                        </td>
+                        <td>
+                            <a href="/drugs/{{ mut.drugbank_id }}"
+                               class="drug-link">
+                                {{ mut.drug_name }}
+                            </a>
+                        </td>
+                        <td>
+                            <span class="source-badge">{{ mut.source }}</span>
+                        </td>
+                        <td class="samples-cell">
+                            {{ mut.total_samples or '—' }}
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+    {% endif %}
+
+</div>
+{% endblock %}
+
+{% block extra_scripts %}
+<script>
+    pageContext = "Viewing target: {{ target.gene_name }} ({{ target.protein_name }})";
+</script>
+
+{% if target.viewer_pdb_id %}
+<link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/molstar@latest/build/viewer/molstar.css"
+>
+<script src="https://cdn.jsdelivr.net/npm/molstar@latest/build/viewer/molstar.js"></script>
+<script>
+    let viewer = null;
+
+    async function initViewer() {
+        const element = document.getElementById('molstar-viewer');
+        const { Viewer } = molstar;
+
+        viewer = await Viewer.create(element, {
+            layoutIsExpanded:      false,
+            layoutShowControls:    false,
+            layoutShowRemoteState: false,
+            layoutShowSequence:    false,
+            layoutShowLog:         false,
+            layoutShowLeftPanel:   false,
+            viewportShowExpand:    false,
+            viewportShowAnimation: false,
+        });
+
+        const url = `https://files.rcsb.org/download/{{ target.viewer_pdb_id|upper }}.cif`;
+        await viewer.loadStructureFromUrl(url, 'mmcif', false);
+    }
+
+    initViewer();
+</script>
+{% endif %}
+{% endblock %}

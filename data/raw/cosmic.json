@@ -1,0 +1,5286 @@
+[
+  {
+    "drug_name": "Imatinib",
+    "total_resistance_samples": 866,
+    "unique_resistance_mutations": 91,
+    "supporting_pmids": [
+      "11964322",
+      "16551858",
+      "20682399",
+      "20697894",
+      "21264552",
+      "18955458",
+      "12399961",
+      "20028860",
+      "15930355",
+      "22299775",
+      "18452195",
+      "26316776",
+      "15685537",
+      "14645423",
+      "18830121",
+      "23799845",
+      "26779618",
+      "18488000",
+      "28421416",
+      "12949711",
+      "27997714",
+      "14745431",
+      "22489663",
+      "25182956",
+      "17875769",
+      "21221851",
+      "31758409",
+      "25886408",
+      "12204532",
+      "17008892",
+      "25807654",
+      "20032375",
+      "23086624",
+      "12623848",
+      "15381060",
+      "23348204",
+      "21357704",
+      "16954519",
+      "19096980",
+      "23456621",
+      "11853795",
+      "25735500",
+      "20043176",
+      "23044928"
+    ],
+    "mutations": [
+      {
+        "gene_symbol": "KIT",
+        "mutation_aa": "p.D816H",
+        "mutation_cds": "c.?",
+        "drug_response": "Imatinib clinical resistant recurrence",
+        "sample_name": "1122357",
+        "pubmed_pmid": "17875769",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "KIT",
+        "mutation_aa": "p.Y823D",
+        "mutation_cds": "c.?",
+        "drug_response": "Imatinib clinical resistant recurrence",
+        "sample_name": "1122359",
+        "pubmed_pmid": "17875769",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "KIT",
+        "mutation_aa": "p.N822K",
+        "mutation_cds": "c.?",
+        "drug_response": "Imatinib clinical resistant recurrence",
+        "sample_name": "1122363",
+        "pubmed_pmid": "17875769",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "KIT",
+        "mutation_aa": "p.V654A",
+        "mutation_cds": "c.?",
+        "drug_response": "Imatinib clinical resistant recurrence",
+        "sample_name": "1122365",
+        "pubmed_pmid": "17875769",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "KIT",
+        "mutation_aa": "p.C809G",
+        "mutation_cds": "c.?",
+        "drug_response": "Imatinib clinical resistant recurrence",
+        "sample_name": "1122371",
+        "pubmed_pmid": "17875769",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "KIT",
+        "mutation_aa": "p.S709F",
+        "mutation_cds": "c.?",
+        "drug_response": "Imatinib clinical resistant recurrence",
+        "sample_name": "1167316",
+        "pubmed_pmid": "16551858",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      },
+      {
+        "gene_symbol": "KIT",
+        "mutation_aa": "p.D820G",
+        "mutation_cds": "c.?",
+        "drug_response": "Imatinib clinical resistant recurrence",
+        "sample_name": "1167332",
+        "pubmed_pmid": "16551858",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "KIT",
+        "mutation_aa": "p.D816E",
+        "mutation_cds": "c.?",
+        "drug_response": "Imatinib clinical resistant recurrence",
+        "sample_name": "1167335",
+        "pubmed_pmid": "16551858",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "KIT",
+        "mutation_aa": "p.D820E",
+        "mutation_cds": "c.?",
+        "drug_response": "Imatinib clinical resistant recurrence",
+        "sample_name": "1167336",
+        "pubmed_pmid": "16551858",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "KIT",
+        "mutation_aa": "p.D820Y",
+        "mutation_cds": "c.?",
+        "drug_response": "Imatinib clinical resistant recurrence",
+        "sample_name": "1167337",
+        "pubmed_pmid": "16551858",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "KIT",
+        "mutation_aa": "p.T670I",
+        "mutation_cds": "c.?",
+        "drug_response": "Imatinib clinical resistant recurrence",
+        "sample_name": "1167341",
+        "pubmed_pmid": "16551858",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "KIT",
+        "mutation_aa": "p.T670E",
+        "mutation_cds": "c.2008_2009delinsGA",
+        "drug_response": "Imatinib clinical resistant recurrence",
+        "sample_name": "1167389",
+        "pubmed_pmid": "16551858",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      },
+      {
+        "gene_symbol": "ABL1",
+        "mutation_aa": "p.T315I",
+        "mutation_cds": "c.?",
+        "drug_response": "Imatinib clinical resistant recurrence",
+        "sample_name": "1431278",
+        "pubmed_pmid": "20697894",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "ABL1",
+        "mutation_aa": "p.I418V",
+        "mutation_cds": "c.?",
+        "drug_response": "Imatinib clinical resistant recurrence",
+        "sample_name": "1431319",
+        "pubmed_pmid": "20697894",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      },
+      {
+        "gene_symbol": "ABL1",
+        "mutation_aa": "p.E450A",
+        "mutation_cds": "c.?",
+        "drug_response": "Imatinib clinical resistant recurrence",
+        "sample_name": "1431320",
+        "pubmed_pmid": "20697894",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      },
+      {
+        "gene_symbol": "ABL1",
+        "mutation_aa": "p.E453L",
+        "mutation_cds": "c.?",
+        "drug_response": "Imatinib clinical resistant recurrence",
+        "sample_name": "1431322",
+        "pubmed_pmid": "20697894",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      },
+      {
+        "gene_symbol": "ABL1",
+        "mutation_aa": "p.E459K",
+        "mutation_cds": "c.?",
+        "drug_response": "Imatinib clinical resistant recurrence",
+        "sample_name": "1431323",
+        "pubmed_pmid": "20697894",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      },
+      {
+        "gene_symbol": "ABL1",
+        "mutation_aa": "p.M351T",
+        "mutation_cds": "c.?",
+        "drug_response": "Imatinib clinical resistant recurrence",
+        "sample_name": "1543107",
+        "pubmed_pmid": "21221851",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      },
+      {
+        "gene_symbol": "ABL1",
+        "mutation_aa": "p.F359I",
+        "mutation_cds": "c.?",
+        "drug_response": "Imatinib clinical resistant recurrence",
+        "sample_name": "1543108",
+        "pubmed_pmid": "21221851",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      },
+      {
+        "gene_symbol": "ABL1",
+        "mutation_aa": "p.E255K",
+        "mutation_cds": "c.?",
+        "drug_response": "Imatinib clinical resistant recurrence",
+        "sample_name": "1543109",
+        "pubmed_pmid": "21221851",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "ABL1",
+        "mutation_aa": "p.E255V",
+        "mutation_cds": "c.?",
+        "drug_response": "Imatinib clinical resistant recurrence",
+        "sample_name": "1543109",
+        "pubmed_pmid": "21221851",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      },
+      {
+        "gene_symbol": "ABL1",
+        "mutation_aa": "p.L248V",
+        "mutation_cds": "c.?",
+        "drug_response": "Imatinib clinical resistant recurrence",
+        "sample_name": "1543110",
+        "pubmed_pmid": "21221851",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      },
+      {
+        "gene_symbol": "ABL1",
+        "mutation_aa": "p.A397P",
+        "mutation_cds": "c.?",
+        "drug_response": "Imatinib clinical resistant recurrence",
+        "sample_name": "1543111",
+        "pubmed_pmid": "21221851",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      },
+      {
+        "gene_symbol": "ABL1",
+        "mutation_aa": "p.M244V",
+        "mutation_cds": "c.?",
+        "drug_response": "Imatinib clinical resistant recurrence",
+        "sample_name": "1543112",
+        "pubmed_pmid": "21221851",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      },
+      {
+        "gene_symbol": "ABL1",
+        "mutation_aa": "p.E355G",
+        "mutation_cds": "c.?",
+        "drug_response": "Imatinib clinical resistant recurrence",
+        "sample_name": "1543113",
+        "pubmed_pmid": "21221851",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      },
+      {
+        "gene_symbol": "ABL1",
+        "mutation_aa": "p.Y253H",
+        "mutation_cds": "c.?",
+        "drug_response": "Imatinib clinical resistant recurrence",
+        "sample_name": "1543114",
+        "pubmed_pmid": "21221851",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "ABL1",
+        "mutation_aa": "p.L364I",
+        "mutation_cds": "c.?",
+        "drug_response": "Imatinib clinical resistant recurrence",
+        "sample_name": "1543116",
+        "pubmed_pmid": "21221851",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      },
+      {
+        "gene_symbol": "ABL1",
+        "mutation_aa": "p.L267V",
+        "mutation_cds": "c.799C>G",
+        "drug_response": "Imatinib clinical resistant recurrence",
+        "sample_name": "1545599",
+        "pubmed_pmid": "17008892",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      },
+      {
+        "gene_symbol": "ABL1",
+        "mutation_aa": "p.F359V",
+        "mutation_cds": "c.?",
+        "drug_response": "Imatinib clinical resistant recurrence",
+        "sample_name": "1547745",
+        "pubmed_pmid": "21357704",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      },
+      {
+        "gene_symbol": "ABL1",
+        "mutation_aa": "p.F317L",
+        "mutation_cds": "c.?",
+        "drug_response": "Imatinib clinical resistant recurrence",
+        "sample_name": "1547747",
+        "pubmed_pmid": "21357704",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "ABL1",
+        "mutation_aa": "p.G250E",
+        "mutation_cds": "c.?",
+        "drug_response": "Imatinib clinical resistant recurrence",
+        "sample_name": "1547749",
+        "pubmed_pmid": "21357704",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "ABL1",
+        "mutation_aa": "p.K294delinsRGG",
+        "mutation_cds": "c.880_881delinsCGGGGGGG",
+        "drug_response": "Imatinib clinical resistant recurrence",
+        "sample_name": "1656921",
+        "pubmed_pmid": "21264552",
+        "census_gene": "Yes",
+        "somatic_status": "Confirmed somatic variant"
+      },
+      {
+        "gene_symbol": "ABL1",
+        "mutation_aa": "p.K313delinsRGG",
+        "mutation_cds": "c.937_938delinsCGGGGGGG",
+        "drug_response": "Imatinib clinical resistant recurrence",
+        "sample_name": "1656921",
+        "pubmed_pmid": "21264552",
+        "census_gene": "Yes",
+        "somatic_status": "Confirmed somatic variant"
+      },
+      {
+        "gene_symbol": "ABL1",
+        "mutation_aa": "p.F311I",
+        "mutation_cds": "c.?",
+        "drug_response": "Imatinib clinical resistant recurrence",
+        "sample_name": "1656922",
+        "pubmed_pmid": "21264552",
+        "census_gene": "Yes",
+        "somatic_status": "Confirmed somatic variant"
+      },
+      {
+        "gene_symbol": "ABL1",
+        "mutation_aa": "p.Q252H",
+        "mutation_cds": "c.?",
+        "drug_response": "Imatinib clinical resistant recurrence",
+        "sample_name": "1744513",
+        "pubmed_pmid": "22489663",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      },
+      {
+        "gene_symbol": "ABL1",
+        "mutation_aa": "p.V299L",
+        "mutation_cds": "c.?",
+        "drug_response": "Imatinib clinical resistant recurrence",
+        "sample_name": "1794527",
+        "pubmed_pmid": "23086624",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      },
+      {
+        "gene_symbol": "ABL1",
+        "mutation_aa": "p.E453G",
+        "mutation_cds": "c.?",
+        "drug_response": "Imatinib clinical resistant recurrence",
+        "sample_name": "1996283",
+        "pubmed_pmid": "23799845",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      },
+      {
+        "gene_symbol": "ABL1",
+        "mutation_aa": "p.Y253F",
+        "mutation_cds": "c.?",
+        "drug_response": "Imatinib clinical resistant recurrence",
+        "sample_name": "1996289",
+        "pubmed_pmid": "23799845",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      },
+      {
+        "gene_symbol": "ABL1",
+        "mutation_aa": "p.E275K",
+        "mutation_cds": "c.?",
+        "drug_response": "Imatinib clinical resistant recurrence",
+        "sample_name": "1996292",
+        "pubmed_pmid": "23799845",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      },
+      {
+        "gene_symbol": "ABL1",
+        "mutation_aa": "p.F378I",
+        "mutation_cds": "c.1132T>A",
+        "drug_response": "Imatinib clinical resistant recurrence",
+        "sample_name": "2324033",
+        "pubmed_pmid": "23044928",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      },
+      {
+        "gene_symbol": "ABL1",
+        "mutation_aa": "p.G269E",
+        "mutation_cds": "c.806G>A",
+        "drug_response": "Imatinib clinical resistant recurrence",
+        "sample_name": "2368723",
+        "pubmed_pmid": "25807654",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "ABL1",
+        "mutation_aa": "p.E274K",
+        "mutation_cds": "c.820G>A",
+        "drug_response": "Imatinib clinical resistant recurrence",
+        "sample_name": "2368723",
+        "pubmed_pmid": "25807654",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      },
+      {
+        "gene_symbol": "KIT",
+        "mutation_aa": "p.K642E",
+        "mutation_cds": "c.?",
+        "drug_response": "Imatinib clinical resistant recurrence",
+        "sample_name": "2428987",
+        "pubmed_pmid": "20043176",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "PDGFRA",
+        "mutation_aa": "p.D842V",
+        "mutation_cds": "c.?",
+        "drug_response": "Imatinib clinical resistant recurrence",
+        "sample_name": "2429112",
+        "pubmed_pmid": "18955458",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "KIT",
+        "mutation_aa": "p.(P627_G664)Xfs*?",
+        "mutation_cds": "c.(1880_1990)ins?",
+        "drug_response": "Imatinib clinical resistant recurrence",
+        "sample_name": "2429114",
+        "pubmed_pmid": "18955458",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      },
+      {
+        "gene_symbol": "KIT",
+        "mutation_aa": "p.A829P",
+        "mutation_cds": "c.?",
+        "drug_response": "Imatinib clinical resistant recurrence",
+        "sample_name": "2429158",
+        "pubmed_pmid": "18955458",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "KIT",
+        "mutation_aa": "p.D820A",
+        "mutation_cds": "c.?",
+        "drug_response": "Imatinib clinical resistant recurrence",
+        "sample_name": "2429232",
+        "pubmed_pmid": "18955458",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      },
+      {
+        "gene_symbol": "KIT",
+        "mutation_aa": "p.D816A",
+        "mutation_cds": "c.?",
+        "drug_response": "Imatinib clinical resistant recurrence",
+        "sample_name": "2429260",
+        "pubmed_pmid": "18955458",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      },
+      {
+        "gene_symbol": "KIT",
+        "mutation_aa": "p.N822Y",
+        "mutation_cds": "c.2464A>T",
+        "drug_response": "Imatinib clinical resistant recurrence",
+        "sample_name": "2431449",
+        "pubmed_pmid": "25886408",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "KIT",
+        "mutation_aa": "p.D579del",
+        "mutation_cds": "c.?",
+        "drug_response": "Imatinib clinical resistant recurrence",
+        "sample_name": "2431454",
+        "pubmed_pmid": "25886408",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "KIT",
+        "mutation_aa": "p.Y578C",
+        "mutation_cds": "c.?",
+        "drug_response": "Imatinib clinical resistant recurrence",
+        "sample_name": "2431454",
+        "pubmed_pmid": "25886408",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      },
+      {
+        "gene_symbol": "KIT",
+        "mutation_aa": "p.N680K",
+        "mutation_cds": "c.2040T>G",
+        "drug_response": "Imatinib clinical resistant recurrence",
+        "sample_name": "2431455",
+        "pubmed_pmid": "25886408",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      },
+      {
+        "gene_symbol": "KIT",
+        "mutation_aa": "p.K818_D820>N",
+        "mutation_cds": "c.?",
+        "drug_response": "Imatinib clinical resistant recurrence",
+        "sample_name": "2431463",
+        "pubmed_pmid": "25886408",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      },
+      {
+        "gene_symbol": "KIT",
+        "mutation_aa": "p.V569_Y578del",
+        "mutation_cds": "c.?",
+        "drug_response": "Imatinib clinical resistant recurrence",
+        "sample_name": "2431490",
+        "pubmed_pmid": "25886408",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      },
+      {
+        "gene_symbol": "ABL1",
+        "mutation_aa": "p.M263V",
+        "mutation_cds": "c.787A>G",
+        "drug_response": "Imatinib clinical resistant recurrence",
+        "sample_name": "2432718",
+        "pubmed_pmid": "22299775",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      },
+      {
+        "gene_symbol": "ABL1",
+        "mutation_aa": "p.H396P",
+        "mutation_cds": "c.1187A>C",
+        "drug_response": "Imatinib clinical resistant recurrence",
+        "sample_name": "2432728",
+        "pubmed_pmid": "22299775",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      },
+      {
+        "gene_symbol": "ABL1",
+        "mutation_aa": "p.H415P",
+        "mutation_cds": "c.1244A>C",
+        "drug_response": "Imatinib clinical resistant recurrence",
+        "sample_name": "2432728",
+        "pubmed_pmid": "22299775",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      },
+      {
+        "gene_symbol": "KIT",
+        "mutation_aa": "p.S821F",
+        "mutation_cds": "c.?",
+        "drug_response": "Imatinib clinical resistant recurrence",
+        "sample_name": "2484983",
+        "pubmed_pmid": "25735500",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      },
+      {
+        "gene_symbol": "BRAF",
+        "mutation_aa": "p.V640E",
+        "mutation_cds": "c.1919T>A",
+        "drug_response": "Imatinib clinical resistant recurrence",
+        "sample_name": "2511759",
+        "pubmed_pmid": "25182956",
+        "census_gene": "Yes",
+        "somatic_status": "Confirmed somatic variant"
+      },
+      {
+        "gene_symbol": "BRAF",
+        "mutation_aa": "p.V600E",
+        "mutation_cds": "c.1799T>A",
+        "drug_response": "Imatinib clinical resistant recurrence",
+        "sample_name": "2511759",
+        "pubmed_pmid": "25182956",
+        "census_gene": "Yes",
+        "somatic_status": "Confirmed somatic variant"
+      },
+      {
+        "gene_symbol": "CTNNB1",
+        "mutation_aa": "p.S33C",
+        "mutation_cds": "c.98C>G",
+        "drug_response": "Imatinib clinical resistant recurrence",
+        "sample_name": "2664378",
+        "pubmed_pmid": "28421416",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "CTNNB1",
+        "mutation_aa": "p.S26C",
+        "mutation_cds": "c.77C>G",
+        "drug_response": "Imatinib clinical resistant recurrence",
+        "sample_name": "2664378",
+        "pubmed_pmid": "28421416",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "PDGFRA",
+        "mutation_aa": "p.H687Y",
+        "mutation_cds": "c.?",
+        "drug_response": "Imatinib clinical resistant recurrence",
+        "sample_name": "2906396",
+        "pubmed_pmid": "31758409",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      },
+      {
+        "gene_symbol": "RB1",
+        "mutation_aa": "p.?Xfs*?",
+        "mutation_cds": "c.?",
+        "drug_response": "Imatinib clinical resistant recurrence",
+        "sample_name": "2906478",
+        "pubmed_pmid": "31758409",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "ABL1",
+        "mutation_aa": "p.E274V",
+        "mutation_cds": "c.821A>T",
+        "drug_response": "Imatinib clinical resistant recurrence",
+        "sample_name": "903853",
+        "pubmed_pmid": "11853795",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      },
+      {
+        "gene_symbol": "ABL1",
+        "mutation_aa": "p.Y272H",
+        "mutation_cds": "c.814T>C",
+        "drug_response": "Imatinib clinical resistant recurrence",
+        "sample_name": "903861",
+        "pubmed_pmid": "11853795",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      },
+      {
+        "gene_symbol": "ABL1",
+        "mutation_aa": "p.T334I",
+        "mutation_cds": "c.1001C>T",
+        "drug_response": "Imatinib clinical resistant recurrence",
+        "sample_name": "903865",
+        "pubmed_pmid": "11853795",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "ABL1",
+        "mutation_aa": "p.F336L",
+        "mutation_cds": "c.1008C>G",
+        "drug_response": "Imatinib clinical resistant recurrence",
+        "sample_name": "904075",
+        "pubmed_pmid": "11964322",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "ABL1",
+        "mutation_aa": "p.M370T",
+        "mutation_cds": "c.1109T>C",
+        "drug_response": "Imatinib clinical resistant recurrence",
+        "sample_name": "904086",
+        "pubmed_pmid": "11964322",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      },
+      {
+        "gene_symbol": "ABL1",
+        "mutation_aa": "p.H396R",
+        "mutation_cds": "c.?",
+        "drug_response": "Imatinib clinical resistant recurrence",
+        "sample_name": "904104",
+        "pubmed_pmid": "12204532",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      },
+      {
+        "gene_symbol": "ABL1",
+        "mutation_aa": "p.Q252R",
+        "mutation_cds": "c.?",
+        "drug_response": "Imatinib clinical resistant recurrence",
+        "sample_name": "904121",
+        "pubmed_pmid": "12204532",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      },
+      {
+        "gene_symbol": "ABL1",
+        "mutation_aa": "p.L387M",
+        "mutation_cds": "c.?",
+        "drug_response": "Imatinib clinical resistant recurrence",
+        "sample_name": "904129",
+        "pubmed_pmid": "12204532",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      },
+      {
+        "gene_symbol": "ABL1",
+        "mutation_aa": "p.Q271H",
+        "mutation_cds": "c.813G>C",
+        "drug_response": "Imatinib clinical resistant recurrence",
+        "sample_name": "904265",
+        "pubmed_pmid": "12399961",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      },
+      {
+        "gene_symbol": "ABL1",
+        "mutation_aa": "p.Y272F",
+        "mutation_cds": "c.815A>T",
+        "drug_response": "Imatinib clinical resistant recurrence",
+        "sample_name": "904275",
+        "pubmed_pmid": "12399961",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      },
+      {
+        "gene_symbol": "ABL1",
+        "mutation_aa": "p.E374G",
+        "mutation_cds": "c.1121A>G",
+        "drug_response": "Imatinib clinical resistant recurrence",
+        "sample_name": "904305",
+        "pubmed_pmid": "12399961",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "ABL1",
+        "mutation_aa": "p.H415R",
+        "mutation_cds": "c.1244A>G",
+        "drug_response": "Imatinib clinical resistant recurrence",
+        "sample_name": "904307",
+        "pubmed_pmid": "12399961",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      },
+      {
+        "gene_symbol": "ABL1",
+        "mutation_aa": "p.T315N",
+        "mutation_cds": "c.944C>A",
+        "drug_response": "Imatinib clinical resistant recurrence",
+        "sample_name": "905171",
+        "pubmed_pmid": "14745431",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      },
+      {
+        "gene_symbol": "ABL1",
+        "mutation_aa": "p.T334N",
+        "mutation_cds": "c.1001C>A",
+        "drug_response": "Imatinib clinical resistant recurrence",
+        "sample_name": "905171",
+        "pubmed_pmid": "14745431",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      },
+      {
+        "gene_symbol": "ABL1",
+        "mutation_aa": "p.F378V",
+        "mutation_cds": "c.1132T>G",
+        "drug_response": "Imatinib clinical resistant recurrence",
+        "sample_name": "905175",
+        "pubmed_pmid": "14745431",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      },
+      {
+        "gene_symbol": "ABL1",
+        "mutation_aa": "p.F359A",
+        "mutation_cds": "c.?",
+        "drug_response": "Imatinib clinical resistant recurrence",
+        "sample_name": "905177",
+        "pubmed_pmid": "14745431",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      },
+      {
+        "gene_symbol": "ABL1",
+        "mutation_aa": "p.D276G",
+        "mutation_cds": "c.827A>G",
+        "drug_response": "Imatinib clinical resistant recurrence",
+        "sample_name": "905196",
+        "pubmed_pmid": "14745431",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "ABL1",
+        "mutation_aa": "p.D295G",
+        "mutation_cds": "c.884A>G",
+        "drug_response": "Imatinib clinical resistant recurrence",
+        "sample_name": "905196",
+        "pubmed_pmid": "14745431",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "ABL1",
+        "mutation_aa": "p.F486S",
+        "mutation_cds": "c.1457T>C",
+        "drug_response": "Imatinib clinical resistant recurrence",
+        "sample_name": "905457",
+        "pubmed_pmid": "12623848",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      },
+      {
+        "gene_symbol": "ABL1",
+        "mutation_aa": "p.F505S",
+        "mutation_cds": "c.1514T>C",
+        "drug_response": "Imatinib clinical resistant recurrence",
+        "sample_name": "905457",
+        "pubmed_pmid": "12623848",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      },
+      {
+        "gene_symbol": "ABL1",
+        "mutation_aa": "p.S417Y",
+        "mutation_cds": "c.1250C>A",
+        "drug_response": "Imatinib clinical resistant recurrence",
+        "sample_name": "905486",
+        "pubmed_pmid": "12623848",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      },
+      {
+        "gene_symbol": "ABL1",
+        "mutation_aa": "p.S436Y",
+        "mutation_cds": "c.1307C>A",
+        "drug_response": "Imatinib clinical resistant recurrence",
+        "sample_name": "905486",
+        "pubmed_pmid": "12623848",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      },
+      {
+        "gene_symbol": "ABL1",
+        "mutation_aa": "p.E478K",
+        "mutation_cds": "c.1432G>A",
+        "drug_response": "Imatinib clinical resistant recurrence",
+        "sample_name": "905486",
+        "pubmed_pmid": "12623848",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      },
+      {
+        "gene_symbol": "KIT",
+        "mutation_aa": "p.D716N",
+        "mutation_cds": "c.2146G>A",
+        "drug_response": "Imatinib clinical resistant recurrence",
+        "sample_name": "909219",
+        "pubmed_pmid": "15685537",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "KIT",
+        "mutation_aa": "p.D816G",
+        "mutation_cds": "c.2447A>G",
+        "drug_response": "Imatinib clinical resistant recurrence",
+        "sample_name": "909235",
+        "pubmed_pmid": "15685537",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "AC058822.1",
+        "mutation_aa": "p.D602V",
+        "mutation_cds": "c.1805A>T",
+        "drug_response": "Imatinib clinical resistant recurrence",
+        "sample_name": "909245",
+        "pubmed_pmid": "15685537",
+        "census_gene": "No",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "KIT",
+        "mutation_aa": "p.D820V",
+        "mutation_cds": "c.?",
+        "drug_response": "Imatinib in vitro resistant",
+        "sample_name": "GIST-R9",
+        "pubmed_pmid": "27997714",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      }
+    ]
+  },
+  {
+    "drug_name": "Gefitinib",
+    "total_resistance_samples": 394,
+    "unique_resistance_mutations": 7,
+    "supporting_pmids": [
+      "19155283",
+      "29807405",
+      "17180521",
+      "18379370",
+      "17332333",
+      "21430269",
+      "29120087",
+      "31761448",
+      "27895763",
+      "23037472",
+      "26400668",
+      "31543779",
+      "17335935",
+      "22815900",
+      "29110836",
+      "18992959",
+      "23886554",
+      "26612314",
+      "24752053",
+      "20871262",
+      "22052230",
+      "28396313",
+      "22993320",
+      "27257132",
+      "19589612",
+      "23407566",
+      "23139670",
+      "17145836",
+      "22108465",
+      "17020982",
+      "17973572",
+      "21030498",
+      "21623281",
+      "18271876",
+      "21921847",
+      "17699786",
+      "23579627",
+      "19381876",
+      "26746366",
+      "25120654",
+      "19596957",
+      "19692934",
+      "28572531",
+      "20682976",
+      "16198442",
+      "28104619",
+      "24369725",
+      "24555578",
+      "29128427",
+      "15728811",
+      "21062933",
+      "17085664",
+      "21315472",
+      "27304188",
+      "16983123"
+    ],
+    "mutations": [
+      {
+        "gene_symbol": "EGFR",
+        "mutation_aa": "p.T790M",
+        "mutation_cds": "c.2369C>T",
+        "drug_response": "Gefitinib clinical resistant recurrence",
+        "sample_name": "1000815",
+        "pubmed_pmid": "16983123",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "EGFR",
+        "mutation_aa": "p.T745M",
+        "mutation_cds": "c.2234C>T",
+        "drug_response": "Gefitinib clinical resistant recurrence",
+        "sample_name": "1000815",
+        "pubmed_pmid": "16983123",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "EGFR",
+        "mutation_aa": "p.?",
+        "mutation_cds": "c.*359C>T",
+        "drug_response": "Gefitinib clinical resistant recurrence",
+        "sample_name": "1000815",
+        "pubmed_pmid": "16983123",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "EGFR",
+        "mutation_aa": "p.D761Y",
+        "mutation_cds": "c.2281G>T",
+        "drug_response": "Gefitinib clinical resistant recurrence",
+        "sample_name": "1031893",
+        "pubmed_pmid": "17085664",
+        "census_gene": "Yes",
+        "somatic_status": "Confirmed somatic variant"
+      },
+      {
+        "gene_symbol": "EGFR",
+        "mutation_aa": "p.D716Y",
+        "mutation_cds": "c.2146G>T",
+        "drug_response": "Gefitinib clinical resistant recurrence",
+        "sample_name": "1031893",
+        "pubmed_pmid": "17085664",
+        "census_gene": "Yes",
+        "somatic_status": "Confirmed somatic variant"
+      },
+      {
+        "gene_symbol": "MET",
+        "mutation_aa": "p.?",
+        "mutation_cds": "c.?",
+        "drug_response": "Gefitinib clinical resistant recurrence",
+        "sample_name": "2664326",
+        "pubmed_pmid": "28396313",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "ERBB2",
+        "mutation_aa": "p.S310Y",
+        "mutation_cds": "c.?",
+        "drug_response": "Gefitinib clinical resistant recurrence",
+        "sample_name": "2824351",
+        "pubmed_pmid": "31543779",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      }
+    ]
+  },
+  {
+    "drug_name": "Osimertinib",
+    "total_resistance_samples": 284,
+    "unique_resistance_mutations": 30,
+    "supporting_pmids": [
+      "29807405",
+      "25939061",
+      "28572531",
+      "28274743",
+      "31761448",
+      "31542322",
+      "29506987",
+      "29128427",
+      "29596911",
+      "28625641",
+      "27257132",
+      "31632838",
+      "31254668",
+      "31561203"
+    ],
+    "mutations": [
+      {
+        "gene_symbol": "EGFR",
+        "mutation_aa": "p.C797S",
+        "mutation_cds": "c.?",
+        "drug_response": "Osimertinib clinical resistant recurrence",
+        "sample_name": "2426829",
+        "pubmed_pmid": "25939061",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "EGFR",
+        "mutation_aa": "p.G796D",
+        "mutation_cds": "c.?",
+        "drug_response": "Osimertinib clinical resistant recurrence",
+        "sample_name": "2638656",
+        "pubmed_pmid": "28572531",
+        "census_gene": "Yes",
+        "somatic_status": "Confirmed somatic variant"
+      },
+      {
+        "gene_symbol": "EGFR",
+        "mutation_aa": "p.G796S",
+        "mutation_cds": "c.2386G>A",
+        "drug_response": "Osimertinib clinical resistant recurrence",
+        "sample_name": "2644799",
+        "pubmed_pmid": "28625641",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "EGFR",
+        "mutation_aa": "p.L792F",
+        "mutation_cds": "c.2374C>T",
+        "drug_response": "Osimertinib clinical resistant recurrence",
+        "sample_name": "2644799",
+        "pubmed_pmid": "28625641",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "EGFR",
+        "mutation_aa": "p.L792H",
+        "mutation_cds": "c.2375T>A",
+        "drug_response": "Osimertinib clinical resistant recurrence",
+        "sample_name": "2644799",
+        "pubmed_pmid": "28625641",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "EGFR",
+        "mutation_aa": "p.G796R",
+        "mutation_cds": "c.2386G>C",
+        "drug_response": "Osimertinib clinical resistant recurrence",
+        "sample_name": "2644799",
+        "pubmed_pmid": "28625641",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "EGFR",
+        "mutation_aa": "p.C797G",
+        "mutation_cds": "c.2389T>G",
+        "drug_response": "Osimertinib clinical resistant recurrence",
+        "sample_name": "2644799",
+        "pubmed_pmid": "28625641",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "EGFR",
+        "mutation_aa": "p.C752S",
+        "mutation_cds": "c.2254T>A",
+        "drug_response": "Osimertinib clinical resistant recurrence",
+        "sample_name": "2644799",
+        "pubmed_pmid": "28625641",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "EGFR",
+        "mutation_aa": "p.G751S",
+        "mutation_cds": "c.2251G>A",
+        "drug_response": "Osimertinib clinical resistant recurrence",
+        "sample_name": "2644799",
+        "pubmed_pmid": "28625641",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "EGFR",
+        "mutation_aa": "p.L747F",
+        "mutation_cds": "c.2239C>T",
+        "drug_response": "Osimertinib clinical resistant recurrence",
+        "sample_name": "2644799",
+        "pubmed_pmid": "28625641",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "EGFR",
+        "mutation_aa": "p.L747H",
+        "mutation_cds": "c.2240T>A",
+        "drug_response": "Osimertinib clinical resistant recurrence",
+        "sample_name": "2644799",
+        "pubmed_pmid": "28625641",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "EGFR",
+        "mutation_aa": "p.G751R",
+        "mutation_cds": "c.2251G>C",
+        "drug_response": "Osimertinib clinical resistant recurrence",
+        "sample_name": "2644799",
+        "pubmed_pmid": "28625641",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "EGFR",
+        "mutation_aa": "p.C752G",
+        "mutation_cds": "c.2254T>G",
+        "drug_response": "Osimertinib clinical resistant recurrence",
+        "sample_name": "2644799",
+        "pubmed_pmid": "28625641",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "EGFR",
+        "mutation_aa": "p.?",
+        "mutation_cds": "c.*379T>A",
+        "drug_response": "Osimertinib clinical resistant recurrence",
+        "sample_name": "2644799",
+        "pubmed_pmid": "28625641",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "EGFR",
+        "mutation_aa": "p.L718Q",
+        "mutation_cds": "c.2153T>A",
+        "drug_response": "Osimertinib clinical resistant recurrence",
+        "sample_name": "2651874",
+        "pubmed_pmid": "27257132",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "EGFR",
+        "mutation_aa": "p.L673Q",
+        "mutation_cds": "c.2018T>A",
+        "drug_response": "Osimertinib clinical resistant recurrence",
+        "sample_name": "2651874",
+        "pubmed_pmid": "27257132",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "MET",
+        "mutation_aa": "p.?",
+        "mutation_cds": "c.?",
+        "drug_response": "Osimertinib clinical resistant recurrence",
+        "sample_name": "2684446",
+        "pubmed_pmid": "29128427",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "EGFR",
+        "mutation_aa": "p.M766Q",
+        "mutation_cds": "c.?",
+        "drug_response": "Osimertinib clinical resistant recurrence",
+        "sample_name": "2803992",
+        "pubmed_pmid": "31254668",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      },
+      {
+        "gene_symbol": "BRAF",
+        "mutation_aa": "p.V600E",
+        "mutation_cds": "c.?",
+        "drug_response": "Osimertinib clinical resistant recurrence",
+        "sample_name": "2812140",
+        "pubmed_pmid": "29596911",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "EGFR",
+        "mutation_aa": "p.T790M",
+        "mutation_cds": "c.?",
+        "drug_response": "Osimertinib clinical resistant recurrence",
+        "sample_name": "2862399",
+        "pubmed_pmid": "31561203",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "EGFR",
+        "mutation_aa": "p.L792R",
+        "mutation_cds": "c.2375T>G",
+        "drug_response": "Osimertinib clinical resistant recurrence",
+        "sample_name": "2876607",
+        "pubmed_pmid": "29506987",
+        "census_gene": "Yes",
+        "somatic_status": "Confirmed somatic variant"
+      },
+      {
+        "gene_symbol": "EGFR",
+        "mutation_aa": "p.L747R",
+        "mutation_cds": "c.2240T>G",
+        "drug_response": "Osimertinib clinical resistant recurrence",
+        "sample_name": "2876607",
+        "pubmed_pmid": "29506987",
+        "census_gene": "Yes",
+        "somatic_status": "Confirmed somatic variant"
+      },
+      {
+        "gene_symbol": "EGFR",
+        "mutation_aa": "p.L792P",
+        "mutation_cds": "c.2375T>C",
+        "drug_response": "Osimertinib clinical resistant recurrence",
+        "sample_name": "2876609",
+        "pubmed_pmid": "29506987",
+        "census_gene": "Yes",
+        "somatic_status": "Confirmed somatic variant"
+      },
+      {
+        "gene_symbol": "EGFR",
+        "mutation_aa": "p.L747P",
+        "mutation_cds": "c.2240T>C",
+        "drug_response": "Osimertinib clinical resistant recurrence",
+        "sample_name": "2876609",
+        "pubmed_pmid": "29506987",
+        "census_gene": "Yes",
+        "somatic_status": "Confirmed somatic variant"
+      },
+      {
+        "gene_symbol": "EGFR",
+        "mutation_aa": "p.L718V",
+        "mutation_cds": "c.2152C>G",
+        "drug_response": "Osimertinib clinical resistant recurrence",
+        "sample_name": "2876611",
+        "pubmed_pmid": "29506987",
+        "census_gene": "Yes",
+        "somatic_status": "Confirmed somatic variant"
+      },
+      {
+        "gene_symbol": "EGFR",
+        "mutation_aa": "p.L673V",
+        "mutation_cds": "c.2017C>G",
+        "drug_response": "Osimertinib clinical resistant recurrence",
+        "sample_name": "2876611",
+        "pubmed_pmid": "29506987",
+        "census_gene": "Yes",
+        "somatic_status": "Confirmed somatic variant"
+      },
+      {
+        "gene_symbol": "EGFR",
+        "mutation_aa": "p.L792V",
+        "mutation_cds": "c.2374C>G",
+        "drug_response": "Osimertinib clinical resistant recurrence",
+        "sample_name": "2876613",
+        "pubmed_pmid": "29506987",
+        "census_gene": "Yes",
+        "somatic_status": "Confirmed somatic variant"
+      },
+      {
+        "gene_symbol": "EGFR",
+        "mutation_aa": "p.L747V",
+        "mutation_cds": "c.2239C>G",
+        "drug_response": "Osimertinib clinical resistant recurrence",
+        "sample_name": "2876613",
+        "pubmed_pmid": "29506987",
+        "census_gene": "Yes",
+        "somatic_status": "Confirmed somatic variant"
+      },
+      {
+        "gene_symbol": "EGFR",
+        "mutation_aa": "p.G719A",
+        "mutation_cds": "c.2156G>C",
+        "drug_response": "Osimertinib clinical resistant recurrence",
+        "sample_name": "2876617",
+        "pubmed_pmid": "29506987",
+        "census_gene": "Yes",
+        "somatic_status": "Confirmed somatic variant"
+      },
+      {
+        "gene_symbol": "EGFR",
+        "mutation_aa": "p.G674A",
+        "mutation_cds": "c.2021G>C",
+        "drug_response": "Osimertinib clinical resistant recurrence",
+        "sample_name": "2876617",
+        "pubmed_pmid": "29506987",
+        "census_gene": "Yes",
+        "somatic_status": "Confirmed somatic variant"
+      }
+    ]
+  },
+  {
+    "drug_name": "Ibrutinib",
+    "total_resistance_samples": 256,
+    "unique_resistance_mutations": 11,
+    "supporting_pmids": [
+      "25082755",
+      "28049639",
+      "27199251",
+      "26182309",
+      "30508305",
+      "28235842",
+      "24869598",
+      "24869597",
+      "27626698"
+    ],
+    "mutations": [
+      {
+        "gene_symbol": "BTK",
+        "mutation_aa": "p.C481S",
+        "mutation_cds": "c.1442G>C",
+        "drug_response": "Ibrutinib clinical resistant recurrence",
+        "sample_name": "2608487",
+        "pubmed_pmid": "28235842",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "BTK",
+        "mutation_aa": "p.C481R",
+        "mutation_cds": "c.1441T>C",
+        "drug_response": "Ibrutinib clinical resistant recurrence",
+        "sample_name": "2608487",
+        "pubmed_pmid": "28235842",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "BTK",
+        "mutation_aa": "p.C481Y",
+        "mutation_cds": "c.1442G>A",
+        "drug_response": "Ibrutinib clinical resistant recurrence",
+        "sample_name": "2608487",
+        "pubmed_pmid": "28235842",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "BTK",
+        "mutation_aa": "p.?",
+        "mutation_cds": "c.1039-1482G>C",
+        "drug_response": "Ibrutinib clinical resistant recurrence",
+        "sample_name": "2608487",
+        "pubmed_pmid": "28235842",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "BTK",
+        "mutation_aa": "p.C515S",
+        "mutation_cds": "c.1544G>C",
+        "drug_response": "Ibrutinib clinical resistant recurrence",
+        "sample_name": "2608487",
+        "pubmed_pmid": "28235842",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "BTK",
+        "mutation_aa": "p.C515R",
+        "mutation_cds": "c.1543T>C",
+        "drug_response": "Ibrutinib clinical resistant recurrence",
+        "sample_name": "2608487",
+        "pubmed_pmid": "28235842",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "BTK",
+        "mutation_aa": "p.C515Y",
+        "mutation_cds": "c.1544G>A",
+        "drug_response": "Ibrutinib clinical resistant recurrence",
+        "sample_name": "2608487",
+        "pubmed_pmid": "28235842",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "BTK",
+        "mutation_aa": "p.C481F",
+        "mutation_cds": "c.1442G>T",
+        "drug_response": "Ibrutinib clinical resistant recurrence",
+        "sample_name": "2616266",
+        "pubmed_pmid": "24869598",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      },
+      {
+        "gene_symbol": "BTK",
+        "mutation_aa": "p.C515F",
+        "mutation_cds": "c.1544G>T",
+        "drug_response": "Ibrutinib clinical resistant recurrence",
+        "sample_name": "2616266",
+        "pubmed_pmid": "24869598",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      },
+      {
+        "gene_symbol": "BTK",
+        "mutation_aa": "p.T316A",
+        "mutation_cds": "c.946A>G",
+        "drug_response": "Ibrutinib clinical resistant recurrence",
+        "sample_name": "2623673",
+        "pubmed_pmid": "27626698",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      },
+      {
+        "gene_symbol": "BTK",
+        "mutation_aa": "p.T350A",
+        "mutation_cds": "c.1048A>G",
+        "drug_response": "Ibrutinib clinical resistant recurrence",
+        "sample_name": "2623673",
+        "pubmed_pmid": "27626698",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      }
+    ]
+  },
+  {
+    "drug_name": "Crizotinib",
+    "total_resistance_samples": 158,
+    "unique_resistance_mutations": 50,
+    "supporting_pmids": [
+      "31712133",
+      "32234363",
+      "23344087",
+      "24675041",
+      "27068398",
+      "32122695",
+      "30683630",
+      "30675302",
+      "31200822",
+      "28396313",
+      "27666659",
+      "22277784",
+      "21030459",
+      "27343442",
+      "23434628",
+      "25393798",
+      "31749991",
+      "28522754",
+      "24736079",
+      "27987579",
+      "30089600",
+      "29128427",
+      "27432227",
+      "27045755"
+    ],
+    "mutations": [
+      {
+        "gene_symbol": "ALK",
+        "mutation_aa": "p.S1206Y",
+        "mutation_cds": "c.3617C>A",
+        "drug_response": "Crizotinib clinical resistant recurrence",
+        "sample_name": "1633976",
+        "pubmed_pmid": "22277784",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      },
+      {
+        "gene_symbol": "ALK",
+        "mutation_aa": "p.S829Y",
+        "mutation_cds": "c.2486C>A",
+        "drug_response": "Crizotinib clinical resistant recurrence",
+        "sample_name": "1633976",
+        "pubmed_pmid": "22277784",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      },
+      {
+        "gene_symbol": "ALK",
+        "mutation_aa": "p.S138Y",
+        "mutation_cds": "c.413C>A",
+        "drug_response": "Crizotinib clinical resistant recurrence",
+        "sample_name": "1633976",
+        "pubmed_pmid": "22277784",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      },
+      {
+        "gene_symbol": "ALK",
+        "mutation_aa": "p.G1202R",
+        "mutation_cds": "c.3604G>A",
+        "drug_response": "Crizotinib clinical resistant recurrence",
+        "sample_name": "1633981",
+        "pubmed_pmid": "22277784",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "ALK",
+        "mutation_aa": "p.G825R",
+        "mutation_cds": "c.2473G>A",
+        "drug_response": "Crizotinib clinical resistant recurrence",
+        "sample_name": "1633981",
+        "pubmed_pmid": "22277784",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "ALK",
+        "mutation_aa": "p.G134R",
+        "mutation_cds": "c.400G>A",
+        "drug_response": "Crizotinib clinical resistant recurrence",
+        "sample_name": "1633981",
+        "pubmed_pmid": "22277784",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "ALK",
+        "mutation_aa": "p.L1196M",
+        "mutation_cds": "c.3586C>A",
+        "drug_response": "Crizotinib clinical resistant recurrence",
+        "sample_name": "1633983",
+        "pubmed_pmid": "22277784",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "ALK",
+        "mutation_aa": "p.L819M",
+        "mutation_cds": "c.2455C>A",
+        "drug_response": "Crizotinib clinical resistant recurrence",
+        "sample_name": "1633983",
+        "pubmed_pmid": "22277784",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "ALK",
+        "mutation_aa": "p.L128M",
+        "mutation_cds": "c.382C>A",
+        "drug_response": "Crizotinib clinical resistant recurrence",
+        "sample_name": "1633983",
+        "pubmed_pmid": "22277784",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "ALK",
+        "mutation_aa": "p.T1151dup",
+        "mutation_cds": "c.3451_3453dup",
+        "drug_response": "Crizotinib clinical resistant recurrence",
+        "sample_name": "1633985",
+        "pubmed_pmid": "22277784",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      },
+      {
+        "gene_symbol": "ALK",
+        "mutation_aa": "p.T774dup",
+        "mutation_cds": "c.2320_2322dup",
+        "drug_response": "Crizotinib clinical resistant recurrence",
+        "sample_name": "1633985",
+        "pubmed_pmid": "22277784",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      },
+      {
+        "gene_symbol": "ALK",
+        "mutation_aa": "p.T83dup",
+        "mutation_cds": "c.247_249dup",
+        "drug_response": "Crizotinib clinical resistant recurrence",
+        "sample_name": "1633985",
+        "pubmed_pmid": "22277784",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      },
+      {
+        "gene_symbol": "ALK",
+        "mutation_aa": "p.F1174L",
+        "mutation_cds": "c.3522C>G",
+        "drug_response": "Crizotinib clinical resistant recurrence",
+        "sample_name": "1677594",
+        "pubmed_pmid": "21030459",
+        "census_gene": "Yes",
+        "somatic_status": "Confirmed somatic variant"
+      },
+      {
+        "gene_symbol": "ALK",
+        "mutation_aa": "p.F797L",
+        "mutation_cds": "c.2391C>G",
+        "drug_response": "Crizotinib clinical resistant recurrence",
+        "sample_name": "1677594",
+        "pubmed_pmid": "21030459",
+        "census_gene": "Yes",
+        "somatic_status": "Confirmed somatic variant"
+      },
+      {
+        "gene_symbol": "ALK",
+        "mutation_aa": "p.F106L",
+        "mutation_cds": "c.318C>G",
+        "drug_response": "Crizotinib clinical resistant recurrence",
+        "sample_name": "1677594",
+        "pubmed_pmid": "21030459",
+        "census_gene": "Yes",
+        "somatic_status": "Confirmed somatic variant"
+      },
+      {
+        "gene_symbol": "ALK",
+        "mutation_aa": "p.G1269A",
+        "mutation_cds": "c.3806G>C",
+        "drug_response": "Crizotinib clinical resistant recurrence",
+        "sample_name": "1859881",
+        "pubmed_pmid": "23344087",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      },
+      {
+        "gene_symbol": "ALK",
+        "mutation_aa": "p.G892A",
+        "mutation_cds": "c.2675G>C",
+        "drug_response": "Crizotinib clinical resistant recurrence",
+        "sample_name": "1859881",
+        "pubmed_pmid": "23344087",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      },
+      {
+        "gene_symbol": "ALK",
+        "mutation_aa": "p.G201A",
+        "mutation_cds": "c.602G>C",
+        "drug_response": "Crizotinib clinical resistant recurrence",
+        "sample_name": "1859881",
+        "pubmed_pmid": "23344087",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      },
+      {
+        "gene_symbol": "ALK",
+        "mutation_aa": "p.C1156Y",
+        "mutation_cds": "c.3467G>A",
+        "drug_response": "Crizotinib clinical resistant recurrence",
+        "sample_name": "1885387",
+        "pubmed_pmid": "23434628",
+        "census_gene": "Yes",
+        "somatic_status": "Confirmed somatic variant"
+      },
+      {
+        "gene_symbol": "ALK",
+        "mutation_aa": "p.C779Y",
+        "mutation_cds": "c.2336G>A",
+        "drug_response": "Crizotinib clinical resistant recurrence",
+        "sample_name": "1885387",
+        "pubmed_pmid": "23434628",
+        "census_gene": "Yes",
+        "somatic_status": "Confirmed somatic variant"
+      },
+      {
+        "gene_symbol": "ALK",
+        "mutation_aa": "p.C88Y",
+        "mutation_cds": "c.263G>A",
+        "drug_response": "Crizotinib clinical resistant recurrence",
+        "sample_name": "1885387",
+        "pubmed_pmid": "23434628",
+        "census_gene": "Yes",
+        "somatic_status": "Confirmed somatic variant"
+      },
+      {
+        "gene_symbol": "ALK",
+        "mutation_aa": "p.F1174V",
+        "mutation_cds": "c.3520T>G",
+        "drug_response": "Crizotinib clinical resistant recurrence",
+        "sample_name": "2144805",
+        "pubmed_pmid": "24736079",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "ALK",
+        "mutation_aa": "p.F797V",
+        "mutation_cds": "c.2389T>G",
+        "drug_response": "Crizotinib clinical resistant recurrence",
+        "sample_name": "2144805",
+        "pubmed_pmid": "24736079",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "ALK",
+        "mutation_aa": "p.F106V",
+        "mutation_cds": "c.316T>G",
+        "drug_response": "Crizotinib clinical resistant recurrence",
+        "sample_name": "2144805",
+        "pubmed_pmid": "24736079",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "ALK",
+        "mutation_aa": "p.I1171T",
+        "mutation_cds": "c.3512T>C",
+        "drug_response": "Crizotinib clinical resistant recurrence",
+        "sample_name": "2293728",
+        "pubmed_pmid": "25393798",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      },
+      {
+        "gene_symbol": "ALK",
+        "mutation_aa": "p.I794T",
+        "mutation_cds": "c.2381T>C",
+        "drug_response": "Crizotinib clinical resistant recurrence",
+        "sample_name": "2293728",
+        "pubmed_pmid": "25393798",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      },
+      {
+        "gene_symbol": "ALK",
+        "mutation_aa": "p.I103T",
+        "mutation_cds": "c.308T>C",
+        "drug_response": "Crizotinib clinical resistant recurrence",
+        "sample_name": "2293728",
+        "pubmed_pmid": "25393798",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      },
+      {
+        "gene_symbol": "KIT",
+        "mutation_aa": "p.D816G",
+        "mutation_cds": "c.2447A>G",
+        "drug_response": "Crizotinib clinical resistant recurrence",
+        "sample_name": "2525579",
+        "pubmed_pmid": "27068398",
+        "census_gene": "Yes",
+        "somatic_status": "Confirmed somatic variant"
+      },
+      {
+        "gene_symbol": "MET",
+        "mutation_aa": "p.D1246N",
+        "mutation_cds": "c.3736G>A",
+        "drug_response": "Crizotinib clinical resistant recurrence",
+        "sample_name": "2564943",
+        "pubmed_pmid": "27343442",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "MET",
+        "mutation_aa": "p.D1228N",
+        "mutation_cds": "c.3682G>A",
+        "drug_response": "Crizotinib clinical resistant recurrence",
+        "sample_name": "2564943",
+        "pubmed_pmid": "27343442",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "MET",
+        "mutation_aa": "p.Y1248C",
+        "mutation_cds": "c.3743A>G",
+        "drug_response": "Crizotinib clinical resistant recurrence",
+        "sample_name": "2585344",
+        "pubmed_pmid": "27666659",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "MET",
+        "mutation_aa": "p.Y1230C",
+        "mutation_cds": "c.3689A>G",
+        "drug_response": "Crizotinib clinical resistant recurrence",
+        "sample_name": "2585344",
+        "pubmed_pmid": "27666659",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "MET",
+        "mutation_aa": "p.Y1248H",
+        "mutation_cds": "c.?",
+        "drug_response": "Crizotinib clinical resistant recurrence",
+        "sample_name": "2605636",
+        "pubmed_pmid": "27987579",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "MET",
+        "mutation_aa": "p.D1246H",
+        "mutation_cds": "c.?",
+        "drug_response": "Crizotinib clinical resistant recurrence",
+        "sample_name": "2605636",
+        "pubmed_pmid": "27987579",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "MET",
+        "mutation_aa": "p.Y1248S",
+        "mutation_cds": "c.?",
+        "drug_response": "Crizotinib clinical resistant recurrence",
+        "sample_name": "2642912",
+        "pubmed_pmid": "28522754",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "MET",
+        "mutation_aa": "p.G1181R",
+        "mutation_cds": "c.?",
+        "drug_response": "Crizotinib clinical resistant recurrence",
+        "sample_name": "2642912",
+        "pubmed_pmid": "28522754",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      },
+      {
+        "gene_symbol": "MET",
+        "mutation_aa": "p.Y1230H",
+        "mutation_cds": "c.3688T>C",
+        "drug_response": "Crizotinib clinical resistant recurrence",
+        "sample_name": "2664329",
+        "pubmed_pmid": "28396313",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "MET",
+        "mutation_aa": "p.D1249Y",
+        "mutation_cds": "c.?",
+        "drug_response": "Crizotinib plus osimertinib clinical resistant recurrence",
+        "sample_name": "2684447",
+        "pubmed_pmid": "29128427",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      },
+      {
+        "gene_symbol": "ALK",
+        "mutation_aa": "p.G1128A",
+        "mutation_cds": "c.3383G>C",
+        "drug_response": "Crizotinib clinical resistant recurrence",
+        "sample_name": "2763255",
+        "pubmed_pmid": "30089600",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "ALK",
+        "mutation_aa": "p.G751A",
+        "mutation_cds": "c.2252G>C",
+        "drug_response": "Crizotinib clinical resistant recurrence",
+        "sample_name": "2763255",
+        "pubmed_pmid": "30089600",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "ALK",
+        "mutation_aa": "p.G60A",
+        "mutation_cds": "c.179G>C",
+        "drug_response": "Crizotinib clinical resistant recurrence",
+        "sample_name": "2763255",
+        "pubmed_pmid": "30089600",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "KRAS",
+        "mutation_aa": "p.G12V",
+        "mutation_cds": "c.?",
+        "drug_response": "Crizotinib clinical resistant recurrence",
+        "sample_name": "2804448",
+        "pubmed_pmid": "31200822",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "ROS1",
+        "mutation_aa": "p.G2032R",
+        "mutation_cds": "c.?",
+        "drug_response": "Crizotinib clinical resistant recurrence",
+        "sample_name": "2841739",
+        "pubmed_pmid": "30683630",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      },
+      {
+        "gene_symbol": "ALK",
+        "mutation_aa": "p.T1151M",
+        "mutation_cds": "c.?",
+        "drug_response": "Crizotinib clinical resistant recurrence",
+        "sample_name": "2841745",
+        "pubmed_pmid": "31712133",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      },
+      {
+        "gene_symbol": "ALK",
+        "mutation_aa": "p.T1151R",
+        "mutation_cds": "c.?",
+        "drug_response": "Crizotinib clinical resistant recurrence",
+        "sample_name": "2841750",
+        "pubmed_pmid": "31712133",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      },
+      {
+        "gene_symbol": "ALK",
+        "mutation_aa": "p.L1152R",
+        "mutation_cds": "c.?",
+        "drug_response": "Crizotinib clinical resistant recurrence",
+        "sample_name": "2841750",
+        "pubmed_pmid": "31712133",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      },
+      {
+        "gene_symbol": "ALK",
+        "mutation_aa": "p.C1156F",
+        "mutation_cds": "c.?",
+        "drug_response": "Crizotinib clinical resistant recurrence",
+        "sample_name": "2841752",
+        "pubmed_pmid": "31712133",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      },
+      {
+        "gene_symbol": "ALK",
+        "mutation_aa": "p.F1174C",
+        "mutation_cds": "c.?",
+        "drug_response": "Crizotinib clinical resistant recurrence",
+        "sample_name": "2841760",
+        "pubmed_pmid": "31712133",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      },
+      {
+        "gene_symbol": "ALK",
+        "mutation_aa": "p.S1206F",
+        "mutation_cds": "c.?",
+        "drug_response": "Crizotinib clinical resistant recurrence",
+        "sample_name": "2841764",
+        "pubmed_pmid": "31712133",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "ALK",
+        "mutation_aa": "p.E1210K",
+        "mutation_cds": "c.?",
+        "drug_response": "Crizotinib clinical resistant recurrence",
+        "sample_name": "MGH086-00",
+        "pubmed_pmid": "27432227",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      }
+    ]
+  },
+  {
+    "drug_name": "Erlotinib",
+    "total_resistance_samples": 122,
+    "unique_resistance_mutations": 6,
+    "supporting_pmids": [
+      "21430269",
+      "28031840",
+      "28274743",
+      "24781527",
+      "21573178",
+      "23079729",
+      "29110836",
+      "26424310",
+      "31542322",
+      "21995391",
+      "29106415",
+      "24636847",
+      "25982275",
+      "31561203",
+      "28271038",
+      "22108465",
+      "24457237",
+      "19181917",
+      "24942894",
+      "22895145",
+      "23466741",
+      "31632838",
+      "24034463",
+      "21921847",
+      "24675505",
+      "24029120",
+      "28961830",
+      "28104619",
+      "31157314",
+      "28625641",
+      "20146086",
+      "17085664",
+      "28874593",
+      "27304188"
+    ],
+    "mutations": [
+      {
+        "gene_symbol": "EGFR",
+        "mutation_aa": "p.T790M",
+        "mutation_cds": "c.?",
+        "drug_response": "Erlotinib clinical resistant recurrence",
+        "sample_name": "1031897",
+        "pubmed_pmid": "17085664",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "EGFR",
+        "mutation_aa": "p.T745M",
+        "mutation_cds": "c.2234C>T",
+        "drug_response": "Erlotinib clinical resistant recurrence",
+        "sample_name": "1319151",
+        "pubmed_pmid": "20146086",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "EGFR",
+        "mutation_aa": "p.?",
+        "mutation_cds": "c.*359C>T",
+        "drug_response": "Erlotinib clinical resistant recurrence",
+        "sample_name": "1319151",
+        "pubmed_pmid": "20146086",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "MET",
+        "mutation_aa": "p.?",
+        "mutation_cds": "c.?",
+        "drug_response": "Erlotinib clinical resistant recurrence",
+        "sample_name": "2605904",
+        "pubmed_pmid": "28271038",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "PIK3CB",
+        "mutation_aa": "p.D1067V",
+        "mutation_cds": "c.?",
+        "drug_response": "Erlotinib clinical resistant recurrence",
+        "sample_name": "2777955",
+        "pubmed_pmid": "25982275",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      },
+      {
+        "gene_symbol": "MET",
+        "mutation_aa": "p.L982_D1028del",
+        "mutation_cds": "c.2942_3082del",
+        "drug_response": "Erlotinib clinical resistant recurrence",
+        "sample_name": "2823658",
+        "pubmed_pmid": "31157314",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      }
+    ]
+  },
+  {
+    "drug_name": "Cetuximab",
+    "total_resistance_samples": 120,
+    "unique_resistance_mutations": 24,
+    "supporting_pmids": [
+      "22722830",
+      "24553385",
+      "26644315",
+      "20361188",
+      "24553387",
+      "37434969",
+      "27929064",
+      "32669268"
+    ],
+    "mutations": [
+      {
+        "gene_symbol": "KRAS",
+        "mutation_aa": "p.G13D",
+        "mutation_cds": "c.38G>A",
+        "drug_response": "Cetuximab clinical resistant recurrence",
+        "sample_name": "1968560",
+        "pubmed_pmid": "22722830",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "KRAS",
+        "mutation_aa": "p.Q61H",
+        "mutation_cds": "c.183A>T",
+        "drug_response": "Cetuximab clinical resistant recurrence",
+        "sample_name": "1968568",
+        "pubmed_pmid": "22722830",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "KRAS",
+        "mutation_aa": "p.?",
+        "mutation_cds": "c.112-17430A>T",
+        "drug_response": "Cetuximab clinical resistant recurrence",
+        "sample_name": "1968568",
+        "pubmed_pmid": "22722830",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "KRAS",
+        "mutation_aa": "p.G12D",
+        "mutation_cds": "c.35G>A",
+        "drug_response": "Cetuximab clinical resistant recurrence",
+        "sample_name": "1968570",
+        "pubmed_pmid": "22722830",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "MAP2K1",
+        "mutation_aa": "p.K57T",
+        "mutation_cds": "c.170A>C",
+        "drug_response": "Cetuximab clinical resistant recurrence",
+        "sample_name": "2542368",
+        "pubmed_pmid": "26644315",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "NRAS",
+        "mutation_aa": "p.G12S",
+        "mutation_cds": "c.?",
+        "drug_response": "Cetuximab clinical resistant recurrence",
+        "sample_name": "2584878",
+        "pubmed_pmid": "27929064",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "KRAS",
+        "mutation_aa": "p.G12V",
+        "mutation_cds": "c.?",
+        "drug_response": "Cetuximab clinical resistant recurrence",
+        "sample_name": "2584880",
+        "pubmed_pmid": "27929064",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "NRAS",
+        "mutation_aa": "p.G60R",
+        "mutation_cds": "c.?",
+        "drug_response": "Cetuximab clinical resistant recurrence",
+        "sample_name": "2584882",
+        "pubmed_pmid": "27929064",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "KRAS",
+        "mutation_aa": "p.G12S",
+        "mutation_cds": "c.?",
+        "drug_response": "Cetuximab clinical resistant recurrence",
+        "sample_name": "2584888",
+        "pubmed_pmid": "27929064",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "KRAS",
+        "mutation_aa": "p.G12A",
+        "mutation_cds": "c.?",
+        "drug_response": "Cetuximab clinical resistant recurrence",
+        "sample_name": "2584890",
+        "pubmed_pmid": "27929064",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "NRAS",
+        "mutation_aa": "p.Q61H",
+        "mutation_cds": "c.?",
+        "drug_response": "Cetuximab clinical resistant recurrence",
+        "sample_name": "2584890",
+        "pubmed_pmid": "27929064",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "NRAS",
+        "mutation_aa": "p.Q61L",
+        "mutation_cds": "c.?",
+        "drug_response": "Cetuximab clinical resistant recurrence",
+        "sample_name": "2584898",
+        "pubmed_pmid": "27929064",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "KRAS",
+        "mutation_aa": "p.Q61L",
+        "mutation_cds": "c.?",
+        "drug_response": "Cetuximab clinical resistant recurrence",
+        "sample_name": "2584900",
+        "pubmed_pmid": "27929064",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "NRAS",
+        "mutation_aa": "p.Q61K",
+        "mutation_cds": "c.?",
+        "drug_response": "Cetuximab clinical resistant recurrence",
+        "sample_name": "2584906",
+        "pubmed_pmid": "27929064",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "NRAS",
+        "mutation_aa": "p.G12D",
+        "mutation_cds": "c.?",
+        "drug_response": "Cetuximab clinical resistant recurrence",
+        "sample_name": "2585232",
+        "pubmed_pmid": "27929064",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "NRAS",
+        "mutation_aa": "p.G60D",
+        "mutation_cds": "c.?",
+        "drug_response": "Cetuximab clinical resistant recurrence",
+        "sample_name": "2585232",
+        "pubmed_pmid": "27929064",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "KRAS",
+        "mutation_aa": "p.G12C",
+        "mutation_cds": "c.?",
+        "drug_response": "Cetuximab clinical resistant recurrence",
+        "sample_name": "2585234",
+        "pubmed_pmid": "27929064",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "NRAS",
+        "mutation_aa": "p.G13R",
+        "mutation_cds": "c.37G>C",
+        "drug_response": "Cetuximab or panitumumab clinical resistant recurrence",
+        "sample_name": "2585570",
+        "pubmed_pmid": "24553387",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "KRAS",
+        "mutation_aa": "p.G12R",
+        "mutation_cds": "c.34G>C",
+        "drug_response": "Cetuximab clinical resistant recurrence",
+        "sample_name": "2840774",
+        "pubmed_pmid": "24553385",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "NRAS",
+        "mutation_aa": "p.Q61R",
+        "mutation_cds": "c.182A>G",
+        "drug_response": "Cetuximab clinical resistant recurrence",
+        "sample_name": "2840774",
+        "pubmed_pmid": "24553385",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "BRAF",
+        "mutation_aa": "p.V640E",
+        "mutation_cds": "c.1919T>A",
+        "drug_response": "Cetuximab clinical resistant recurrence",
+        "sample_name": "2840784",
+        "pubmed_pmid": "24553385",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "BRAF",
+        "mutation_aa": "p.V600E",
+        "mutation_cds": "c.1799T>A",
+        "drug_response": "Cetuximab clinical resistant recurrence",
+        "sample_name": "2840784",
+        "pubmed_pmid": "24553385",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "KRAS",
+        "mutation_aa": "p.Q61R",
+        "mutation_cds": "c.182A>G",
+        "drug_response": "Cetuximab clinical resistant recurrence",
+        "sample_name": "2840784",
+        "pubmed_pmid": "24553385",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "BRAF",
+        "mutation_aa": "p.?",
+        "mutation_cds": "c.(138+1_139-1)_(1314+1_1315-1)del",
+        "drug_response": "Cetuximab plus irinotecan plus vemurafenib clinical resistant recurrence",
+        "sample_name": "2876861",
+        "pubmed_pmid": "32669268",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      }
+    ]
+  },
+  {
+    "drug_name": "Vemurafenib",
+    "total_resistance_samples": 96,
+    "unique_resistance_mutations": 31,
+    "supporting_pmids": [
+      "25515853",
+      "29605720",
+      "26352686",
+      "26101714",
+      "24463458",
+      "30036146",
+      "21383288",
+      "23569304",
+      "26715644",
+      "24265155",
+      "25673644",
+      "24265153",
+      "21107323"
+    ],
+    "mutations": [
+      {
+        "gene_symbol": "MAP2K1",
+        "mutation_aa": "p.C121S",
+        "mutation_cds": "c.362G>C",
+        "drug_response": "Vemurafenib clinical resistant recurrence",
+        "sample_name": "1514540",
+        "pubmed_pmid": "21383288",
+        "census_gene": "Yes",
+        "somatic_status": "Confirmed somatic variant"
+      },
+      {
+        "gene_symbol": "BRAF",
+        "mutation_aa": "p.?",
+        "mutation_cds": "c.139_1140del",
+        "drug_response": "Vemurafenib clinical resistant recurrence",
+        "sample_name": "2466814",
+        "pubmed_pmid": "24463458",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "MAP2K2",
+        "mutation_aa": "p.F57C",
+        "mutation_cds": "c.170T>G",
+        "drug_response": "Vemurafenib clinical resistant recurrence",
+        "sample_name": "2466829",
+        "pubmed_pmid": "24463458",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "MAP2K2",
+        "mutation_aa": "p.?",
+        "mutation_cds": "c.-122T>G",
+        "drug_response": "Vemurafenib clinical resistant recurrence",
+        "sample_name": "2466829",
+        "pubmed_pmid": "24463458",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "MAP2K1",
+        "mutation_aa": "p.K57E",
+        "mutation_cds": "c.?",
+        "drug_response": "Vemurafenib clinical resistant recurrence",
+        "sample_name": "2470929",
+        "pubmed_pmid": "23569304",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      },
+      {
+        "gene_symbol": "MAP2K1",
+        "mutation_aa": "p.Q56P",
+        "mutation_cds": "c.?",
+        "drug_response": "Vemurafenib clinical resistant recurrence",
+        "sample_name": "2470929",
+        "pubmed_pmid": "23569304",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      },
+      {
+        "gene_symbol": "MAP2K1",
+        "mutation_aa": "p.E203K",
+        "mutation_cds": "c.?",
+        "drug_response": "Vemurafenib clinical resistant recurrence",
+        "sample_name": "2470933",
+        "pubmed_pmid": "23569304",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "NRAS",
+        "mutation_aa": "p.Q61K",
+        "mutation_cds": "c.?",
+        "drug_response": "Vemurafenib clinical resistant recurrence",
+        "sample_name": "2470935",
+        "pubmed_pmid": "23569304",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "NRAS",
+        "mutation_aa": "p.Q61L",
+        "mutation_cds": "c.?",
+        "drug_response": "Vemurafenib clinical resistant recurrence",
+        "sample_name": "2470937",
+        "pubmed_pmid": "23569304",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "BRAF",
+        "mutation_aa": "p.L545H",
+        "mutation_cds": "c.1634T>A",
+        "drug_response": "Vemurafenib clinical resistant recurrence",
+        "sample_name": "2474090",
+        "pubmed_pmid": "25515853",
+        "census_gene": "Yes",
+        "somatic_status": "Confirmed somatic variant"
+      },
+      {
+        "gene_symbol": "BRAF",
+        "mutation_aa": "p.L505H",
+        "mutation_cds": "c.1514T>A",
+        "drug_response": "Vemurafenib clinical resistant recurrence",
+        "sample_name": "2474090",
+        "pubmed_pmid": "25515853",
+        "census_gene": "Yes",
+        "somatic_status": "Confirmed somatic variant"
+      },
+      {
+        "gene_symbol": "PIK3CA",
+        "mutation_aa": "p.E545K",
+        "mutation_cds": "c.1633G>A",
+        "drug_response": "Vemurafenib clinical resistant recurrence",
+        "sample_name": "2474095",
+        "pubmed_pmid": "25515853",
+        "census_gene": "Yes",
+        "somatic_status": "Confirmed somatic variant"
+      },
+      {
+        "gene_symbol": "NRAS",
+        "mutation_aa": "p.Q61R",
+        "mutation_cds": "c.?",
+        "drug_response": "Vemurafenib clinical resistant recurrence",
+        "sample_name": "2879134",
+        "pubmed_pmid": "24265155",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "CDKN2A",
+        "mutation_aa": "p.0",
+        "mutation_cds": "c.1_*del",
+        "drug_response": "Vemurafenib clinical resistant recurrence",
+        "sample_name": "2879151",
+        "pubmed_pmid": "24265155",
+        "census_gene": "Yes",
+        "somatic_status": "Confirmed somatic variant"
+      },
+      {
+        "gene_symbol": "PTEN",
+        "mutation_aa": "p.0",
+        "mutation_cds": "c.1_*del",
+        "drug_response": "Vemurafenib clinical resistant recurrence",
+        "sample_name": "2879151",
+        "pubmed_pmid": "24265155",
+        "census_gene": "Yes",
+        "somatic_status": "Confirmed somatic variant"
+      },
+      {
+        "gene_symbol": "NRAS",
+        "mutation_aa": "p.G13R",
+        "mutation_cds": "c.37G>C",
+        "drug_response": "Vemurafenib clinical resistant recurrence",
+        "sample_name": "2879163",
+        "pubmed_pmid": "24265155",
+        "census_gene": "Yes",
+        "somatic_status": "Confirmed somatic variant"
+      },
+      {
+        "gene_symbol": "MAP2K1",
+        "mutation_aa": "p.K57N",
+        "mutation_cds": "c.171G>C",
+        "drug_response": "Vemurafenib clinical resistant recurrence",
+        "sample_name": "2879173",
+        "pubmed_pmid": "24265155",
+        "census_gene": "Yes",
+        "somatic_status": "Confirmed somatic variant"
+      },
+      {
+        "gene_symbol": "KRAS",
+        "mutation_aa": "p.G12R",
+        "mutation_cds": "c.?",
+        "drug_response": "Vemurafenib clinical resistant recurrence",
+        "sample_name": "2879174",
+        "pubmed_pmid": "24265155",
+        "census_gene": "Yes",
+        "somatic_status": "Confirmed somatic variant"
+      },
+      {
+        "gene_symbol": "KRAS",
+        "mutation_aa": "p.Q61H",
+        "mutation_cds": "c.?",
+        "drug_response": "Vemurafenib clinical resistant recurrence",
+        "sample_name": "2879175",
+        "pubmed_pmid": "24265155",
+        "census_gene": "Yes",
+        "somatic_status": "Confirmed somatic variant"
+      },
+      {
+        "gene_symbol": "PIK3CA",
+        "mutation_aa": "p.E545G",
+        "mutation_cds": "c.1634A>G",
+        "drug_response": "Vemurafenib clinical resistant recurrence",
+        "sample_name": "2879177",
+        "pubmed_pmid": "24265155",
+        "census_gene": "Yes",
+        "somatic_status": "Confirmed somatic variant"
+      },
+      {
+        "gene_symbol": "NRAS",
+        "mutation_aa": "p.G12R",
+        "mutation_cds": "c.?",
+        "drug_response": "Vemurafenib clinical resistant recurrence",
+        "sample_name": "2879215",
+        "pubmed_pmid": "24265155",
+        "census_gene": "Yes",
+        "somatic_status": "Confirmed somatic variant"
+      },
+      {
+        "gene_symbol": "PTEN",
+        "mutation_aa": "p.M134del",
+        "mutation_cds": "c.402_404del",
+        "drug_response": "Vemurafenib clinical resistant recurrence",
+        "sample_name": "2879226",
+        "pubmed_pmid": "24265155",
+        "census_gene": "Yes",
+        "somatic_status": "Confirmed somatic variant"
+      },
+      {
+        "gene_symbol": "KRAS",
+        "mutation_aa": "p.G12D",
+        "mutation_cds": "c.?",
+        "drug_response": "Vemurafenib clinical resistant recurrence",
+        "sample_name": "2894906",
+        "pubmed_pmid": "26352686",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "BRAF",
+        "mutation_aa": "p.V47_D380del",
+        "mutation_cds": "c.139_1140del1002",
+        "drug_response": "Vemurafenib in vitro resistant",
+        "sample_name": "A375-R1",
+        "pubmed_pmid": "29605720",
+        "census_gene": "Yes",
+        "somatic_status": "Confirmed somatic variant"
+      },
+      {
+        "gene_symbol": "MAP2K1",
+        "mutation_aa": "p.G128V",
+        "mutation_cds": "c.383G>T",
+        "drug_response": "Vemurafenib clinical resistant recurrence",
+        "sample_name": "Pat_32_B",
+        "pubmed_pmid": "24265153",
+        "census_gene": "Yes",
+        "somatic_status": "Confirmed somatic variant"
+      },
+      {
+        "gene_symbol": "MAP2K1",
+        "mutation_aa": "p.V60E",
+        "mutation_cds": "c.179T>A",
+        "drug_response": "Vemurafenib clinical resistant recurrence",
+        "sample_name": "Pat_41_B",
+        "pubmed_pmid": "24265153",
+        "census_gene": "Yes",
+        "somatic_status": "Confirmed somatic variant"
+      },
+      {
+        "gene_symbol": "MAP2K2",
+        "mutation_aa": "p.V35M",
+        "mutation_cds": "c.103G>A",
+        "drug_response": "Vemurafenib clinical resistant recurrence",
+        "sample_name": "Pat_45_B",
+        "pubmed_pmid": "24265153",
+        "census_gene": "Yes",
+        "somatic_status": "Confirmed somatic variant"
+      },
+      {
+        "gene_symbol": "MAP2K2",
+        "mutation_aa": "p.C125S",
+        "mutation_cds": "c.373T>A",
+        "drug_response": "Vemurafenib clinical resistant recurrence",
+        "sample_name": "Pat_63_B",
+        "pubmed_pmid": "24265153",
+        "census_gene": "Yes",
+        "somatic_status": "Confirmed somatic variant"
+      },
+      {
+        "gene_symbol": "MAP2K2",
+        "mutation_aa": "p.C28S",
+        "mutation_cds": "c.82T>A",
+        "drug_response": "Vemurafenib clinical resistant recurrence",
+        "sample_name": "Pat_63_B",
+        "pubmed_pmid": "24265153",
+        "census_gene": "Yes",
+        "somatic_status": "Confirmed somatic variant"
+      },
+      {
+        "gene_symbol": "NRAS",
+        "mutation_aa": "p.Q61H",
+        "mutation_cds": "c.183A>C",
+        "drug_response": "Vemurafenib clinical resistant recurrence",
+        "sample_name": "Pat_70_B",
+        "pubmed_pmid": "24265153",
+        "census_gene": "Yes",
+        "somatic_status": "Confirmed somatic variant"
+      },
+      {
+        "gene_symbol": "KRAS",
+        "mutation_aa": "p.G13D",
+        "mutation_cds": "c.38G>A",
+        "drug_response": "Vemurafenib plus cetuximab in vitro resistant,Vemurafenib plus selumetinib in vitro resistant",
+        "sample_name": "VACO432-RM",
+        "pubmed_pmid": "25673644",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      }
+    ]
+  },
+  {
+    "drug_name": "Panitumumab",
+    "total_resistance_samples": 79,
+    "unique_resistance_mutations": 14,
+    "supporting_pmids": [
+      "22722830",
+      "24553385",
+      "25137394",
+      "22722843",
+      "27929064",
+      "28951457"
+    ],
+    "mutations": [
+      {
+        "gene_symbol": "KRAS",
+        "mutation_aa": "p.G13D",
+        "mutation_cds": "c.38G>A",
+        "drug_response": "Panitumumab clinical resistant recurrence",
+        "sample_name": "1968558",
+        "pubmed_pmid": "22722830",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "KRAS",
+        "mutation_aa": "p.Q61H",
+        "mutation_cds": "c.?",
+        "drug_response": "Panitumumab clinical resistant recurrence",
+        "sample_name": "2585242",
+        "pubmed_pmid": "27929064",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "NRAS",
+        "mutation_aa": "p.Q61L",
+        "mutation_cds": "c.?",
+        "drug_response": "Panitumumab clinical resistant recurrence",
+        "sample_name": "2585242",
+        "pubmed_pmid": "27929064",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "NRAS",
+        "mutation_aa": "p.Q61H",
+        "mutation_cds": "c.?",
+        "drug_response": "Panitumumab clinical resistant recurrence",
+        "sample_name": "2585242",
+        "pubmed_pmid": "27929064",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "KRAS",
+        "mutation_aa": "p.G12D",
+        "mutation_cds": "c.35G>A",
+        "drug_response": "Panitumumab clinical resistant recurrence",
+        "sample_name": "2776123",
+        "pubmed_pmid": "25137394",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "KRAS",
+        "mutation_aa": "p.G12R",
+        "mutation_cds": "c.34G>C",
+        "drug_response": "Panitumumab clinical resistant recurrence",
+        "sample_name": "2838942",
+        "pubmed_pmid": "22722843",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "KRAS",
+        "mutation_aa": "p.G12C",
+        "mutation_cds": "c.34G>T",
+        "drug_response": "Panitumumab clinical resistant recurrence",
+        "sample_name": "2838944",
+        "pubmed_pmid": "22722843",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "KRAS",
+        "mutation_aa": "p.G12A",
+        "mutation_cds": "c.35G>C",
+        "drug_response": "Panitumumab clinical resistant recurrence",
+        "sample_name": "2838944",
+        "pubmed_pmid": "22722843",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "KRAS",
+        "mutation_aa": "p.G12V",
+        "mutation_cds": "c.35G>T",
+        "drug_response": "Panitumumab clinical resistant recurrence",
+        "sample_name": "2838946",
+        "pubmed_pmid": "22722843",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "KRAS",
+        "mutation_aa": "p.G12S",
+        "mutation_cds": "c.34G>A",
+        "drug_response": "Panitumumab clinical resistant recurrence",
+        "sample_name": "2838948",
+        "pubmed_pmid": "22722843",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "KRAS",
+        "mutation_aa": "p.Q61E",
+        "mutation_cds": "c.181C>G",
+        "drug_response": "Panitumumab clinical resistant recurrence",
+        "sample_name": "2840776",
+        "pubmed_pmid": "24553385",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "KRAS",
+        "mutation_aa": "p.Q61P",
+        "mutation_cds": "c.182_183delinsCC",
+        "drug_response": "Panitumumab clinical resistant recurrence",
+        "sample_name": "2840776",
+        "pubmed_pmid": "24553385",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      },
+      {
+        "gene_symbol": "KRAS",
+        "mutation_aa": "p.?",
+        "mutation_cds": "c.112-17432C>G",
+        "drug_response": "Panitumumab clinical resistant recurrence",
+        "sample_name": "2840776",
+        "pubmed_pmid": "24553385",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "NRAS",
+        "mutation_aa": "p.Q61K",
+        "mutation_cds": "c.?",
+        "drug_response": "Panitumumab plus vemurafenib clinical resistant recurrence",
+        "sample_name": "2878911",
+        "pubmed_pmid": "28951457",
+        "census_gene": "Yes",
+        "somatic_status": "Confirmed somatic variant"
+      }
+    ]
+  },
+  {
+    "drug_name": "Afatinib",
+    "total_resistance_samples": 73,
+    "unique_resistance_mutations": 10,
+    "supporting_pmids": [
+      "22228822",
+      "28978102",
+      "27694386",
+      "31542322",
+      "24813888",
+      "26862733",
+      "27553514",
+      "32777674",
+      "32122695"
+    ],
+    "mutations": [
+      {
+        "gene_symbol": "EGFR",
+        "mutation_aa": "p.T790M",
+        "mutation_cds": "c.?",
+        "drug_response": "Afatinib clinical resistant recurrence",
+        "sample_name": "1635869",
+        "pubmed_pmid": "22228822",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "EGFR",
+        "mutation_aa": "p.T745M",
+        "mutation_cds": "c.2234C>T",
+        "drug_response": "Afatinib plus cetuximab clinical resistant recurrence",
+        "sample_name": "2161695",
+        "pubmed_pmid": "24813888",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "EGFR",
+        "mutation_aa": "p.?",
+        "mutation_cds": "c.*359C>T",
+        "drug_response": "Afatinib plus cetuximab clinical resistant recurrence",
+        "sample_name": "2161695",
+        "pubmed_pmid": "24813888",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "NF2",
+        "mutation_aa": "p.R115*",
+        "mutation_cds": "c.343C>T",
+        "drug_response": "Afatinib plus cetuximab clinical resistant recurrence",
+        "sample_name": "2161695",
+        "pubmed_pmid": "24813888",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "NF2",
+        "mutation_aa": "p.?",
+        "mutation_cds": "c.562-2A>T",
+        "drug_response": "Afatinib plus cetuximab clinical resistant recurrence",
+        "sample_name": "2161695",
+        "pubmed_pmid": "24813888",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      },
+      {
+        "gene_symbol": "NF2",
+        "mutation_aa": "p.R198*",
+        "mutation_cds": "c.592C>T",
+        "drug_response": "Afatinib plus cetuximab clinical resistant recurrence",
+        "sample_name": "2161695",
+        "pubmed_pmid": "24813888",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "NF2",
+        "mutation_aa": "p.R157*",
+        "mutation_cds": "c.469C>T",
+        "drug_response": "Afatinib plus cetuximab clinical resistant recurrence",
+        "sample_name": "2161695",
+        "pubmed_pmid": "24813888",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "NF2",
+        "mutation_aa": "p.R156*",
+        "mutation_cds": "c.466C>T",
+        "drug_response": "Afatinib plus cetuximab clinical resistant recurrence",
+        "sample_name": "2161695",
+        "pubmed_pmid": "24813888",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "MET",
+        "mutation_aa": "p.?",
+        "mutation_cds": "c.?",
+        "drug_response": "Afatinib clinical resistant recurrence",
+        "sample_name": "2585346",
+        "pubmed_pmid": "27694386",
+        "census_gene": "Yes",
+        "somatic_status": "Confirmed somatic variant"
+      },
+      {
+        "gene_symbol": "EGFR",
+        "mutation_aa": "p.C797S",
+        "mutation_cds": "c.?",
+        "drug_response": "Afatinib clinical resistant recurrence",
+        "sample_name": "2901987",
+        "pubmed_pmid": "32777674",
+        "census_gene": "Yes",
+        "somatic_status": "Confirmed somatic variant"
+      }
+    ]
+  },
+  {
+    "drug_name": "Ivosidenib",
+    "total_resistance_samples": 67,
+    "unique_resistance_mutations": 12,
+    "supporting_pmids": [
+      "30355724",
+      "36056177",
+      "32380538",
+      "29950729",
+      "33832922"
+    ],
+    "mutations": [
+      {
+        "gene_symbol": "IDH1",
+        "mutation_aa": "p.S280F",
+        "mutation_cds": "c.839C>T",
+        "drug_response": "Ivosidenib clinical resistant recurrence",
+        "sample_name": "19-01827",
+        "pubmed_pmid": "33832922",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      },
+      {
+        "gene_symbol": "IDH2",
+        "mutation_aa": "p.R140Q",
+        "mutation_cds": "c.?",
+        "drug_response": "Ivosidenib clinical resistant recurrence",
+        "sample_name": "2955487",
+        "pubmed_pmid": "32380538",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "IDH1",
+        "mutation_aa": "p.D279N",
+        "mutation_cds": "c.?",
+        "drug_response": "Ivosidenib clinical resistant recurrence",
+        "sample_name": "2955500",
+        "pubmed_pmid": "32380538",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      },
+      {
+        "gene_symbol": "IDH1",
+        "mutation_aa": "p.R119P",
+        "mutation_cds": "c.?",
+        "drug_response": "Ivosidenib clinical resistant recurrence",
+        "sample_name": "2955550",
+        "pubmed_pmid": "32380538",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      },
+      {
+        "gene_symbol": "IDH1",
+        "mutation_aa": "p.G131A",
+        "mutation_cds": "c.?",
+        "drug_response": "Ivosidenib clinical resistant recurrence",
+        "sample_name": "2955558",
+        "pubmed_pmid": "32380538",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      },
+      {
+        "gene_symbol": "IDH1",
+        "mutation_aa": "p.H315D",
+        "mutation_cds": "c.?",
+        "drug_response": "Ivosidenib clinical resistant recurrence",
+        "sample_name": "2955570",
+        "pubmed_pmid": "32380538",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      },
+      {
+        "gene_symbol": "IDH1",
+        "mutation_aa": "p.G289D",
+        "mutation_cds": "c.?",
+        "drug_response": "Ivosidenib clinical resistant recurrence",
+        "sample_name": "2955588",
+        "pubmed_pmid": "32380538",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      },
+      {
+        "gene_symbol": "IDH2",
+        "mutation_aa": "p.R172K",
+        "mutation_cds": "c.?",
+        "drug_response": "Ivosidenib clinical resistant recurrence",
+        "sample_name": "2956003",
+        "pubmed_pmid": "36056177",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "IDH2",
+        "mutation_aa": "p.R172V",
+        "mutation_cds": "c.514_515delinsGT",
+        "drug_response": "Ivosidenib clinical resistant recurrence",
+        "sample_name": "P-0000713-T02-IM6",
+        "pubmed_pmid": "30355724",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      },
+      {
+        "gene_symbol": "IDH2",
+        "mutation_aa": "p.R120V",
+        "mutation_cds": "c.358_359delinsGT",
+        "drug_response": "Ivosidenib clinical resistant recurrence",
+        "sample_name": "P-0000713-T02-IM6",
+        "pubmed_pmid": "30355724",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      },
+      {
+        "gene_symbol": "IDH2",
+        "mutation_aa": "p.?",
+        "mutation_cds": "c.208-105_208-104delinsGT",
+        "drug_response": "Ivosidenib clinical resistant recurrence",
+        "sample_name": "P-0000713-T02-IM6",
+        "pubmed_pmid": "30355724",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      },
+      {
+        "gene_symbol": "IDH2",
+        "mutation_aa": "p.R88Q",
+        "mutation_cds": "c.263G>A",
+        "drug_response": "Ivosidenib clinical resistant recurrence",
+        "sample_name": "P-0014444-T16-TB3",
+        "pubmed_pmid": "30355724",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      }
+    ]
+  },
+  {
+    "drug_name": "Dabrafenib",
+    "total_resistance_samples": 64,
+    "unique_resistance_mutations": 18,
+    "supporting_pmids": [
+      "25886620",
+      "32238877",
+      "25452114",
+      "24463458",
+      "24265154",
+      "26715644",
+      "24265155",
+      "25673644",
+      "23645591",
+      "24265153",
+      "26524482",
+      "25705882"
+    ],
+    "mutations": [
+      {
+        "gene_symbol": "MAP2K2",
+        "mutation_aa": "p.Q60P",
+        "mutation_cds": "c.179A>C",
+        "drug_response": "Dabrafenib plus trametinib clinical resistant recurrence",
+        "sample_name": "1_RESISTANT",
+        "pubmed_pmid": "24265154",
+        "census_gene": "Yes",
+        "somatic_status": "Confirmed somatic variant"
+      },
+      {
+        "gene_symbol": "MAP2K2",
+        "mutation_aa": "p.?",
+        "mutation_cds": "c.-113A>C",
+        "drug_response": "Dabrafenib plus trametinib clinical resistant recurrence",
+        "sample_name": "1_RESISTANT",
+        "pubmed_pmid": "24265154",
+        "census_gene": "Yes",
+        "somatic_status": "Confirmed somatic variant"
+      },
+      {
+        "gene_symbol": "MAP2K1",
+        "mutation_aa": "p.E203K",
+        "mutation_cds": "c.607G>A",
+        "drug_response": "Dabrafenib clinical resistant recurrence",
+        "sample_name": "2466770",
+        "pubmed_pmid": "24463458",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "MAP2K1",
+        "mutation_aa": "p.E27K",
+        "mutation_cds": "c.79G>A",
+        "drug_response": "Dabrafenib clinical resistant recurrence",
+        "sample_name": "2466770",
+        "pubmed_pmid": "24463458",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "NRAS",
+        "mutation_aa": "p.Q61K",
+        "mutation_cds": "c.181C>A",
+        "drug_response": "Dabrafenib clinical resistant recurrence",
+        "sample_name": "2466772",
+        "pubmed_pmid": "24463458",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "BRAF",
+        "mutation_aa": "p.?",
+        "mutation_cds": "c.139-?_1314+?del",
+        "drug_response": "Dabrafenib clinical resistant recurrence",
+        "sample_name": "2466777",
+        "pubmed_pmid": "24463458",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "MAP2K1",
+        "mutation_aa": "p.K57E",
+        "mutation_cds": "c.169A>G",
+        "drug_response": "Dabrafenib clinical resistant recurrence",
+        "sample_name": "2466807",
+        "pubmed_pmid": "24463458",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "MAP2K1",
+        "mutation_aa": "p.G128D",
+        "mutation_cds": "c.383G>A",
+        "drug_response": "Dabrafenib plus trametinib clinical resistant recurrence",
+        "sample_name": "2471408",
+        "pubmed_pmid": "25452114",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "MAP2K2",
+        "mutation_aa": "p.C125S",
+        "mutation_cds": "c.374G>C",
+        "drug_response": "Dabrafenib plus trametinib clinical resistant recurrence",
+        "sample_name": "2471408",
+        "pubmed_pmid": "25452114",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "MAP2K2",
+        "mutation_aa": "p.C28S",
+        "mutation_cds": "c.83G>C",
+        "drug_response": "Dabrafenib plus trametinib clinical resistant recurrence",
+        "sample_name": "2471408",
+        "pubmed_pmid": "25452114",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "MAP2K2",
+        "mutation_aa": "p.E207K",
+        "mutation_cds": "c.619G>A",
+        "drug_response": "Dabrafenib plus trametinib clinical resistant recurrence",
+        "sample_name": "2471425",
+        "pubmed_pmid": "25452114",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "MAP2K2",
+        "mutation_aa": "p.E110K",
+        "mutation_cds": "c.328G>A",
+        "drug_response": "Dabrafenib plus trametinib clinical resistant recurrence",
+        "sample_name": "2471425",
+        "pubmed_pmid": "25452114",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "NRAS",
+        "mutation_aa": "p.G12D",
+        "mutation_cds": "c.35G>A",
+        "drug_response": "Dabrafenib plus trametinib clinical resistant recurrence",
+        "sample_name": "2471425",
+        "pubmed_pmid": "25452114",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "NRAS",
+        "mutation_aa": "p.Q61R",
+        "mutation_cds": "c.182A>G",
+        "drug_response": "Dabrafenib plus trametinib clinical resistant recurrence",
+        "sample_name": "2480652",
+        "pubmed_pmid": "26715644",
+        "census_gene": "Yes",
+        "somatic_status": "Confirmed somatic variant"
+      },
+      {
+        "gene_symbol": "CDKN2A",
+        "mutation_aa": "p.0",
+        "mutation_cds": "c.1_*del",
+        "drug_response": "Dabrafenib clinical resistant recurrence",
+        "sample_name": "2879161",
+        "pubmed_pmid": "24265155",
+        "census_gene": "Yes",
+        "somatic_status": "Confirmed somatic variant"
+      },
+      {
+        "gene_symbol": "KRAS",
+        "mutation_aa": "p.G12C",
+        "mutation_cds": "c.34G>T",
+        "drug_response": "Dabrafenib clinical resistant recurrence",
+        "sample_name": "2879206",
+        "pubmed_pmid": "24265155",
+        "census_gene": "Yes",
+        "somatic_status": "Confirmed somatic variant"
+      },
+      {
+        "gene_symbol": "MAP2K2",
+        "mutation_aa": "p.N126D",
+        "mutation_cds": "c.376A>G",
+        "drug_response": "Dabrafenib clinical resistant recurrence",
+        "sample_name": "Pat_76_B",
+        "pubmed_pmid": "24265153",
+        "census_gene": "Yes",
+        "somatic_status": "Confirmed somatic variant"
+      },
+      {
+        "gene_symbol": "MAP2K2",
+        "mutation_aa": "p.N29D",
+        "mutation_cds": "c.85A>G",
+        "drug_response": "Dabrafenib clinical resistant recurrence",
+        "sample_name": "Pat_76_B",
+        "pubmed_pmid": "24265153",
+        "census_gene": "Yes",
+        "somatic_status": "Confirmed somatic variant"
+      }
+    ]
+  },
+  {
+    "drug_name": "Alectinib",
+    "total_resistance_samples": 40,
+    "unique_resistance_mutations": 13,
+    "supporting_pmids": [
+      "27565911",
+      "25393798",
+      "31374369",
+      "25393796",
+      "26464158",
+      "27432227",
+      "27130468",
+      "25228534"
+    ],
+    "mutations": [
+      {
+        "gene_symbol": "ALK",
+        "mutation_aa": "p.I1171N",
+        "mutation_cds": "c.3512T>A",
+        "drug_response": "Alectinib clinical resistant recurrence",
+        "sample_name": "2293725",
+        "pubmed_pmid": "25393796",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "ALK",
+        "mutation_aa": "p.I794N",
+        "mutation_cds": "c.2381T>A",
+        "drug_response": "Alectinib clinical resistant recurrence",
+        "sample_name": "2293725",
+        "pubmed_pmid": "25393796",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "ALK",
+        "mutation_aa": "p.I103N",
+        "mutation_cds": "c.308T>A",
+        "drug_response": "Alectinib clinical resistant recurrence",
+        "sample_name": "2293725",
+        "pubmed_pmid": "25393796",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "ALK",
+        "mutation_aa": "p.I1171S",
+        "mutation_cds": "c.3512T>G",
+        "drug_response": "Alectinib clinical resistant recurrence",
+        "sample_name": "2293726",
+        "pubmed_pmid": "25393796",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      },
+      {
+        "gene_symbol": "ALK",
+        "mutation_aa": "p.I794S",
+        "mutation_cds": "c.2381T>G",
+        "drug_response": "Alectinib clinical resistant recurrence",
+        "sample_name": "2293726",
+        "pubmed_pmid": "25393796",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      },
+      {
+        "gene_symbol": "ALK",
+        "mutation_aa": "p.I103S",
+        "mutation_cds": "c.308T>G",
+        "drug_response": "Alectinib clinical resistant recurrence",
+        "sample_name": "2293726",
+        "pubmed_pmid": "25393796",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      },
+      {
+        "gene_symbol": "ALK",
+        "mutation_aa": "p.G1202R",
+        "mutation_cds": "c.3604G>A",
+        "drug_response": "Alectinib clinical resistant recurrence",
+        "sample_name": "2522064",
+        "pubmed_pmid": "27130468",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "ALK",
+        "mutation_aa": "p.G825R",
+        "mutation_cds": "c.2473G>A",
+        "drug_response": "Alectinib clinical resistant recurrence",
+        "sample_name": "2522064",
+        "pubmed_pmid": "27130468",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "ALK",
+        "mutation_aa": "p.G134R",
+        "mutation_cds": "c.400G>A",
+        "drug_response": "Alectinib clinical resistant recurrence",
+        "sample_name": "2522064",
+        "pubmed_pmid": "27130468",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "ALK",
+        "mutation_aa": "p.V1180L",
+        "mutation_cds": "c.3538G>C",
+        "drug_response": "Alectinib in vitro resistant",
+        "sample_name": "H3122-CHR-A1",
+        "pubmed_pmid": "25228534",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      },
+      {
+        "gene_symbol": "ALK",
+        "mutation_aa": "p.V803L",
+        "mutation_cds": "c.2407G>C",
+        "drug_response": "Alectinib in vitro resistant",
+        "sample_name": "H3122-CHR-A1",
+        "pubmed_pmid": "25228534",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      },
+      {
+        "gene_symbol": "ALK",
+        "mutation_aa": "p.V112L",
+        "mutation_cds": "c.334G>C",
+        "drug_response": "Alectinib in vitro resistant",
+        "sample_name": "H3122-CHR-A1",
+        "pubmed_pmid": "25228534",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      },
+      {
+        "gene_symbol": "ALK",
+        "mutation_aa": "p.I1171T",
+        "mutation_cds": "c.?",
+        "drug_response": "Alectinib clinical resistant recurrence",
+        "sample_name": "MGH056",
+        "pubmed_pmid": "27432227",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      }
+    ]
+  },
+  {
+    "drug_name": "Palbociclib",
+    "total_resistance_samples": 38,
+    "unique_resistance_mutations": 27,
+    "supporting_pmids": [
+      "30914635"
+    ],
+    "mutations": [
+      {
+        "gene_symbol": "FGFR1",
+        "mutation_aa": "p.N455K",
+        "mutation_cds": "c.1365C>A",
+        "drug_response": "Palbociclib plus endocrine therapy clinical resistant recurrence",
+        "sample_name": "2907063",
+        "pubmed_pmid": "30914635",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "FGFR1",
+        "mutation_aa": "p.N536K",
+        "mutation_cds": "c.1608C>A",
+        "drug_response": "Palbociclib plus endocrine therapy clinical resistant recurrence",
+        "sample_name": "2907063",
+        "pubmed_pmid": "30914635",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "FGFR1",
+        "mutation_aa": "p.?",
+        "mutation_cds": "c.*688C>A",
+        "drug_response": "Palbociclib plus endocrine therapy clinical resistant recurrence",
+        "sample_name": "2907063",
+        "pubmed_pmid": "30914635",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "FGFR1",
+        "mutation_aa": "p.N457K",
+        "mutation_cds": "c.1371C>A",
+        "drug_response": "Palbociclib plus endocrine therapy clinical resistant recurrence",
+        "sample_name": "2907063",
+        "pubmed_pmid": "30914635",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "FGFR1",
+        "mutation_aa": "p.N544K",
+        "mutation_cds": "c.1632C>A",
+        "drug_response": "Palbociclib plus endocrine therapy clinical resistant recurrence",
+        "sample_name": "2907063",
+        "pubmed_pmid": "30914635",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "FGFR1",
+        "mutation_aa": "p.N577K",
+        "mutation_cds": "c.1731C>A",
+        "drug_response": "Palbociclib plus endocrine therapy clinical resistant recurrence",
+        "sample_name": "2907063",
+        "pubmed_pmid": "30914635",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "FGFR1",
+        "mutation_aa": "p.N546K",
+        "mutation_cds": "c.1638C>A",
+        "drug_response": "Palbociclib plus endocrine therapy clinical resistant recurrence",
+        "sample_name": "2907063",
+        "pubmed_pmid": "30914635",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "FGFR2",
+        "mutation_aa": "p.N547K",
+        "mutation_cds": "c.1641T>A",
+        "drug_response": "Palbociclib plus endocrine therapy clinical resistant recurrence",
+        "sample_name": "2907065",
+        "pubmed_pmid": "30914635",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "FGFR2",
+        "mutation_aa": "p.N549K",
+        "mutation_cds": "c.1647T>A",
+        "drug_response": "Palbociclib plus endocrine therapy clinical resistant recurrence",
+        "sample_name": "2907065",
+        "pubmed_pmid": "30914635",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "FGFR2",
+        "mutation_aa": "p.N432K",
+        "mutation_cds": "c.1296T>A",
+        "drug_response": "Palbociclib plus endocrine therapy clinical resistant recurrence",
+        "sample_name": "2907065",
+        "pubmed_pmid": "30914635",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "FGFR2",
+        "mutation_aa": "p.N460K",
+        "mutation_cds": "c.1380T>A",
+        "drug_response": "Palbociclib plus endocrine therapy clinical resistant recurrence",
+        "sample_name": "2907065",
+        "pubmed_pmid": "30914635",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "FGFR2",
+        "mutation_aa": "p.N461K",
+        "mutation_cds": "c.1383T>A",
+        "drug_response": "Palbociclib plus endocrine therapy clinical resistant recurrence",
+        "sample_name": "2907065",
+        "pubmed_pmid": "30914635",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "FGFR2",
+        "mutation_aa": "p.N550K",
+        "mutation_cds": "c.1650T>A",
+        "drug_response": "Palbociclib plus endocrine therapy clinical resistant recurrence",
+        "sample_name": "2907065",
+        "pubmed_pmid": "30914635",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "FGFR2",
+        "mutation_aa": "p.N435K",
+        "mutation_cds": "c.1305T>A",
+        "drug_response": "Palbociclib plus endocrine therapy clinical resistant recurrence",
+        "sample_name": "2907065",
+        "pubmed_pmid": "30914635",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "FGFR2",
+        "mutation_aa": "p.N433K",
+        "mutation_cds": "c.1299T>A",
+        "drug_response": "Palbociclib plus endocrine therapy clinical resistant recurrence",
+        "sample_name": "2907065",
+        "pubmed_pmid": "30914635",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "FGFR2",
+        "mutation_aa": "p.N437K",
+        "mutation_cds": "c.1311T>A",
+        "drug_response": "Palbociclib plus endocrine therapy clinical resistant recurrence",
+        "sample_name": "2907065",
+        "pubmed_pmid": "30914635",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "FGFR2",
+        "mutation_aa": "p.N321K",
+        "mutation_cds": "c.963T>A",
+        "drug_response": "Palbociclib plus endocrine therapy clinical resistant recurrence",
+        "sample_name": "2907065",
+        "pubmed_pmid": "30914635",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "FGFR2",
+        "mutation_aa": "p.V395D",
+        "mutation_cds": "c.1184T>A",
+        "drug_response": "Palbociclib plus endocrine therapy clinical resistant recurrence",
+        "sample_name": "2907068",
+        "pubmed_pmid": "30914635",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "FGFR2",
+        "mutation_aa": "p.V397D",
+        "mutation_cds": "c.1190T>A",
+        "drug_response": "Palbociclib plus endocrine therapy clinical resistant recurrence",
+        "sample_name": "2907068",
+        "pubmed_pmid": "30914635",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "FGFR2",
+        "mutation_aa": "p.V280D",
+        "mutation_cds": "c.839T>A",
+        "drug_response": "Palbociclib plus endocrine therapy clinical resistant recurrence",
+        "sample_name": "2907068",
+        "pubmed_pmid": "30914635",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "FGFR2",
+        "mutation_aa": "p.V306D",
+        "mutation_cds": "c.917T>A",
+        "drug_response": "Palbociclib plus endocrine therapy clinical resistant recurrence",
+        "sample_name": "2907068",
+        "pubmed_pmid": "30914635",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "FGFR2",
+        "mutation_aa": "p.V307D",
+        "mutation_cds": "c.920T>A",
+        "drug_response": "Palbociclib plus endocrine therapy clinical resistant recurrence",
+        "sample_name": "2907068",
+        "pubmed_pmid": "30914635",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "FGFR2",
+        "mutation_aa": "p.V396D",
+        "mutation_cds": "c.1187T>A",
+        "drug_response": "Palbociclib plus endocrine therapy clinical resistant recurrence",
+        "sample_name": "2907068",
+        "pubmed_pmid": "30914635",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "FGFR2",
+        "mutation_aa": "p.V281D",
+        "mutation_cds": "c.842T>A",
+        "drug_response": "Palbociclib plus endocrine therapy clinical resistant recurrence",
+        "sample_name": "2907068",
+        "pubmed_pmid": "30914635",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "FGFR2",
+        "mutation_aa": "p.?",
+        "mutation_cds": "c.939+4759T>A",
+        "drug_response": "Palbociclib plus endocrine therapy clinical resistant recurrence",
+        "sample_name": "2907068",
+        "pubmed_pmid": "30914635",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "FGFR2",
+        "mutation_aa": "p.V283D",
+        "mutation_cds": "c.848T>A",
+        "drug_response": "Palbociclib plus endocrine therapy clinical resistant recurrence",
+        "sample_name": "2907068",
+        "pubmed_pmid": "30914635",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "FGFR2",
+        "mutation_aa": "p.V167D",
+        "mutation_cds": "c.500T>A",
+        "drug_response": "Palbociclib plus endocrine therapy clinical resistant recurrence",
+        "sample_name": "2907068",
+        "pubmed_pmid": "30914635",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      }
+    ]
+  },
+  {
+    "drug_name": "Lorlatinib",
+    "total_resistance_samples": 31,
+    "unique_resistance_mutations": 13,
+    "supporting_pmids": [
+      "31943796",
+      "31749991",
+      "31616196",
+      "29650534"
+    ],
+    "mutations": [
+      {
+        "gene_symbol": "ALK",
+        "mutation_aa": "p.I1171N",
+        "mutation_cds": "c.?",
+        "drug_response": "Lorlatinib clinical resistant recurrence",
+        "sample_name": "2823733",
+        "pubmed_pmid": "31616196",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      },
+      {
+        "gene_symbol": "ALK",
+        "mutation_aa": "p.G1202R",
+        "mutation_cds": "c.3604G>A",
+        "drug_response": "Lorlatinib clinical resistant recurrence",
+        "sample_name": "2824344",
+        "pubmed_pmid": "31749991",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "ALK",
+        "mutation_aa": "p.G1269A",
+        "mutation_cds": "c.3806G>C",
+        "drug_response": "Lorlatinib clinical resistant recurrence",
+        "sample_name": "2824344",
+        "pubmed_pmid": "31749991",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      },
+      {
+        "gene_symbol": "ALK",
+        "mutation_aa": "p.G825R",
+        "mutation_cds": "c.2473G>A",
+        "drug_response": "Lorlatinib clinical resistant recurrence",
+        "sample_name": "2824344",
+        "pubmed_pmid": "31749991",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "ALK",
+        "mutation_aa": "p.G892A",
+        "mutation_cds": "c.2675G>C",
+        "drug_response": "Lorlatinib clinical resistant recurrence",
+        "sample_name": "2824344",
+        "pubmed_pmid": "31749991",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      },
+      {
+        "gene_symbol": "ALK",
+        "mutation_aa": "p.G134R",
+        "mutation_cds": "c.400G>A",
+        "drug_response": "Lorlatinib clinical resistant recurrence",
+        "sample_name": "2824344",
+        "pubmed_pmid": "31749991",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "ALK",
+        "mutation_aa": "p.G201A",
+        "mutation_cds": "c.602G>C",
+        "drug_response": "Lorlatinib clinical resistant recurrence",
+        "sample_name": "2824344",
+        "pubmed_pmid": "31749991",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      },
+      {
+        "gene_symbol": "ALK",
+        "mutation_aa": "p.I1171S",
+        "mutation_cds": "c.3512T>G",
+        "drug_response": "Lorlatinib clinical resistant recurrence",
+        "sample_name": "2831753",
+        "pubmed_pmid": "31943796",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      },
+      {
+        "gene_symbol": "ALK",
+        "mutation_aa": "p.I794S",
+        "mutation_cds": "c.2381T>G",
+        "drug_response": "Lorlatinib clinical resistant recurrence",
+        "sample_name": "2831753",
+        "pubmed_pmid": "31943796",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      },
+      {
+        "gene_symbol": "ALK",
+        "mutation_aa": "p.I103S",
+        "mutation_cds": "c.308T>G",
+        "drug_response": "Lorlatinib clinical resistant recurrence",
+        "sample_name": "2831753",
+        "pubmed_pmid": "31943796",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      },
+      {
+        "gene_symbol": "ALK",
+        "mutation_aa": "p.L1196M",
+        "mutation_cds": "c.?",
+        "drug_response": "Lorlatinib clinical resistant recurrence",
+        "sample_name": "2832002",
+        "pubmed_pmid": "29650534",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "ALK",
+        "mutation_aa": "p.L1198F",
+        "mutation_cds": "c.?",
+        "drug_response": "Lorlatinib clinical resistant recurrence",
+        "sample_name": "2832841",
+        "pubmed_pmid": "29650534",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      },
+      {
+        "gene_symbol": "ALK",
+        "mutation_aa": "p.L1204V",
+        "mutation_cds": "c.?",
+        "drug_response": "Lorlatinib clinical resistant recurrence",
+        "sample_name": "2832843",
+        "pubmed_pmid": "29650534",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      }
+    ]
+  },
+  {
+    "drug_name": "Flutamide",
+    "total_resistance_samples": 28,
+    "unique_resistance_mutations": 14,
+    "supporting_pmids": [
+      "7723794",
+      "19366804",
+      "14618630",
+      "12860943"
+    ],
+    "mutations": [
+      {
+        "gene_symbol": "AR",
+        "mutation_aa": "p.T878A",
+        "mutation_cds": "c.2632A>G",
+        "drug_response": "Flutamide plus leuprorelin clinical resistant recurrence",
+        "sample_name": "2539198",
+        "pubmed_pmid": "14618630",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "AR",
+        "mutation_aa": "p.T346A",
+        "mutation_cds": "c.1036A>G",
+        "drug_response": "Flutamide plus leuprorelin clinical resistant recurrence",
+        "sample_name": "2539198",
+        "pubmed_pmid": "14618630",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "AR",
+        "mutation_aa": "p.H733R",
+        "mutation_cds": "c.2198A>G",
+        "drug_response": "Flutamide plus leuprorelin clinical resistant recurrence",
+        "sample_name": "2539198",
+        "pubmed_pmid": "14618630",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "AR",
+        "mutation_aa": "p.T695A",
+        "mutation_cds": "c.2083A>G",
+        "drug_response": "Flutamide plus leuprorelin clinical resistant recurrence",
+        "sample_name": "2539198",
+        "pubmed_pmid": "14618630",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "AR",
+        "mutation_aa": "p.Q641*",
+        "mutation_cds": "c.1921C>T",
+        "drug_response": "Flutamide plus leuprorelin clinical resistant recurrence",
+        "sample_name": "2539199",
+        "pubmed_pmid": "14618630",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      },
+      {
+        "gene_symbol": "AR",
+        "mutation_aa": "p.Q109*",
+        "mutation_cds": "c.325C>T",
+        "drug_response": "Flutamide plus leuprorelin clinical resistant recurrence",
+        "sample_name": "2539199",
+        "pubmed_pmid": "14618630",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      },
+      {
+        "gene_symbol": "AR",
+        "mutation_aa": "p.Q451*",
+        "mutation_cds": "c.1351C>T",
+        "drug_response": "Flutamide plus leuprorelin clinical resistant recurrence",
+        "sample_name": "2539199",
+        "pubmed_pmid": "14618630",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      },
+      {
+        "gene_symbol": "AR",
+        "mutation_aa": "p.T878S",
+        "mutation_cds": "c.2633C>G",
+        "drug_response": "Flutamide plus leuprorelin clinical resistant recurrence",
+        "sample_name": "2539200",
+        "pubmed_pmid": "7723794",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "AR",
+        "mutation_aa": "p.T346S",
+        "mutation_cds": "c.1037C>G",
+        "drug_response": "Flutamide plus leuprorelin clinical resistant recurrence",
+        "sample_name": "2539200",
+        "pubmed_pmid": "7723794",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "AR",
+        "mutation_aa": "p.H733Q",
+        "mutation_cds": "c.2199C>G",
+        "drug_response": "Flutamide plus leuprorelin clinical resistant recurrence",
+        "sample_name": "2539200",
+        "pubmed_pmid": "7723794",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "AR",
+        "mutation_aa": "p.T695S",
+        "mutation_cds": "c.2084C>G",
+        "drug_response": "Flutamide plus leuprorelin clinical resistant recurrence",
+        "sample_name": "2539200",
+        "pubmed_pmid": "7723794",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "AR",
+        "mutation_aa": "p.V716M",
+        "mutation_cds": "c.2146G>A",
+        "drug_response": "Flutamide clinical resistant recurrence",
+        "sample_name": "2551720",
+        "pubmed_pmid": "19366804",
+        "census_gene": "Yes",
+        "somatic_status": "Confirmed somatic variant"
+      },
+      {
+        "gene_symbol": "AR",
+        "mutation_aa": "p.V184M",
+        "mutation_cds": "c.550G>A",
+        "drug_response": "Flutamide clinical resistant recurrence",
+        "sample_name": "2551720",
+        "pubmed_pmid": "19366804",
+        "census_gene": "Yes",
+        "somatic_status": "Confirmed somatic variant"
+      },
+      {
+        "gene_symbol": "AR",
+        "mutation_aa": "p.V526M",
+        "mutation_cds": "c.1576G>A",
+        "drug_response": "Flutamide clinical resistant recurrence",
+        "sample_name": "2551720",
+        "pubmed_pmid": "19366804",
+        "census_gene": "Yes",
+        "somatic_status": "Confirmed somatic variant"
+      }
+    ]
+  },
+  {
+    "drug_name": "Ceritinib",
+    "total_resistance_samples": 25,
+    "unique_resistance_mutations": 12,
+    "supporting_pmids": [
+      "30683630",
+      "26134233",
+      "27432227",
+      "28434515",
+      "24675041"
+    ],
+    "mutations": [
+      {
+        "gene_symbol": "ALK",
+        "mutation_aa": "p.G1202R",
+        "mutation_cds": "c.?",
+        "drug_response": "Ceritinib clinical resistant recurrence",
+        "sample_name": "2275291",
+        "pubmed_pmid": "24675041",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "ALK",
+        "mutation_aa": "p.F1174C",
+        "mutation_cds": "c.?",
+        "drug_response": "Ceritinib clinical resistant recurrence",
+        "sample_name": "2275295",
+        "pubmed_pmid": "24675041",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      },
+      {
+        "gene_symbol": "ALK",
+        "mutation_aa": "p.F1174V",
+        "mutation_cds": "c.?",
+        "drug_response": "Ceritinib clinical resistant recurrence",
+        "sample_name": "2275308",
+        "pubmed_pmid": "24675041",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      },
+      {
+        "gene_symbol": "ALK",
+        "mutation_aa": "p.G1123S",
+        "mutation_cds": "c.3367G>A",
+        "drug_response": "Ceritinib clinical resistant recurrence",
+        "sample_name": "2396137",
+        "pubmed_pmid": "26134233",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      },
+      {
+        "gene_symbol": "ALK",
+        "mutation_aa": "p.G746S",
+        "mutation_cds": "c.2236G>A",
+        "drug_response": "Ceritinib clinical resistant recurrence",
+        "sample_name": "2396137",
+        "pubmed_pmid": "26134233",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      },
+      {
+        "gene_symbol": "ALK",
+        "mutation_aa": "p.G55S",
+        "mutation_cds": "c.163G>A",
+        "drug_response": "Ceritinib clinical resistant recurrence",
+        "sample_name": "2396137",
+        "pubmed_pmid": "26134233",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      },
+      {
+        "gene_symbol": "ALK",
+        "mutation_aa": "p.D1203N",
+        "mutation_cds": "c.3607G>A",
+        "drug_response": "Ceritinib clinical resistant recurrence",
+        "sample_name": "2624132",
+        "pubmed_pmid": "28434515",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      },
+      {
+        "gene_symbol": "ALK",
+        "mutation_aa": "p.D826N",
+        "mutation_cds": "c.2476G>A",
+        "drug_response": "Ceritinib clinical resistant recurrence",
+        "sample_name": "2624132",
+        "pubmed_pmid": "28434515",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      },
+      {
+        "gene_symbol": "ALK",
+        "mutation_aa": "p.D135N",
+        "mutation_cds": "c.403G>A",
+        "drug_response": "Ceritinib clinical resistant recurrence",
+        "sample_name": "2624132",
+        "pubmed_pmid": "28434515",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      },
+      {
+        "gene_symbol": "ALK",
+        "mutation_aa": "p.L1196M",
+        "mutation_cds": "c.?",
+        "drug_response": "Ceritinib clinical resistant recurrence",
+        "sample_name": "MGH065",
+        "pubmed_pmid": "27432227",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "ALK",
+        "mutation_aa": "p.G1202del",
+        "mutation_cds": "c.?",
+        "drug_response": "Ceritinib clinical resistant recurrence",
+        "sample_name": "MGH092",
+        "pubmed_pmid": "27432227",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      },
+      {
+        "gene_symbol": "ALK",
+        "mutation_aa": "p.F1174L",
+        "mutation_cds": "c.?",
+        "drug_response": "Ceritinib clinical resistant recurrence",
+        "sample_name": "MGH970",
+        "pubmed_pmid": "27432227",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      }
+    ]
+  },
+  {
+    "drug_name": "Enasidenib",
+    "total_resistance_samples": 24,
+    "unique_resistance_mutations": 8,
+    "supporting_pmids": [
+      "30355724",
+      "30013198",
+      "29950729"
+    ],
+    "mutations": [
+      {
+        "gene_symbol": "IDH1",
+        "mutation_aa": "p.R132C",
+        "mutation_cds": "c.394C>T",
+        "drug_response": "Enasidenib clinical resistant recurrence",
+        "sample_name": "201-014-Relapse",
+        "pubmed_pmid": "30013198",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "IDH1",
+        "mutation_aa": "p.R132H",
+        "mutation_cds": "c.395G>A",
+        "drug_response": "Enasidenib clinical resistant recurrence",
+        "sample_name": "201-022-Relapse",
+        "pubmed_pmid": "30013198",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "IDH2",
+        "mutation_aa": "p.Q316E",
+        "mutation_cds": "c.946C>G",
+        "drug_response": "Enasidenib clinical resistant recurrence",
+        "sample_name": "2963766",
+        "pubmed_pmid": "29950729",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      },
+      {
+        "gene_symbol": "IDH2",
+        "mutation_aa": "p.Q264E",
+        "mutation_cds": "c.790C>G",
+        "drug_response": "Enasidenib clinical resistant recurrence",
+        "sample_name": "2963766",
+        "pubmed_pmid": "29950729",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      },
+      {
+        "gene_symbol": "IDH2",
+        "mutation_aa": "p.Q207E",
+        "mutation_cds": "c.619C>G",
+        "drug_response": "Enasidenib clinical resistant recurrence",
+        "sample_name": "2963766",
+        "pubmed_pmid": "29950729",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      },
+      {
+        "gene_symbol": "IDH2",
+        "mutation_aa": "p.I319M",
+        "mutation_cds": "c.957C>G",
+        "drug_response": "Enasidenib clinical resistant recurrence",
+        "sample_name": "2963769",
+        "pubmed_pmid": "29950729",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      },
+      {
+        "gene_symbol": "IDH2",
+        "mutation_aa": "p.I267M",
+        "mutation_cds": "c.801C>G",
+        "drug_response": "Enasidenib clinical resistant recurrence",
+        "sample_name": "2963769",
+        "pubmed_pmid": "29950729",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      },
+      {
+        "gene_symbol": "IDH2",
+        "mutation_aa": "p.I210M",
+        "mutation_cds": "c.630C>G",
+        "drug_response": "Enasidenib clinical resistant recurrence",
+        "sample_name": "2963769",
+        "pubmed_pmid": "29950729",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      }
+    ]
+  },
+  {
+    "drug_name": "Acalabrutinib",
+    "total_resistance_samples": 20,
+    "unique_resistance_mutations": 5,
+    "supporting_pmids": [
+      "30508305"
+    ],
+    "mutations": [
+      {
+        "gene_symbol": "BTK",
+        "mutation_aa": "p.C481S",
+        "mutation_cds": "c.1442G>C",
+        "drug_response": "Acalabrutinib clinical resistant recurrence",
+        "sample_name": "2835709",
+        "pubmed_pmid": "30508305",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "BTK",
+        "mutation_aa": "p.C481F",
+        "mutation_cds": "c.1442G>T",
+        "drug_response": "Acalabrutinib clinical resistant recurrence",
+        "sample_name": "2835709",
+        "pubmed_pmid": "30508305",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      },
+      {
+        "gene_symbol": "BTK",
+        "mutation_aa": "p.?",
+        "mutation_cds": "c.1039-1482G>C",
+        "drug_response": "Acalabrutinib clinical resistant recurrence",
+        "sample_name": "2835709",
+        "pubmed_pmid": "30508305",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "BTK",
+        "mutation_aa": "p.C515S",
+        "mutation_cds": "c.1544G>C",
+        "drug_response": "Acalabrutinib clinical resistant recurrence",
+        "sample_name": "2835709",
+        "pubmed_pmid": "30508305",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "BTK",
+        "mutation_aa": "p.C515F",
+        "mutation_cds": "c.1544G>T",
+        "drug_response": "Acalabrutinib clinical resistant recurrence",
+        "sample_name": "2835709",
+        "pubmed_pmid": "30508305",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      }
+    ]
+  },
+  {
+    "drug_name": "Quizartinib",
+    "total_resistance_samples": 18,
+    "unique_resistance_mutations": 5,
+    "supporting_pmids": [
+      "22354205",
+      "23392356",
+      "22504184",
+      "27908881"
+    ],
+    "mutations": [
+      {
+        "gene_symbol": "FLT3",
+        "mutation_aa": "p.D835Y",
+        "mutation_cds": "c.2503G>T",
+        "drug_response": "Quizartinib clinical resistant recurrence",
+        "sample_name": "1863605",
+        "pubmed_pmid": "22504184",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "FLT3",
+        "mutation_aa": "p.D835V",
+        "mutation_cds": "c.2504A>T",
+        "drug_response": "Quizartinib clinical resistant recurrence",
+        "sample_name": "1863605",
+        "pubmed_pmid": "22504184",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "FLT3",
+        "mutation_aa": "p.D835F",
+        "mutation_cds": "c.2503_2504delinsTT",
+        "drug_response": "Quizartinib clinical resistant recurrence",
+        "sample_name": "1863605",
+        "pubmed_pmid": "22504184",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      },
+      {
+        "gene_symbol": "FLT3",
+        "mutation_aa": "p.F691L",
+        "mutation_cds": "c.2073T>G",
+        "drug_response": "Quizartinib clinical resistant recurrence",
+        "sample_name": "1863609",
+        "pubmed_pmid": "22504184",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "FLT3",
+        "mutation_aa": "p.D835I",
+        "mutation_cds": "c.?",
+        "drug_response": "Quizartinib clinical resistant recurrence",
+        "sample_name": "2823716",
+        "pubmed_pmid": "27908881",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      }
+    ]
+  },
+  {
+    "drug_name": "Trastuzumab",
+    "total_resistance_samples": 18,
+    "unique_resistance_mutations": 4,
+    "supporting_pmids": [
+      "31867841"
+    ],
+    "mutations": [
+      {
+        "gene_symbol": "ERBB2",
+        "mutation_aa": "p.L869R",
+        "mutation_cds": "c.2606T>G",
+        "drug_response": "Trastuzumab plus chemotherapy clinical resistant recurrence",
+        "sample_name": "BC1-2",
+        "pubmed_pmid": "31867841",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "ERBB2",
+        "mutation_aa": "p.L839R",
+        "mutation_cds": "c.2516T>G",
+        "drug_response": "Trastuzumab plus chemotherapy clinical resistant recurrence",
+        "sample_name": "BC1-2",
+        "pubmed_pmid": "31867841",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "ERBB2",
+        "mutation_aa": "p.L593R",
+        "mutation_cds": "c.1778T>G",
+        "drug_response": "Trastuzumab plus chemotherapy clinical resistant recurrence",
+        "sample_name": "BC1-2",
+        "pubmed_pmid": "31867841",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "ERBB2",
+        "mutation_aa": "p.L854R",
+        "mutation_cds": "c.2561T>G",
+        "drug_response": "Trastuzumab plus chemotherapy clinical resistant recurrence",
+        "sample_name": "BC1-2",
+        "pubmed_pmid": "31867841",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      }
+    ]
+  },
+  {
+    "drug_name": "Vismodegib",
+    "total_resistance_samples": 16,
+    "unique_resistance_mutations": 10,
+    "supporting_pmids": [
+      "25759019",
+      "25306392",
+      "25759020",
+      "19726788",
+      "25199678"
+    ],
+    "mutations": [
+      {
+        "gene_symbol": "SMO",
+        "mutation_aa": "p.D473H",
+        "mutation_cds": "c.1417G>C",
+        "drug_response": "Vismodegib clinical resistant recurrence",
+        "sample_name": "1286110",
+        "pubmed_pmid": "19726788",
+        "census_gene": "Yes",
+        "somatic_status": "Confirmed somatic variant"
+      },
+      {
+        "gene_symbol": "SMO",
+        "mutation_aa": "p.D473Y",
+        "mutation_cds": "c.1417G>T",
+        "drug_response": "Vismodegib clinical resistant recurrence",
+        "sample_name": "2275245",
+        "pubmed_pmid": "25306392",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      },
+      {
+        "gene_symbol": "SMO",
+        "mutation_aa": "p.W281L",
+        "mutation_cds": "c.842G>T",
+        "drug_response": "Vismodegib clinical resistant recurrence",
+        "sample_name": "2493036",
+        "pubmed_pmid": "25199678",
+        "census_gene": "Yes",
+        "somatic_status": "Confirmed somatic variant"
+      },
+      {
+        "gene_symbol": "SMO",
+        "mutation_aa": "p.V321M",
+        "mutation_cds": "c.961G>A",
+        "drug_response": "Vismodegib clinical resistant recurrence",
+        "sample_name": "2493037",
+        "pubmed_pmid": "25199678",
+        "census_gene": "Yes",
+        "somatic_status": "Confirmed somatic variant"
+      },
+      {
+        "gene_symbol": "SMO",
+        "mutation_aa": "p.A459V",
+        "mutation_cds": "c.1376C>T",
+        "drug_response": "Vismodegib clinical resistant recurrence",
+        "sample_name": "2521246",
+        "pubmed_pmid": "25759019",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "SMO",
+        "mutation_aa": "p.C469Y",
+        "mutation_cds": "c.1406G>A",
+        "drug_response": "Vismodegib clinical resistant recurrence",
+        "sample_name": "2521259",
+        "pubmed_pmid": "25759019",
+        "census_gene": "Yes",
+        "somatic_status": "Confirmed somatic variant"
+      },
+      {
+        "gene_symbol": "SMO",
+        "mutation_aa": "p.T241M",
+        "mutation_cds": "c.722C>T",
+        "drug_response": "Vismodegib clinical resistant recurrence",
+        "sample_name": "2521260",
+        "pubmed_pmid": "25759019",
+        "census_gene": "Yes",
+        "somatic_status": "Confirmed somatic variant"
+      },
+      {
+        "gene_symbol": "SMO",
+        "mutation_aa": "p.D473G",
+        "mutation_cds": "c.?",
+        "drug_response": "Vismodegib clinical resistant recurrence",
+        "sample_name": "2531510",
+        "pubmed_pmid": "25759020",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "SMO",
+        "mutation_aa": "p.Q477E",
+        "mutation_cds": "c.?",
+        "drug_response": "Vismodegib clinical resistant recurrence",
+        "sample_name": "2531516",
+        "pubmed_pmid": "25759020",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      },
+      {
+        "gene_symbol": "SMO",
+        "mutation_aa": "p.S533N",
+        "mutation_cds": "c.?",
+        "drug_response": "Vismodegib clinical resistant recurrence",
+        "sample_name": "2531518",
+        "pubmed_pmid": "25759020",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      }
+    ]
+  },
+  {
+    "drug_name": "Sorafenib",
+    "total_resistance_samples": 12,
+    "unique_resistance_mutations": 4,
+    "supporting_pmids": [
+      "23969938",
+      "27908881",
+      "22368270"
+    ],
+    "mutations": [
+      {
+        "gene_symbol": "FLT3",
+        "mutation_aa": "p.D835Y",
+        "mutation_cds": "c.2503G>T",
+        "drug_response": "Sorafenib clinical resistant recurrence",
+        "sample_name": "2531203",
+        "pubmed_pmid": "22368270",
+        "census_gene": "Yes",
+        "somatic_status": "Confirmed somatic variant"
+      },
+      {
+        "gene_symbol": "FLT3",
+        "mutation_aa": "p.D835H",
+        "mutation_cds": "c.2503G>C",
+        "drug_response": "Sorafenib clinical resistant recurrence",
+        "sample_name": "2531217",
+        "pubmed_pmid": "22368270",
+        "census_gene": "Yes",
+        "somatic_status": "Confirmed somatic variant"
+      },
+      {
+        "gene_symbol": "FLT3",
+        "mutation_aa": "p.D835X",
+        "mutation_cds": "c.?",
+        "drug_response": "Sorafenib clinical resistant recurrence",
+        "sample_name": "2531223",
+        "pubmed_pmid": "22368270",
+        "census_gene": "Yes",
+        "somatic_status": "Confirmed somatic variant"
+      },
+      {
+        "gene_symbol": "FLT3",
+        "mutation_aa": "p.F691L",
+        "mutation_cds": "c.2073T>G",
+        "drug_response": "Sorafenib clinical resistant recurrence",
+        "sample_name": "2531279",
+        "pubmed_pmid": "23969938",
+        "census_gene": "Yes",
+        "somatic_status": "Confirmed somatic variant"
+      }
+    ]
+  },
+  {
+    "drug_name": "Pemigatinib",
+    "total_resistance_samples": 12,
+    "unique_resistance_mutations": 6,
+    "supporting_pmids": [
+      "33218975"
+    ],
+    "mutations": [
+      {
+        "gene_symbol": "FGFR2",
+        "mutation_aa": "p.N549K",
+        "mutation_cds": "c.?",
+        "drug_response": "Pemigatinib clinical resistant recurrence",
+        "sample_name": "2907600",
+        "pubmed_pmid": "33218975",
+        "census_gene": "Yes",
+        "somatic_status": "Confirmed somatic variant"
+      },
+      {
+        "gene_symbol": "FGFR2",
+        "mutation_aa": "p.K659M",
+        "mutation_cds": "c.?",
+        "drug_response": "Pemigatinib clinical resistant recurrence",
+        "sample_name": "2907602",
+        "pubmed_pmid": "33218975",
+        "census_gene": "Yes",
+        "somatic_status": "Confirmed somatic variant"
+      },
+      {
+        "gene_symbol": "FGFR2",
+        "mutation_aa": "p.K641R",
+        "mutation_cds": "c.?",
+        "drug_response": "Pemigatinib clinical resistant recurrence",
+        "sample_name": "2907604",
+        "pubmed_pmid": "33218975",
+        "census_gene": "Yes",
+        "somatic_status": "Confirmed somatic variant"
+      },
+      {
+        "gene_symbol": "FGFR2",
+        "mutation_aa": "p.L617V",
+        "mutation_cds": "c.?",
+        "drug_response": "Pemigatinib clinical resistant recurrence",
+        "sample_name": "2907606",
+        "pubmed_pmid": "33218975",
+        "census_gene": "Yes",
+        "somatic_status": "Confirmed somatic variant"
+      },
+      {
+        "gene_symbol": "FGFR2",
+        "mutation_aa": "p.E565A",
+        "mutation_cds": "c.?",
+        "drug_response": "Pemigatinib clinical resistant recurrence",
+        "sample_name": "2907610",
+        "pubmed_pmid": "33218975",
+        "census_gene": "Yes",
+        "somatic_status": "Confirmed somatic variant"
+      },
+      {
+        "gene_symbol": "FGFR2",
+        "mutation_aa": "p.N549H",
+        "mutation_cds": "c.?",
+        "drug_response": "Pemigatinib clinical resistant recurrence",
+        "sample_name": "2907612",
+        "pubmed_pmid": "33218975",
+        "census_gene": "Yes",
+        "somatic_status": "Confirmed somatic variant"
+      }
+    ]
+  },
+  {
+    "drug_name": "Sunitinib",
+    "total_resistance_samples": 9,
+    "unique_resistance_mutations": 6,
+    "supporting_pmids": [
+      "23969938",
+      "30848481",
+      "28768491"
+    ],
+    "mutations": [
+      {
+        "gene_symbol": "FLT3",
+        "mutation_aa": "p.D835Y",
+        "mutation_cds": "c.2503G>T",
+        "drug_response": "Sunitinib clinical resistant recurrence",
+        "sample_name": "2531281",
+        "pubmed_pmid": "23969938",
+        "census_gene": "Yes",
+        "somatic_status": "Confirmed somatic variant"
+      },
+      {
+        "gene_symbol": "LRP1B",
+        "mutation_aa": "p.C1187W",
+        "mutation_cds": "c.3561T>G",
+        "drug_response": "Sunitinib clinical resistant recurrence",
+        "sample_name": "2823495",
+        "pubmed_pmid": "30848481",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      },
+      {
+        "gene_symbol": "TET2",
+        "mutation_aa": "p.P46L",
+        "mutation_cds": "c.137C>T",
+        "drug_response": "Sunitinib clinical resistant recurrence",
+        "sample_name": "2823495",
+        "pubmed_pmid": "30848481",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "TET2",
+        "mutation_aa": "p.P67L",
+        "mutation_cds": "c.200C>T",
+        "drug_response": "Sunitinib clinical resistant recurrence",
+        "sample_name": "2823495",
+        "pubmed_pmid": "30848481",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "AC058822.1",
+        "mutation_aa": "p.D602V",
+        "mutation_cds": "c.1805A>T",
+        "drug_response": "Sunitinib clinical resistant recurrence",
+        "sample_name": "2896059",
+        "pubmed_pmid": "28768491",
+        "census_gene": "No",
+        "somatic_status": "Confirmed somatic variant"
+      },
+      {
+        "gene_symbol": "PDGFRA",
+        "mutation_aa": "p.D842V",
+        "mutation_cds": "c.2525A>T",
+        "drug_response": "Sunitinib clinical resistant recurrence",
+        "sample_name": "2896059",
+        "pubmed_pmid": "28768491",
+        "census_gene": "Yes",
+        "somatic_status": "Confirmed somatic variant"
+      }
+    ]
+  },
+  {
+    "drug_name": "Enzalutamide",
+    "total_resistance_samples": 8,
+    "unique_resistance_mutations": 8,
+    "supporting_pmids": [
+      "25712683"
+    ],
+    "mutations": [
+      {
+        "gene_symbol": "AR",
+        "mutation_aa": "p.T878A",
+        "mutation_cds": "c.2632A>G",
+        "drug_response": "Enzalutamide clinical resistant recurrence",
+        "sample_name": "2537729",
+        "pubmed_pmid": "25712683",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "AR",
+        "mutation_aa": "p.F877L",
+        "mutation_cds": "c.2629T>C",
+        "drug_response": "Enzalutamide clinical resistant recurrence",
+        "sample_name": "2537729",
+        "pubmed_pmid": "25712683",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      },
+      {
+        "gene_symbol": "AR",
+        "mutation_aa": "p.T346A",
+        "mutation_cds": "c.1036A>G",
+        "drug_response": "Enzalutamide clinical resistant recurrence",
+        "sample_name": "2537729",
+        "pubmed_pmid": "25712683",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "AR",
+        "mutation_aa": "p.F345L",
+        "mutation_cds": "c.1033T>C",
+        "drug_response": "Enzalutamide clinical resistant recurrence",
+        "sample_name": "2537729",
+        "pubmed_pmid": "25712683",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      },
+      {
+        "gene_symbol": "AR",
+        "mutation_aa": "p.H733R",
+        "mutation_cds": "c.2198A>G",
+        "drug_response": "Enzalutamide clinical resistant recurrence",
+        "sample_name": "2537729",
+        "pubmed_pmid": "25712683",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "AR",
+        "mutation_aa": "p.V732A",
+        "mutation_cds": "c.2195T>C",
+        "drug_response": "Enzalutamide clinical resistant recurrence",
+        "sample_name": "2537729",
+        "pubmed_pmid": "25712683",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      },
+      {
+        "gene_symbol": "AR",
+        "mutation_aa": "p.T695A",
+        "mutation_cds": "c.2083A>G",
+        "drug_response": "Enzalutamide clinical resistant recurrence",
+        "sample_name": "2537729",
+        "pubmed_pmid": "25712683",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "AR",
+        "mutation_aa": "p.F694L",
+        "mutation_cds": "c.2080T>C",
+        "drug_response": "Enzalutamide clinical resistant recurrence",
+        "sample_name": "2537729",
+        "pubmed_pmid": "25712683",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      }
+    ]
+  },
+  {
+    "drug_name": "Bosutinib",
+    "total_resistance_samples": 7,
+    "unique_resistance_mutations": 5,
+    "supporting_pmids": [
+      "23044928",
+      "23086624"
+    ],
+    "mutations": [
+      {
+        "gene_symbol": "ABL1",
+        "mutation_aa": "p.V299L",
+        "mutation_cds": "c.?",
+        "drug_response": "Bosutinib clinical resistant recurrence",
+        "sample_name": "1794539",
+        "pubmed_pmid": "23086624",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      },
+      {
+        "gene_symbol": "ABL1",
+        "mutation_aa": "p.L248R",
+        "mutation_cds": "c.743T>G",
+        "drug_response": "Bosutinib clinical resistant recurrence",
+        "sample_name": "2324034",
+        "pubmed_pmid": "23044928",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      },
+      {
+        "gene_symbol": "ABL1",
+        "mutation_aa": "p.F359I",
+        "mutation_cds": "c.1075T>A",
+        "drug_response": "Bosutinib clinical resistant recurrence",
+        "sample_name": "2324034",
+        "pubmed_pmid": "23044928",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      },
+      {
+        "gene_symbol": "ABL1",
+        "mutation_aa": "p.L267R",
+        "mutation_cds": "c.800T>G",
+        "drug_response": "Bosutinib clinical resistant recurrence",
+        "sample_name": "2324034",
+        "pubmed_pmid": "23044928",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      },
+      {
+        "gene_symbol": "ABL1",
+        "mutation_aa": "p.F378I",
+        "mutation_cds": "c.1132T>A",
+        "drug_response": "Bosutinib clinical resistant recurrence",
+        "sample_name": "2324034",
+        "pubmed_pmid": "23044928",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      }
+    ]
+  },
+  {
+    "drug_name": "Brigatinib",
+    "total_resistance_samples": 7,
+    "unique_resistance_mutations": 4,
+    "supporting_pmids": [
+      "27432227",
+      "31668326"
+    ],
+    "mutations": [
+      {
+        "gene_symbol": "ALK",
+        "mutation_aa": "p.G1202R",
+        "mutation_cds": "c.?",
+        "drug_response": "Brigatinib clinical resistant recurrence",
+        "sample_name": "2824253",
+        "pubmed_pmid": "31668326",
+        "census_gene": "Yes",
+        "somatic_status": "Confirmed somatic variant"
+      },
+      {
+        "gene_symbol": "ALK",
+        "mutation_aa": "p.L1196M",
+        "mutation_cds": "c.?",
+        "drug_response": "Brigatinib clinical resistant recurrence",
+        "sample_name": "2824253",
+        "pubmed_pmid": "31668326",
+        "census_gene": "Yes",
+        "somatic_status": "Confirmed somatic variant"
+      },
+      {
+        "gene_symbol": "ALK",
+        "mutation_aa": "p.S1206C",
+        "mutation_cds": "c.?",
+        "drug_response": "Brigatinib clinical resistant recurrence",
+        "sample_name": "MGH086-0",
+        "pubmed_pmid": "27432227",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      },
+      {
+        "gene_symbol": "ALK",
+        "mutation_aa": "p.D1203N",
+        "mutation_cds": "c.?",
+        "drug_response": "Brigatinib clinical resistant recurrence",
+        "sample_name": "MGH086-1",
+        "pubmed_pmid": "27432227",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      }
+    ]
+  },
+  {
+    "drug_name": "Capmatinib",
+    "total_resistance_samples": 6,
+    "unique_resistance_mutations": 4,
+    "supporting_pmids": [
+      "28396313"
+    ],
+    "mutations": [
+      {
+        "gene_symbol": "MET",
+        "mutation_aa": "p.D1246N",
+        "mutation_cds": "c.3736G>A",
+        "drug_response": "Capmatinib clinical resistant recurrence",
+        "sample_name": "2664335",
+        "pubmed_pmid": "28396313",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "MET",
+        "mutation_aa": "p.D1228N",
+        "mutation_cds": "c.3682G>A",
+        "drug_response": "Capmatinib clinical resistant recurrence",
+        "sample_name": "2664335",
+        "pubmed_pmid": "28396313",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "MET",
+        "mutation_aa": "p.Y1248H",
+        "mutation_cds": "c.3742T>C",
+        "drug_response": "Capmatinib clinical resistant recurrence",
+        "sample_name": "2664336",
+        "pubmed_pmid": "28396313",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      },
+      {
+        "gene_symbol": "MET",
+        "mutation_aa": "p.Y1230H",
+        "mutation_cds": "c.3688T>C",
+        "drug_response": "Capmatinib clinical resistant recurrence",
+        "sample_name": "2664336",
+        "pubmed_pmid": "28396313",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      }
+    ]
+  },
+  {
+    "drug_name": "Nilotinib",
+    "total_resistance_samples": 3,
+    "unique_resistance_mutations": 3,
+    "supporting_pmids": [
+      "23044928",
+      "27864817"
+    ],
+    "mutations": [
+      {
+        "gene_symbol": "ABL1",
+        "mutation_aa": "p.T315V",
+        "mutation_cds": "c.943_944inv",
+        "drug_response": "Nilotinib clinical resistant recurrence",
+        "sample_name": "2324036",
+        "pubmed_pmid": "23044928",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      },
+      {
+        "gene_symbol": "ABL1",
+        "mutation_aa": "p.T334V",
+        "mutation_cds": "c.1000_1001inv",
+        "drug_response": "Nilotinib clinical resistant recurrence",
+        "sample_name": "2324036",
+        "pubmed_pmid": "23044928",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      },
+      {
+        "gene_symbol": "KIT",
+        "mutation_aa": "p.N655T",
+        "mutation_cds": "c.?",
+        "drug_response": "Nilotinib clinical resistant recurrence",
+        "sample_name": "2585897",
+        "pubmed_pmid": "27864817",
+        "census_gene": "Yes",
+        "somatic_status": "Confirmed somatic variant"
+      }
+    ]
+  },
+  {
+    "drug_name": "Alpelisib",
+    "total_resistance_samples": 3,
+    "unique_resistance_mutations": 3,
+    "supporting_pmids": [
+      "28951457"
+    ],
+    "mutations": [
+      {
+        "gene_symbol": "NRAS",
+        "mutation_aa": "p.G13R",
+        "mutation_cds": "c.?",
+        "drug_response": "Alpelisib plus cetuximab plus encorafenib clinical resistant recurrence",
+        "sample_name": "2878915",
+        "pubmed_pmid": "28951457",
+        "census_gene": "Yes",
+        "somatic_status": "Confirmed somatic variant"
+      },
+      {
+        "gene_symbol": "BRAF",
+        "mutation_aa": "p.V47_D380del",
+        "mutation_cds": "c.139_1140del1002",
+        "drug_response": "Alpelisib plus cetuximab plus encorafenib clinical resistant recurrence",
+        "sample_name": "2878916",
+        "pubmed_pmid": "28951457",
+        "census_gene": "Yes",
+        "somatic_status": "Confirmed somatic variant"
+      },
+      {
+        "gene_symbol": "KRAS",
+        "mutation_aa": "p.G12A",
+        "mutation_cds": "c.?",
+        "drug_response": "Alpelisib plus cetuximab plus encorafenib clinical resistant recurrence",
+        "sample_name": "2878920",
+        "pubmed_pmid": "28951457",
+        "census_gene": "Yes",
+        "somatic_status": "Confirmed somatic variant"
+      }
+    ]
+  },
+  {
+    "drug_name": "Pembrolizumab",
+    "total_resistance_samples": 3,
+    "unique_resistance_mutations": 2,
+    "supporting_pmids": [
+      "27433843"
+    ],
+    "mutations": [
+      {
+        "gene_symbol": "JAK1",
+        "mutation_aa": "p.Q503*",
+        "mutation_cds": "c.1507C>T",
+        "drug_response": "Pembrolizumab clinical resistant recurrence",
+        "sample_name": "Case#1-Relapse",
+        "pubmed_pmid": "27433843",
+        "census_gene": "Yes",
+        "somatic_status": "Confirmed somatic variant"
+      },
+      {
+        "gene_symbol": "JAK2",
+        "mutation_aa": "p.?",
+        "mutation_cds": "c.1641+2T>G",
+        "drug_response": "Pembrolizumab clinical resistant recurrence",
+        "sample_name": "Case#2-Relapse-M464",
+        "pubmed_pmid": "27433843",
+        "census_gene": "Yes",
+        "somatic_status": "Confirmed somatic variant"
+      }
+    ]
+  },
+  {
+    "drug_name": "Everolimus",
+    "total_resistance_samples": 2,
+    "unique_resistance_mutations": 2,
+    "supporting_pmids": [
+      "25295501"
+    ],
+    "mutations": [
+      {
+        "gene_symbol": "MTOR",
+        "mutation_aa": "p.F2108L",
+        "mutation_cds": "c.6324C>A",
+        "drug_response": "Everolimus clinical resistant recurrence",
+        "sample_name": "2290930",
+        "pubmed_pmid": "25295501",
+        "census_gene": "Yes",
+        "somatic_status": "Confirmed somatic variant"
+      },
+      {
+        "gene_symbol": "MTOR",
+        "mutation_aa": "p.F313L",
+        "mutation_cds": "c.939C>A",
+        "drug_response": "Everolimus clinical resistant recurrence",
+        "sample_name": "2290930",
+        "pubmed_pmid": "25295501",
+        "census_gene": "Yes",
+        "somatic_status": "Confirmed somatic variant"
+      }
+    ]
+  },
+  {
+    "drug_name": "Binimetinib",
+    "total_resistance_samples": 2,
+    "unique_resistance_mutations": 1,
+    "supporting_pmids": [
+      "31227518"
+    ],
+    "mutations": [
+      {
+        "gene_symbol": "MAP2K1",
+        "mutation_aa": "p.V211D",
+        "mutation_cds": "c.?",
+        "drug_response": "Binimetinib plus panitumumab clinical resistant recurrence",
+        "sample_name": "2804223",
+        "pubmed_pmid": "31227518",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      }
+    ]
+  },
+  {
+    "drug_name": "Adagrasib",
+    "total_resistance_samples": 2,
+    "unique_resistance_mutations": 1,
+    "supporting_pmids": [
+      "33824136"
+    ],
+    "mutations": [
+      {
+        "gene_symbol": "KRAS",
+        "mutation_aa": "p.Y96D",
+        "mutation_cds": "c.?",
+        "drug_response": "Adagrasib clinical resistant recurrence",
+        "sample_name": "2963626",
+        "pubmed_pmid": "33824136",
+        "census_gene": "Yes",
+        "somatic_status": "Variant of unknown origin"
+      }
+    ]
+  },
+  {
+    "drug_name": "Selumetinib",
+    "total_resistance_samples": 1,
+    "unique_resistance_mutations": 1,
+    "supporting_pmids": [
+      "19915144"
+    ],
+    "mutations": [
+      {
+        "gene_symbol": "MAP2K1",
+        "mutation_aa": "p.P124L",
+        "mutation_cds": "c.371C>T",
+        "drug_response": "Selumetinib clinical resistant recurrence",
+        "sample_name": "1927115",
+        "pubmed_pmid": "19915144",
+        "census_gene": "Yes",
+        "somatic_status": "Reported in another cancer sample as somatic"
+      }
+    ]
+  },
+  {
+    "drug_name": "Encorafenib",
+    "total_resistance_samples": 1,
+    "unique_resistance_mutations": 1,
+    "supporting_pmids": [
+      "25673644"
+    ],
+    "mutations": [
+      {
+        "gene_symbol": "KRAS",
+        "mutation_aa": "p.?",
+        "mutation_cds": "c.?",
+        "drug_response": "Encorafenib plus cetuximab clinical resistant recurrence",
+        "sample_name": "P1_Post-all",
+        "pubmed_pmid": "25673644",
+        "census_gene": "Yes",
+        "somatic_status": "Confirmed somatic variant"
+      }
+    ]
+  }
+]

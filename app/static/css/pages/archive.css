@@ -1,0 +1,237 @@
+/* ── Page layout ───────────────────────────────────────── */
+.archive-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+}
+
+/* ── Page header ───────────────────────────────────────── */
+.page-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.page-header h1 {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--text);
+    letter-spacing: -0.05rem;
+    margin-bottom: 0.25rem;
+}
+
+.page-header p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+.drug-count {
+    font-size: 0.78rem;
+    color: var(--text-dim);
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 2rem;
+    padding: 0.3rem 0.85rem;
+    align-self: flex-start;
+    white-space: nowrap;
+}
+
+/* ── Filter bar ────────────────────────────────────────── */
+.filter-bar {
+    display: flex;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.filter-bar input[type="text"] {
+    padding: 0.55rem 1rem;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 0.5rem;
+    color: var(--text);
+    font-size: 0.9rem;
+    outline: none;
+    width: 220px;
+    transition: border-color 0.2s ease, width 0.2s ease;
+}
+
+.filter-bar input[type="text"]:focus {
+    border-color: var(--accent);
+    width: 280px;
+}
+
+.filter-bar input::placeholder { color: var(--text-dim); }
+
+.filter-bar select {
+    padding: 0.55rem 1rem;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 0.5rem;
+    color: var(--text);
+    font-size: 0.9rem;
+    outline: none;
+    cursor: pointer;
+    transition: border-color 0.2s ease;
+}
+
+.filter-bar select:focus { border-color: var(--accent); }
+.filter-bar select option { background: var(--bg-card); }
+
+/* ── Table ─────────────────────────────────────────────── */
+.table-wrap {
+    border: 1px solid var(--border);
+    border-radius: 0.75rem;
+    overflow: hidden;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+}
+
+thead tr {
+    background: var(--bg-card);
+    border-bottom: 1px solid var(--border);
+}
+
+thead th {
+    padding: 0.85rem 1.25rem;
+    text-align: left;
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: var(--text-dim);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+tbody tr {
+    border-bottom: 1px solid var(--border);
+    transition: background 0.15s ease;
+}
+
+tbody tr:last-child { border-bottom: none; }
+
+tbody tr:hover { background: var(--bg-card); }
+
+td {
+    padding: 0.85rem 1.25rem;
+    vertical-align: middle;
+}
+
+/* ── Cell styles ───────────────────────────────────────── */
+.drug-name {
+    font-weight: 500;
+    color: var(--text);
+    margin-bottom: 0.2rem;
+}
+
+.drug-synonyms {
+    font-size: 0.78rem;
+    color: var(--text-dim);
+}
+
+.num-cell {
+    font-size: 0.95rem;
+    color: var(--accent);
+    font-weight: 600;
+}
+
+.dim { color: var(--text-dim); }
+
+/* ── Badges ────────────────────────────────────────────── */
+.class-badge {
+    display: inline-block;
+    font-size: 0.72rem;
+    padding: 0.2rem 0.6rem;
+    border-radius: 2rem;
+    border: 1px solid var(--border);
+    color: var(--accent);
+    background: transparent;
+    white-space: nowrap;
+}
+
+.mutation-badge {
+    display: inline-block;
+    font-size: 0.78rem;
+    font-weight: 600;
+    padding: 0.2rem 0.65rem;
+    border-radius: 2rem;
+    background: rgba(0, 229, 160, 0.1);
+    color: #00e5a0;
+    border: 1px solid rgba(0, 229, 160, 0.2);
+}
+
+/* ── View button ───────────────────────────────────────── */
+.view-btn {
+    padding: 0.35rem 0.85rem;
+    font-size: 0.82rem;
+}
+
+/* ── Empty state ───────────────────────────────────────── */
+.empty-state {
+    text-align: center;
+    padding: 5rem 2rem;
+    color: var(--text-dim);
+}
+
+.empty-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    opacity: 0.4;
+}
+
+/* ── Target table specific ─────────────────────────────── */
+.gene-name {
+    font-family: monospace;
+    font-weight: 600;
+    color: #00e5a0;
+    font-size: 0.9rem;
+}
+
+.uniprot-id {
+    font-family: monospace;
+    font-size: 0.8rem;
+    color: var(--accent);
+}
+
+.protein-name {
+    font-size: 0.875rem;
+    color: var(--text);
+}
+
+.location-cell {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    max-width: 160px;
+}
+
+/* Hide location column on tablets */
+@media (max-width: 900px) {
+    thead th:nth-child(4),
+    td:nth-child(4) { display: none; }
+}
+
+/* ── Mobile ────────────────────────────────────────────── */
+@media (max-width: 768px) {
+    .archive-page { padding: 2rem 1rem; }
+
+    .filter-bar input[type="text"],
+    .filter-bar input[type="text"]:focus {
+        width: 100%;
+    }
+
+    .filter-bar { flex-direction: column; align-items: stretch; }
+    .filter-bar select { width: 100%; }
+    .filter-bar .btn { width: 100%; text-align: center; }
+
+    thead th:nth-child(2),
+    td:nth-child(2) { display: none; }
+}

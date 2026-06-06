@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        (function() {
+            const saved = localStorage.getItem('theme') || 'dark';
+            document.documentElement.setAttribute('data-theme', saved);
+        })();
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}DB{% endblock %}</title>
+    <link rel="stylesheet" href="/static/css/base.css">
+    {% block extra_styles %}{% endblock %}
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-content">
+            <h3><a href="/" style="text-decoration:none; color:inherit;">Logo</a></h3>
+            <ul class="nav-list">
+                <li class="nav-pages">
+                    <a href="/drugs"
+                       class="{% if request.url.path.startswith('/drugs') %}active{% endif %}">
+                        Drugs
+                    </a>
+                </li>
+                <li class="nav-pages">
+                    <a href="/targets"
+                       class="{% if request.url.path.startswith('/targets') %}active{% endif %}">
+                        Targets
+                    </a>
+                </li>
+                <li class="nav-pages">
+                    <a href="/chat"
+                       class="{% if request.url.path == '/chat' %}active{% endif %}">
+                        Chat
+                    </a>
+                </li>
+            </ul>
+
+						<div class="search-container">
+    <input
+        type="text"
+        name="q"
+        placeholder="Search..."
+        value="{{ request.query_params.get('q', '') }}"
+    >
+    <button class="theme-toggle" onclick="toggleTheme()" id="themeBtn">
+        ☀️ Light
+    </button>
+</div>
+        </div>
+    </nav>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    <script>
+        // Update button label to match current theme
+        const current = document.documentElement.getAttribute('data-theme');
+        document.getElementById('themeBtn').textContent =
+            current === 'dark' ? '☀️ Light' : '🌙 Dark';
+
+        function toggleTheme() {
+            const current = document.documentElement.getAttribute('data-theme');
+            const next    = current === 'dark' ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', next);
+            localStorage.setItem('theme', next);
+            document.getElementById('themeBtn').textContent =
+                next === 'dark' ? '☀️ Light' : '🌙 Dark';
+        }
+</script>
+    {% block extra_scripts %}{% endblock %}
+</body>
+</html>

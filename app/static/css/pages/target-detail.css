@@ -1,0 +1,415 @@
+/* ── Page layout ───────────────────────────────────────── */
+.target-detail-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2.5rem 2rem;
+}
+
+/* ── Breadcrumb ────────────────────────────────────────── */
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+    color: var(--text-dim);
+    margin-bottom: 1.5rem;
+}
+
+.breadcrumb a {
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.breadcrumb a:hover { color: var(--accent); }
+.breadcrumb-sep     { color: var(--text-dim); }
+
+/* ── Target header ─────────────────────────────────────── */
+.target-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 0.75rem;
+}
+
+.gene-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--gene-color, #00e5a0);
+    font-family: monospace;
+    letter-spacing: -0.05rem;
+    margin-bottom: 0.3rem;
+}
+
+.protein-full-name {
+    color: var(--text-muted);
+    font-size: 1rem;
+}
+
+.uniprot-link {
+    font-family: monospace;
+    font-size: 0.85rem;
+    color: var(--accent);
+    border: 1px solid var(--border);
+    border-radius: 0.4rem;
+    padding: 0.35rem 0.75rem;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    background: var(--bg-card);
+}
+
+.uniprot-link:hover {
+    border-color: var(--accent);
+    background: var(--bg);
+}
+
+/* ── Stat chips ────────────────────────────────────────── */
+.stat-chips {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+}
+
+.stat-chip {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 0.6rem;
+    padding: 0.75rem 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+    min-width: 90px;
+}
+
+.chip-value {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--accent);
+    line-height: 1;
+}
+
+.chip-value.mono {
+    font-family: monospace;
+    font-size: 1rem;
+    padding-top: 0.3rem;
+}
+
+.chip-label {
+    font-size: 0.68rem;
+    color: var(--text-dim);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+/* ── Main grid ─────────────────────────────────────────── */
+.target-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+@media (max-width: 900px) {
+    .target-grid { grid-template-columns: 1fr; }
+}
+
+/* ── Viewer card ───────────────────────────────────────── */
+.viewer-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 0.75rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.viewer-header {
+    padding: 0.85rem 1.25rem;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--bg);
+    flex-shrink: 0;
+}
+
+.viewer-title {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--text);
+}
+
+.viewer-pdb {
+    font-family: monospace;
+    font-size: 0.82rem;
+    color: var(--accent);
+}
+
+#molstar-viewer {
+    width: 100%;
+    height: 420px;
+    background: #05080d;
+    overflow: hidden;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.no-structure {
+    height: 420px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-dim);
+    font-size: 0.85rem;
+    font-family: monospace;
+}
+
+.viewer-controls {
+    padding: 0.75rem 1.25rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    background: var(--bg);
+    flex-shrink: 0;
+}
+
+/* ── Info column ───────────────────────────────────────── */
+.info-column {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.info-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 0.75rem;
+    padding: 1.25rem;
+}
+
+.info-card-title {
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-dim);
+    margin-bottom: 0.85rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.count-pill {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 2rem;
+    padding: 0.1rem 0.5rem;
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    font-weight: 400;
+}
+
+/* ── Protein info grid ─────────────────────────────────── */
+.protein-info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.85rem;
+}
+
+.info-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.info-item.full-width {
+    grid-column: 1 / -1;
+}
+
+.info-label {
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-dim);
+}
+
+.info-value {
+    font-size: 0.875rem;
+    color: var(--text);
+}
+
+.info-value.mono  { font-family: monospace; }
+.info-value.accent { color: var(--accent); text-decoration: none; }
+.info-value.accent:hover { text-decoration: underline; }
+.info-value.gene-color { color: var(--gene-color, #00e5a0); font-family: monospace; font-weight: 600; }
+
+/* ── Drug list ─────────────────────────────────────────── */
+.drug-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    max-height: 280px;
+    overflow-y: auto;
+}
+
+.drug-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.6rem 0.85rem;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 0.5rem;
+    text-decoration: none;
+    transition: all 0.15s ease;
+}
+
+.drug-item:hover {
+    border-color: var(--accent);
+    background: var(--bg-card);
+}
+
+.drug-item-left {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+}
+
+.drug-item-name {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--text);
+}
+
+.drug-item-class {
+    font-size: 0.72rem;
+    color: var(--text-dim);
+}
+
+.drug-item-right {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.confirmed-badge {
+    font-size: 0.68rem;
+    padding: 0.15rem 0.5rem;
+    border-radius: 2rem;
+    background: var(--mutation-badge-bg, rgba(0,229,160,0.1));
+    color: var(--mutation-badge-text, #00e5a0);
+    border: 1px solid var(--mutation-badge-border, rgba(0,229,160,0.2));
+}
+
+.arrow-icon {
+    color: var(--text-dim);
+    font-size: 0.85rem;
+}
+
+/* ── Section title ─────────────────────────────────────── */
+.section-title {
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-dim);
+    padding-bottom: 0.6rem;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 1rem;
+}
+
+/* ── Mutations section ─────────────────────────────────── */
+.mutations-section {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Table styles — reuse from archive.css pattern */
+.table-wrap {
+    border: 1px solid var(--border);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.875rem;
+}
+
+thead tr {
+    background: var(--bg);
+    border-bottom: 1px solid var(--border);
+}
+
+thead th {
+    padding: 0.75rem 1rem;
+    text-align: left;
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: var(--text-dim);
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+tbody tr {
+    border-bottom: 1px solid var(--border);
+    transition: background 0.15s ease;
+}
+
+tbody tr:last-child { border-bottom: none; }
+tbody tr:hover      { background: var(--bg); }
+
+td { padding: 0.75rem 1rem; vertical-align: middle; }
+
+.mut-code {
+    font-family: monospace;
+    font-size: 0.85rem;
+    color: var(--gene-color, #00e5a0);
+    font-weight: 600;
+}
+
+.drug-link {
+    color: var(--text);
+    text-decoration: none;
+    font-size: 0.875rem;
+    transition: color 0.15s ease;
+}
+
+.drug-link:hover { color: var(--accent); }
+
+.source-badge {
+    font-size: 0.72rem;
+    padding: 0.15rem 0.5rem;
+    border-radius: 0.3rem;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    color: var(--text-muted);
+}
+
+.samples-cell {
+    font-family: monospace;
+    font-size: 0.82rem;
+    color: var(--text-muted);
+}
+
+.dim { color: var(--text-dim); }
+
+/* ── Mobile ────────────────────────────────────────────── */
+@media (max-width: 768px) {
+    .target-detail-page { padding: 1.5rem 1rem; }
+    .gene-title          { font-size: 1.8rem; }
+    .protein-info-grid   { grid-template-columns: 1fr; }
+    .stat-chips          { gap: 0.5rem; }
+    .drug-list           { max-height: none; }
+}
