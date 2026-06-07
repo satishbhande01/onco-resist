@@ -1,0 +1,240 @@
+/* ── Page layout ───────────────────────────────────────── */
+.search-page {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+}
+
+/* ── Search header ─────────────────────────────────────── */
+.search-header {
+    margin-bottom: 1.5rem;
+}
+
+.search-header h1 {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--text);
+    letter-spacing: -0.05rem;
+    margin-bottom: 0.35rem;
+}
+
+.search-header p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+.query-highlight {
+    color: var(--accent);
+    font-family: monospace;
+}
+
+/* ── Search bar ────────────────────────────────────────── */
+.search-bar {
+    display: flex;
+    gap: 0.6rem;
+    margin-bottom: 2.5rem;
+}
+
+.search-bar input {
+    flex: 1;
+    padding: 0.75rem 1.1rem;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 0.5rem;
+    color: var(--text);
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+.search-bar input:focus {
+    border-color: var(--accent);
+}
+
+.search-bar input::placeholder { color: var(--text-dim); }
+
+/* ── Search hints ──────────────────────────────────────── */
+.search-hints {
+    margin-top: 1rem;
+}
+
+.hints-label {
+    font-size: 0.78rem;
+    color: var(--text-dim);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 0.75rem;
+}
+
+.hint-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.hint-chip {
+    font-family: monospace;
+    font-size: 0.85rem;
+    padding: 0.35rem 0.85rem;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 2rem;
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: all 0.15s ease;
+}
+
+.hint-chip:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+/* ── No results ────────────────────────────────────────── */
+.no-results {
+    text-align: center;
+    padding: 5rem 2rem;
+    color: var(--text-dim);
+}
+
+.no-results-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    opacity: 0.4;
+}
+
+.no-results-hint {
+    font-size: 0.85rem;
+    color: var(--text-dim);
+    margin-top: 0.5rem;
+}
+
+/* ── Results sections ──────────────────────────────────── */
+.results-section {
+    margin-bottom: 2.5rem;
+}
+
+.results-section-title {
+    font-size: 0.78rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-dim);
+    margin-bottom: 0.85rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.results-count {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 2rem;
+    padding: 0.1rem 0.55rem;
+    font-size: 0.72rem;
+    color: var(--text-muted);
+    font-weight: 400;
+}
+
+/* ── Table ─────────────────────────────────────────────── */
+.table-wrap {
+    border: 1px solid var(--border);
+    border-radius: 0.75rem;
+    overflow: hidden;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.875rem;
+}
+
+thead tr {
+    background: var(--bg-card);
+    border-bottom: 1px solid var(--border);
+}
+
+thead th {
+    padding: 0.75rem 1rem;
+    text-align: left;
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: var(--text-dim);
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+tbody tr {
+    border-bottom: 1px solid var(--border);
+    transition: background 0.15s ease;
+}
+
+tbody tr:last-child { border-bottom: none; }
+tbody tr:hover      { background: var(--bg-card); }
+
+td { padding: 0.75rem 1rem; vertical-align: middle; }
+
+/* ── Cell styles ───────────────────────────────────────── */
+.result-name {
+    font-weight: 500;
+    color: var(--text);
+}
+
+.gene-name {
+    font-family: monospace;
+    font-weight: 600;
+    color: var(--gene-color, #00e5a0);
+}
+
+.uniprot-id {
+    font-family: monospace;
+    font-size: 0.82rem;
+    color: var(--accent);
+}
+
+.mut-code {
+    font-family: monospace;
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--accent);
+}
+
+.indication-cell {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    max-width: 300px;
+}
+
+.protein-name-cell {
+    font-size: 0.875rem;
+    color: var(--text);
+    max-width: 280px;
+}
+
+.class-badge {
+    display: inline-block;
+    font-size: 0.72rem;
+    padding: 0.2rem 0.6rem;
+    border-radius: 2rem;
+    border: 1px solid var(--border);
+    color: var(--accent);
+}
+
+.view-btn {
+    padding: 0.35rem 0.85rem;
+    font-size: 0.82rem;
+    white-space: nowrap;
+}
+
+.dim { color: var(--text-dim); }
+
+/* ── Mobile ────────────────────────────────────────────── */
+@media (max-width: 768px) {
+    .search-page  { padding: 2rem 1rem; }
+    .search-bar   { flex-direction: column; }
+    .search-bar input { width: 100%; }
+
+    .indication-cell,
+    .protein-name-cell { display: none; }
+}

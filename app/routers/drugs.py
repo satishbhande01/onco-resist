@@ -2,7 +2,7 @@ from pathlib import Path
 from fastapi import APIRouter, Request, HTTPException
 from fastapi.templating import Jinja2Templates
 from fastapi.responses import HTMLResponse
-from app.database import get_all_drugs, get_drug_by_id, get_drug_classes
+from app.database import get_all_drugs, get_drug_by_id, get_drug_classes, get_cancer_types
 
 router = APIRouter()
 
@@ -21,19 +21,24 @@ def drug_archive(
     request: Request,
     drug_class: str = None,
     search: str = None,
+    cancer_type: str = None,       # ← new
 ):
-    drug_list = get_all_drugs(drug_class=drug_class, search=search)
+    drug_list    = get_all_drugs(drug_class=drug_class, search=search, cancer_type=cancer_type)
     drug_classes = get_drug_classes()
+    cancer_types = get_cancer_types()          # ← new
+
     return templates.TemplateResponse(
         request=request,
         name="drugs/archive.html",
         context={
-            "drugs": drug_list,
-            "drug_classes": drug_classes,
-            "selected_class": drug_class,
-            "search_query": search or "",
-            "total": len(drug_list),
-        },
+            "drugs":           drug_list,
+            "drug_classes":    drug_classes,
+            "cancer_types":    cancer_types,   # ← new
+            "selected_class":  drug_class,
+            "selected_cancer": cancer_type,    # ← new
+            "search_query":    search or "",
+            "total":           len(drug_list),
+        }
     )
 
 

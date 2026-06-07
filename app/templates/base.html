@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <script>
-        (function() {
+        (function () {
             const saved = localStorage.getItem('theme') || 'dark';
             document.documentElement.setAttribute('data-theme', saved);
         })();
@@ -13,42 +14,39 @@
     <link rel="stylesheet" href="/static/css/base.css">
     {% block extra_styles %}{% endblock %}
 </head>
+
 <body>
     <nav class="navbar">
         <div class="navbar-content">
             <h3><a href="/" style="text-decoration:none; color:inherit;">Logo</a></h3>
             <ul class="nav-list">
                 <li class="nav-pages">
-                    <a href="/drugs"
-                       class="{% if request.url.path.startswith('/drugs') %}active{% endif %}">
+                    <a href="/drugs" class="{% if request.url.path.startswith('/drugs') %}active{% endif %}">
                         Drugs
                     </a>
                 </li>
                 <li class="nav-pages">
-                    <a href="/targets"
-                       class="{% if request.url.path.startswith('/targets') %}active{% endif %}">
+                    <a href="/targets" class="{% if request.url.path.startswith('/targets') %}active{% endif %}">
                         Targets
                     </a>
                 </li>
                 <li class="nav-pages">
-                    <a href="/chat"
-                       class="{% if request.url.path == '/chat' %}active{% endif %}">
+                    <a href="/chat" class="{% if request.url.path == '/chat' %}active{% endif %}">
                         Chat
                     </a>
                 </li>
             </ul>
 
-						<div class="search-container">
-    <input
-        type="text"
-        name="q"
-        placeholder="Search..."
-        value="{{ request.query_params.get('q', '') }}"
-    >
-    <button class="theme-toggle" onclick="toggleTheme()" id="themeBtn">
-        ☀️ Light
-    </button>
-</div>
+            <div class="search-container">
+                <form action="/search" method="get">
+                    <input type="text" name="q" placeholder="Search..." value="{{ request.query_params.get('q', '') }}"
+                        autocomplete="off">
+                </form>
+            </div>
+            <button class="theme-toggle" onclick="toggleTheme()" id="themeBtn">
+                ☀️ Light
+            </button>
+        </div>
         </div>
     </nav>
 
@@ -63,13 +61,14 @@
 
         function toggleTheme() {
             const current = document.documentElement.getAttribute('data-theme');
-            const next    = current === 'dark' ? 'light' : 'dark';
+            const next = current === 'dark' ? 'light' : 'dark';
             document.documentElement.setAttribute('data-theme', next);
             localStorage.setItem('theme', next);
             document.getElementById('themeBtn').textContent =
                 next === 'dark' ? '☀️ Light' : '🌙 Dark';
         }
-</script>
+    </script>
     {% block extra_scripts %}{% endblock %}
 </body>
+
 </html>

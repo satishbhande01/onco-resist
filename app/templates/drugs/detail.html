@@ -30,9 +30,16 @@
 
     <!-- ── Indication ───────────────────────────────────── -->
     {% if drug.indication %}
-    <p class="indication">
-        {{ drug.indication[:250] }}{% if drug.indication|length > 250 %}…{% endif %}
-    </p>
+    <div class="indication-section">
+        <span class="indication-label">Approved Indication</span>
+        <p class="indication-text" id="indicationText">
+            {{ drug.indication[:300] }}
+            {% if drug.indication|length > 300 %}
+            <span id="indicationMore" style="display:none;">{{ drug.indication[300:] }}</span>
+            <button class="expand-btn" onclick="expandIndication()">Show more</button>
+            {% endif %}
+        </p>
+    </div>
     {% endif %}
 
     <!-- ── Stat chips ───────────────────────────────────── -->
@@ -86,26 +93,22 @@
                 </span>
                 <select class="pdb-select" onchange="loadStructure(this.value)">
                     {% for target in drug.targets %}
-                        {% for pdb in target.pdb_ids %}
-                        <option value="{{ pdb }}"
-                            {% if pdb == viewer_pdb_id %}selected{% endif %}>
-                            {{ pdb|upper }} — {{ target.gene_name }}
-                        </option>
-                        {% endfor %}
+                    {% for pdb in target.pdb_ids %}
+                    <option value="{{ pdb }}" {% if pdb==viewer_pdb_id %}selected{% endif %}>
+                        {{ pdb|upper }} — {{ target.gene_name }}
+                    </option>
+                    {% endfor %}
                     {% endfor %}
                 </select>
-                    <a id="rcsbLink"
-                       href="https://www.rcsb.org/structure/{{ viewer_pdb_id|upper }}"
-                       target="_blank"
-                       class="btn secondary"
-                       style="padding:0.3rem 0.7rem; font-size:0.78rem;">
-                        RCSB ↗
-                    </a>
+                <a id="rcsbLink" href="https://www.rcsb.org/structure/{{ viewer_pdb_id|upper }}" target="_blank"
+                    class="btn secondary" style="padding:0.3rem 0.7rem; font-size:0.78rem;">
+                    RCSB ↗
+                </a>
             </div>
             {% endif %}
         </div>
 
-        <!-- Right: drug info -->
+        <!-- Right: targets + mechanism only -->
         <div class="info-column">
 
             <!-- Targets -->
@@ -114,7 +117,7 @@
                 <div class="target-pills">
                     {% for target in drug.targets %}
                     <a href="/targets/{{ target.uniprot_accession }}"
-                       class="target-pill {% if target.known_action == 'yes' %}confirmed{% endif %}">
+                        class="target-pill {% if target.known_action == 'yes' %}confirmed{% endif %}">
                         <span class="target-gene">{{ target.gene_name }}</span>
                         <span class="target-uniprot">{{ target.uniprot_accession }}</span>
                         {% if target.known_action == 'yes' %}
@@ -128,44 +131,100 @@
                 </div>
             </div>
 
-            <!-- Mechanism -->
-            <div class="info-card">
+            <!-- Mechanism — sets the height floor for the viewer -->
+            <div class="info-card mechanism-card">
                 <div class="info-card-title">Mechanism of Action</div>
                 <p class="mechanism-text">
                     {{ drug.mechanism_of_action or 'Not available.' }}
                 </p>
             </div>
 
-            <!-- Drug details -->
-            <div class="info-card">
-                <div class="info-card-title">Details</div>
-                <div class="details-grid">
-                    <div class="detail-item">
-                        <span class="detail-label">DrugBank ID</span>
-                        <span class="detail-value mono">{{ drug.drugbank_id }}</span>
-                    </div>
-                    <div class="detail-item">
-                        <span class="detail-label">Drug Class</span>
-                        <span class="detail-value">{{ drug.drug_class or '—' }}</span>
-                    </div>
-                    <div class="detail-item">
-                        <span class="detail-label">ATC Codes</span>
-                        <span class="detail-value mono">
-                            {{ drug.atc_codes|join(', ') or '—' }}
-                        </span>
-                    </div>
-                    <div class="detail-item">
-                        <span class="detail-label">Synonyms</span>
-                        <span class="detail-value">
-                            {{ drug.synonyms[:3]|join(', ') or '—' }}
-                        </span>
-                    </div>
+        </div>
+
+    </div>
+
+    <!-- ── Details — full width below grid ───────────────── -->
+    <div class="details-full">
+        <div class="info-card">
+            <div class="info-card-title">Details</div>
+            <div class="details-grid">
+
+                <div class="detail-item">
+                    <span class="detail-label">DrugBank ID</span>
+                    <a href="https://go.drugbank.com/drugs/{{ drug.drugbank_id }}" target="_blank"
+                        class="detail-value mono accent">
+                        {{ drug.drugbank_id }} ↗
+                    </a>
                 </div>
+
+                <div class="detail-item">
+                    <span class="detail-label">Approval Date</span>
+                    <span class="detail-value">
+                        {{ drug.approval_date or '—' }}
+                    </span>
+                </div>
+
+                <div class="detail-item">
+                    <span class="detail-label">Molecular Weight</span>
+                    <span class="detail-value mono">
+                        {{ drug.molecular_weight or '—' }} g/mol
+                    </span>
+                </div>
+
+                <div class="detail-item">
+                    <span class="detail-label">Drug Class</span>
+                    <span class="detail-value">{{ drug.drug_class or '—' }}</span>
+                </div>
+
+                <div class="detail-item">
+                    <span class="detail-label">ATC Codes</span>
+                    <span class="detail-value mono">
+                        {{ drug.atc_codes|join(', ') or '—' }}
+                    </span>
+                </div>
+
+                <div class="detail-item">
+                    <span class="detail-label">Synonyms</span>
+                    <span class="detail-value">
+                        {% set short_syns = [] %}
+                        {% for syn in drug.synonyms %}
+                        {% if syn|length < 30 %} {% set _=short_syns.append(syn) %} {% endif %} {% endfor %} {{
+                            short_syns[:3]|join(', ') or ' —' }} </span>
+                </div>
+
+                {% if drug.pubchem_cid %}
+                <div class="detail-item">
+                    <span class="detail-label">PubChem</span>
+                    <a href="https://pubchem.ncbi.nlm.nih.gov/compound/{{ drug.pubchem_cid }}" target="_blank"
+                        class="detail-value mono accent">
+                        CID: {{ drug.pubchem_cid }} ↗
+                    </a>
+                </div>
+                {% endif %}
+
+                {% if drug.chembl_id %}
+                <div class="detail-item">
+                    <span class="detail-label">ChEMBL</span>
+                    <a href="https://www.ebi.ac.uk/chembl/compound_report_card/{{ drug.chembl_id }}" target="_blank"
+                        class="detail-value mono accent">
+                        {{ drug.chembl_id }} ↗
+                    </a>
+                </div>
+                {% endif %}
+
             </div>
+
+            {% if drug.smiles %}
+            <div class="smiles-section">
+                <div class="detail-label" style="margin-bottom:0.4rem;">
+                    SMILES
+                </div>
+                <div class="smiles-string">{{ drug.smiles }}</div>
+            </div>
+            {% endif %}
 
         </div>
     </div>
-
     <!-- ── Resistance Mutations ──────────────────────────── -->
     {% if drug.resistance_mutations %}
     <div class="mutations-section">
@@ -174,54 +233,54 @@
         {% set ns = namespace(current_gene=None) %}
         {% for mut in drug.resistance_mutations %}
 
-            {% if mut.gene_symbol != ns.current_gene %}
-                {% if ns.current_gene != None %}
-                </div></div>
-                {% endif %}
-                {% set ns.current_gene = mut.gene_symbol %}
-                <div class="mutation-group">
-                    <div class="mutation-group-header">
-                        <span class="mutation-gene">{{ mut.gene_symbol }}</span>
-                        {% if mut.total_samples %}
-                        <span class="dim" style="font-size:0.78rem;">
-                            {{ mut.total_samples }} resistance samples
-                        </span>
-                        {% endif %}
-                    </div>
-                    <div class="mutation-chips">
-            {% endif %}
+        {% if mut.gene_symbol != ns.current_gene %}
+        {% if ns.current_gene != None %}
+    </div>
+</div>
+{% endif %}
+{% set ns.current_gene = mut.gene_symbol %}
+<div class="mutation-group">
+    <div class="mutation-group-header">
+        <span class="mutation-gene">{{ mut.gene_symbol }}</span>
+        {% if mut.total_samples %}
+        <span class="dim" style="font-size:0.78rem;">
+            {{ mut.total_samples }} resistance samples
+        </span>
+        {% endif %}
+    </div>
+    <div class="mutation-chips">
+        {% endif %}
 
-            <span class="mut-chip">{{ mut.mutation_aa }}</span>
+        <span class="mut-chip">{{ mut.mutation_aa }}</span>
 
         {% endfor %}
-        </div></div>
-
-        <p class="mutations-note">
-            Resistance mutations sourced from COSMIC Drug Resistance database.
-        </p>
     </div>
-    {% endif %}
+</div>
 
-    <!-- ── References ───────────────────────────────────── -->
-    {% if drug.pubmed_ids %}
-    <div class="references-section">
-        <div class="section-title">References</div>
-        <div class="pubmed-refs">
-            {% for pmid in drug.pubmed_ids[:20] %}
-            <a href="https://pubmed.ncbi.nlm.nih.gov/{{ pmid }}/"
-               target="_blank"
-               class="pmid-badge">
-                PMID:{{ pmid }}
-            </a>
-            {% endfor %}
-            {% if drug.pubmed_ids|length > 20 %}
-            <span class="dim" style="font-size:0.8rem;">
-                +{{ drug.pubmed_ids|length - 20 }} more
-            </span>
-            {% endif %}
-        </div>
+<p class="mutations-note">
+    Resistance mutations sourced from COSMIC Drug Resistance database.
+</p>
+</div>
+{% endif %}
+
+<!-- ── References ───────────────────────────────────── -->
+{% if drug.pubmed_ids %}
+<div class="references-section">
+    <div class="section-title">References</div>
+    <div class="pubmed-refs">
+        {% for pmid in drug.pubmed_ids[:20] %}
+        <a href="https://pubmed.ncbi.nlm.nih.gov/{{ pmid }}/" target="_blank" class="pmid-badge">
+            PMID:{{ pmid }}
+        </a>
+        {% endfor %}
+        {% if drug.pubmed_ids|length > 20 %}
+        <span class="dim" style="font-size:0.8rem;">
+            +{{ drug.pubmed_ids|length - 20 }} more
+        </span>
+        {% endif %}
     </div>
-    {% endif %}
+</div>
+{% endif %}
 
 </div>
 {% endblock %}
@@ -229,13 +288,14 @@
 {% block extra_scripts %}
 <script>
     pageContext = "Viewing drug: {{ drug.name }} ({{ drug.drug_class }})";
+    function expandIndication() {
+        document.getElementById('indicationMore').style.display = 'inline';
+        event.target.style.display = 'none';
+    }    
 </script>
 
 {% if viewer_pdb_id %}
-<link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/molstar@latest/build/viewer/molstar.css"
->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/molstar@latest/build/viewer/molstar.css">
 <script src="https://cdn.jsdelivr.net/npm/molstar@latest/build/viewer/molstar.js"></script>
 <script>
     let viewer = null;
@@ -245,49 +305,49 @@
         const { Viewer } = molstar;
 
         viewer = await Viewer.create(element, {
-            layoutIsExpanded:      false,
-            layoutShowControls:    false,
+            layoutIsExpanded: false,
+            layoutShowControls: false,
             layoutShowRemoteState: false,
-            layoutShowSequence:    false,
-            layoutShowLog:         false,
-            layoutShowLeftPanel:   false,
-            viewportShowExpand:    false,
+            layoutShowSequence: false,
+            layoutShowLog: false,
+            layoutShowLeftPanel: false,
+            viewportShowExpand: false,
             viewportShowAnimation: false,
         });
 
         await loadStructure('{{ viewer_pdb_id }}');
     }
 
-        async function loadStructure(pdbId) {
-            if (!viewer) return;
+    async function loadStructure(pdbId) {
+        if (!viewer) return;
 
-            const url = `https://files.rcsb.org/download/${pdbId.toUpperCase()}.cif`;
+        const url = `https://files.rcsb.org/download/${pdbId.toUpperCase()}.cif`;
 
-            // Destroy and recreate the viewer completely
-            const element = document.getElementById('molstar-viewer');
-            element.innerHTML = '';
-            viewer = null;
+        // Destroy and recreate the viewer completely
+        const element = document.getElementById('molstar-viewer');
+        element.innerHTML = '';
+        viewer = null;
 
-            const { Viewer } = molstar;
-            viewer = await Viewer.create(element, {
-                layoutIsExpanded:      false,
-                layoutShowControls:    false,
-                layoutShowRemoteState: false,
-                layoutShowSequence:    false,
-                layoutShowLog:         false,
-                layoutShowLeftPanel:   false,
-                viewportShowExpand:    false,
-                viewportShowAnimation: false,
-            });
+        const { Viewer } = molstar;
+        viewer = await Viewer.create(element, {
+            layoutIsExpanded: false,
+            layoutShowControls: false,
+            layoutShowRemoteState: false,
+            layoutShowSequence: false,
+            layoutShowLog: false,
+            layoutShowLeftPanel: false,
+            viewportShowExpand: false,
+            viewportShowAnimation: false,
+        });
 
-            await viewer.loadStructureFromUrl(url, 'mmcif', false);
+        await viewer.loadStructureFromUrl(url, 'mmcif', false);
 
-            // Update the RCSB link
-            const rcsbLink = document.getElementById('rcsbLink');
-            if (rcsbLink) {
-                rcsbLink.href = `https://www.rcsb.org/structure/${pdbId.toUpperCase()}`;
-            }
+        // Update the RCSB link
+        const rcsbLink = document.getElementById('rcsbLink');
+        if (rcsbLink) {
+            rcsbLink.href = `https://www.rcsb.org/structure/${pdbId.toUpperCase()}`;
         }
+    }
     initViewer();
 </script>
 {% endif %}

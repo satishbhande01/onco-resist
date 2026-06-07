@@ -12,9 +12,17 @@ CREATE TABLE IF NOT EXISTS drugs (
     atc_codes            TEXT,
     synonyms             TEXT,
     unmatched_pdb_ids    TEXT,
+
+    -- ── New columns ──────────────────────────────────
+    smiles               TEXT,
+    molecular_weight     TEXT,
+    inchikey             TEXT,
+    pubchem_cid          TEXT,
+    chembl_id            TEXT,
+    approval_date        TEXT,
+
     created_at           TEXT DEFAULT (datetime('now'))
 );
-
 CREATE TABLE IF NOT EXISTS targets (
     uniprot_accession    TEXT PRIMARY KEY,
     gene_name            TEXT NOT NULL,

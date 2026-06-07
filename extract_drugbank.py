@@ -232,6 +232,81 @@ def extract_targets(drug_el):
 
     return targets
 
+def extract_calculated_properties(drug_el):
+    """
+    Extract calculated properties from DrugBank.
+    Returns dict with smiles, molecular_weight, inchikey.
+    """
+    props = {
+        "smiles":           None,
+        "molecular_weight": None,
+        "inchikey":         None,
+    }
+
+    calc_el = drug_el.find(tag("calculated-properties"))
+    if calc_el is None:
+        return props
+
+    for prop_el in calc_el.findall(tag("property")):
+        kind  = find_text(prop_el, "kind")
+        value = find_text(prop_el, "value")
+
+        if kind == "SMILES":
+            props["smiles"] = value
+        elif kind == "Molecular Weight":
+            props["molecular_weight"] = value
+        elif kind == "InChIKey":
+            props["inchikey"] = value
+
+    return props
+
+
+def extract_external_ids(drug_el):
+    """
+    Extract external database identifiers.
+    Returns dict with pubchem_cid, chembl_id.
+    """
+    ids = {
+        "pubchem_cid": None,
+        "chembl_id":   None,
+    }
+
+    ext_ids_el = drug_el.find(tag("external-identifiers"))
+    if ext_ids_el is None:
+        return ids
+
+    for ext_el in ext_ids_el.findall(tag("external-identifier")):
+        resource   = find_text(ext_el, "resource")
+        identifier = find_text(ext_el, "identifier")
+
+        if resource == "PubChem Compound":
+            ids["pubchem_cid"] = identifier
+        elif resource == "ChEMBL":
+            ids["chembl_id"] = identifier
+
+    return ids
+
+
+def extract_approval_date(drug_el):
+    """
+    Extract earliest FDA approval date from products block.
+    Looks for the earliest started-marketing-on date
+    across all approved US products.
+    """
+    products_el = drug_el.find(tag("products"))
+    if products_el is None:
+        return None
+
+    dates = []
+    for product_el in products_el.findall(tag("product")):
+        country  = find_text(product_el, "country")
+        approved = find_text(product_el, "approved")
+        date     = find_text(product_el, "started-marketing-on")
+
+        if country == "US" and approved == "true" and date:
+            dates.append(date)
+
+    return min(dates) if dates else None
 
 # Single drug extraction
 def extract_drug(drug_el):
@@ -258,33 +333,40 @@ def extract_drug(drug_el):
     if not drugbank_id:
         return None
 
-    moa = find_text(drug_el, "mechanism-of-action")
+    moa  = find_text(drug_el, "mechanism-of-action")
+    props = extract_calculated_properties(drug_el)
+    ext   = extract_external_ids(drug_el)
+    date  = extract_approval_date(drug_el)
 
     return {
-        "drugbank_id": drugbank_id,
-        "name": find_text(drug_el, "name"),
-        "atc_codes": [
+        "drugbank_id":         drugbank_id,
+        "name":                find_text(drug_el, "name"),
+        "atc_codes":           [
             atc.get("code", "")
             for atc in (drug_el.find(tag("atc-codes")) or [])
             if atc.get("code", "")
         ],
-        "indication": find_text(drug_el, "indication"),
+        "indication":          find_text(drug_el, "indication"),
         "mechanism_of_action": moa,
-        "pharmacodynamics": find_text(drug_el, "pharmacodynamics"),
-        "drug_class": infer_drug_class(moa),
-        "synonyms": find_all_text(drug_el, "synonyms/synonym"),
-        "pdb_ids": find_all_text(drug_el, "pdb-entries/pdb-entry"),
-        "targets": extract_targets(drug_el),
-        "pubmed_ids": [
+        "pharmacodynamics":    find_text(drug_el, "pharmacodynamics"),
+        "drug_class":          infer_drug_class(moa),
+        "synonyms":            find_all_text(drug_el, "synonyms/synonym"),
+        "pdb_ids":             find_all_text(drug_el, "pdb-entries/pdb-entry"),
+        "targets":             extract_targets(drug_el),
+        "pubmed_ids":          [
             find_text(a, "pubmed-id")
             for a in (
-                (drug_el.find(tag("general-references")) or ET.Element("x")).find(
-                    tag("articles")
-                )
-                or []
+                (drug_el.find(tag("general-references")) or
+                ET.Element("x")).find(tag("articles")) or []
             )
             if find_text(a, "pubmed-id")
         ],
+        "smiles":              props["smiles"],
+        "molecular_weight":    props["molecular_weight"],
+        "inchikey":            props["inchikey"],
+        "pubchem_cid":         ext["pubchem_cid"],
+        "chembl_id":           ext["chembl_id"],
+        "approval_date":       date,
     }
 
 

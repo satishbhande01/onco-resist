@@ -1,0 +1,204 @@
+{% extends "base.html" %}
+{% block title %}Search{% endblock %}
+
+{% block extra_styles %}
+<link rel="stylesheet" href="/static/css/pages/search.css">
+{% endblock %}
+
+{% block content %}
+<div class="search-page">
+
+    <!-- ── Search header ────────────────────────────────── -->
+    <div class="search-header">
+        <h1>Search</h1>
+        {% if query %}
+        <p>
+            Results for
+            <span class="query-highlight">"{{ query }}"</span>
+        </p>
+        {% else %}
+        <p>Search across drugs, targets, and resistance mutations</p>
+        {% endif %}
+    </div>
+
+    <!-- ── Search bar ───────────────────────────────────── -->
+    <form class="search-bar" action="/search" method="get">
+        <input
+            type="text"
+            name="q"
+            value="{{ query }}"
+            placeholder="Try imatinib, ABL1, T315I…"
+            autofocus
+        >
+        <button type="submit" class="btn primary">Search</button>
+    </form>
+
+    <!-- ── No query state ───────────────────────────────── -->
+    {% if not query %}
+    <div class="search-hints">
+        <p class="hints-label">Try searching for</p>
+        <div class="hint-chips">
+            <a href="/search?q=imatinib"   class="hint-chip">imatinib</a>
+            <a href="/search?q=EGFR"       class="hint-chip">EGFR</a>
+            <a href="/search?q=T315I"      class="hint-chip">T315I</a>
+            <a href="/search?q=dasatinib"  class="hint-chip">dasatinib</a>
+            <a href="/search?q=BRAF"       class="hint-chip">BRAF</a>
+            <a href="/search?q=olaparib"   class="hint-chip">olaparib</a>
+            <a href="/search?q=PARP"       class="hint-chip">PARP</a>
+            <a href="/search?q=vemurafenib" class="hint-chip">vemurafenib</a>
+        </div>
+    </div>
+
+    {% else %}
+
+    <!-- ── No results ───────────────────────────────────── -->
+    {% if not results.drugs and not results.targets and not results.mutations %}
+    <div class="no-results">
+        <div class="no-results-icon">🔬</div>
+        <p>No results found for "{{ query }}"</p>
+        <p class="no-results-hint">
+            Try a drug name, gene symbol, or mutation code
+        </p>
+    </div>
+
+    {% else %}
+
+    <!-- ── Drugs results ────────────────────────────────── -->
+    {% if results.drugs %}
+    <div class="results-section">
+        <div class="results-section-title">
+            Drugs
+            <span class="results-count">{{ results.drugs|length }}</span>
+        </div>
+        <div class="table-wrap">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Class</th>
+                        <th>Indication</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for drug in results.drugs %}
+                    <tr>
+                        <td>
+                            <span class="result-name">{{ drug.name }}</span>
+                        </td>
+                        <td>
+                            {% if drug.drug_class and drug.drug_class != 'Other' %}
+                            <span class="class-badge">{{ drug.drug_class }}</span>
+                            {% else %}
+                            <span class="dim">—</span>
+                            {% endif %}
+                        </td>
+                        <td class="indication-cell">
+                            {{ (drug.indication or '')[:100] }}
+                            {% if drug.indication and drug.indication|length > 100 %}…{% endif %}
+                        </td>
+                        <td>
+                            <a href="/drugs/{{ drug.drugbank_id }}"
+                               class="btn secondary view-btn">
+                                View →
+                            </a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+    {% endif %}
+
+    <!-- ── Targets results ──────────────────────────────── -->
+    {% if results.targets %}
+    <div class="results-section">
+        <div class="results-section-title">
+            Targets
+            <span class="results-count">{{ results.targets|length }}</span>
+        </div>
+        <div class="table-wrap">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Gene</th>
+                        <th>Protein Name</th>
+                        <th>UniProt</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for target in results.targets %}
+                    <tr>
+                        <td>
+                            <span class="gene-name">{{ target.gene_name }}</span>
+                        </td>
+                        <td class="protein-name-cell">
+                            {{ target.protein_name or '—' }}
+                        </td>
+                        <td>
+                            <span class="uniprot-id">
+                                {{ target.uniprot_accession }}
+                            </span>
+                        </td>
+                        <td>
+                            <a href="/targets/{{ target.uniprot_accession }}"
+                               class="btn secondary view-btn">
+                                View →
+                            </a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+    {% endif %}
+
+    <!-- ── Mutations results ────────────────────────────── -->
+    {% if results.mutations %}
+    <div class="results-section">
+        <div class="results-section-title">
+            Resistance Mutations
+            <span class="results-count">{{ results.mutations|length }}</span>
+        </div>
+        <div class="table-wrap">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Gene</th>
+                        <th>Mutation</th>
+                        <th>Drug</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for mut in results.mutations %}
+                    <tr>
+                        <td>
+                            <span class="gene-name">{{ mut.gene_symbol }}</span>
+                        </td>
+                        <td>
+                            <span class="mut-code">{{ mut.mutation_aa }}</span>
+                        </td>
+                        <td>{{ mut.drug_name }}</td>
+                        <td>
+                            <a href="/drugs/{{ mut.drugbank_id }}"
+                               class="btn secondary view-btn">
+                                View Drug →
+                            </a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+    {% endif %}
+
+    {% endif %}
+    {% endif %}
+
+</div>
+{% endblock %}

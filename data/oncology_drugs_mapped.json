@@ -138,6 +138,12 @@
       "15269308",
       "16336752"
     ],
+    "smiles": null,
+    "molecular_weight": null,
+    "inchikey": null,
+    "pubchem_cid": null,
+    "chembl_id": "CHEMBL1201577",
+    "approval_date": "2004-02-12",
     "target_pdb_links": [
       {
         "gene_name": "EGFR",
@@ -317,6 +323,12 @@
       "17187516",
       "17454642"
     ],
+    "smiles": null,
+    "molecular_weight": null,
+    "inchikey": null,
+    "pubchem_cid": null,
+    "chembl_id": "CHEMBL1201550",
+    "approval_date": "2008-10-15",
     "target_pdb_links": [
       {
         "gene_name": "IL2RA",
@@ -394,6 +406,12 @@
       "15780490",
       "16370917"
     ],
+    "smiles": null,
+    "molecular_weight": null,
+    "inchikey": null,
+    "pubchem_cid": null,
+    "chembl_id": "CHEMBL1201199",
+    "approval_date": "1989-01-26",
     "target_pdb_links": [
       {
         "gene_name": "GNRHR",
@@ -447,6 +465,12 @@
       }
     ],
     "pubmed_ids": [],
+    "smiles": "CC(C)C[C@H](NC(=O)[C@@H](COC(C)(C)C)NC(=O)[C@H](CC1=CC=C(O)C=C1)NC(=O)[C@H](CO)NC(=O)[C@H](CC1=CNC2=CC=CC=C12)NC(=O)[C@H](CC1=CN=CN1)NC(=O)[C@@H]1CCC(=O)N1)C(=O)N[C@@H](CCCN=C(N)N)C(=O)N1CCC[C@H]1C(=O)NNC(N)=O",
+    "molecular_weight": "1269.4105",
+    "inchikey": "BLCLNMBMMGCOAS-URPVMXJPSA-N",
+    "pubchem_cid": "5311128",
+    "chembl_id": "CHEMBL1201247",
+    "approval_date": "2003-05-05",
     "target_pdb_links": [
       {
         "gene_name": "LHCGR",
@@ -515,6 +539,12 @@
     "pubmed_ids": [
       "21456630"
     ],
+    "smiles": null,
+    "molecular_weight": null,
+    "inchikey": null,
+    "pubchem_cid": null,
+    "chembl_id": "CHEMBL1201568",
+    "approval_date": "2002-04-01",
     "target_pdb_links": [
       {
         "gene_name": "CSF3R",
@@ -611,6 +641,12 @@
       }
     ],
     "pubmed_ids": [],
+    "smiles": null,
+    "molecular_weight": null,
+    "inchikey": null,
+    "pubchem_cid": null,
+    "chembl_id": "CHEMBL1201670",
+    "approval_date": "1991-05-01",
     "target_pdb_links": [
       {
         "gene_name": "CSF2RA",
@@ -694,6 +730,12 @@
     "pubmed_ids": [
       "17554375"
     ],
+    "smiles": null,
+    "molecular_weight": null,
+    "inchikey": null,
+    "pubchem_cid": null,
+    "chembl_id": "CHEMBL2108989",
+    "approval_date": null,
     "target_pdb_links": [],
     "unmatched_pdb_ids": []
   },
@@ -741,6 +783,12 @@
       }
     ],
     "pubmed_ids": [],
+    "smiles": null,
+    "molecular_weight": null,
+    "inchikey": null,
+    "pubchem_cid": null,
+    "chembl_id": null,
+    "approval_date": null,
     "target_pdb_links": [
       {
         "gene_name": "IFNAR1",
@@ -820,6 +868,12 @@
       }
     ],
     "pubmed_ids": [],
+    "smiles": null,
+    "molecular_weight": null,
+    "inchikey": null,
+    "pubchem_cid": null,
+    "chembl_id": "CHEMBL1201438",
+    "approval_date": "1992-05-05",
     "target_pdb_links": [
       {
         "gene_name": "IL2RB",
@@ -992,6 +1046,12 @@
       "12738663",
       "15286091"
     ],
+    "smiles": null,
+    "molecular_weight": null,
+    "inchikey": null,
+    "pubchem_cid": null,
+    "chembl_id": "CHEMBL1201506",
+    "approval_date": "2017-09-07",
     "target_pdb_links": [
       {
         "gene_name": "CD33",
@@ -1137,6 +1197,12 @@
     "pubmed_ids": [
       "14499708"
     ],
+    "smiles": null,
+    "molecular_weight": null,
+    "inchikey": null,
+    "pubchem_cid": null,
+    "chembl_id": "CHEMBL2108546",
+    "approval_date": "1994-02-01",
     "target_pdb_links": [],
     "unmatched_pdb_ids": []
   },
@@ -1189,6 +1255,12 @@
     "pubmed_ids": [
       "8836913"
     ],
+    "smiles": null,
+    "molecular_weight": null,
+    "inchikey": null,
+    "pubchem_cid": null,
+    "chembl_id": "CHEMBL1201557",
+    "approval_date": null,
     "target_pdb_links": [
       {
         "gene_name": "IFNAR1",
@@ -1361,6 +1433,12 @@
       "14613027",
       "21813259"
     ],
+    "smiles": null,
+    "molecular_weight": null,
+    "inchikey": null,
+    "pubchem_cid": null,
+    "chembl_id": "CHEMBL1201585",
+    "approval_date": "1998-09-25",
     "target_pdb_links": [
       {
         "gene_name": "ERBB2",
@@ -1630,6 +1708,12 @@
       "16705086",
       "12826649"
     ],
+    "smiles": null,
+    "molecular_weight": null,
+    "inchikey": null,
+    "pubchem_cid": null,
+    "chembl_id": "CHEMBL1201576",
+    "approval_date": "1997-11-26",
     "target_pdb_links": [
       {
         "gene_name": "MS4A1",
@@ -1875,6 +1959,12 @@
       "6349718",
       "3127726"
     ],
+    "smiles": null,
+    "molecular_weight": null,
+    "inchikey": null,
+    "pubchem_cid": null,
+    "chembl_id": "CHEMBL1201587",
+    "approval_date": "2009-11-30",
     "target_pdb_links": [
       {
         "gene_name": "CD52",
@@ -2035,6 +2125,12 @@
     "pubmed_ids": [
       "11677930"
     ],
+    "smiles": null,
+    "molecular_weight": null,
+    "inchikey": null,
+    "pubchem_cid": null,
+    "chembl_id": "CHEMBL1201567",
+    "approval_date": "1994-06-08",
     "target_pdb_links": [
       {
         "gene_name": "CSF3R",
@@ -2108,6 +2204,12 @@
     "pubmed_ids": [
       "8994971"
     ],
+    "smiles": null,
+    "molecular_weight": null,
+    "inchikey": null,
+    "pubchem_cid": null,
+    "chembl_id": null,
+    "approval_date": "1986-06-04",
     "target_pdb_links": [
       {
         "gene_name": "IFNAR2",
@@ -2162,6 +2264,12 @@
       }
     ],
     "pubmed_ids": [],
+    "smiles": "CC(C)C[C@H](NC(=O)[C@@H](CC(N)=O)NC(=O)[C@H](CC1=CC=C(O)C=C1)N(C)C(=O)[C@H](CO)NC(=O)[C@@H](CC1=CN=CC=C1)NC(=O)[C@@H](CC1=CC=C(Cl)C=C1)NC(=O)[C@@H](CC1=CC2=C(C=CC=C2)C=C1)NC(C)=O)C(=O)N[C@@H](CCCCNC(C)C)C(=O)N1CCC[C@H]1C(=O)N[C@H](C)C(N)=O",
+    "molecular_weight": "1416.09",
+    "inchikey": "AIWRTTMUVOZGPW-HSPKUQOVSA-N",
+    "pubchem_cid": "16131215",
+    "chembl_id": "CHEMBL1252",
+    "approval_date": null,
     "target_pdb_links": [
       {
         "gene_name": "GNRHR",
@@ -2297,6 +2405,12 @@
     "pubmed_ids": [
       "17409907"
     ],
+    "smiles": null,
+    "molecular_weight": null,
+    "inchikey": null,
+    "pubchem_cid": null,
+    "chembl_id": "CHEMBL1201583",
+    "approval_date": "2004-02-26",
     "target_pdb_links": [
       {
         "gene_name": "VEGFA",
@@ -2458,6 +2572,12 @@
       }
     ],
     "pubmed_ids": [],
+    "smiles": "C[C@@H](CC1=CC(O)=C(O)C=C1)[C@H](C)CC1=CC(O)=C(O)C=C1",
+    "molecular_weight": "302.3649",
+    "inchikey": "HCZKYJDFEPMADG-TXEJJXNPSA-N",
+    "pubchem_cid": "71398",
+    "chembl_id": "CHEMBL313972",
+    "approval_date": null,
     "target_pdb_links": [
       {
         "gene_name": "ALOX5",
@@ -2556,6 +2676,12 @@
       "10363983",
       "15846363"
     ],
+    "smiles": "CC(C)C[C@H](NC(=O)[C@H](CC1=CC=CC=C1)NC(=O)C1=CN=CC=N1)B(O)O",
+    "molecular_weight": "384.237",
+    "inchikey": "GXJABQQUPOEUTA-RDJZCZTQSA-N",
+    "pubchem_cid": "387447",
+    "chembl_id": "CHEMBL325041",
+    "approval_date": "2003-05-13",
     "target_pdb_links": [
       {
         "gene_name": "PSMB5",
@@ -2568,7 +2694,6 @@
         ],
         "known_action": "yes",
         "pdb_ids": [
-          "5l5z",
           "5lf3"
         ]
       },
@@ -2583,7 +2708,8 @@
         ],
         "known_action": "yes",
         "pdb_ids": [
-          "5l5f"
+          "5l5f",
+          "5l5z"
         ]
       }
     ],
@@ -2626,6 +2752,12 @@
     "pdb_ids": [],
     "targets": [],
     "pubmed_ids": [],
+    "smiles": "BrCCC(=O)N1CCN(CC1)C(=O)CCBr",
+    "molecular_weight": "356.054",
+    "inchikey": "NJBFOOCLYDNZJN-UHFFFAOYSA-N",
+    "pubchem_cid": "4842",
+    "chembl_id": "CHEMBL1585",
+    "approval_date": null,
     "target_pdb_links": [],
     "unmatched_pdb_ids": []
   },
@@ -2767,6 +2899,12 @@
       "19576186",
       "19463072"
     ],
+    "smiles": "NC1=C2N=CN([C@H]3C[C@H](O)[C@@H](CO)O3)C2=NC(Cl)=N1",
+    "molecular_weight": "285.687",
+    "inchikey": "PTOAARAWEBMLNO-KVQBGUIXSA-N",
+    "pubchem_cid": "20279",
+    "chembl_id": "CHEMBL1619",
+    "approval_date": "2004-12-01",
     "target_pdb_links": [
       {
         "gene_name": "RRM1",
@@ -3018,6 +3156,12 @@
       "5171004",
       "5549830"
     ],
+    "smiles": "CCC(=C(CC)C1=CC=C(O)C=C1)C1=CC=C(O)C=C1",
+    "molecular_weight": "268.3502",
+    "inchikey": "RGLYKWWBQGJZGM-ISLYRVAYSA-N",
+    "pubchem_cid": "3054",
+    "chembl_id": "CHEMBL411",
+    "approval_date": null,
     "target_pdb_links": [
       {
         "gene_name": "ESR1",
@@ -3029,10 +3173,7 @@
           "agonist"
         ],
         "known_action": "yes",
-        "pdb_ids": [
-          "3erd",
-          "4zn7"
-        ]
+        "pdb_ids": []
       },
       {
         "gene_name": "ESRRG",
@@ -3086,7 +3227,10 @@
         "cellular_location": "Nucleus",
         "actions": [],
         "known_action": "unknown",
-        "pdb_ids": []
+        "pdb_ids": [
+          "3erd",
+          "4zn7"
+        ]
       },
       {
         "gene_name": "NR1I2",
@@ -3162,6 +3306,12 @@
       }
     ],
     "pubmed_ids": [],
+    "smiles": "ClCCNC(=O)N(CCCl)N=O",
+    "molecular_weight": "214.05",
+    "inchikey": "DLGOEMSEDOSKAD-UHFFFAOYSA-N",
+    "pubchem_cid": "2578",
+    "chembl_id": "CHEMBL513",
+    "approval_date": "1996-09-24",
     "target_pdb_links": [
       {
         "gene_name": "GSR",
@@ -3244,6 +3394,12 @@
       }
     ],
     "pubmed_ids": [],
+    "smiles": "COC1=C(NC2=C3C=CC=CC3=NC3=CC=CC=C23)C=CC(NS(C)(=O)=O)=C1",
+    "molecular_weight": "393.459",
+    "inchikey": "XCPGHVQEEXUHNC-UHFFFAOYSA-N",
+    "pubchem_cid": "2179",
+    "chembl_id": "CHEMBL43",
+    "approval_date": null,
     "target_pdb_links": [
       {
         "gene_name": "TOP2A",
@@ -3341,6 +3497,12 @@
     "pubmed_ids": [
       "11749501"
     ],
+    "smiles": "C[C@@H](O)[C@H](NC(=O)[C@@H](C)[C@H](O)[C@@H](C)NC(=O)[C@@H](NC(=O)C1=C(C)C(N)=NC(=N1)[C@H](CC(N)=O)NC[C@H](N)C(N)=O)[C@@H](OC1OC(CO)C(O)C(O)C1OC1OC(CO)C(O)C(OC(N)=O)C1O)C1=CN=CN1)C(=O)NCCC1=NC(=CS1)C1=NC(=CS1)C(=O)NCCC[S+](C)C",
+    "molecular_weight": "1415.552",
+    "inchikey": "OYVAGSVQBOHSSS-WXFSZRTFSA-O",
+    "pubchem_cid": "5360373",
+    "chembl_id": "CHEMBL403664",
+    "approval_date": "2000-03-10",
     "target_pdb_links": [
       {
         "gene_name": "LIG1",
@@ -3401,6 +3563,12 @@
       "19160296",
       "20033051"
     ],
+    "smiles": "OC(=O)CCCC1=CC=C(C=C1)N(CCCl)CCCl",
+    "molecular_weight": "304.212",
+    "inchikey": "JCKYGMPEJWAADB-UHFFFAOYSA-N",
+    "pubchem_cid": "2708",
+    "chembl_id": "CHEMBL515",
+    "approval_date": "1985-02-13",
     "target_pdb_links": [],
     "unmatched_pdb_ids": [
       "3csj"
@@ -3459,6 +3627,12 @@
       }
     ],
     "pubmed_ids": [],
+    "smiles": "CN(CC1=CC2=C(NC(C)=NC2=O)C=C1)C1=CC=C(S1)C(=O)N[C@@H](CCC(O)=O)C(O)=O",
+    "molecular_weight": "458.488",
+    "inchikey": "IVTVGDXNLFLDRM-HNNXBMFYSA-N",
+    "pubchem_cid": "104758",
+    "chembl_id": "CHEMBL225071",
+    "approval_date": null,
     "target_pdb_links": [
       {
         "gene_name": "TYMS",
@@ -3524,6 +3698,12 @@
     "pdb_ids": [],
     "targets": [],
     "pubmed_ids": [],
+    "smiles": "CO[C@]12[C@H]3N[C@H]3CN1C1=C([C@H]2COC(N)=O)C(=O)C(N)=C(C)C1=O",
+    "molecular_weight": "334.3272",
+    "inchikey": "NWIBSHFKIJFRCO-WUDYKRTCSA-N",
+    "pubchem_cid": "5746",
+    "chembl_id": "CHEMBL105",
+    "approval_date": "2009-06-10",
     "target_pdb_links": [],
     "unmatched_pdb_ids": []
   },
@@ -3597,6 +3777,12 @@
       "16495926",
       "15056048"
     ],
+    "smiles": "CC1=CC2=C(C=C1C(=C)C1=CC=C(C=C1)C(O)=O)C(C)(C)CCC2(C)C",
+    "molecular_weight": "348.4779",
+    "inchikey": "NAVMQTYZDKMPEU-UHFFFAOYSA-N",
+    "pubchem_cid": "82146",
+    "chembl_id": "CHEMBL1023",
+    "approval_date": "1999-12-29",
     "target_pdb_links": [
       {
         "gene_name": "RXRA",
@@ -3670,6 +3856,12 @@
       }
     ],
     "pubmed_ids": [],
+    "smiles": "[H][C@@]12N3CC[C@@]11C4=CC(=C(OC)C=C4N(C)[C@@]1([H])[C@](O)([C@H](O)[C@]2(CC)C=CC3)C(N)=O)[C@]1(C[C@]2([H])CN(C[C@](O)(CC)C2)CCC2=C1NC1=CC=CC=C21)C(=O)OC",
+    "molecular_weight": "753.9261",
+    "inchikey": "HHJUWIANJFBDHT-KOTLKJBCSA-N",
+    "pubchem_cid": "40839",
+    "chembl_id": "CHEMBL219146",
+    "approval_date": null,
     "target_pdb_links": [
       {
         "gene_name": "TUBB1",
@@ -3727,6 +3919,12 @@
       "15329413",
       "15284455"
     ],
+    "smiles": "COC1=C(OCCCN2CCOCC2)C=C2C(NC3=CC(Cl)=C(F)C=C3)=NC=NC2=C1",
+    "molecular_weight": "446.902",
+    "inchikey": "XGALLCVXEZPNRQ-UHFFFAOYSA-N",
+    "pubchem_cid": "123631",
+    "chembl_id": "CHEMBL939",
+    "approval_date": "2015-07-13",
     "target_pdb_links": [
       {
         "gene_name": "EGFR",
@@ -3819,6 +4017,12 @@
       "19434889",
       "12872362"
     ],
+    "smiles": "[H][C@@]12CC[C@](OC(C)=O)(C(C)=O)[C@@]1(C)CC[C@@]1([H])[C@@]2([H])C=C(C)C2=CC(=O)CC[C@]12C",
+    "molecular_weight": "384.516",
+    "inchikey": "RQZAXGRLVPAYTJ-GQFGMJRRSA-N",
+    "pubchem_cid": "11683",
+    "chembl_id": "CHEMBL1201139",
+    "approval_date": "1988-08-08",
     "target_pdb_links": [
       {
         "gene_name": "PGR",
@@ -3889,6 +4093,12 @@
     ],
     "targets": [],
     "pubmed_ids": [],
+    "smiles": "NC1=NC(=S)C2=C(N1)N=CN2",
+    "molecular_weight": "167.192",
+    "inchikey": "WYWHKKSPHMUBEB-UHFFFAOYSA-N",
+    "pubchem_cid": "2723601",
+    "chembl_id": "CHEMBL727",
+    "approval_date": "2013-03-12",
     "target_pdb_links": [],
     "unmatched_pdb_ids": [
       "3jqa",
@@ -3947,6 +4157,12 @@
       }
     ],
     "pubmed_ids": [],
+    "smiles": "CCC1(CCC(=O)NC1=O)C1=CC=C(N)C=C1",
+    "molecular_weight": "232.2783",
+    "inchikey": "ROBVIMPUHSLWNV-UHFFFAOYSA-N",
+    "pubchem_cid": "2145",
+    "chembl_id": "CHEMBL488",
+    "approval_date": null,
     "target_pdb_links": [
       {
         "gene_name": "CYP19A1",
@@ -4010,6 +4226,12 @@
     "pubmed_ids": [
       "11822766"
     ],
+    "smiles": "[H][C@@]12N(C)C3=CC(OC)=C(C=C3[C@@]11CCN3CC=C[C@@](CC)([C@@H](OC(C)=O)[C@@]2(O)C(=O)OC)[C@@]13[H])[C@]1(C[C@@]2([H])CN(CC(CC)=C2)CC2=C1NC1=CC=CC=C21)C(=O)OC",
+    "molecular_weight": "778.9323",
+    "inchikey": "GBABOYUKABKIAF-GHYRFKGUSA-N",
+    "pubchem_cid": "44424639",
+    "chembl_id": "CHEMBL607994",
+    "approval_date": "2003-03-01",
     "target_pdb_links": [
       {
         "gene_name": "TUBB",
@@ -4059,6 +4281,12 @@
       }
     ],
     "pubmed_ids": [],
+    "smiles": "[H][C@@]1(C[C@@](O)(CC2=C(O)C3=C(C(O)=C12)C(=O)C1=C(OC)C=CC=C1C3=O)C(=O)COC(=O)CCCC)O[C@H]1C[C@H](NC(=O)C(F)(F)F)[C@H](O)[C@H](C)O1",
+    "molecular_weight": "723.651",
+    "inchikey": "ZOCKGBMQLCSHFP-KQRAQHLDSA-N",
+    "pubchem_cid": "454216",
+    "chembl_id": "CHEMBL1096885",
+    "approval_date": "1998-10-01",
     "target_pdb_links": [
       {
         "gene_name": "TOP2A",
@@ -4213,6 +4441,12 @@
       }
     ],
     "pubmed_ids": [],
+    "smiles": "CNC(=O)C1=NC=CC(OC2=CC=C(NC(=O)NC3=CC(=C(Cl)C=C3)C(F)(F)F)C=C2)=C1",
+    "molecular_weight": "464.825",
+    "inchikey": "MLDQJTXFUGDVEO-UHFFFAOYSA-N",
+    "pubchem_cid": "216239",
+    "chembl_id": "CHEMBL1336",
+    "approval_date": "2005-12-20",
     "target_pdb_links": [
       {
         "gene_name": "BRAF",
@@ -4400,6 +4634,12 @@
       "13841501",
       "4170654"
     ],
+    "smiles": "CN(N=O)C(=O)N[C@H]1[C@@H](O)O[C@H](CO)[C@@H](O)[C@@H]1O",
+    "molecular_weight": "265.2206",
+    "inchikey": "ZSJLQEPLLKMAKR-GKHCUFPYSA-N",
+    "pubchem_cid": "29327",
+    "chembl_id": "CHEMBL1603",
+    "approval_date": "2003-12-03",
     "target_pdb_links": [
       {
         "gene_name": "SLC2A2",
@@ -4487,6 +4727,12 @@
       }
     ],
     "pubmed_ids": [],
+    "smiles": "NC1=NC(=O)N(C=C1)[C@@H]1O[C@H](CO)[C@@H](O)C1(F)F",
+    "molecular_weight": "263.1981",
+    "inchikey": "SDUQYLNIPVEERB-QPPQHZFASA-N",
+    "pubchem_cid": "60750",
+    "chembl_id": "CHEMBL888",
+    "approval_date": "1996-05-15",
     "target_pdb_links": [
       {
         "gene_name": "RRM1",
@@ -4567,6 +4813,12 @@
       }
     ],
     "pubmed_ids": [],
+    "smiles": "[H][C@]12COC(=O)[C@]1([H])[C@]([H])(C1=CC(OC)=C(O)C(OC)=C1)C1=CC3=C(OCO3)C=C1[C@@]2([H])O[C@]1([H])O[C@]2([H])CO[C@]([H])(O[C@@]2([H])[C@]([H])(O)[C@@]1([H])O)C1=CC=CS1",
+    "molecular_weight": "656.654",
+    "inchikey": "NRUKOCRGYNPUPR-QBPJDGROSA-N",
+    "pubchem_cid": "452548",
+    "chembl_id": "CHEMBL452231",
+    "approval_date": "2013-04-30",
     "target_pdb_links": [
       {
         "gene_name": "TOP2A",
@@ -4632,6 +4884,12 @@
       }
     ],
     "pubmed_ids": [],
+    "smiles": "COC1=CC=CC2=C1C(=O)C1=C(O)C3=C(C[C@](O)(C[C@@H]3O[C@H]3C[C@H](N)[C@@H](O)[C@H](C)O3)C(=O)CO)C(O)=C1C2=O",
+    "molecular_weight": "543.5193",
+    "inchikey": "AOJJSUZBOXZQNB-VTZDEGQISA-N",
+    "pubchem_cid": "41867",
+    "chembl_id": "CHEMBL417",
+    "approval_date": "1999-09-15",
     "target_pdb_links": [
       {
         "gene_name": "CHD1",
@@ -4730,6 +4988,12 @@
       "16569772",
       "16344099"
     ],
+    "smiles": "NC1=CC=CC2=C1CN(C1CCC(=O)NC1=O)C2=O",
+    "molecular_weight": "259.2606",
+    "inchikey": "GOTYRUGSSMKFNF-UHFFFAOYSA-N",
+    "pubchem_cid": "216326",
+    "chembl_id": "CHEMBL848",
+    "approval_date": "2005-12-27",
     "target_pdb_links": [
       {
         "gene_name": "CRBN",
@@ -4811,6 +5075,12 @@
       "11302345",
       "7656502"
     ],
+    "smiles": "CN(C)C1=NC(=NC(=N1)N(C)C)N(C)C",
+    "molecular_weight": "210.2794",
+    "inchikey": "UUVWYPNAQBNQJQ-UHFFFAOYSA-N",
+    "pubchem_cid": "2123",
+    "chembl_id": "CHEMBL1455",
+    "approval_date": "1990-12-26",
     "target_pdb_links": [],
     "unmatched_pdb_ids": []
   },
@@ -4871,6 +5141,12 @@
       }
     ],
     "pubmed_ids": [],
+    "smiles": "CC(C)C(=O)NC1=CC(=C(C=C1)[N+]([O-])=O)C(F)(F)F",
+    "molecular_weight": "276.2118",
+    "inchikey": "MKXKFYHWDHIYRV-UHFFFAOYSA-N",
+    "pubchem_cid": "3397",
+    "chembl_id": "CHEMBL806",
+    "approval_date": "2001-09-18",
     "target_pdb_links": [
       {
         "gene_name": "AR",
@@ -4964,6 +5240,12 @@
       }
     ],
     "pubmed_ids": [],
+    "smiles": "N[Pt](N)(Cl)Cl",
+    "molecular_weight": "298.035",
+    "inchikey": "DQLATGHUWYMOKM-UHFFFAOYSA-L",
+    "pubchem_cid": "2767",
+    "chembl_id": "CHEMBL2068237",
+    "approval_date": "2000-06-01",
     "target_pdb_links": [
       {
         "gene_name": "MPG",
@@ -5149,6 +5431,12 @@
       }
     ],
     "pubmed_ids": [],
+    "smiles": "C\\C(\\C=C\\C1=C(C)CCCC1(C)C)=C\\C=C\\C(\\C)=C\\C(O)=O",
+    "molecular_weight": "300.4351",
+    "inchikey": "SHGAZHPCJJPHSC-ZVCIMWCZSA-N",
+    "pubchem_cid": "449171",
+    "chembl_id": "CHEMBL705",
+    "approval_date": "1999-02-03",
     "target_pdb_links": [
       {
         "gene_name": "RARA",
@@ -5304,6 +5592,12 @@
       "16806962",
       "14756144"
     ],
+    "smiles": "[H][N]1([H])[C@@H]2CCCC[C@H]2[N]([H])([H])[Pt]11OC(=O)C(=O)O1",
+    "molecular_weight": "397.294",
+    "inchikey": "ZROHGHOFXNOHSO-BNTLRKBRSA-L",
+    "pubchem_cid": "6857599",
+    "chembl_id": "CHEMBL414804",
+    "approval_date": "2006-06-02",
     "target_pdb_links": [],
     "unmatched_pdb_ids": []
   },
@@ -5357,6 +5651,12 @@
       "15613453",
       "11123895"
     ],
+    "smiles": "COCCOC1=C(OCCOC)C=C2C(NC3=CC=CC(=C3)C#C)=NC=NC2=C1",
+    "molecular_weight": "393.4357",
+    "inchikey": "AAKJLRGGTJKAMG-UHFFFAOYSA-N",
+    "pubchem_cid": "176870",
+    "chembl_id": "CHEMBL553",
+    "approval_date": "2005-04-30",
     "target_pdb_links": [
       {
         "gene_name": "EGFR",
@@ -5430,6 +5730,12 @@
       "8697402",
       "2491747"
     ],
+    "smiles": "ClCCN(CCCl)P1(=O)NCCCO1",
+    "molecular_weight": "261.086",
+    "inchikey": "CMSMOCZEIVJLDB-UHFFFAOYSA-N",
+    "pubchem_cid": "2907",
+    "chembl_id": "CHEMBL88",
+    "approval_date": "1959-11-16",
     "target_pdb_links": [
       {
         "gene_name": "NR1I2",
@@ -5490,6 +5796,12 @@
       "16515478",
       "17504144"
     ],
+    "smiles": "CN(C)CCOC1=CC=C(C=C1)C(=C(\\CCCl)C1=CC=CC=C1)\\C1=CC=CC=C1",
+    "molecular_weight": "405.96",
+    "inchikey": "XFCLJVABOIYOMF-QPLCGJKRSA-N",
+    "pubchem_cid": "3005573",
+    "chembl_id": "CHEMBL1655",
+    "approval_date": "1997-06-30",
     "target_pdb_links": [
       {
         "gene_name": "ESR1",
@@ -5567,6 +5879,12 @@
       "14070392",
       "10226730"
     ],
+    "smiles": "[H][C@@]12N3CC[C@@]11C4=CC(=C(OC)C=C4N(C=O)[C@@]1([H])[C@](O)([C@H](OC(C)=O)[C@]2(CC)C=CC3)C(=O)OC)[C@]1(C[C@]2([H])CN(C[C@](O)(CC)C2)CCC2=C1NC1=CC=CC=C21)C(=O)OC",
+    "molecular_weight": "824.9576",
+    "inchikey": "OGWKCGZFUXNPDA-XQKSVPLYSA-N",
+    "pubchem_cid": "5978",
+    "chembl_id": "CHEMBL90555",
+    "approval_date": "1988-04-19",
     "target_pdb_links": [
       {
         "gene_name": "TUBB",
@@ -5655,6 +5973,12 @@
       "12724731",
       "15032669"
     ],
+    "smiles": "FC1=CNC(=O)NC1=O",
+    "molecular_weight": "130.0772",
+    "inchikey": "GHASVSINZRGABV-UHFFFAOYSA-N",
+    "pubchem_cid": "3385",
+    "chembl_id": "CHEMBL185",
+    "approval_date": "1970-07-29",
     "target_pdb_links": [
       {
         "gene_name": "TYMS",
@@ -5723,6 +6047,12 @@
       }
     ],
     "pubmed_ids": [],
+    "smiles": "OC[C@H]1O[C@H](C[C@@H]1O)N1C=NC2=C1N=CNC[C@H]2O",
+    "molecular_weight": "268.2691",
+    "inchikey": "FPVKHBSQESCIEP-JQCXWYLXSA-N",
+    "pubchem_cid": "439693",
+    "chembl_id": "CHEMBL1580",
+    "approval_date": "1991-10-11",
     "target_pdb_links": [
       {
         "gene_name": "ADA",
@@ -5837,6 +6167,12 @@
       "15001324",
       "15639649"
     ],
+    "smiles": "CN(CC1=CN=C2N=C(N)N=C(N)C2=N1)C1=CC=C(C=C1)C(=O)N[C@@H](CCC(O)=O)C(O)=O",
+    "molecular_weight": "454.4393",
+    "inchikey": "FBOZXECLQNJBKD-ZDUSSCGKSA-N",
+    "pubchem_cid": "126941",
+    "chembl_id": "CHEMBL34259",
+    "approval_date": "1953-07-12",
     "target_pdb_links": [
       {
         "gene_name": "DHFR",
@@ -6003,6 +6339,12 @@
     "pubmed_ids": [
       "942954"
     ],
+    "smiles": "[H][C@@]12N(C)C3=CC(OC)=C(C=C3[C@@]11CCN3CC=C[C@](CC)([C@@]13[H])[C@@]([H])(OC(C)=O)[C@]2(O)C(=O)OC)[C@]1(C[C@@]2([H])CN(C[C@](O)(CC)C2)CCC2=C1NC1=CC=CC=C21)C(=O)OC",
+    "molecular_weight": "810.9741",
+    "inchikey": "JXLYSJRDGCGARV-CFWMRBGOSA-N",
+    "pubchem_cid": "13342",
+    "chembl_id": "CHEMBL159",
+    "approval_date": "2000-07-12",
     "target_pdb_links": [
       {
         "gene_name": "TUBA1A",
@@ -6148,6 +6490,12 @@
       "19434889",
       "1119869"
     ],
+    "smiles": "[H][C@@]12CC[C@](OC(C)=O)(C(C)=O)[C@@]1(C)CC[C@@]1([H])[C@@]2([H])C[C@H](C)C2=CC(=O)CC[C@]12C",
+    "molecular_weight": "386.5244",
+    "inchikey": "PSGAAPLEWMOORI-PEINSRQWSA-N",
+    "pubchem_cid": "6279",
+    "chembl_id": "CHEMBL717",
+    "approval_date": "1959-06-03",
     "target_pdb_links": [
       {
         "gene_name": "PGR",
@@ -6324,6 +6672,12 @@
       "14988091",
       "15980865"
     ],
+    "smiles": "CN1CCN(CC2=CC=C(C=C2)C(=O)NC2=CC(NC3=NC=CC(=N3)C3=CN=CC=C3)=C(C)C=C2)CC1",
+    "molecular_weight": "493.6027",
+    "inchikey": "KTUFNOKKBVMGRW-UHFFFAOYSA-N",
+    "pubchem_cid": "5291",
+    "chembl_id": "CHEMBL941",
+    "approval_date": "2001-05-15",
     "target_pdb_links": [
       {
         "gene_name": "BCR/ABL fusion",
@@ -6517,6 +6871,12 @@
       "19463072",
       "19576186"
     ],
+    "smiles": "[H][C@]1(F)[C@H](O)[C@@H](CO)O[C@H]1N1C=NC2=C(N)N=C(Cl)N=C12",
+    "molecular_weight": "303.677",
+    "inchikey": "WDDPHFBMKLOVOX-AYQXTPAHSA-N",
+    "pubchem_cid": "119182",
+    "chembl_id": "CHEMBL1750",
+    "approval_date": "2004-12-28",
     "target_pdb_links": [
       {
         "gene_name": "POLA1",
@@ -6619,6 +6979,12 @@
       "20446853",
       "12722874"
     ],
+    "smiles": "[H][C@@](CCC(O)=O)(NC(=O)C1=CC=C(CCC2=CNC3=C2C(O)=NC(=N)N3)C=C1)C(O)=O",
+    "molecular_weight": "427.4106",
+    "inchikey": "WBXPDJSOTKVWSJ-ZDUSSCGKSA-N",
+    "pubchem_cid": "446556",
+    "chembl_id": "CHEMBL225072",
+    "approval_date": "2004-02-04",
     "target_pdb_links": [
       {
         "gene_name": "TYMS",
@@ -6752,6 +7118,12 @@
       }
     ],
     "pubmed_ids": [],
+    "smiles": "ClC(Cl)C(C1=CC=C(Cl)C=C1)C1=CC=CC=C1Cl",
+    "molecular_weight": "320.041",
+    "inchikey": "JWBOIMRXGHLCPP-UHFFFAOYSA-N",
+    "pubchem_cid": "4211",
+    "chembl_id": "CHEMBL1670",
+    "approval_date": "2009-06-01",
     "target_pdb_links": [
       {
         "gene_name": "CYP11B1",
@@ -6846,6 +7218,12 @@
       "12686822",
       "17576447"
     ],
+    "smiles": "CC1(C)NC(=O)N(C1=O)C1=CC(=C(C=C1)[N+]([O-])=O)C(F)(F)F",
+    "molecular_weight": "317.2207",
+    "inchikey": "XWXYUMMDTVBTOU-UHFFFAOYSA-N",
+    "pubchem_cid": "4493",
+    "chembl_id": "CHEMBL1274",
+    "approval_date": "1996-09-19",
     "target_pdb_links": [
       {
         "gene_name": "AR",
@@ -6995,6 +7373,12 @@
       "15845599",
       "16418409"
     ],
+    "smiles": "CC\\C(=C(/C1=CC=CC=C1)C1=CC=C(OCCN(C)C)C=C1)C1=CC=CC=C1",
+    "molecular_weight": "371.5146",
+    "inchikey": "NKANXQFJJICGDU-QPLCGJKRSA-N",
+    "pubchem_cid": "2733526",
+    "chembl_id": "CHEMBL83",
+    "approval_date": "1994-04-26",
     "target_pdb_links": [
       {
         "gene_name": "ESR1",
@@ -7164,6 +7548,12 @@
       }
     ],
     "pubmed_ids": [],
+    "smiles": "COC1=CC=CC2=C1C(=O)C1=C(O)C3=C(C[C@](O)(C[C@@H]3O[C@H]3C[C@H](N)[C@H](O)[C@H](C)O3)C(C)=O)C(O)=C1C2=O",
+    "molecular_weight": "527.5199",
+    "inchikey": "STQGQHZAVUOBTE-VGBVRHCVSA-N",
+    "pubchem_cid": "30323",
+    "chembl_id": "CHEMBL178",
+    "approval_date": "2004-04-01",
     "target_pdb_links": [
       {
         "gene_name": "TOP2A",
@@ -7251,6 +7641,12 @@
       }
     ],
     "pubmed_ids": [],
+    "smiles": null,
+    "molecular_weight": null,
+    "inchikey": null,
+    "pubchem_cid": null,
+    "chembl_id": null,
+    "approval_date": "1995-12-27",
     "target_pdb_links": [
       {
         "gene_name": "LDLR",
@@ -7529,6 +7925,12 @@
       "11874821",
       "17099008"
     ],
+    "smiles": "CC(C=CC1=C(C)CCCC1(C)C)=CC=CC(C)=CC(O)=O",
+    "molecular_weight": "300.4351",
+    "inchikey": "SHGAZHPCJJPHSC-YCNIQYBTSA-N",
+    "pubchem_cid": "5538",
+    "chembl_id": "CHEMBL38",
+    "approval_date": "1973-01-26",
     "target_pdb_links": [
       {
         "gene_name": "RXRB",
@@ -7803,6 +8205,12 @@
       "19852077",
       "9342501"
     ],
+    "smiles": "CCC1=C2CN3C(=CC4=C(COC(=O)[C@]4(O)CC)C3=O)C2=NC2=C1C=C(OC(=O)N1CCC(CC1)N1CCCCC1)C=C2",
+    "molecular_weight": "586.678",
+    "inchikey": "UWKQSNNFCGGAFS-XIFFEERXSA-N",
+    "pubchem_cid": "60838",
+    "chembl_id": "CHEMBL481",
+    "approval_date": "1996-06-14",
     "target_pdb_links": [
       {
         "gene_name": "TOP1",
@@ -7887,6 +8295,12 @@
       "11531262",
       "17578914"
     ],
+    "smiles": "[H][C@]12COC(=O)[C@]1([H])[C@H](C1=CC(OC)=C(O)C(OC)=C1)C1=CC3=C(OCO3)C=C1[C@H]2O[C@@H]1O[C@]2([H])CO[C@@H](C)O[C@@]2([H])[C@H](O)[C@H]1O",
+    "molecular_weight": "588.5566",
+    "inchikey": "VJJPUSNTGOMMGY-MRVIYFEKSA-N",
+    "pubchem_cid": "36462",
+    "chembl_id": "CHEMBL44657",
+    "approval_date": "1996-08-01",
     "target_pdb_links": [
       {
         "gene_name": "TOP2A",
@@ -7975,6 +8389,12 @@
       }
     ],
     "pubmed_ids": [],
+    "smiles": "CN(C)\\N=N\\C1=C(N=CN1)C(N)=O",
+    "molecular_weight": "182.187",
+    "inchikey": "FDKXTQMXEQVLRF-ZHACJKMWSA-N",
+    "pubchem_cid": "5351166",
+    "chembl_id": "CHEMBL476",
+    "approval_date": "1998-08-27",
     "target_pdb_links": [
       {
         "gene_name": "POLA2",
@@ -8045,6 +8465,12 @@
       "10914698",
       "16925485"
     ],
+    "smiles": "CN1N=NC2=C(N=CN2C1=O)C(N)=O",
+    "molecular_weight": "194.1508",
+    "inchikey": "BPEGJWRSRHCHSN-UHFFFAOYSA-N",
+    "pubchem_cid": "5394",
+    "chembl_id": "CHEMBL810",
+    "approval_date": "1999-08-11",
     "target_pdb_links": [],
     "unmatched_pdb_ids": []
   },
@@ -8076,6 +8502,12 @@
     "pdb_ids": [],
     "targets": [],
     "pubmed_ids": [],
+    "smiles": "CN(CCCl)CCCl",
+    "molecular_weight": "156.054",
+    "inchikey": "HAWPXGHAZFHHAD-UHFFFAOYSA-N",
+    "pubchem_cid": "4033",
+    "chembl_id": "CHEMBL427",
+    "approval_date": "1949-03-15",
     "target_pdb_links": [],
     "unmatched_pdb_ids": []
   },
@@ -8129,6 +8561,12 @@
       "16030365",
       "19726509"
     ],
+    "smiles": "NC1=NC(=O)N(C=N1)[C@@H]1O[C@H](CO)[C@@H](O)[C@H]1O",
+    "molecular_weight": "244.2047",
+    "inchikey": "NMUSYJAQQFHJEW-KVTDHHQDSA-N",
+    "pubchem_cid": "9444",
+    "chembl_id": "CHEMBL1489",
+    "approval_date": "2004-07-05",
     "target_pdb_links": [
       {
         "gene_name": "DNMT1",
@@ -8179,6 +8617,12 @@
       "20151846",
       "12490735"
     ],
+    "smiles": "[H][C@@]12CC[C@H](O)[C@@]1(C)CC[C@@]1([H])C2[C@H](CCCCCCCCCS(=O)CCCC(F)(F)C(F)(F)F)CC2=CC(O)=CC=C12",
+    "molecular_weight": "606.771",
+    "inchikey": "VWUXBMIQPBEWFH-LQKBAPIOSA-N",
+    "pubchem_cid": "17756771",
+    "chembl_id": "CHEMBL1712246",
+    "approval_date": "2002-04-26",
     "target_pdb_links": [
       {
         "gene_name": "ESR1",
@@ -8219,6 +8663,12 @@
       "3512077",
       "3002623"
     ],
+    "smiles": "N.N.O=C1O[Pt]OC(=O)C11CCC1",
+    "molecular_weight": "371.254",
+    "inchikey": "OLESAACUTLOWQZ-UHFFFAOYSA-L",
+    "pubchem_cid": "38904",
+    "chembl_id": "CHEMBL1351",
+    "approval_date": "2004-10-14",
     "target_pdb_links": [],
     "unmatched_pdb_ids": []
   },
@@ -8252,6 +8702,12 @@
       "17102824",
       "15543019"
     ],
+    "smiles": "[H][C@@]12CCCN1C(=O)[C@H](NC(=O)[C@@H](NC(=O)C1=C3N=C4C(OC3=C(C)C=C1)=C(C)C(=O)C(N)=C4C(=O)N[C@H]1[C@@H](C)OC(=O)[C@H](C(C)C)N(C)C(=O)CN(C)C(=O)[C@]3([H])CCCN3C(=O)[C@H](NC1=O)C(C)C)[C@@H](C)OC(=O)[C@H](C(C)C)N(C)C(=O)CN(C)C2=O)C(C)C",
+    "molecular_weight": "1255.417",
+    "inchikey": "RJURFGZVJUQBHK-IIXSONLDSA-N",
+    "pubchem_cid": "457193",
+    "chembl_id": "CHEMBL1554",
+    "approval_date": "1964-12-10",
     "target_pdb_links": [],
     "unmatched_pdb_ids": []
   },
@@ -8338,6 +8794,12 @@
       }
     ],
     "pubmed_ids": [],
+    "smiles": "[H][C@@]12CC[C@@](O)(C#C)[C@@]1(C)CC[C@]1([H])C3=C(CC[C@@]21[H])C=C(O)C=C3",
+    "molecular_weight": "296.4034",
+    "inchikey": "BFPYWIDHMRZLRN-SLHNCBLASA-N",
+    "pubchem_cid": "5991",
+    "chembl_id": "CHEMBL691",
+    "approval_date": "1974-12-27",
     "target_pdb_links": [
       {
         "gene_name": "ESR1",
@@ -8416,6 +8878,12 @@
       }
     ],
     "pubmed_ids": [],
+    "smiles": "NC1=NC(=O)N(C=C1)[C@@H]1O[C@H](CO)[C@@H](O)[C@@H]1O",
+    "molecular_weight": "243.2166",
+    "inchikey": "UHDGCWIWMRVCDJ-CCXZUQQUSA-N",
+    "pubchem_cid": "6253",
+    "chembl_id": "CHEMBL803",
+    "approval_date": "1990-06-04",
     "target_pdb_links": [
       {
         "gene_name": "POLB",
@@ -8474,6 +8942,12 @@
       "20360896",
       "18728707"
     ],
+    "smiles": "[H][C@@]12CCC(=O)[C@@]1(C)CC[C@@]1([H])[C@@]2([H])CC(=C)C2=CC(=O)C=C[C@]12C",
+    "molecular_weight": "296.4034",
+    "inchikey": "BFYIZQONLCFLEV-DAELLWKTSA-N",
+    "pubchem_cid": "60198",
+    "chembl_id": "CHEMBL1200374",
+    "approval_date": "1999-10-21",
     "target_pdb_links": [
       {
         "gene_name": "CYP19A1",
@@ -8554,6 +9028,12 @@
       "19442138",
       "2555273"
     ],
+    "smiles": "COC1=CC=CC2=C1C(=O)C1=C(O)C3=C(C[C@](O)(C[C@@H]3O[C@H]3C[C@H](N)[C@H](O)[C@H](C)O3)C(=O)CO)C(O)=C1C2=O",
+    "molecular_weight": "543.5193",
+    "inchikey": "AOJJSUZBOXZQNB-TZSSRYMLSA-N",
+    "pubchem_cid": "31703",
+    "chembl_id": "CHEMBL53463",
+    "approval_date": "1987-12-23",
     "target_pdb_links": [
       {
         "gene_name": "TOP2A",
@@ -8633,6 +9113,12 @@
       }
     ],
     "pubmed_ids": [],
+    "smiles": "NC(=O)NO",
+    "molecular_weight": "76.0547",
+    "inchikey": "VSNHCAURESNICA-UHFFFAOYSA-N",
+    "pubchem_cid": "3657",
+    "chembl_id": "CHEMBL467",
+    "approval_date": "1998-10-19",
     "target_pdb_links": [
       {
         "gene_name": "RRM1",
@@ -8682,6 +9168,12 @@
     "pubmed_ids": [
       "16650422"
     ],
+    "smiles": "N#CC1=CC=C(C=C1)C(N1C=NC=N1)C1=CC=C(C=C1)C#N",
+    "molecular_weight": "285.3027",
+    "inchikey": "HPJKCIUCZWXJDR-UHFFFAOYSA-N",
+    "pubchem_cid": "3902",
+    "chembl_id": "CHEMBL1444",
+    "approval_date": "1997-07-31",
     "target_pdb_links": [
       {
         "gene_name": "CYP19A1",
@@ -8736,6 +9228,12 @@
       "18690982",
       "18690856"
     ],
+    "smiles": "CS(=O)(=O)OCCCCOS(C)(=O)=O",
+    "molecular_weight": "246.302",
+    "inchikey": "COVZYZSDYWQREU-UHFFFAOYSA-N",
+    "pubchem_cid": "2478",
+    "chembl_id": "CHEMBL820",
+    "approval_date": "1985-03-21",
     "target_pdb_links": [],
     "unmatched_pdb_ids": []
   },
@@ -8788,6 +9286,12 @@
       "8853931",
       "9122737"
     ],
+    "smiles": "CC[C@@]1(O)C(=O)OCC2=C1C=C1N(CC3=CC4=C(C=CC(O)=C4CN(C)C)N=C13)C2=O",
+    "molecular_weight": "421.4458",
+    "inchikey": "UCFGDBYHRUNTLO-QHCPKHFHSA-N",
+    "pubchem_cid": "60700",
+    "chembl_id": "CHEMBL84",
+    "approval_date": "1996-06-07",
     "target_pdb_links": [
       {
         "gene_name": "TOP1",
@@ -8879,6 +9383,12 @@
       }
     ],
     "pubmed_ids": [],
+    "smiles": "S=C1N=CNC2=C1NC=N2",
+    "molecular_weight": "152.177",
+    "inchikey": "GLVAUDGFNGKCSF-UHFFFAOYSA-N",
+    "pubchem_cid": "667490",
+    "chembl_id": "CHEMBL1425",
+    "approval_date": "2004-02-11",
     "target_pdb_links": [
       {
         "gene_name": "HPRT1",
@@ -8955,6 +9465,12 @@
       "16781199",
       "8398701"
     ],
+    "smiles": "N[C@@H](CC1=CC=C(C=C1)N(CCCl)CCCl)C(O)=O",
+    "molecular_weight": "305.2",
+    "inchikey": "SGDBTWWWUNNDEQ-LBPRGKRZSA-N",
+    "pubchem_cid": "460612",
+    "chembl_id": "CHEMBL852",
+    "approval_date": "2009-10-27",
     "target_pdb_links": [],
     "unmatched_pdb_ids": []
   },
@@ -9013,6 +9529,12 @@
       "9698219",
       "12969985"
     ],
+    "smiles": "NC1=NC(F)=NC2=C1N=CN2[C@@H]1O[C@H](CO)[C@@H](O)[C@@H]1O",
+    "molecular_weight": "285.235",
+    "inchikey": "HBUBKKRHXORPQB-FJFJXFQQSA-N",
+    "pubchem_cid": "657237",
+    "chembl_id": "CHEMBL1568",
+    "approval_date": "2003-09-12",
     "target_pdb_links": [
       {
         "gene_name": "RRM1",
@@ -9093,6 +9615,12 @@
       "15280932",
       "11291832"
     ],
+    "smiles": "CCCCCOC(=O)NC1=NC(=O)N(C=C1F)[C@@H]1O[C@H](C)[C@@H](O)[C@H]1O",
+    "molecular_weight": "359.3501",
+    "inchikey": "GAGWJHPBXLXJQN-UORFTKCHSA-N",
+    "pubchem_cid": "60953",
+    "chembl_id": "CHEMBL1773",
+    "approval_date": "1998-04-30",
     "target_pdb_links": [
       {
         "gene_name": "TYMS",
@@ -9139,6 +9667,12 @@
       }
     ],
     "pubmed_ids": [],
+    "smiles": "CC(O)(CS(=O)(=O)C1=CC=C(F)C=C1)C(=O)NC1=CC(=C(C=C1)C#N)C(F)(F)F",
+    "molecular_weight": "430.373",
+    "inchikey": "LKJPYSCBVHEWIU-UHFFFAOYSA-N",
+    "pubchem_cid": "2375",
+    "chembl_id": "CHEMBL409",
+    "approval_date": "1995-10-16",
     "target_pdb_links": [
       {
         "gene_name": "AR",
@@ -9194,6 +9728,12 @@
       }
     ],
     "pubmed_ids": [],
+    "smiles": "CNNCC1=CC=C(C=C1)C(=O)NC(C)C",
+    "molecular_weight": "221.2988",
+    "inchikey": "CPTBDICYNRMXFX-UHFFFAOYSA-N",
+    "pubchem_cid": "4915",
+    "chembl_id": "CHEMBL1321",
+    "approval_date": "1985-12-27",
     "target_pdb_links": [
       {
         "gene_name": "MAOA",
@@ -9344,6 +9884,12 @@
     "pubmed_ids": [
       "17640917"
     ],
+    "smiles": "O=[As]O[As]=O",
+    "molecular_weight": "197.84",
+    "inchikey": "IKWTVSLWAPBBKU-UHFFFAOYSA-N",
+    "pubchem_cid": "261004",
+    "chembl_id": "CHEMBL1200978",
+    "approval_date": "2000-10-15",
     "target_pdb_links": [
       {
         "gene_name": "IKBKB",
@@ -9502,6 +10048,12 @@
       }
     ],
     "pubmed_ids": [],
+    "smiles": "C[C@@H]1O[C@H](C[C@H](N)[C@@H]1O)O[C@H]1C[C@@](O)(CC2=C1C(O)=C1C(=O)C3=CC=CC=C3C(=O)C1=C2O)C(C)=O",
+    "molecular_weight": "497.4939",
+    "inchikey": "XDXDZDZNSLXDNA-TZNDIEGXSA-N",
+    "pubchem_cid": "42890",
+    "chembl_id": "CHEMBL1117",
+    "approval_date": "1997-02-17",
     "target_pdb_links": [
       {
         "gene_name": "TOP2A",
@@ -9567,6 +10119,12 @@
       "2107997",
       "1720382"
     ],
+    "smiles": "ClCCNP1(=O)OCCCN1CCCl",
+    "molecular_weight": "261.086",
+    "inchikey": "HOMGKSMUEGBAAB-UHFFFAOYSA-N",
+    "pubchem_cid": "3690",
+    "chembl_id": "CHEMBL1024",
+    "approval_date": "1988-12-30",
     "target_pdb_links": [
       {
         "gene_name": "NR1I2",
@@ -9647,6 +10205,12 @@
       }
     ],
     "pubmed_ids": [],
+    "smiles": "[H][C@@]12CC[C@H](O)[C@@]1(C)CC[C@]1([H])C3=CC=C(OC(=O)N(CCCl)CCCl)C=C3CC[C@@]21[H]",
+    "molecular_weight": "440.403",
+    "inchikey": "FRPJXPJMRWBBIH-RBRWEJTLSA-N",
+    "pubchem_cid": "259331",
+    "chembl_id": "CHEMBL1575",
+    "approval_date": "1992-01-01",
     "target_pdb_links": [
       {
         "gene_name": "MAP2",
@@ -9736,6 +10300,12 @@
       }
     ],
     "pubmed_ids": [],
+    "smiles": "ClCCN(N=O)C(=O)NC1CCCCC1",
+    "molecular_weight": "233.695",
+    "inchikey": "GQYIWUVLTXOXAJ-UHFFFAOYSA-N",
+    "pubchem_cid": "3950",
+    "chembl_id": "CHEMBL514",
+    "approval_date": "2008-12-15",
     "target_pdb_links": [
       {
         "gene_name": "STMN4",
@@ -9788,6 +10358,12 @@
       "19753124",
       "19389994"
     ],
+    "smiles": "CC(C)(C#N)C1=CC(=CC(CN2C=NC=N2)=C1)C(C)(C)C#N",
+    "molecular_weight": "293.3663",
+    "inchikey": "YBBLVLTVTVSKRW-UHFFFAOYSA-N",
+    "pubchem_cid": "2187",
+    "chembl_id": "CHEMBL1399",
+    "approval_date": "1996-01-16",
     "target_pdb_links": [
       {
         "gene_name": "CYP19A1",
@@ -9936,6 +10512,12 @@
       "15139776",
       "20217610"
     ],
+    "smiles": "[H][C@]12[C@H](OC(=O)C3=CC=CC=C3)[C@]3(O)C[C@H](OC(=O)[C@H](O)[C@@H](NC(=O)C4=CC=CC=C4)C4=CC=CC=C4)C(C)=C([C@@H](OC(C)=O)C(=O)[C@]1(C)[C@@H](O)C[C@H]1OC[C@@]21OC(C)=O)C3(C)C",
+    "molecular_weight": "853.9061",
+    "inchikey": "RCINICONZNJXQF-MZXODVADSA-N",
+    "pubchem_cid": "36314",
+    "chembl_id": "CHEMBL428647",
+    "approval_date": "2002-05-08",
     "target_pdb_links": [
       {
         "gene_name": "TUBB1",
@@ -10130,6 +10712,12 @@
       }
     ],
     "pubmed_ids": [],
+    "smiles": "[H][C@@]12C[C@H](O)[C@@]3(C)C(=O)[C@H](O)C4=C(C)[C@H](C[C@@](O)([C@@H](OC(=O)C5=CC=CC=C5)[C@]3([H])[C@@]1(CO2)OC(C)=O)C4(C)C)OC(=O)[C@H](O)[C@@H](NC(=O)OC(C)(C)C)C1=CC=CC=C1",
+    "molecular_weight": "807.8792",
+    "inchikey": "ZDZOTLJHXYCWBA-VCVYQWHSSA-N",
+    "pubchem_cid": "148124",
+    "chembl_id": "CHEMBL92",
+    "approval_date": "2010-08-02",
     "target_pdb_links": [
       {
         "gene_name": "TUBB1",
@@ -10472,6 +11060,12 @@
       "17154512",
       "16775234"
     ],
+    "smiles": "CC1=NC(NC2=NC=C(S2)C(=O)NC2=C(C)C=CC=C2Cl)=CC(=N1)N1CCN(CCO)CC1",
+    "molecular_weight": "488.006",
+    "inchikey": "ZBNZXTGUTAYRHI-UHFFFAOYSA-N",
+    "pubchem_cid": "3062316",
+    "chembl_id": "CHEMBL1421",
+    "approval_date": "2006-06-27",
     "target_pdb_links": [
       {
         "gene_name": "ABL1",
@@ -10803,6 +11397,12 @@
       "20110044",
       "18803986"
     ],
+    "smiles": "CS(=O)(=O)CCNCC1=CC=C(O1)C1=CC2=C(C=C1)N=CN=C2NC1=CC(Cl)=C(OCC2=CC(F)=CC=C2)C=C1",
+    "molecular_weight": "581.058",
+    "inchikey": "BCFGMOOMADDAQU-UHFFFAOYSA-N",
+    "pubchem_cid": "208908",
+    "chembl_id": "CHEMBL554",
+    "approval_date": "2007-03-16",
     "target_pdb_links": [
       {
         "gene_name": "EGFR",
@@ -10876,6 +11476,12 @@
       "18425818",
       "17023173"
     ],
+    "smiles": "NC1=NC(=O)N(C=N1)[C@H]1C[C@H](O)[C@@H](CO)O1",
+    "molecular_weight": "228.2053",
+    "inchikey": "XAUDJQYHKZQPEU-KVQBGUIXSA-N",
+    "pubchem_cid": "451668",
+    "chembl_id": "CHEMBL1201129",
+    "approval_date": "1996-05-03",
     "target_pdb_links": [
       {
         "gene_name": "DNMT1",
@@ -11009,6 +11615,12 @@
       "17215529",
       "17046465"
     ],
+    "smiles": "CCN(CC)CCNC(=O)C1=C(C)NC(\\C=C2/C(=O)NC3=C2C=C(F)C=C3)=C1C",
+    "molecular_weight": "398.4738",
+    "inchikey": "WINHZLLDWRZWRT-ATVHPVEESA-N",
+    "pubchem_cid": "5329102",
+    "chembl_id": "CHEMBL535",
+    "approval_date": "2006-01-26",
     "target_pdb_links": [
       {
         "gene_name": "PDGFRB",
@@ -11154,6 +11766,12 @@
       "17355997",
       "20481659"
     ],
+    "smiles": null,
+    "molecular_weight": null,
+    "inchikey": null,
+    "pubchem_cid": null,
+    "chembl_id": "CHEMBL1201827",
+    "approval_date": "2006-10-10",
     "target_pdb_links": [
       {
         "gene_name": "EGFR",
@@ -11209,6 +11827,12 @@
       "19157550",
       "16485343"
     ],
+    "smiles": "COC1=NC(N)=NC2=C1N=CN2[C@@H]1O[C@H](CO)[C@@H](O)[C@@H]1O",
+    "molecular_weight": "297.2673",
+    "inchikey": "IXOXBSCIXZEQEQ-UHTZMRCNSA-N",
+    "pubchem_cid": "3011155",
+    "chembl_id": "CHEMBL1201112",
+    "approval_date": "2006-01-19",
     "target_pdb_links": [
       {
         "gene_name": "POLA1",
@@ -11259,6 +11883,12 @@
       "22899246",
       "23455452"
     ],
+    "smiles": "[H][C@@]1(C[C@@H](C)[C@]2([H])CC(=O)[C@H](C)\\C=C(C)\\[C@@H](O)[C@@H](OC)C(=O)[C@H](C)C[C@H](C)\\C=C\\C=C\\C=C(C)\\[C@H](C[C@]3([H])CC[C@@H](C)[C@@](O)(O3)C(=O)C(=O)N3CCCC[C@@]3([H])C(=O)O2)OC)CC[C@@H](OCCO)[C@@H](C1)OC",
+    "molecular_weight": "958.24",
+    "inchikey": "HKVAMNSJSFKALM-GKUWKFKPSA-N",
+    "pubchem_cid": "6442177",
+    "chembl_id": "CHEMBL1908360",
+    "approval_date": "2009-03-31",
     "target_pdb_links": [
       {
         "gene_name": "MTOR",
@@ -11363,6 +11993,12 @@
     "pubmed_ids": [
       "16928817"
     ],
+    "smiles": "ONC(=O)CCCCCCC(=O)NC1=CC=CC=C1",
+    "molecular_weight": "264.3202",
+    "inchikey": "WAEXFXRVDQXREF-UHFFFAOYSA-N",
+    "pubchem_cid": "5311",
+    "chembl_id": "CHEMBL98",
+    "approval_date": "2006-10-06",
     "target_pdb_links": [
       {
         "gene_name": "HDAC1",
@@ -11454,6 +12090,12 @@
     "pubmed_ids": [
       "10913381"
     ],
+    "smiles": "S=P(N1CC1)(N1CC1)N1CC1",
+    "molecular_weight": "189.218",
+    "inchikey": "FOCVUCIESVLUNU-UHFFFAOYSA-N",
+    "pubchem_cid": "5453",
+    "chembl_id": "CHEMBL671",
+    "approval_date": "2001-06-01",
     "target_pdb_links": [],
     "unmatched_pdb_ids": []
   },
@@ -11486,6 +12128,12 @@
       }
     ],
     "pubmed_ids": [],
+    "smiles": "[H][C@]12C[C@H](NC(=O)C[C@H](O)C(C)(C)C(=O)[C@H](C)[C@@H](O)[C@@H](C)CCC[C@@]1(C)O2)C(\\C)=C\\C1=CSC(C)=N1",
+    "molecular_weight": "506.7",
+    "inchikey": "FABUFPQFXZVHFB-PVYNADRNSA-N",
+    "pubchem_cid": "6445540",
+    "chembl_id": "CHEMBL1201752",
+    "approval_date": "2007-10-16",
     "target_pdb_links": [
       {
         "gene_name": "TUBB3",
@@ -11551,6 +12199,12 @@
       "17715389",
       "17642017"
     ],
+    "smiles": "CC1=CN(C=N1)C1=CC(=CC(NC(=O)C2=CC(NC3=NC=CC(=N3)C3=CN=CC=C3)=C(C)C=C2)=C1)C(F)(F)F",
+    "molecular_weight": "529.5158",
+    "inchikey": "HHZIURLSWUIHRB-UHFFFAOYSA-N",
+    "pubchem_cid": "644241",
+    "chembl_id": "CHEMBL255863",
+    "approval_date": "2007-10-29",
     "target_pdb_links": [
       {
         "gene_name": "ABL1",
@@ -11617,6 +12271,12 @@
       "23382909",
       "25864732"
     ],
+    "smiles": "ONC(=O)\\C=C\\C1=CC=CC(=C1)S(=O)(=O)NC1=CC=CC=C1",
+    "molecular_weight": "318.35",
+    "inchikey": "NCNRHFGMJRPRSK-MDZDMXLPSA-N",
+    "pubchem_cid": "6918638",
+    "chembl_id": "CHEMBL408513",
+    "approval_date": "2014-07-21",
     "target_pdb_links": [
       {
         "gene_name": "HDAC1",
@@ -11657,6 +12317,12 @@
       "16922593",
       "19515014"
     ],
+    "smiles": "[H][C@@]12[C@@H]3SC[C@]4(NCCC5=C4C=C(OC)C(O)=C5)C(=O)OC[C@H](N1[C@@H](O)[C@@H]1CC4=CC(C)=C(OC)C(O)=C4[C@H]2N1C)C1=C2OCOC2=C(C)C(OC(C)=O)=C31",
+    "molecular_weight": "761.837",
+    "inchikey": "PKVRCIRHQMSYJX-AIFWHQITSA-N",
+    "pubchem_cid": "108150",
+    "chembl_id": "CHEMBL450449",
+    "approval_date": "2015-10-23",
     "target_pdb_links": [],
     "unmatched_pdb_ids": []
   },
@@ -11695,6 +12361,12 @@
       "20048182",
       "11774295"
     ],
+    "smiles": null,
+    "molecular_weight": null,
+    "inchikey": null,
+    "pubchem_cid": null,
+    "chembl_id": "CHEMBL1743062",
+    "approval_date": "2014-04-21",
     "target_pdb_links": [
       {
         "gene_name": "KDR",
@@ -11746,6 +12418,12 @@
     "pubmed_ids": [
       "19010901"
     ],
+    "smiles": null,
+    "molecular_weight": null,
+    "inchikey": null,
+    "pubchem_cid": null,
+    "chembl_id": "CHEMBL1743082",
+    "approval_date": "2013-02-22",
     "target_pdb_links": [
       {
         "gene_name": "ERBB2",
@@ -11800,6 +12478,12 @@
       "15150570",
       "23199349"
     ],
+    "smiles": "[H][C@@]12CC=C(C3=CC=CN=C3)[C@@]1(C)CC[C@@]1([H])[C@@]2([H])CC=C2C[C@@H](O)CC[C@]12C",
+    "molecular_weight": "349.509",
+    "inchikey": "GZOSMCIZMLWJML-VJLLXTKPSA-N",
+    "pubchem_cid": "132971",
+    "chembl_id": "CHEMBL254328",
+    "approval_date": "2011-04-28",
     "target_pdb_links": [
       {
         "gene_name": "CYP17A1",
@@ -11898,6 +12582,12 @@
       "21587264",
       "26473529"
     ],
+    "smiles": "[H]\\C(C)=C1\\N=C(O)[C@@]2([H])CSSCCC([H])=C([H])[C@]([H])(CC(O)=N[C@]([H])(C(C)C)C(O)=N2)OC(=O)[C@@]([H])(N=C1O)C(C)C",
+    "molecular_weight": "540.69",
+    "inchikey": "OHRURASPPZQGQM-QDBHDZETSA-N",
+    "pubchem_cid": "57515973",
+    "chembl_id": "CHEMBL1998981",
+    "approval_date": "2010-01-04",
     "target_pdb_links": [
       {
         "gene_name": "HDAC1",
@@ -11993,6 +12683,12 @@
     "pubmed_ids": [
       "22658126"
     ],
+    "smiles": null,
+    "molecular_weight": null,
+    "inchikey": null,
+    "pubchem_cid": null,
+    "chembl_id": "CHEMBL1789844",
+    "approval_date": "2011-03-25",
     "target_pdb_links": [
       {
         "gene_name": "CTLA4",
@@ -12028,6 +12724,12 @@
       "21905966",
       "23192654"
     ],
+    "smiles": "NCCNC1=CC=C(NCCN)C2=C1C(=O)C1=C(C=NC=C1)C2=O",
+    "molecular_weight": "325.372",
+    "inchikey": "PEZPMAYDXJQYRV-UHFFFAOYSA-N",
+    "pubchem_cid": "134019",
+    "chembl_id": "CHEMBL167731",
+    "approval_date": null,
     "target_pdb_links": [],
     "unmatched_pdb_ids": []
   },
@@ -12058,6 +12760,12 @@
       "18463964",
       "17628745"
     ],
+    "smiles": "[H][C@@]1(C[C@@](N)(CC2=C1C(O)=C1C(=O)C3=CC=CC=C3C(=O)C1=C2O)C(C)=O)O[C@H]1C[C@H](O)[C@H](O)CO1",
+    "molecular_weight": "483.473",
+    "inchikey": "VJZITPJGSQKZMX-XDPRQOKASA-N",
+    "pubchem_cid": "3035016",
+    "chembl_id": "CHEMBL1186894",
+    "approval_date": null,
     "target_pdb_links": [
       {
         "gene_name": "TOP2A",
@@ -12102,6 +12810,12 @@
     "pubmed_ids": [
       "17913896"
     ],
+    "smiles": "OCC(C)(CO)C(=O)O[C@@H]1CC[C@@H](C[C@@H](C)[C@]2([H])CC(=O)[C@H](C)\\C=C(C)\\[C@@H](O)[C@@H](OC)C(=O)[C@H](C)C[C@H](C)\\C=C\\C=C\\C=C(C)\\[C@@H](OC)C[C@]3([H])CC[C@@H](C)[C@@](O)(O3)C(=O)C(=O)N3CCCC[C@H]3C(=O)O2)C[C@H]1OC",
+    "molecular_weight": "1030.2871",
+    "inchikey": "CBPNZQVSJQDFBE-FUXHJELOSA-N",
+    "pubchem_cid": "23724530",
+    "chembl_id": "CHEMBL1201182",
+    "approval_date": "2007-07-01",
     "target_pdb_links": [
       {
         "gene_name": "MTOR",
@@ -12150,6 +12864,12 @@
       }
     ],
     "pubmed_ids": [],
+    "smiles": null,
+    "molecular_weight": null,
+    "inchikey": null,
+    "pubchem_cid": null,
+    "chembl_id": "CHEMBL2007641",
+    "approval_date": "2012-06-08",
     "target_pdb_links": [
       {
         "gene_name": "ERBB2",
@@ -12297,6 +13017,12 @@
       "23548165",
       "23072642"
     ],
+    "smiles": "CN(C1=CC2=NN(C)C(C)=C2C=C1)C1=CC=NC(NC2=CC=C(C)C(=C2)S(N)(=O)=O)=N1",
+    "molecular_weight": "437.518",
+    "inchikey": "CUIHSIWYWATEQL-UHFFFAOYSA-N",
+    "pubchem_cid": "10113978",
+    "chembl_id": "CHEMBL477772",
+    "approval_date": "2009-10-19",
     "target_pdb_links": [
       {
         "gene_name": "FLT1",
@@ -12453,6 +13179,12 @@
       "16428510",
       "26362997"
     ],
+    "smiles": "[H]\\C(=C(\\[H])C1=CC=C(CNCCC2=C(C)NC3=CC=CC=C23)C=C1)C(O)=NO",
+    "molecular_weight": "349.434",
+    "inchikey": "FPOHNWQLNRZRFC-ZHACJKMWSA-N",
+    "pubchem_cid": "6918837",
+    "chembl_id": "CHEMBL483254",
+    "approval_date": "2015-02-23",
     "target_pdb_links": [
       {
         "gene_name": "HDAC1",
@@ -12485,6 +13217,12 @@
     "pdb_ids": [],
     "targets": [],
     "pubmed_ids": [],
+    "smiles": null,
+    "molecular_weight": null,
+    "inchikey": null,
+    "pubchem_cid": null,
+    "chembl_id": null,
+    "approval_date": null,
     "target_pdb_links": [],
     "unmatched_pdb_ids": []
   },
@@ -12633,6 +13371,12 @@
       "23674887",
       "23098112"
     ],
+    "smiles": "COC1=CC(NC2=C(C=NC3=CC(OCCCN4CCN(C)CC4)=C(OC)C=C23)C#N)=C(Cl)C=C1Cl",
+    "molecular_weight": "530.446",
+    "inchikey": "UBPYILGKFZZVDX-UHFFFAOYSA-N",
+    "pubchem_cid": "5328940",
+    "chembl_id": "CHEMBL288441",
+    "approval_date": "2012-09-04",
     "target_pdb_links": [
       {
         "gene_name": "BCR",
@@ -12832,6 +13576,12 @@
       "16425985",
       "23211371"
     ],
+    "smiles": "[H]\\C(=C(\\[H])C1=CC=CC=N1)C1=C2C=CC(SC3=CC=CC=C3C(O)=NC)=CC2=NN1",
+    "molecular_weight": "386.47",
+    "inchikey": "RITAVMQDGBJQJZ-FMIVXFBMSA-N",
+    "pubchem_cid": "6450551",
+    "chembl_id": "CHEMBL1289926",
+    "approval_date": "2012-01-27",
     "target_pdb_links": [
       {
         "gene_name": "FLT1",
@@ -12913,6 +13663,12 @@
       "17768100",
       "19427037"
     ],
+    "smiles": null,
+    "molecular_weight": null,
+    "inchikey": null,
+    "pubchem_cid": null,
+    "chembl_id": "CHEMBL1201836",
+    "approval_date": "2011-07-22",
     "target_pdb_links": [
       {
         "gene_name": "MS4A1",
@@ -12963,6 +13719,12 @@
       "15176049",
       "16736512"
     ],
+    "smiles": null,
+    "molecular_weight": null,
+    "inchikey": null,
+    "pubchem_cid": null,
+    "chembl_id": "CHEMBL1237024",
+    "approval_date": "2010-04-29",
     "target_pdb_links": [
       {
         "gene_name": "ACPP",
@@ -13009,6 +13771,12 @@
       "20110043",
       "19602868"
     ],
+    "smiles": "CC(C)C[C@H](NC(=O)[C@@H](CC1=CC=C(NC(N)=O)C=C1)NC(=O)[C@H](CC1=CC=C(NC(=O)[C@@H]2CC(=O)NC(=O)N2)C=C1)NC(=O)[C@H](CO)NC(=O)[C@@H](CC1=CC=CN=C1)NC(=O)[C@@H](CC1=CC=C(Cl)C=C1)NC(=O)[C@@H](CC1=CC=C2C=CC=CC2=C1)NC(C)=O)C(=O)N[C@@H](CCCCNC(C)C)C(=O)N1CCC[C@H]1C(=O)N[C@H](C)C(N)=O",
+    "molecular_weight": "1632.29",
+    "inchikey": "MEUCPCLKGZSHTA-XYAYPHGZSA-N",
+    "pubchem_cid": "16136245",
+    "chembl_id": "CHEMBL415606",
+    "approval_date": "2009-03-02",
     "target_pdb_links": [
       {
         "gene_name": "GNRHR",
@@ -13063,6 +13831,12 @@
       }
     ],
     "pubmed_ids": [],
+    "smiles": null,
+    "molecular_weight": null,
+    "inchikey": null,
+    "pubchem_cid": null,
+    "chembl_id": "CHEMBL1909304",
+    "approval_date": null,
     "target_pdb_links": [
       {
         "gene_name": "LHCGR",
@@ -13109,6 +13883,12 @@
       "16957931",
       "25829094"
     ],
+    "smiles": "CN1C(CCCC(O)=O)=NC2=CC(=CC=C12)N(CCCl)CCCl",
+    "molecular_weight": "358.263",
+    "inchikey": "YTKUWDBFDASYHO-UHFFFAOYSA-N",
+    "pubchem_cid": "65628",
+    "chembl_id": "CHEMBL487253",
+    "approval_date": "2008-03-31",
     "target_pdb_links": [],
     "unmatched_pdb_ids": []
   },
@@ -13158,6 +13938,12 @@
       "23542607",
       "23091336"
     ],
+    "smiles": "[H][C@@](O)([C@@H](NC(=O)OC(C)(C)C)C1=CC=CC=C1)C(=O)O[C@@]1([H])C[C@@]2(O)[C@@]([H])(OC(=O)C3=CC=CC=C3)[C@]3([H])[C@@]4(CO[C@]4([H])C[C@]([H])(OC)[C@@]3(C)C(=O)[C@]([H])(OC)C(=C1C)C2(C)C)OC(C)=O",
+    "molecular_weight": "835.9324",
+    "inchikey": "BMQGVNUXMIRLCK-OAGWZNDDSA-N",
+    "pubchem_cid": "9854073",
+    "chembl_id": "CHEMBL1201748",
+    "approval_date": "2010-06-17",
     "target_pdb_links": [
       {
         "gene_name": "TUBA4A",
@@ -13224,6 +14010,12 @@
       "21851539",
       "20735905"
     ],
+    "smiles": "CC(O)=O.CC(O)=O.[H][C@@](CO)(N=C(O)[C@]([H])(CC1=CNC2=CC=CC=C12)N=C(O)[C@]([H])(CC1=CN=CN1)N=C(O)[C@]1([H])CCC(O)=N1)C(O)=N[C@@]([H])(CC1=CC=C(O)C=C1)C(O)=N[C@]([H])(CC1=CN(CC2=CC=CC=C2)C=N1)C(O)=N[C@@]([H])(CC(C)C)C(O)=N[C@@]([H])(CCCNC(N)=N)C(=O)N1CCC[C@@]1([H])C(O)=NCC",
+    "molecular_weight": "1443.632",
+    "inchikey": "BKEMVGVBBDMHKL-VYFXDUNUSA-N",
+    "pubchem_cid": "56927879",
+    "chembl_id": "CHEMBL1201255",
+    "approval_date": "2004-11-01",
     "target_pdb_links": [
       {
         "gene_name": "GNRHR",
@@ -13274,6 +14066,12 @@
       "20009003",
       "21861545"
     ],
+    "smiles": "C(N1CCCNCCNCCCNCC1)C1=CC=C(CN2CCCNCCNCCCNCC2)C=C1",
+    "molecular_weight": "502.782",
+    "inchikey": "YIQPUIGJQJDJOS-UHFFFAOYSA-N",
+    "pubchem_cid": "65015",
+    "chembl_id": "CHEMBL18442",
+    "approval_date": "2008-12-15",
     "target_pdb_links": [
       {
         "gene_name": "CXCR4",
@@ -13314,6 +14112,12 @@
     "pubmed_ids": [
       "9917296"
     ],
+    "smiles": "CO[C@@H]([C@@H]1CC2=CC3=CC(O[C@H]4C[C@@H](O[C@H]5C[C@@H](O)[C@H](O)[C@@H](C)O5)[C@H](O)[C@@H](C)O4)=C(C)C(O)=C3C(O)=C2C(=O)[C@H]1O[C@H]1C[C@@H](O[C@H]2C[C@@H](O[C@H]3C[C@](C)(O)[C@H](O)[C@@H](C)O3)[C@@H](O)[C@@H](C)O2)[C@H](O)[C@@H](C)O1)C(=O)[C@@H](O)[C@@H](C)O",
+    "molecular_weight": "1085.1454",
+    "inchikey": "CFCUWKMKBJTWLW-BKHRDMLASA-N",
+    "pubchem_cid": "163659",
+    "chembl_id": "CHEMBL1237054",
+    "approval_date": null,
     "target_pdb_links": [],
     "unmatched_pdb_ids": []
   },
@@ -13366,6 +14170,12 @@
       "22921318",
       "23032692"
     ],
+    "smiles": "NC1=NC2=NC=C(CC(CC#C)C3=CC=C(C=C3)C(=O)N[C@@H](CCC(O)=O)C(O)=O)N=C2C(N)=N1",
+    "molecular_weight": "477.4726",
+    "inchikey": "OGSBUKJUDHAQEA-WMCAAGNKSA-N",
+    "pubchem_cid": "148121",
+    "chembl_id": "CHEMBL1201746",
+    "approval_date": "2009-09-24",
     "target_pdb_links": [
       {
         "gene_name": "DHFR",
@@ -13431,6 +14241,12 @@
       "10969915",
       "15955640"
     ],
+    "smiles": "CC(C)C[C@H](NC(=O)[C@@H](CC1=CNC2=CC=CC=C12)NC(=O)[C@H](CC1=CC=C(O)C=C1)NC(=O)[C@H](CO)NC(=O)[C@H](CC1=CNC2=C1C=CC=C2)NC(=O)[C@H](CC1=CNC=N1)NC(=O)[C@@H]1CCC(=O)N1)C(=O)N[C@@H](CCCNC(N)=N)C(=O)N1CCC[C@H]1C(=O)NCC(N)=O",
+    "molecular_weight": "1311.473",
+    "inchikey": "VXKHXGOKWPXYNA-PGBVPBMZSA-N",
+    "pubchem_cid": "25074470",
+    "chembl_id": "CHEMBL1201334",
+    "approval_date": "2000-06-15",
     "target_pdb_links": [
       {
         "gene_name": "GNRHR",
@@ -13481,6 +14297,12 @@
       "19726763",
       "23662017"
     ],
+    "smiles": "CS(=O)(=O)C1=CC(Cl)=C(C=C1)C(=O)NC1=CC=C(Cl)C(=C1)C1=CC=CC=N1",
+    "molecular_weight": "421.297",
+    "inchikey": "BPQMGSKTAYIVFO-UHFFFAOYSA-N",
+    "pubchem_cid": "24776445",
+    "chembl_id": "CHEMBL473417",
+    "approval_date": "2012-01-30",
     "target_pdb_links": [
       {
         "gene_name": "SMO",
@@ -13554,6 +14376,12 @@
       "23686600",
       "22594847"
     ],
+    "smiles": "C[C@@H](OC1=CC(=CN=C1N)C1=CN(N=C1)C1CCNCC1)C1=C(Cl)C=CC(F)=C1Cl",
+    "molecular_weight": "450.337",
+    "inchikey": "KTEIFNKAUNYNJU-GFCCVEGCSA-N",
+    "pubchem_cid": "11626560",
+    "chembl_id": "CHEMBL601719",
+    "approval_date": "2011-08-26",
     "target_pdb_links": [
       {
         "gene_name": "ALK",
@@ -13625,6 +14453,12 @@
     "pubmed_ids": [
       "12714494"
     ],
+    "smiles": null,
+    "molecular_weight": null,
+    "inchikey": null,
+    "pubchem_cid": null,
+    "chembl_id": "CHEMBL1742994",
+    "approval_date": "2011-08-25",
     "target_pdb_links": [
       {
         "gene_name": "TNFRSF8",
@@ -13679,6 +14513,12 @@
       "22953094",
       "16020666"
     ],
+    "smiles": "[H][C@@]12O[C@@]3([H])CCC4CC(=O)C[C@H]5[C@H](C[C@H]6O[C@H](C[C@@H](C)C6=C)CC[C@@H]6O[C@H](CC6=C)CC[C@@]67C[C@@H](O[C@H]1[C@@H](O6)[C@@]3([H])O4)[C@@H]2O7)O[C@H](C[C@H](O)CN)[C@@H]5OC",
+    "molecular_weight": "729.8966",
+    "inchikey": "UFNVPOGXISZXJD-WVMZDRIUSA-N",
+    "pubchem_cid": "73425383",
+    "chembl_id": "CHEMBL1683590",
+    "approval_date": "2010-11-15",
     "target_pdb_links": [
       {
         "gene_name": "BCL2",
@@ -13756,6 +14596,12 @@
       "26536165",
       "24756794"
     ],
+    "smiles": "COC1=CC2=C(C=C1OC)C(OC1=CC=C(NC(=O)C3(CC3)C(=O)NC3=CC=C(F)C=C3)C=C1)=CC=N2",
+    "molecular_weight": "501.514",
+    "inchikey": "ONIQOQHATWINJY-UHFFFAOYSA-N",
+    "pubchem_cid": "25102847",
+    "chembl_id": "CHEMBL2105717",
+    "approval_date": "2012-11-29",
     "target_pdb_links": [
       {
         "gene_name": "MET",
@@ -13836,6 +14682,12 @@
       "28255850",
       "25729580"
     ],
+    "smiles": "CCCS(=O)(=O)NC1=C(F)C(C(=O)C2=CNC3=NC=C(C=C23)C2=CC=C(Cl)C=C2)=C(F)C=C1",
+    "molecular_weight": "489.922",
+    "inchikey": "GPXBXXGIAQBQNI-UHFFFAOYSA-N",
+    "pubchem_cid": "42611257",
+    "chembl_id": "CHEMBL1229517",
+    "approval_date": "2011-08-17",
     "target_pdb_links": [
       {
         "gene_name": "BRAF",
@@ -13913,6 +14765,12 @@
       "23560774",
       "23673444"
     ],
+    "smiles": null,
+    "molecular_weight": null,
+    "inchikey": null,
+    "pubchem_cid": null,
+    "chembl_id": "CHEMBL1742982",
+    "approval_date": "2011-11-21",
     "target_pdb_links": [
       {
         "gene_name": "VEGFA",
@@ -14037,6 +14895,12 @@
       "23393020",
       "17591945"
     ],
+    "smiles": "CC(C)C[C@H](NC(=O)[C@H](CCC1=CC=CC=C1)NC(=O)CN1CCOCC1)C(=O)N[C@@H](CC1=CC=CC=C1)C(=O)N[C@@H](CC(C)C)C(=O)[C@@]1(C)CO1",
+    "molecular_weight": "719.9099",
+    "inchikey": "BLMPQMFVWMYDKT-NZTKNTHTSA-N",
+    "pubchem_cid": "11556711",
+    "chembl_id": "CHEMBL451887",
+    "approval_date": "2012-07-20",
     "target_pdb_links": [
       {
         "gene_name": "PSMB5",
@@ -14330,6 +15194,12 @@
       }
     ],
     "pubmed_ids": [],
+    "smiles": "CNC(=O)C1=CC(OC2=CC(F)=C(NC(=O)NC3=CC=C(Cl)C(=C3)C(F)(F)F)C=C2)=CC=N1",
+    "molecular_weight": "482.815",
+    "inchikey": "FNHKPVJBJVTLMP-UHFFFAOYSA-N",
+    "pubchem_cid": "11167602",
+    "chembl_id": "CHEMBL1946170",
+    "approval_date": "2012-09-27",
     "target_pdb_links": [
       {
         "gene_name": "FLT1",
@@ -14578,6 +15448,12 @@
     "pubmed_ids": [
       "23699654"
     ],
+    "smiles": "CNC(=O)C1=C(F)C=C(C=C1)N1C(=S)N(C(=O)C1(C)C)C1=CC=C(C#N)C(=C1)C(F)(F)F",
+    "molecular_weight": "464.436",
+    "inchikey": "WXCXUHSOUPDCQV-UHFFFAOYSA-N",
+    "pubchem_cid": "15951529",
+    "chembl_id": "CHEMBL1082407",
+    "approval_date": "2012-08-31",
     "target_pdb_links": [
       {
         "gene_name": "AR",
@@ -14790,6 +15666,12 @@
     "pubmed_ids": [
       "23226582"
     ],
+    "smiles": "CN1CCN(CC2=CC=C(NC(=O)C3=CC(C#CC4=CN=C5C=CC=NN45)=C(C)C=C3)C=C2C(F)(F)F)CC1",
+    "molecular_weight": "532.5595",
+    "inchikey": "PHXJVRSECIGDHY-UHFFFAOYSA-N",
+    "pubchem_cid": "24826799",
+    "chembl_id": "CHEMBL1171837",
+    "approval_date": "2012-12-14",
     "target_pdb_links": [
       {
         "gene_name": "ABL1",
@@ -15017,6 +15899,12 @@
       "7873455",
       "10586340"
     ],
+    "smiles": "[H][C@@]12CCC(=O)[C@@]1(C)CC[C@@]1([H])[C@@]2([H])CCC2=C(O)C(=O)CC[C@]12C",
+    "molecular_weight": "302.4079",
+    "inchikey": "OSVMTWJCGUFAOD-KZQROQTASA-N",
+    "pubchem_cid": "11273",
+    "chembl_id": "CHEMBL132530",
+    "approval_date": null,
     "target_pdb_links": [],
     "unmatched_pdb_ids": []
   },
@@ -15072,6 +15960,12 @@
       "23730498",
       "23690693"
     ],
+    "smiles": "NC1=CC=CC2=C1C(=O)N(C1CCC(=O)NC1=O)C2=O",
+    "molecular_weight": "273.2441",
+    "inchikey": "UVSMNLNDYGZFPF-UHFFFAOYSA-N",
+    "pubchem_cid": "134780",
+    "chembl_id": "CHEMBL43452",
+    "approval_date": "2013-02-18",
     "target_pdb_links": [
       {
         "gene_name": "CRBN",
@@ -15155,6 +16049,12 @@
     "pubmed_ids": [
       "23432625"
     ],
+    "smiles": "CN1C(=O)C(C)=C2N(C(=O)N(C3CC3)C(=O)C2=C1NC1=CC=C(I)C=C1F)C1=CC(NC(C)=O)=CC=C1",
+    "molecular_weight": "615.3948",
+    "inchikey": "LIRYPHYGHXZJBZ-UHFFFAOYSA-N",
+    "pubchem_cid": "11707110",
+    "chembl_id": "CHEMBL2103875",
+    "approval_date": "2013-06-17",
     "target_pdb_links": [
       {
         "gene_name": "MAP2K1",
@@ -15261,6 +16161,12 @@
     "pubmed_ids": [
       "23621583"
     ],
+    "smiles": "CC(C)(C)C1=NC(=C(S1)C1=NC(N)=NC=C1)C1=C(F)C(NS(=O)(=O)C2=C(F)C=CC=C2F)=CC=C1",
+    "molecular_weight": "519.562",
+    "inchikey": "BFSMGDJOXZAERB-UHFFFAOYSA-N",
+    "pubchem_cid": "44462760",
+    "chembl_id": "CHEMBL2028663",
+    "approval_date": "2013-06-10",
     "target_pdb_links": [
       {
         "gene_name": "BRAF",
@@ -15381,6 +16287,12 @@
       }
     ],
     "pubmed_ids": [],
+    "smiles": "CN(C)C\\C=C\\C(=O)NC1=C(O[C@H]2CCOC2)C=C2N=CN=C(NC3=CC(Cl)=C(F)C=C3)C2=C1",
+    "molecular_weight": "485.938",
+    "inchikey": "ULXXDDBFHOBEHA-CWDCEQMOSA-N",
+    "pubchem_cid": "10184653",
+    "chembl_id": "CHEMBL1173655",
+    "approval_date": "2013-07-12",
     "target_pdb_links": [
       {
         "gene_name": "EGFR",
@@ -15451,6 +16363,12 @@
       }
     ],
     "pubmed_ids": [],
+    "smiles": null,
+    "molecular_weight": null,
+    "inchikey": null,
+    "pubchem_cid": null,
+    "chembl_id": null,
+    "approval_date": "2013-11-01",
     "target_pdb_links": [
       {
         "gene_name": "MS4A1",
@@ -15509,6 +16427,12 @@
       "25552903",
       "25526490"
     ],
+    "smiles": null,
+    "molecular_weight": null,
+    "inchikey": null,
+    "pubchem_cid": null,
+    "chembl_id": "CHEMBL1743087",
+    "approval_date": "2014-05-20",
     "target_pdb_links": [
       {
         "gene_name": "ITGA4",
@@ -15567,6 +16491,12 @@
       "25625924",
       "24590637"
     ],
+    "smiles": null,
+    "molecular_weight": null,
+    "inchikey": null,
+    "pubchem_cid": null,
+    "chembl_id": "CHEMBL2108738",
+    "approval_date": "2014-12-22",
     "target_pdb_links": [
       {
         "gene_name": "PDCD1",
@@ -15617,6 +16547,12 @@
       "25331768",
       "27485741"
     ],
+    "smiles": null,
+    "molecular_weight": null,
+    "inchikey": null,
+    "pubchem_cid": null,
+    "chembl_id": "CHEMBL3137343",
+    "approval_date": "2014-09-04",
     "target_pdb_links": [
       {
         "gene_name": "PDCD1",
@@ -15674,6 +16610,12 @@
       "25883042",
       "25359367"
     ],
+    "smiles": null,
+    "molecular_weight": null,
+    "inchikey": null,
+    "pubchem_cid": null,
+    "chembl_id": "CHEMBL1742992",
+    "approval_date": "2014-12-18",
     "target_pdb_links": [
       {
         "gene_name": "CD19",
@@ -15738,6 +16680,12 @@
       "25802231",
       "25488930"
     ],
+    "smiles": "NC1=NC=NC2=C1C(=NN2[C@@H]1CCCN(C1)C(=O)C=C)C1=CC=C(OC2=CC=CC=C2)C=C1",
+    "molecular_weight": "440.507",
+    "inchikey": "XYFPWWZEPKGCCK-GOSISDBHSA-N",
+    "pubchem_cid": "24821094",
+    "chembl_id": "CHEMBL1873475",
+    "approval_date": "2013-11-07",
     "target_pdb_links": [
       {
         "gene_name": "BTK",
@@ -15783,6 +16731,12 @@
       "24615776",
       "24615777"
     ],
+    "smiles": "[H][C@@](CC)(NC1=NC=NC2=C1N=CN2)C1=NC2=CC=CC(F)=C2C(=O)N1C1=CC=CC=C1",
+    "molecular_weight": "415.432",
+    "inchikey": "IFSDAJWBUCMOAH-HNNXBMFYSA-N",
+    "pubchem_cid": "11625818",
+    "chembl_id": "CHEMBL2216870",
+    "approval_date": "2014-07-23",
     "target_pdb_links": [],
     "unmatched_pdb_ids": [
       "4xe0"
@@ -15825,6 +16779,12 @@
       "23742252",
       "25971657"
     ],
+    "smiles": "CC(C)OC1=C(NC2=NC=C(Cl)C(N2)=NC2=CC=CC=C2S(=O)(=O)C(C)C)C=C(C)C(=C1)C1CCNCC1",
+    "molecular_weight": "558.135",
+    "inchikey": "VERWOWGGCGHDQE-UHFFFAOYSA-N",
+    "pubchem_cid": "57379345",
+    "chembl_id": "CHEMBL2403108",
+    "approval_date": "2014-04-29",
     "target_pdb_links": [
       {
         "gene_name": "ALK",
@@ -15893,6 +16853,12 @@
       "25524798",
       "25501126"
     ],
+    "smiles": "CC(=O)C1=C(C)C2=CN=C(NC3=NC=C(C=C3)N3CCNCC3)N=C2N(C2CCCC2)C1=O",
+    "molecular_weight": "447.5328",
+    "inchikey": "AHJRHEGDXFFMBM-UHFFFAOYSA-N",
+    "pubchem_cid": "5330286",
+    "chembl_id": "CHEMBL189963",
+    "approval_date": "2015-02-03",
     "target_pdb_links": [
       {
         "gene_name": "CDK4",
@@ -15984,6 +16950,12 @@
       "19383921",
       "18971340"
     ],
+    "smiles": "OC1=NN=C(CC2=CC(C(=O)N3CCN(CC3)C(=O)C3CC3)=C(F)C=C2)C2=CC=CC=C12",
+    "molecular_weight": "434.4628",
+    "inchikey": "FDLYAMZZIXQODN-UHFFFAOYSA-N",
+    "pubchem_cid": "23725625",
+    "chembl_id": "CHEMBL521686",
+    "approval_date": "2014-12-23",
     "target_pdb_links": [
       {
         "gene_name": "PARP1",
@@ -16053,6 +17025,12 @@
       "1988079",
       "15923178"
     ],
+    "smiles": null,
+    "molecular_weight": null,
+    "inchikey": null,
+    "pubchem_cid": null,
+    "chembl_id": "CHEMBL3137342",
+    "approval_date": "2015-03-10",
     "target_pdb_links": [],
     "unmatched_pdb_ids": []
   },
@@ -16169,6 +17147,12 @@
       "25795101",
       "25707627"
     ],
+    "smiles": "COC1=C(C=C2C(OC3=CC(Cl)=C(NC(O)=NC4CC4)C=C3)=CC=NC2=C1)C(O)=N",
+    "molecular_weight": "426.86",
+    "inchikey": "WOSKHXYHFSIKNG-UHFFFAOYSA-N",
+    "pubchem_cid": "9823820",
+    "chembl_id": "CHEMBL1289601",
+    "approval_date": "2015-02-13",
     "target_pdb_links": [
       {
         "gene_name": "FLT1",
@@ -16303,6 +17287,12 @@
       "24817600",
       "26323341"
     ],
+    "smiles": "[H][C@]1(C)CN(C[C@@]([H])(C)O1)C1=CC=C(NC(=O)C2=CC=CC(=C2C)C2=CC=C(OC(F)(F)F)C=C2)C=N1",
+    "molecular_weight": "485.507",
+    "inchikey": "VZZJRYRQSPEMTK-CALCHBBNSA-N",
+    "pubchem_cid": "24775005",
+    "chembl_id": "CHEMBL2105737",
+    "approval_date": "2015-07-24",
     "target_pdb_links": [
       {
         "gene_name": "SMO",
@@ -16340,6 +17330,12 @@
       "24940424",
       "25206296"
     ],
+    "smiles": "FC1=CN(C2CCCO2)C(=O)NC1=O",
+    "molecular_weight": "200.169",
+    "inchikey": "WFWLQNSHRPWKFK-UHFFFAOYSA-N",
+    "pubchem_cid": "5386",
+    "chembl_id": "CHEMBL20883",
+    "approval_date": null,
     "target_pdb_links": [],
     "unmatched_pdb_ids": []
   },
@@ -16374,6 +17370,12 @@
       "26729188",
       "25701169"
     ],
+    "smiles": null,
+    "molecular_weight": null,
+    "inchikey": null,
+    "pubchem_cid": null,
+    "chembl_id": null,
+    "approval_date": "2015-11-24",
     "target_pdb_links": [
       {
         "gene_name": "EGFR",
@@ -16409,6 +17411,12 @@
       "25302026",
       "26138345"
     ],
+    "smiles": "[H][C@@](CC(C)C)(N=C(O)CN=C(O)C1=C(Cl)C=CC(Cl)=C1)B(O)O",
+    "molecular_weight": "361.03",
+    "inchikey": "MXAYKZJJDUDWDS-LBPRGKRZSA-N",
+    "pubchem_cid": "25183872",
+    "chembl_id": "CHEMBL2141296",
+    "approval_date": "2015-11-20",
     "target_pdb_links": [],
     "unmatched_pdb_ids": [
       "5lf7"
@@ -16450,6 +17458,12 @@
     "pubmed_ids": [
       "10776839"
     ],
+    "smiles": null,
+    "molecular_weight": null,
+    "inchikey": null,
+    "pubchem_cid": null,
+    "chembl_id": null,
+    "approval_date": null,
     "target_pdb_links": [
       {
         "gene_name": "CSF3R",

@@ -51,8 +51,56 @@ def parse_json_fields(record: dict, fields: list) -> dict:
                 record[field] = []
     return record
 
+CANCER_TYPES = {
+    "leukemia":       "Leukemia",
+    "leukaemia":      "Leukemia",
+    "lymphoma":       "Lymphoma",
+    "melanoma":       "Melanoma",
+    "lung cancer":    "Lung Cancer",
+    "breast cancer":  "Breast Cancer",
+    "prostate cancer":"Prostate Cancer",
+    "colorectal":     "Colorectal Cancer",
+    "ovarian":        "Ovarian Cancer",
+    "renal":          "Renal Cancer",
+    "hepatocellular": "Liver Cancer",
+    "glioma":         "Brain Cancer",
+    "glioblastoma":   "Brain Cancer",
+    "myeloma":        "Multiple Myeloma",
+    "sarcoma":        "Sarcoma",
+    "thyroid":        "Thyroid Cancer",
+    "gastric":        "Gastric Cancer",
+    "pancreatic":     "Pancreatic Cancer",
+    "bladder":        "Bladder Cancer",
+    "carcinoma":      "Carcinoma",
+    "myeloid":        "Myeloid Disorders",
+    "kaposi":         "Kaposi's Sarcoma",
+}
 
-def get_all_drugs(drug_class: str = None, search: str = None) -> list:
+def extract_cancer_types(indication: str) -> list:
+    """Extract cancer type labels from indication text."""
+    if not indication:
+        return []
+    indication_lower = indication.lower()
+    found = []
+    seen  = set()
+    for keyword, label in CANCER_TYPES.items():
+        if keyword in indication_lower and label not in seen:
+            found.append(label)
+            seen.add(label)
+    return found
+
+def get_cancer_types() -> list:
+    """Return all distinct cancer types across all drugs."""
+    conn = get_conn()
+    rows = conn.execute("SELECT indication FROM drugs WHERE indication IS NOT NULL").fetchall()
+    conn.close()
+    all_types = set()
+    for row in rows:
+        for ct in extract_cancer_types(row["indication"]):
+            all_types.add(ct)
+    return sorted(all_types)
+
+def get_all_drugs(drug_class: str = None, search: str = None,cancer_type: str = None) -> list:
     conn = get_conn()
     params = []
     conditions = []
@@ -60,6 +108,13 @@ def get_all_drugs(drug_class: str = None, search: str = None) -> list:
     if drug_class:
         conditions.append("d.drug_class = ?")
         params.append(drug_class)
+    if cancer_type:
+        # Find the keyword that maps to this cancer type label
+        keywords = [k for k, v in CANCER_TYPES.items() if v == cancer_type]
+        if keywords:
+            keyword_conditions = " OR ".join(["d.indication LIKE ?" for _ in keywords])
+            conditions.append(f"({keyword_conditions})")
+            params.extend([f"%{k}%" for k in keywords])
 
     if search:
         conditions.append("(d.name LIKE ? OR d.synonyms LIKE ?)")

@@ -108,26 +108,30 @@ def insert_drugs(conn: sqlite3.Connection, drugs: list):
             continue
 
         # ── Insert drug ──────────────────────────────────────
-        cur.execute(
-            """
+        cur.execute("""
             INSERT OR IGNORE INTO drugs
                 (drugbank_id, name, indication, mechanism_of_action,
-                 pharmacodynamics, drug_class, atc_codes, synonyms,
-                 unmatched_pdb_ids)
-            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
-        """,
-            (
-                drugbank_id,
-                drug.get("name", ""),
-                drug.get("indication", ""),
-                drug.get("mechanism_of_action", ""),
-                drug.get("pharmacodynamics", ""),
-                drug.get("drug_class", "Other"),
-                jdump(drug.get("atc_codes", [])),
-                jdump(drug.get("synonyms", [])),
-                jdump(drug.get("unmatched_pdb_ids", [])),
-            ),
-        )
+                pharmacodynamics, drug_class, atc_codes, synonyms,
+                unmatched_pdb_ids, smiles, molecular_weight,
+                inchikey, pubchem_cid, chembl_id, approval_date)
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+        """, (
+            drugbank_id,
+            drug.get("name", ""),
+            drug.get("indication", ""),
+            drug.get("mechanism_of_action", ""),
+            drug.get("pharmacodynamics", ""),
+            drug.get("drug_class", "Other"),
+            jdump(drug.get("atc_codes", [])),
+            jdump(drug.get("synonyms", [])),
+            jdump(drug.get("unmatched_pdb_ids", [])),
+            drug.get("smiles"),
+            drug.get("molecular_weight"),
+            drug.get("inchikey"),
+            drug.get("pubchem_cid"),
+            drug.get("chembl_id"),
+            drug.get("approval_date"),
+        ))
         if cur.rowcount:
             drugs_inserted += 1
 

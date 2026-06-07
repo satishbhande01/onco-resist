@@ -19,23 +19,25 @@
 
     <!-- ── Filter bar ───────────────────────────────────── -->
     <form class="filter-bar" method="get" action="/drugs">
-        <input
-            type="text"
-            name="search"
-            placeholder="Search by name or brand…"
-            value="{{ search_query }}"
-        >
+        <input type="text" name="search" placeholder="Search by name or brand…" value="{{ search_query }}">
         <select name="drug_class" onchange="this.form.submit()">
             <option value="">All classes</option>
             {% for cls in drug_classes %}
-            <option value="{{ cls }}"
-                {% if cls == selected_class %}selected{% endif %}>
+            <option value="{{ cls }}" {% if cls==selected_class %}selected{% endif %}>
                 {{ cls }}
             </option>
             {% endfor %}
         </select>
+        <select name="cancer_type" onchange="this.form.submit()">
+            <option value="">All cancer types</option>
+            {% for ct in cancer_types %}
+            <option value="{{ ct }}" {% if ct==selected_cancer %}selected{% endif %}>
+                {{ ct }}
+            </option>
+            {% endfor %}
+        </select>
         <button type="submit" class="btn secondary">Filter</button>
-        {% if search_query or selected_class %}
+        {% if search_query or selected_class or selected_cancer %}
         <a href="/drugs" class="btn secondary">Clear</a>
         {% endif %}
     </form>
@@ -83,8 +85,7 @@
                         {% endif %}
                     </td>
                     <td>
-                        <a href="/drugs/{{ drug.drugbank_id }}"
-                           class="btn secondary view-btn">
+                        <a href="/drugs/{{ drug.drugbank_id }}" class="btn secondary view-btn">
                             View →
                         </a>
                     </td>
