@@ -76,6 +76,73 @@ def get_drug_info(drug_name: str) -> dict:
     conn.close()
     return drug
 
+def get_drugs_by_cancer_type(cancer_type: str) -> dict:
+    """
+    Find drugs indicated for a specific cancer type.
+    Searches indication text for cancer type keywords.
+    """
+    conn = get_conn()
+
+    # Map common cancer type names to search keywords
+    keywords = {
+    "colorectal":     ["colorectal", "colon cancer", "rectal cancer", "colon or rectum"],
+    "lung":           ["lung cancer", "non-small cell", "nsclc", "sclc", "pulmonary"],
+    "leukemia":       ["leukemia", "leukaemia", "cml", "all", "aml", "myeloid"],
+    "melanoma":       ["melanoma"],
+    "breast":         ["breast cancer", "breast carcinoma"],
+    "prostate":       ["prostate cancer", "prostate carcinoma"],
+    "lymphoma":       ["lymphoma"],
+    "myeloma":        ["myeloma", "multiple myeloma"],
+    "liver":          ["hepatocellular", "liver cancer", "hepatic", "hcc"],
+    "kidney":         ["renal", "kidney cancer", "renal cell carcinoma", "rcc"],
+    "thyroid":        ["thyroid cancer", "thyroid carcinoma"],
+    "gastric":        ["gastric", "stomach cancer", "gastric carcinoma"],
+    "pancreatic":     ["pancreatic", "pancreas cancer"],
+    "bladder":        ["bladder cancer", "urothelial"],
+    "ovarian":        ["ovarian", "ovary cancer"],
+    "brain":          ["glioma", "glioblastoma", "brain cancer", "brain tumor"],
+    "sarcoma":        ["sarcoma", "gist", "gastrointestinal stromal"],
+    "head and neck":  ["head and neck", "squamous cell carcinoma of the head"],
+    "skin":           ["skin cancer", "basal cell", "squamous cell carcinoma"],
+    "endometrial":    ["endometrial", "uterine cancer"],
+    }
+
+    # Find matching keywords
+    cancer_lower = cancer_type.lower()
+    search_terms = []
+    for key, terms in keywords.items():
+        if key in cancer_lower or any(t in cancer_lower for t in terms):
+            search_terms = terms
+            break
+
+    if not search_terms:
+        search_terms = [cancer_lower]
+
+    conditions = " OR ".join(["LOWER(indication) LIKE ?" for _ in search_terms])
+    params     = [f"%{t}%" for t in search_terms]
+
+    rows = conn.execute(f"""
+        SELECT drugbank_id, name, drug_class, indication
+        FROM drugs
+        WHERE {conditions}
+        ORDER BY name
+    """, params).fetchall()
+
+    conn.close()
+
+    return {
+        "cancer_type": cancer_type,
+        "drugs": [
+            {
+                "name":        r["name"],
+                "drug_class":  r["drug_class"],
+                "indication":  (r["indication"] or "")[:200],
+                "portal_link": f"/drugs/{r['drugbank_id']}",
+            }
+            for r in rows
+        ],
+        "total": len(rows),
+    }
 
 def get_drug_targets(drug_name: str) -> dict:
     """

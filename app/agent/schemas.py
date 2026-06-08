@@ -249,6 +249,28 @@ TOOL_SCHEMAS = [
             }
         }
     },
+    {
+        "type": "function",
+        "function": {
+            "name": "get_drugs_by_cancer_type",
+            "description": (
+                "Find all drugs in the database indicated for a specific cancer type. "
+                "Use this when asked about drugs for a particular cancer like colorectal, "
+                "lung, leukemia, melanoma, breast cancer etc."
+            ),
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "cancer_type": {
+                        "type": "string",
+                        "description": "Cancer type e.g. 'colorectal', 'lung cancer', 'leukemia'"
+                    }
+                },
+                "required": ["cancer_type"]
+            }
+        }
+    },
+    
 ]
 
 

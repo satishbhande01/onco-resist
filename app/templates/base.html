@@ -20,7 +20,16 @@
     <nav class="navbar">
         <div class="navbar-content">
             <h3><a href="/" style="text-decoration:none; color:inherit;">Logo</a></h3>
-            <ul class="nav-list">
+
+            <!-- Hamburger button — visible only on mobile -->
+            <button class="hamburger" onclick="toggleMenu()" id="hamburgerBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <!-- Nav links — collapsible on mobile -->
+            <ul class="nav-list" id="navList">
                 <li class="nav-pages">
                     <a href="/drugs" class="{% if request.url.path.startswith('/drugs') %}active{% endif %}">
                         Drugs
@@ -44,10 +53,10 @@
                         autocomplete="off">
                 </form>
             </div>
+
             <button class="theme-toggle" onclick="toggleTheme()" id="themeBtn">
                 ☀️ Light
             </button>
-        </div>
         </div>
     </nav>
 
@@ -70,6 +79,22 @@
         }
     </script>
     <script src="/static/js/chat.js"></script>
+    <script>
+    function toggleMenu() {
+        const nav = document.getElementById('navList');
+        const btn = document.getElementById('hamburgerBtn');
+        nav.classList.toggle('open');
+        btn.classList.toggle('open');
+    }
+
+    // Close menu when a nav link is clicked
+    document.querySelectorAll('.nav-pages a').forEach(link => {
+        link.addEventListener('click', () => {
+            document.getElementById('navList').classList.remove('open');
+            document.getElementById('hamburgerBtn').classList.remove('open');
+        });
+    });
+</script>
     {% block extra_scripts %}{% endblock %}
 </body>
 
