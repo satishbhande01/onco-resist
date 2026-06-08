@@ -3,6 +3,8 @@ from fastapi import APIRouter, Request, HTTPException
 from fastapi.templating import Jinja2Templates
 from fastapi.responses import HTMLResponse
 from app.database import get_all_drugs, get_drug_by_id, get_drug_classes, get_cancer_types
+from fastapi.responses import JSONResponse
+import molviewspec as mvs
 
 router = APIRouter()
 
@@ -81,3 +83,113 @@ def api_drug_detail(drugbank_id: str):
     if not drug:
         raise HTTPException(status_code=404, detail="Drug not found")
     return drug
+
+@router.post("/api/molview")
+def build_molview(payload: dict):
+    pdb_id    = payload.get("pdb_id", "").upper()
+    mutations = payload.get("mutations", [])
+
+    if not pdb_id:
+        return JSONResponse({"error": "pdb_id required"}, status_code=400)
+
+    # Fetch the sequence residues available in this PDB
+    # from RCSB GraphQL to know which residues exist
+    available_residues = get_pdb_residues(pdb_id)
+
+    found     = []
+    not_found = []
+    for r in mutations:
+        if available_residues and r not in available_residues:
+            not_found.append(r)
+        else:
+            found.append(r)
+
+    builder   = mvs.create_builder()
+    structure = (
+        builder
+        .download(url=f"https://files.rcsb.org/download/{pdb_id}.cif")
+        .parse(format="mmcif")
+        .model_structure()
+    )
+
+    (
+        structure
+        .component(selector="polymer")
+        .representation(type="cartoon")
+        .color(color="#1a3a6b")
+    )
+
+    (
+        structure
+        .component(selector="ligand")
+        .representation(type="ball_and_stick")
+        .color(color="#ffdd00")
+    )
+
+    for residue_num in found:
+        (
+            structure
+            .component(
+                selector=mvs.ComponentExpression(label_seq_id=residue_num)
+            )
+            .representation(type="ball_and_stick")
+            .color(color="#ff4d6a")
+        )
+
+    return {
+        "mvs":       builder.get_state().to_dict(),
+        "not_found": not_found,
+        "found":     found,
+    }
+
+
+def get_pdb_residues(pdb_id: str) -> set:
+    """
+    Query RCSB GraphQL for residue sequence IDs in a PDB structure.
+    Returns a set of integer residue numbers or empty set on failure.
+    """
+    query = """
+    query($id: String!) {
+        entry(entry_id: $id) {
+            polymer_entities {
+                entity_poly {
+                    pdbx_seq_one_letter_code_can
+                }
+                polymer_entity_instances {
+                    rcsb_polymer_entity_instance_container_identifiers {
+                        auth_seq_id_1
+                        auth_seq_id_2
+                    }
+                }
+            }
+        }
+    }
+    """
+    try:
+        import requests
+        resp = requests.post(
+            "https://data.rcsb.org/graphql",
+            json={"query": query, "variables": {"id": pdb_id}},
+            timeout=8
+        )
+        resp.raise_for_status()
+        data = resp.json()
+
+        residues = set()
+        entry    = (data.get("data") or {}).get("entry", {})
+
+        for entity in (entry.get("polymer_entities") or []):
+            for instance in (entity.get("polymer_entity_instances") or []):
+                ids = instance.get(
+                    "rcsb_polymer_entity_instance_container_identifiers", {}
+                )
+                start = ids.get("auth_seq_id_1")
+                end   = ids.get("auth_seq_id_2")
+                if start and end:
+                    residues.update(range(int(start), int(end) + 1))
+
+        return residues
+
+    except Exception as e:
+        print(f"[RCSB] Residue fetch error: {e}")
+        return set()

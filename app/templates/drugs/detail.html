@@ -102,7 +102,7 @@
                 <span class="dim" style="font-size:0.78rem;">
                     Switch structure:
                 </span>
-                <select class="pdb-select" onchange="loadStructure(this.value)">
+                <select class="pdb-select" onchange="switchStructure(this.value)">
                     {% for target in drug.targets %}
                     {% for pdb in target.pdb_ids %}
                     <option value="{{ pdb }}" {% if pdb==viewer_pdb_id %}selected{% endif %}>
@@ -153,101 +153,23 @@
         </div>
 
     </div>
-
-    <!-- ── Details — full width below grid ───────────────── -->
-    <div class="details-full">
-        <div class="info-card">
-            <div class="info-card-title">Details</div>
-            <div class="details-grid">
-
-                <div class="detail-item">
-                    <span class="detail-label">DrugBank ID</span>
-                    <a href="https://go.drugbank.com/drugs/{{ drug.drugbank_id }}" target="_blank"
-                        class="detail-value mono accent">
-                        {{ drug.drugbank_id }} ↗
-                    </a>
-                </div>
-
-                <div class="detail-item">
-                    <span class="detail-label">Approval Date</span>
-                    <span class="detail-value">
-                        {{ drug.approval_date or '—' }}
-                    </span>
-                </div>
-
-                <div class="detail-item">
-                    <span class="detail-label">Molecular Weight</span>
-                    <span class="detail-value mono">
-                        {{ drug.molecular_weight or '—' }} g/mol
-                    </span>
-                </div>
-
-                <div class="detail-item">
-                    <span class="detail-label">Drug Class</span>
-                    <span class="detail-value">{{ drug.drug_class or '—' }}</span>
-                </div>
-
-                <div class="detail-item">
-                    <span class="detail-label">ATC Codes</span>
-                    <span class="detail-value mono">
-                        {{ drug.atc_codes|join(', ') or '—' }}
-                    </span>
-                </div>
-
-                <div class="detail-item">
-                    <span class="detail-label">Synonyms</span>
-                    <span class="detail-value">
-                        {% set short_syns = [] %}
-                        {% for syn in drug.synonyms %}
-                        {% if syn|length < 30 %} {% set _=short_syns.append(syn) %} {% endif %} {% endfor %} {{
-                            short_syns[:3]|join(', ') or ' —' }} </span>
-                </div>
-
-                {% if drug.pubchem_cid %}
-                <div class="detail-item">
-                    <span class="detail-label">PubChem</span>
-                    <a href="https://pubchem.ncbi.nlm.nih.gov/compound/{{ drug.pubchem_cid }}" target="_blank"
-                        class="detail-value mono accent">
-                        CID: {{ drug.pubchem_cid }} ↗
-                    </a>
-                </div>
-                {% endif %}
-
-                {% if drug.chembl_id %}
-                <div class="detail-item">
-                    <span class="detail-label">ChEMBL</span>
-                    <a href="https://www.ebi.ac.uk/chembl/compound_report_card/{{ drug.chembl_id }}" target="_blank"
-                        class="detail-value mono accent">
-                        {{ drug.chembl_id }} ↗
-                    </a>
-                </div>
-                {% endif %}
-
-            </div>
-
-            {% if drug.smiles %}
-            <div class="smiles-section">
-                <div class="detail-label" style="margin-bottom:0.4rem;">
-                    SMILES
-                </div>
-                <div class="smiles-string">{{ drug.smiles }}</div>
-            </div>
-            {% endif %}
-
-        </div>
-    </div>
-    <!-- ── Resistance Mutations ──────────────────────────── -->
     <!-- ── Resistance Mutations ──────────────────────────── -->
     {% if drug.resistance_mutations %}
     <div class="mutations-section">
-        <div class="section-title">
-            Resistance Mutations
-            {% set first_mut = drug.resistance_mutations[0] %}
-            {% if first_mut.total_samples %}
-            <span class="dim" style="font-weight:400; font-size:0.75rem; text-transform:none; letter-spacing:0;">
-                — {{ first_mut.total_samples }} resistance samples observed in COSMIC
-            </span>
-            {% endif %}
+        <div class="section-title" style="display:flex; align-items:center; justify-content:space-between;">
+            <div>
+                Resistance Mutations
+                {% set first_mut = drug.resistance_mutations[0] %}
+                {% if first_mut.total_samples %}
+                <span class="dim" style="font-weight:400; font-size:0.75rem; text-transform:none; letter-spacing:0;">
+                    — {{ first_mut.total_samples }} resistance samples observed in COSMIC
+                </span>
+                {% endif %}
+            </div>
+            <button class="btn secondary" id="clearMutBtn" onclick="clearMutations()"
+                style="display:none; padding:0.25rem 0.75rem; font-size:0.75rem;">
+                Clear
+            </button>
         </div>
 
         {% set ns = namespace(current_gene=None) %}
@@ -267,7 +189,8 @@
         {% endif %}
 
         {% if mut.mutation_aa and mut.mutation_aa != 'p.?' %}
-        <span class="mut-chip {{ mut.resistance_type }}" title="{{ mut.resistance_type }} resistance">
+        <span class="mut-chip {{ mut.resistance_type }}" title="{{ mut.resistance_type }} resistance"
+            onclick="toggleMutation('{{ mut.mutation_aa }}', this)" style="cursor:pointer;">
             {{ mut.mutation_aa }}
             {% if mut.pubmed_refs %}
             <span class="mut-ref-count">{{ mut.pubmed_refs|length }}</span>
@@ -287,6 +210,89 @@
 </p>
 </div>
 {% endif %}
+<!-- ── Details — full width below grid ───────────────── -->
+<div class="details-full">
+    <div class="info-card">
+        <div class="info-card-title">Details</div>
+        <div class="details-grid">
+
+            <div class="detail-item">
+                <span class="detail-label">DrugBank ID</span>
+                <a href="https://go.drugbank.com/drugs/{{ drug.drugbank_id }}" target="_blank"
+                    class="detail-value mono accent">
+                    {{ drug.drugbank_id }} ↗
+                </a>
+            </div>
+
+            <div class="detail-item">
+                <span class="detail-label">Approval Date</span>
+                <span class="detail-value">
+                    {{ drug.approval_date or '—' }}
+                </span>
+            </div>
+
+            <div class="detail-item">
+                <span class="detail-label">Molecular Weight</span>
+                <span class="detail-value mono">
+                    {{ drug.molecular_weight or '—' }} g/mol
+                </span>
+            </div>
+
+            <div class="detail-item">
+                <span class="detail-label">Drug Class</span>
+                <span class="detail-value">{{ drug.drug_class or '—' }}</span>
+            </div>
+
+            <div class="detail-item">
+                <span class="detail-label">ATC Codes</span>
+                <span class="detail-value mono">
+                    {{ drug.atc_codes|join(', ') or '—' }}
+                </span>
+            </div>
+
+            <div class="detail-item">
+                <span class="detail-label">Synonyms</span>
+                <span class="detail-value">
+                    {% set short_syns = [] %}
+                    {% for syn in drug.synonyms %}
+                    {% if syn|length < 30 %} {% set _=short_syns.append(syn) %} {% endif %} {% endfor %} {{
+                        short_syns[:3]|join(', ') or ' —' }} </span>
+            </div>
+
+            {% if drug.pubchem_cid %}
+            <div class="detail-item">
+                <span class="detail-label">PubChem</span>
+                <a href="https://pubchem.ncbi.nlm.nih.gov/compound/{{ drug.pubchem_cid }}" target="_blank"
+                    class="detail-value mono accent">
+                    CID: {{ drug.pubchem_cid }} ↗
+                </a>
+            </div>
+            {% endif %}
+
+            {% if drug.chembl_id %}
+            <div class="detail-item">
+                <span class="detail-label">ChEMBL</span>
+                <a href="https://www.ebi.ac.uk/chembl/compound_report_card/{{ drug.chembl_id }}" target="_blank"
+                    class="detail-value mono accent">
+                    {{ drug.chembl_id }} ↗
+                </a>
+            </div>
+            {% endif %}
+
+        </div>
+
+        {% if drug.smiles %}
+        <div class="smiles-section">
+            <div class="detail-label" style="margin-bottom:0.4rem;">
+                SMILES
+            </div>
+            <div class="smiles-string">{{ drug.smiles }}</div>
+        </div>
+        {% endif %}
+
+    </div>
+</div>
+
 
 <!-- ── References ───────────────────────────────────── -->
 {% if drug.pubmed_ids %}
@@ -313,10 +319,11 @@
 {% block extra_scripts %}
 <script>
     pageContext = "Viewing drug: {{ drug.name }} ({{ drug.drug_class }})";
+
     function expandIndication() {
         document.getElementById('indicationMore').style.display = 'inline';
         event.target.style.display = 'none';
-    }    
+    }
 </script>
 
 {% if viewer_pdb_id %}
@@ -324,11 +331,13 @@
 <script src="https://cdn.jsdelivr.net/npm/molstar@latest/build/viewer/molstar.js"></script>
 <script>
     let viewer = null;
+    let currentPdbId = '{{ viewer_pdb_id }}';
+    const highlightedMutations = new Set();
 
+    /* ── Viewer init ──────────────────────────────────── */
     async function initViewer() {
         const element = document.getElementById('molstar-viewer');
         const { Viewer } = molstar;
-
         viewer = await Viewer.create(element, {
             layoutIsExpanded: false,
             layoutShowControls: false,
@@ -339,40 +348,117 @@
             viewportShowExpand: false,
             viewportShowAnimation: false,
         });
-
-        await loadStructure('{{ viewer_pdb_id }}');
+        await loadStructure(currentPdbId, []);
     }
 
-    async function loadStructure(pdbId) {
+    /* ── Load structure via MolViewSpec ───────────────── */
+    async function loadStructure(pdbId, mutations = []) {
         if (!viewer) return;
 
-        const url = `https://files.rcsb.org/download/${pdbId.toUpperCase()}.cif`;
-
-        // Destroy and recreate the viewer completely
-        const element = document.getElementById('molstar-viewer');
-        element.innerHTML = '';
-        viewer = null;
-
-        const { Viewer } = molstar;
-        viewer = await Viewer.create(element, {
-            layoutIsExpanded: false,
-            layoutShowControls: false,
-            layoutShowRemoteState: false,
-            layoutShowSequence: false,
-            layoutShowLog: false,
-            layoutShowLeftPanel: false,
-            viewportShowExpand: false,
-            viewportShowAnimation: false,
+        const resp = await fetch('/api/molview', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ pdb_id: pdbId, mutations: mutations })
         });
 
-        await viewer.loadStructureFromUrl(url, 'mmcif', false);
+        const data = await resp.json();
 
-        // Update the RCSB link
+        // Show toast for residues not found in this PDB
+        if (data.not_found && data.not_found.length > 0) {
+            showToast(
+                `Residue(s) ${data.not_found.join(', ')} not found in ${pdbId.toUpperCase()} — try a different structure`,
+                'warning'
+            );
+        }
+
+        try {
+            const mvsData = molstar.PluginExtensions.mvs.MVSData.fromMVSJ(
+                JSON.stringify(data.mvs)
+            );
+            await molstar.PluginExtensions.mvs.loadMVS(
+                viewer.plugin,
+                mvsData,
+                { replaceExisting: true, sanityChecks: true }
+            );
+        } catch (e) {
+            console.error('MVS load error:', e);
+            await viewer.loadStructureFromUrl(
+                `https://files.rcsb.org/download/${pdbId.toUpperCase()}.cif`,
+                'mmcif',
+                false
+            );
+        }
+
         const rcsbLink = document.getElementById('rcsbLink');
         if (rcsbLink) {
             rcsbLink.href = `https://www.rcsb.org/structure/${pdbId.toUpperCase()}`;
         }
     }
+    function showToast(message, type = 'info') {
+        const toast = document.createElement('div');
+        toast.className = `toast toast-${type}`;
+        toast.textContent = message;
+        document.body.appendChild(toast);
+
+        // Animate in
+        setTimeout(() => toast.classList.add('visible'), 10);
+
+        // Remove after 4 seconds
+        setTimeout(() => {
+            toast.classList.remove('visible');
+            setTimeout(() => toast.remove(), 300);
+        }, 4000);
+    }
+
+    /* ── Structure switch dropdown ────────────────────── */
+    async function switchStructure(pdbId) {
+        currentPdbId = pdbId;
+        highlightedMutations.clear();
+        document.querySelectorAll('.mut-chip.selected')
+            .forEach(c => c.classList.remove('selected'));
+        const clearBtn = document.getElementById('clearMutBtn');
+        if (clearBtn) clearBtn.style.display = 'none';
+        await loadStructure(pdbId, []);
+    }
+
+    /* ── Mutation highlighting ────────────────────────── */
+    function parseMutationCode(mutationAA) {
+        if (!mutationAA) return null;
+        const code = mutationAA.startsWith('p.') ? mutationAA.slice(2) : mutationAA;
+        const match = code.match(/(\d+)/);
+        return match ? parseInt(match[1]) : null;
+    }
+
+    function toggleMutation(mutationAA, chipElement) {
+        const residueNum = parseMutationCode(mutationAA);
+        if (!residueNum) return;
+
+        if (highlightedMutations.has(residueNum)) {
+            highlightedMutations.delete(residueNum);
+            chipElement.classList.remove('selected');
+        } else {
+            highlightedMutations.add(residueNum);
+            chipElement.classList.add('selected');
+        }
+
+        const clearBtn = document.getElementById('clearMutBtn');
+        if (clearBtn) {
+            clearBtn.style.display =
+                highlightedMutations.size > 0 ? 'inline-flex' : 'none';
+        }
+
+        loadStructure(currentPdbId, Array.from(highlightedMutations));
+    }
+
+    function clearMutations() {
+        document.querySelectorAll('.mut-chip.selected')
+            .forEach(c => c.classList.remove('selected'));
+        highlightedMutations.clear();
+        const clearBtn = document.getElementById('clearMutBtn');
+        if (clearBtn) clearBtn.style.display = 'none';
+        loadStructure(currentPdbId, []);
+    }
+
     initViewer();
 </script>
 {% endif %}
