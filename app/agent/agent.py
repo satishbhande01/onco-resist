@@ -105,15 +105,22 @@ def run_agent(
     # calling tools or we hit MAX_TOOL_ROUNDS.
 
     for round_num in range(MAX_TOOL_ROUNDS):
-
-        response = client.chat.completions.create(
-            model=MODEL,
-            messages=messages,
-            tools=TOOL_SCHEMAS,
-            tool_choice="auto",
-            max_tokens=2048,
-            temperature=0.1,   # low temperature for factual accuracy
-        )
+        try:
+            response = client.chat.completions.create(
+                model=MODEL,
+                messages=messages,
+                tools=TOOL_SCHEMAS,
+                tool_choice="auto",
+                max_tokens=2048,
+                temperature=0.1,
+            )
+        except Exception as e:
+            print(f"[Agent] Groq error: {e}")  # ← add this
+            return {
+                "answer": "I encountered an error processing your request. Please try again.",
+                "history": [],
+                "tools_used": tools_used,
+            }
 
         choice  = response.choices[0]
         message_obj = choice.message
