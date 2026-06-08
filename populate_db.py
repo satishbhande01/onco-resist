@@ -392,6 +392,68 @@ def validate(conn: sqlite3.Connection):
     for row in cur.fetchall():
         print(f"  {row['drug_class']:<35} {row['n']:>4}")
 
+def classify_resistance_types(conn: sqlite3.Connection):
+    """
+    Classify each resistance mutation as on-target or off-target.
+
+    on-target  — mutation gene matches one of the drug's known targets
+    off-target — mutation gene does not match any of the drug's targets
+    unknown    — no target data available for this drug
+    """
+    cur = conn.cursor()
+
+    # Build lookup: drugbank_id → set of target gene symbols
+    cur.execute("""
+        SELECT dtl.drugbank_id, t.gene_name
+        FROM drug_target_links dtl
+        JOIN targets t ON t.uniprot_accession = dtl.uniprot_accession
+    """)
+    drug_targets = {}
+    for row in cur.fetchall():
+        drug_id = row["drugbank_id"]
+        gene    = row["gene_name"].upper()
+        if drug_id not in drug_targets:
+            drug_targets[drug_id] = set()
+        drug_targets[drug_id].add(gene)
+
+    # Fetch all mutations
+    cur.execute("""
+        SELECT id, drugbank_id, gene_symbol
+        FROM resistance_mutations
+    """)
+    mutations = cur.fetchall()
+
+    on_target  = 0
+    off_target = 0
+    unknown    = 0
+
+    for mut in mutations:
+        mut_id   = mut["id"]
+        drug_id  = mut["drugbank_id"]
+        gene     = (mut["gene_symbol"] or "").upper()
+
+        targets = drug_targets.get(drug_id)
+
+        if not targets:
+            resistance_type = "unknown"
+            unknown += 1
+        elif gene in targets:
+            resistance_type = "on-target"
+            on_target += 1
+        else:
+            resistance_type = "off-target"
+            off_target += 1
+
+        cur.execute("""
+            UPDATE resistance_mutations
+            SET resistance_type = ?
+            WHERE id = ?
+        """, (resistance_type, mut_id))
+
+    conn.commit()
+    print(f"  On-target   : {on_target}")
+    print(f"  Off-target  : {off_target}")
+    print(f"  Unknown     : {unknown}")
 
 # Entry point
 def main():
@@ -432,6 +494,9 @@ def main():
 
     print(f"\nInserting COSMIC resistance mutations ...")
     insert_cosmic_mutations(conn, cosmic, drugs)
+
+    print(f"\nClassifying resistance types ...")
+    classify_resistance_types(conn)
 
     # Validate
     validate(conn)

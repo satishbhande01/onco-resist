@@ -444,6 +444,16 @@
     margin-top: 1rem;
 }
 
+.mut-chip.on-target {
+    border-color: rgba(0, 212, 255, 0.3);
+    color: var(--accent);
+}
+
+.mut-chip.off-target {
+    border-color: rgba(255, 179, 64, 0.3);
+    color: var(--amber, #ffb340);
+}
+
 /* ── References ────────────────────────────────────────── */
 .references-section {
     background: var(--bg-card);

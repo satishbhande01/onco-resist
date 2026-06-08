@@ -251,7 +251,7 @@
     <div class="mutation-chips">
         {% endif %}
 
-        <span class="mut-chip">{{ mut.mutation_aa }}</span>
+        <span class="mut-chip {{ mut.resistance_type }}">{{ mut.mutation_aa }}</span>
 
         {% endfor %}
     </div>
@@ -259,6 +259,8 @@
 
 <p class="mutations-note">
     Resistance mutations sourced from COSMIC Drug Resistance database.
+    <span style="color:var(--accent);">Cyan</span> = on-target ·
+    <span style="color:#ffb340;">Amber</span> = off-target
 </p>
 </div>
 {% endif %}
