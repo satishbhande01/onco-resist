@@ -1,6 +1,7 @@
 import json
 import sqlite3
 from pathlib import Path
+import requests
 
 DB_path = Path(__file__).resolve().parent.parent / "data" / "portal.db"
 
@@ -75,6 +76,137 @@ CANCER_TYPES = {
     "myeloid":        "Myeloid Disorders",
     "kaposi":         "Kaposi's Sarcoma",
 }
+
+def fetch_rcsb_structures(uniprot_accession: str) -> list:
+    """
+    Query RCSB Search API for all PDB structures associated
+    with a UniProt accession.
+    """
+    search_url = "https://search.rcsb.org/rcsbsearch/v2/query"
+
+    query = {
+        "query": {
+            "type": "terminal",
+            "service": "text",
+            "parameters": {
+                "attribute": "rcsb_polymer_entity_container_identifiers"
+                             ".reference_sequence_identifiers"
+                             ".database_accession",
+                "operator": "exact_match",
+                "value":    uniprot_accession
+            }
+        },
+        "return_type": "entry",
+        "request_options": {
+            "paginate": {
+                "start": 0,
+                "rows":  50
+            },
+            "results_content_type": ["experimental"],
+            "sort": [
+                {
+                    "sort_by":   "rcsb_entry_info.resolution_combined",
+                    "direction": "asc"
+                }
+            ]
+        }
+    }
+
+    try:
+        resp = requests.post(
+            search_url,
+            json=query,
+            timeout=10,
+            headers={"Content-Type": "application/json"}
+        )
+        resp.raise_for_status()
+        data = resp.json()
+    except Exception as e:
+        print(f"[RCSB] Error fetching structures for {uniprot_accession}: {e}")
+        return []
+
+    results = data.get("result_set", [])
+    pdb_ids = [r["identifier"] for r in results]
+
+    if not pdb_ids:
+        return []
+
+    return fetch_rcsb_details(pdb_ids)
+
+
+def fetch_rcsb_details(pdb_ids: list) -> list:
+    """
+    Fetch title, resolution, and experimental method
+    for a list of PDB IDs using RCSB GraphQL.
+    """
+    if not pdb_ids:
+        return []
+
+    graphql_url = "https://data.rcsb.org/graphql"
+
+    # Build entries query for multiple IDs at once
+    entries_query = " ".join([
+        f"""
+        e{i}: entry(entry_id: "{pdb_id}") {{
+            rcsb_id
+            struct {{ title }}
+            rcsb_entry_info {{
+                resolution_combined
+                experimental_method
+                deposited_nonpolymer_entity_instance_count
+            }}
+        }}
+        """
+        for i, pdb_id in enumerate(pdb_ids[:30])  # cap at 30
+    ])
+
+    query = f"{{ {entries_query} }}"
+
+    try:
+        resp = requests.post(
+            graphql_url,
+            json={"query": query},
+            timeout=15
+        )
+        resp.raise_for_status()
+        data = resp.json().get("data", {})
+    except Exception as e:
+        print(f"[RCSB] GraphQL error: {e}")
+        # Fall back to returning just PDB IDs without details
+        return [{"pdb_id": pid, "title": None,
+                 "resolution": None, "method": None,
+                 "has_ligand": False}
+                for pid in pdb_ids]
+
+    structures = []
+    for i, pdb_id in enumerate(pdb_ids[:30]):
+        entry = data.get(f"e{i}", {})
+        if not entry:
+            continue
+
+        info       = entry.get("rcsb_entry_info", {})
+        
+        # resolution_combined returns a list
+        resolution_raw = info.get("resolution_combined")
+        if isinstance(resolution_raw, list):
+            resolution = resolution_raw[0] if resolution_raw else None
+        else:
+            resolution = resolution_raw
+
+        method     = info.get("experimental_method", "")
+        has_ligand = (info.get(
+            "deposited_nonpolymer_entity_instance_count", 0) or 0) > 0
+        title      = (entry.get("struct") or {}).get("title", "")
+
+        structures.append({
+            "pdb_id":     pdb_id.lower(),
+            "title":      title,
+            "resolution": round(resolution, 2) if resolution else None,
+            "method":     method,
+            "has_ligand": has_ligand,
+        })
+
+    return structures
 
 def extract_cancer_types(indication: str) -> list:
     """Extract cancer type labels from indication text."""
@@ -328,6 +460,20 @@ def get_target_by_uniprot(uniprot_accession: str) -> dict:
     target["resistance_mutations"] = [dict(r) for r in mut_rows]
 
     conn.close()
+    target["rcsb_structures"] = fetch_rcsb_structures(uniprot_accession)
+    # Pick viewer PDB from RCSB results — first structure with a ligand
+    # preferring ligand-bound structures for biological relevance
+    viewer_pdb = None
+    for s in target["rcsb_structures"]:
+        if s["has_ligand"]:
+            viewer_pdb = s["pdb_id"]
+            break
+
+    # Fall back to first structure if none has a ligand
+    if not viewer_pdb and target["rcsb_structures"]:
+        viewer_pdb = target["rcsb_structures"][0]["pdb_id"]
+
+    target["viewer_pdb_id"] = viewer_pdb
     return target
 
 

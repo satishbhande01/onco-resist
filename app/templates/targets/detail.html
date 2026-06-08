@@ -22,9 +22,8 @@
             <p class="protein-full-name">{{ target.protein_name }}</p>
         </div>
         <div class="target-header-right">
-            <a href="https://www.uniprot.org/uniprot/{{ target.uniprot_accession }}"
-               target="_blank"
-               class="uniprot-link">
+            <a href="https://www.uniprot.org/uniprot/{{ target.uniprot_accession }}" target="_blank"
+                class="uniprot-link">
                 {{ target.uniprot_accession }} ↗
             </a>
         </div>
@@ -56,9 +55,7 @@
             <div class="viewer-header">
                 <span class="viewer-title">3D Structure</span>
                 {% if target.viewer_pdb_id %}
-                <span class="viewer-pdb">
-                    PDB: {{ target.viewer_pdb_id|upper }}
-                </span>
+                <span class="viewer-pdb">PDB: {{ target.viewer_pdb_id|upper }}</span>
                 {% else %}
                 <span class="dim">No structure available</span>
                 {% endif %}
@@ -74,18 +71,17 @@
 
             {% if target.viewer_pdb_id %}
             <div class="viewer-controls">
-                <a id="rcsbLink"
-                   href="https://www.rcsb.org/structure/{{ target.viewer_pdb_id|upper }}"
-                   target="_blank"
-                   class="btn secondary"
-                   style="font-size:0.78rem; padding:0.3rem 0.7rem;">
-                    View on RCSB ↗
-                </a>
-                <a href="https://www.uniprot.org/uniprot/{{ target.uniprot_accession }}"
-                   target="_blank"
-                   class="btn secondary"
-                   style="font-size:0.78rem; padding:0.3rem 0.7rem;">
-                    UniProt ↗
+                <span class="dim" style="font-size:0.78rem;">Switch structure:</span>
+                <select class="pdb-select" onchange="loadStructure(this.value)">
+                    {% for s in target.rcsb_structures %}
+                    <option value="{{ s.pdb_id }}" {% if s.pdb_id==target.viewer_pdb_id %}selected{% endif %}>
+                        {{ s.pdb_id|upper }} — {{ s.resolution }}Å
+                    </option>
+                    {% endfor %}
+                </select>
+                <a id="rcsbLink" href="https://www.rcsb.org/structure/{{ target.viewer_pdb_id|upper }}" target="_blank"
+                    class="btn secondary" style="font-size:0.78rem; padding:0.3rem 0.7rem;">
+                    RCSB ↗
                 </a>
             </div>
             {% endif %}
@@ -100,9 +96,8 @@
                 <div class="protein-info-grid">
                     <div class="info-item">
                         <span class="info-label">UniProt Accession</span>
-                        <a href="https://www.uniprot.org/uniprot/{{ target.uniprot_accession }}"
-                           target="_blank"
-                           class="info-value mono accent">
+                        <a href="https://www.uniprot.org/uniprot/{{ target.uniprot_accession }}" target="_blank"
+                            class="info-value mono accent">
                             {{ target.uniprot_accession }} ↗
                         </a>
                     </div>
@@ -128,15 +123,14 @@
             </div>
 
             <!-- Drugs targeting this protein -->
-            <div class="info-card">
+            <div class="info-card grow">
                 <div class="info-card-title">
                     Targeting Drugs
                     <span class="count-pill">{{ target.drugs|length }}</span>
                 </div>
                 <div class="drug-list">
                     {% for drug in target.drugs %}
-                    <a href="/drugs/{{ drug.drugbank_id }}"
-                       class="drug-item">
+                    <a href="/drugs/{{ drug.drugbank_id }}" class="drug-item">
                         <div class="drug-item-left">
                             <span class="drug-item-name">{{ drug.name }}</span>
                             {% if drug.drug_class and drug.drug_class != 'Other' %}
@@ -180,8 +174,7 @@
                             <span class="mut-code">{{ mut.mutation_aa }}</span>
                         </td>
                         <td>
-                            <a href="/drugs/{{ mut.drugbank_id }}"
-                               class="drug-link">
+                            <a href="/drugs/{{ mut.drugbank_id }}" class="drug-link">
                                 {{ mut.drug_name }}
                             </a>
                         </td>
@@ -208,10 +201,7 @@
 </script>
 
 {% if target.viewer_pdb_id %}
-<link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/molstar@latest/build/viewer/molstar.css"
->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/molstar@latest/build/viewer/molstar.css">
 <script src="https://cdn.jsdelivr.net/npm/molstar@latest/build/viewer/molstar.js"></script>
 <script>
     let viewer = null;
@@ -219,20 +209,49 @@
     async function initViewer() {
         const element = document.getElementById('molstar-viewer');
         const { Viewer } = molstar;
-
         viewer = await Viewer.create(element, {
-            layoutIsExpanded:      false,
-            layoutShowControls:    false,
+            layoutIsExpanded: false,
+            layoutShowControls: false,
             layoutShowRemoteState: false,
-            layoutShowSequence:    false,
-            layoutShowLog:         false,
-            layoutShowLeftPanel:   false,
-            viewportShowExpand:    false,
+            layoutShowSequence: false,
+            layoutShowLog: false,
+            layoutShowLeftPanel: false,
+            viewportShowExpand: false,
             viewportShowAnimation: false,
         });
+        await loadStructure('{{ target.viewer_pdb_id }}');
+    }
 
-        const url = `https://files.rcsb.org/download/{{ target.viewer_pdb_id|upper }}.cif`;
+    async function loadStructure(pdbId) {
+        if (!viewer) return;
+        const url = `https://files.rcsb.org/download/${pdbId.toUpperCase()}.cif`;
+        const element = document.getElementById('molstar-viewer');
+        element.innerHTML = '';
+        viewer = null;
+        const { Viewer } = molstar;
+        viewer = await Viewer.create(element, {
+            layoutIsExpanded: false,
+            layoutShowControls: false,
+            layoutShowRemoteState: false,
+            layoutShowSequence: false,
+            layoutShowLog: false,
+            layoutShowLeftPanel: false,
+            viewportShowExpand: false,
+            viewportShowAnimation: false,
+        });
         await viewer.loadStructureFromUrl(url, 'mmcif', false);
+
+        // Update RCSB link
+        const rcsbLink = document.getElementById('rcsbLink');
+        if (rcsbLink) {
+            rcsbLink.href = `https://www.rcsb.org/structure/${pdbId.toUpperCase()}`;
+        }
+
+        // Update PDB label in header
+        const pdbLabel = document.querySelector('.viewer-pdb');
+        if (pdbLabel) {
+            pdbLabel.textContent = `PDB: ${pdbId.toUpperCase()}`;
+        }
     }
 
     initViewer();
