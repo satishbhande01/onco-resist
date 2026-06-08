@@ -544,3 +544,50 @@ def search_all(query: str) -> dict:
         "targets": [dict(r) for r in targets],
         "mutations": [dict(r) for r in mutations],
     }
+
+def get_sifts_mapping(pdb_id: str, uniprot_accession: str) -> dict:
+    """
+    Fetch SIFTS residue mapping for a PDB ID + UniProt accession.
+    Returns dict: {uniprot_position: pdb_residue_number}
+    
+    Uses the SIFTS API from EBI.
+    """
+    import requests
+
+    url = (
+        f"https://www.ebi.ac.uk/pdbe/api/mappings/uniprot_segments/"
+        f"{pdb_id.lower()}"
+    )
+
+    try:
+        resp = requests.get(url, timeout=10)
+        resp.raise_for_status()
+        data = resp.json()
+    except Exception as e:
+        print(f"[SIFTS] Error for {pdb_id}: {e}")
+        return {}
+
+    mapping = {}
+
+    pdb_data    = data.get(pdb_id.lower(), {})
+    uniprot_map = pdb_data.get("UniProt", {})
+    entry       = uniprot_map.get(uniprot_accession, {})
+    mappings    = entry.get("mappings", [])
+
+    for seg in mappings:
+        uniprot_start = seg.get("unp_start")
+        uniprot_end   = seg.get("unp_end")
+        pdb_start     = seg.get("start", {}).get("residue_number")
+        pdb_end       = seg.get("end", {}).get("residue_number")
+
+        if None in (uniprot_start, uniprot_end, pdb_start, pdb_end):
+            continue
+
+        # Build position-by-position mapping for this segment
+        offset = pdb_start - uniprot_start
+        for i in range(uniprot_end - uniprot_start + 1):
+            uniprot_pos = uniprot_start + i
+            pdb_pos     = pdb_start + i
+            mapping[uniprot_pos] = pdb_pos
+
+    return mapping

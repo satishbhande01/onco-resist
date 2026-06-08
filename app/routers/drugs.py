@@ -2,7 +2,7 @@ from pathlib import Path
 from fastapi import APIRouter, Request, HTTPException
 from fastapi.templating import Jinja2Templates
 from fastapi.responses import HTMLResponse
-from app.database import get_all_drugs, get_drug_by_id, get_drug_classes, get_cancer_types
+from app.database import get_all_drugs, get_drug_by_id, get_drug_classes, get_cancer_types, get_sifts_mapping
 from fastapi.responses import JSONResponse
 import molviewspec as mvs
 
@@ -87,22 +87,30 @@ def api_drug_detail(drugbank_id: str):
 @router.post("/api/molview")
 def build_molview(payload: dict):
     pdb_id    = payload.get("pdb_id", "").upper()
-    mutations = payload.get("mutations", [])
+    mutations = payload.get("mutations", [])      # UniProt residue numbers
+    uniprot   = payload.get("uniprot", "")        # UniProt accession
 
     if not pdb_id:
         return JSONResponse({"error": "pdb_id required"}, status_code=400)
 
-    # Fetch the sequence residues available in this PDB
-    # from RCSB GraphQL to know which residues exist
-    available_residues = get_pdb_residues(pdb_id)
+    # Get SIFTS mapping — UniProt position → PDB residue number
+    sifts = {}
+    if uniprot:
+        sifts = get_sifts_mapping(pdb_id, uniprot)
 
     found     = []
     not_found = []
-    for r in mutations:
-        if available_residues and r not in available_residues:
-            not_found.append(r)
+
+    for uniprot_pos in mutations:
+        if sifts:
+            pdb_pos = sifts.get(uniprot_pos)
+            if pdb_pos:
+                found.append(pdb_pos)
+            else:
+                not_found.append(uniprot_pos)
         else:
-            found.append(r)
+            # No SIFTS data — use position directly as fallback
+            found.append(uniprot_pos)
 
     builder   = mvs.create_builder()
     structure = (
@@ -126,11 +134,11 @@ def build_molview(payload: dict):
         .color(color="#ffdd00")
     )
 
-    for residue_num in found:
+    for pdb_pos in found:
         (
             structure
             .component(
-                selector=mvs.ComponentExpression(label_seq_id=residue_num)
+                selector=mvs.ComponentExpression(label_seq_id=pdb_pos)
             )
             .representation(type="ball_and_stick")
             .color(color="#ff4d6a")
@@ -141,7 +149,6 @@ def build_molview(payload: dict):
         "not_found": not_found,
         "found":     found,
     }
-
 
 def get_pdb_residues(pdb_id: str) -> set:
     """

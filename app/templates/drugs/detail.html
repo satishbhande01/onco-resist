@@ -327,6 +327,16 @@
 </script>
 
 {% if viewer_pdb_id %}
+<!-- PDB to UniProt mapping — must be before viewer script -->
+<script>
+    const pdbToUniprot = {
+    {% for target in drug.targets %}
+    {% for pdb in target.pdb_ids %}
+    "{{ pdb }}": "{{ target.uniprot_accession }}",
+        {% endfor %}
+    {% endfor %}
+};
+</script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/molstar@latest/build/viewer/molstar.css">
 <script src="https://cdn.jsdelivr.net/npm/molstar@latest/build/viewer/molstar.js"></script>
 <script>
@@ -355,10 +365,16 @@
     async function loadStructure(pdbId, mutations = []) {
         if (!viewer) return;
 
+        const uniprot = pdbToUniprot[pdbId.toLowerCase()] || '';
+
         const resp = await fetch('/api/molview', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ pdb_id: pdbId, mutations: mutations })
+            body: JSON.stringify({
+                pdb_id: pdbId,
+                mutations: mutations,
+                uniprot: uniprot       // ← pass UniProt accession
+            })
         });
 
         const data = await resp.json();
@@ -378,8 +394,16 @@
             await molstar.PluginExtensions.mvs.loadMVS(
                 viewer.plugin,
                 mvsData,
-                { replaceExisting: true, sanityChecks: true }
+                { replaceExisting: true, sanityChecks: true, appendSnapshots: false }
             );
+            // Clear snapshot timeline
+            viewer.plugin.managers.snapshot.clear();
+
+            // Re-apply viewport settings that MVS overrides
+            viewer.plugin.layout.setProps({
+                isExpanded: false,
+                showControls: false,
+            });
         } catch (e) {
             console.error('MVS load error:', e);
             await viewer.loadStructureFromUrl(
