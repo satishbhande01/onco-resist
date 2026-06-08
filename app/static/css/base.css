@@ -184,6 +184,90 @@ a {
     background: var(--btn-secondary-hover);
 }
 
+/* ── Markdown in chat messages ─────────────────────────── */
+.chat-msg.assistant p {
+    margin-bottom: 0.6rem;
+    line-height: 1.65;
+}
+
+.chat-msg.assistant p:last-child {
+    margin-bottom: 0;
+}
+
+.chat-msg.assistant strong {
+    color: var(--text);
+    font-weight: 600;
+}
+
+.chat-msg.assistant ul,
+.chat-msg.assistant ol {
+    padding-left: 1.25rem;
+    margin-bottom: 0.6rem;
+}
+
+.chat-msg.assistant li {
+    margin-bottom: 0.3rem;
+    line-height: 1.6;
+}
+
+.chat-msg.assistant a {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px solid var(--accent-dim, #005f7a);
+    transition: border-color 0.15s ease;
+}
+
+.chat-msg.assistant a:hover {
+    border-color: var(--accent);
+}
+
+.chat-msg.assistant table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.82rem;
+    margin-bottom: 0.75rem;
+}
+
+.chat-msg.assistant th {
+    background: var(--bg);
+    padding: 0.4rem 0.65rem;
+    text-align: left;
+    font-weight: 600;
+    border-bottom: 1px solid var(--border);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-dim);
+}
+
+.chat-msg.assistant td {
+    padding: 0.4rem 0.65rem;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+}
+
+.chat-msg.assistant tr:last-child td {
+    border-bottom: none;
+}
+
+.chat-msg.assistant code {
+    font-family: monospace;
+    font-size: 0.82rem;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    padding: 0.1rem 0.35rem;
+    color: var(--accent);
+}
+
+.chat-msg.assistant h3,
+.chat-msg.assistant h4 {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 0.4rem;
+    margin-top: 0.75rem;
+}
 /* ── Responsive ────────────────────────────────────────── */
 @media (max-width: 900px) {
     .navbar-content { padding: 0 1.5rem; }

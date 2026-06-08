@@ -23,28 +23,22 @@
         <div class="sidebar-section">
             <div class="sidebar-section-title">Example Questions</div>
             <div class="example-list">
-                <button class="example-item"
-                        onclick="setQuery('What mutations cause resistance to imatinib?')">
+                <button class="example-item" onclick="setQuery('What mutations cause resistance to imatinib?')">
                     What mutations cause resistance to imatinib?
                 </button>
-                <button class="example-item"
-                        onclick="setQuery('Which EGFR mutations cause gefitinib resistance?')">
+                <button class="example-item" onclick="setQuery('Which EGFR mutations cause gefitinib resistance?')">
                     Which EGFR mutations cause gefitinib resistance?
                 </button>
-                <button class="example-item"
-                        onclick="setQuery('How does ALK inhibitor resistance develop?')">
+                <button class="example-item" onclick="setQuery('How does ALK inhibitor resistance develop?')">
                     How does ALK inhibitor resistance develop?
                 </button>
-                <button class="example-item"
-                        onclick="setQuery('What is the T315I mutation?')">
+                <button class="example-item" onclick="setQuery('What is the T315I mutation?')">
                     What is the T315I mutation?
                 </button>
-                <button class="example-item"
-                        onclick="setQuery('Compare imatinib and dasatinib resistance profiles')">
+                <button class="example-item" onclick="setQuery('Compare imatinib and dasatinib resistance profiles')">
                     Compare imatinib and dasatinib resistance profiles
                 </button>
-                <button class="example-item"
-                        onclick="setQuery('What drugs target BRAF V600E?')">
+                <button class="example-item" onclick="setQuery('What drugs target BRAF V600E?')">
                     What drugs target BRAF V600E?
                 </button>
             </div>
@@ -84,13 +78,8 @@
         <!-- Input -->
         <div class="chat-input-area">
             <div class="chat-input-wrap">
-                <input
-                    type="text"
-                    id="pageChatInput"
-                    placeholder="Ask about resistance mutations, drug mechanisms…"
-                    onkeydown="if(event.key === 'Enter') sendPageChat()"
-                    autocomplete="off"
-                >
+                <input type="text" id="pageChatInput" placeholder="Ask about resistance mutations, drug mechanisms…"
+                    onkeydown="if(event.key === 'Enter') sendPageChat()" autocomplete="off">
                 <button class="chat-send-btn" onclick="sendPageChat()">
                     Send →
                 </button>
@@ -123,7 +112,21 @@
 
         const content = document.createElement('div');
         content.className = 'msg-content';
-        content.textContent = text;
+
+        if (role === 'assistant') {
+            content.innerHTML = marked.parse(text);
+            content.querySelectorAll('a').forEach(link => {
+                const href = link.getAttribute('href');
+                if (href && href.startsWith('/')) {
+                    link.target = '_self';
+                } else {
+                    link.target = '_blank';
+                    link.rel = 'noopener noreferrer';
+                }
+            });
+        } else {
+            content.textContent = text;
+        }
 
         div.appendChild(content);
         container.appendChild(div);
@@ -132,7 +135,7 @@
     }
 
     async function sendPageChat() {
-        const input   = document.getElementById('pageChatInput');
+        const input = document.getElementById('pageChatInput');
         const message = input.value.trim();
         if (!message) return;
 
@@ -143,7 +146,7 @@
 
         try {
             const res = await fetch('/api/chat', {
-                method:  'POST',
+                method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
                     message: message,
@@ -159,13 +162,15 @@
                 answer = answer.split('## References')[0].trim();
             }
 
-            thinking.textContent = answer;
-            thinking.closest('.chat-msg').className = 'chat-msg assistant';
+            // Remove thinking element and append proper markdown message
+            thinking.closest('.chat-msg').remove();
+            appendPageMessage('assistant', answer);
+
             pageChatHistory = data.history || [];
 
         } catch (e) {
-            thinking.textContent = 'Something went wrong. Please try again.';
-            thinking.closest('.chat-msg').className = 'chat-msg assistant';
+            thinking.closest('.chat-msg').remove();
+            appendPageMessage('assistant', 'Something went wrong. Please try again.');
         }
     }
 </script>

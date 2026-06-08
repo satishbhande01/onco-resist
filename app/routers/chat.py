@@ -4,9 +4,11 @@ from fastapi.templating import Jinja2Templates
 from fastapi.responses import HTMLResponse
 from pydantic import BaseModel
 
+from app.agent.agent import run_agent
+
 router = APIRouter()
 
-BASE_DIR = Path(__file__).resolve().parent.parent
+BASE_DIR  = Path(__file__).resolve().parent.parent
 templates = Jinja2Templates(directory=str(BASE_DIR / "templates"))
 
 
@@ -23,20 +25,28 @@ class ChatRequest(BaseModel):
 
 @router.get("/chat", response_class=HTMLResponse)
 def chat_page(request: Request):
-    return templates.TemplateResponse(request=request, name="chat.html")
+    return templates.TemplateResponse(
+        request=request,
+        name="chat.html"
+    )
 
 
 @router.post("/api/chat")
 def chat_endpoint(payload: ChatRequest):
-    # Placeholder — returns a stub response until the RAG agent is built
-    # Replace the body of this function when the agent is ready
+    history = [
+        {"role": m.role, "content": m.content}
+        for m in payload.history
+    ]
+
+    result = run_agent(
+        message=payload.message,
+        history=history,
+        page_context=payload.context,
+    )
+
     return {
-        "answer": "The AI assistant is not connected yet.",
-        "reformulated_query": payload.message,
-        "sources": [],
-        "source_details": [],
-        "history": [
-            {"role": "user", "content": payload.message},
-            {"role": "assistant", "content": "The AI assistant is not connected yet."},
-        ],
+        "answer":     result["answer"],
+        "history":    result["history"],
+        "tools_used": result["tools_used"],
+        "sources":    [],
     }
