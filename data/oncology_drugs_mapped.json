@@ -2694,7 +2694,7 @@
         ],
         "known_action": "yes",
         "pdb_ids": [
-          "5lf3"
+          "5l5z"
         ]
       },
       {
@@ -2709,7 +2709,7 @@
         "known_action": "yes",
         "pdb_ids": [
           "5l5f",
-          "5l5z"
+          "5lf3"
         ]
       }
     ],
@@ -5473,8 +5473,7 @@
           "3oap",
           "3uvv",
           "4nqa",
-          "5ji0",
-          "5uan"
+          "5ji0"
         ]
       },
       {
@@ -5487,7 +5486,9 @@
           "agonist"
         ],
         "known_action": "yes",
-        "pdb_ids": []
+        "pdb_ids": [
+          "5uan"
+        ]
       },
       {
         "gene_name": "RXRB",
@@ -6781,7 +6782,12 @@
         ],
         "known_action": "unknown",
         "pdb_ids": [
+          "1iep",
+          "1opj",
           "2hyy",
+          "3k5v",
+          "3ms9",
+          "3mss",
           "3pyy"
         ]
       },
@@ -6799,17 +6805,12 @@
       }
     ],
     "unmatched_pdb_ids": [
-      "1iep",
-      "1opj",
       "1xbb",
       "2oiq",
       "2pl0",
       "3fw1",
       "3gvu",
       "3hec",
-      "3k5v",
-      "3ms9",
-      "3mss",
       "3oez",
       "4csv",
       "5mqt"
@@ -8043,7 +8044,8 @@
         "actions": [],
         "known_action": "unknown",
         "pdb_ids": [
-          "4dm8"
+          "4dm8",
+          "5uan"
         ]
       },
       {
@@ -8099,8 +8101,7 @@
         "pdb_ids": [
           "2acl",
           "3fal",
-          "3fc6",
-          "5uan"
+          "3fc6"
         ]
       },
       {
@@ -15683,7 +15684,10 @@
           "inhibitor"
         ],
         "known_action": "yes",
-        "pdb_ids": []
+        "pdb_ids": [
+          "3ik3",
+          "3oxz"
+        ]
       },
       {
         "gene_name": "BCR",
@@ -15864,8 +15868,6 @@
       }
     ],
     "unmatched_pdb_ids": [
-      "3ik3",
-      "3oxz",
       "3zos",
       "4c8b"
     ]

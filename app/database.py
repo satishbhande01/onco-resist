@@ -337,7 +337,18 @@ def get_drug_by_id(drugbank_id: str) -> dict:
         ORDER BY gene_symbol, total_samples DESC
     """, (drugbank_id,)).fetchall()
 
-    drug["resistance_mutations"] = [dict(r) for r in mut_rows]  # ← was missing
+    drug["resistance_mutations"] = [
+    dict(r) for r in mut_rows
+    if (r["mutation_aa"] or "") != "p.?"
+]
+    # Fetch pubmed refs for each mutation
+    for mut in drug["resistance_mutations"]:
+        ref_rows = conn.execute("""
+            SELECT pmid FROM mutation_pubmed_refs
+            WHERE mutation_id = ?
+            ORDER BY pmid
+        """, (mut["id"],)).fetchall()
+        mut["pubmed_refs"] = [r["pmid"] for r in ref_rows]
 
     ref_rows = conn.execute("""
         SELECT pmid FROM drug_pubmed_refs

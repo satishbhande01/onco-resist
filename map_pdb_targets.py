@@ -30,6 +30,16 @@ import time
 import requests
 from collections import defaultdict
 
+UNIPROT_ALIASES = {
+    "P00520": "P00519",   # BCR-ABL fusion → ABL1
+    "A9UF02": "P00519",   # BCR-ABL alternate accession → ABL1
+    "P00519-2": "P00519", # ABL1 isoform 2 → ABL1
+    "P10721-2": "P10721", # KIT isoform 2 → KIT
+    "P16234-2": "P16234", # PDGFRA isoform → PDGFRA
+    "P09619-2": "P09619", # PDGFRB isoform → PDGFRB
+    "O43519-2": "O43519", # RET isoform → RET
+}
+
 RCSB_GRAPHQL = "https://data.rcsb.org/graphql"
 REQUEST_DELAY = 0.15  # seconds between API calls — be polite to RCSB
 
@@ -59,13 +69,8 @@ query GetUniProtForEntry($id: String!) {
 
 def get_uniprot_accessions_for_pdb(pdb_id: str) -> set:
     """
-    Query RCSB GraphQL for one PDB entry.
-    Returns a set of all UniProt accessions found in that structure.
-    Returns an empty set on any failure.
-
-    Example:
-        get_uniprot_accessions_for_pdb("2hyy")
-        → {"P00519"}   (ABL1 — imatinib bound to ABL1 kinase domain)
+    Query RCSB GraphQL for a PDB entry.
+    Returns all UniProt accessions found, normalised through aliases.
     """
     try:
         resp = requests.post(
@@ -85,11 +90,15 @@ def get_uniprot_accessions_for_pdb(pdb_id: str) -> set:
         return accessions
 
     for entity in entry.get("polymer_entities") or []:
-        container = entity.get("rcsb_polymer_entity_container_identifiers", {})
+        container = entity.get(
+            "rcsb_polymer_entity_container_identifiers", {}
+        )
         for ref in container.get("reference_sequence_identifiers") or []:
             if ref.get("database_name") == "UniProt":
                 acc = ref.get("database_accession", "").strip()
                 if acc:
+                    # Normalise through alias map
+                    acc = UNIPROT_ALIASES.get(acc, acc)
                     accessions.add(acc)
 
     return accessions
