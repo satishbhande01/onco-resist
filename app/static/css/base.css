@@ -24,20 +24,38 @@
     --bg:           #f0f4f8;
     --bg-surface:   #ffffff;
     --bg-card:      #ffffff;
-    --border:       #e2e8f0;
-    --border-hover: #cbd5e1;
+    --bg-2:         #e8edf2;
+    --bg-3:         #dde3ea;
+    --border:       #d1d9e0;
+    --border-2:     #b8c4ce;
     --text:         #0f172a;
+    --text-2:       #334155;
     --text-muted:   #475569;
-    --text-dim:     #94a3b8;
-    --accent:       #0891b2;
-    --nav-bg:       #ffffff;
-    --btn-primary-bg:    #0f172a;
-    --btn-primary-text:  #ffffff;
-    --btn-secondary-bg:  transparent;
-    --btn-secondary-text: #0f172a;
-    --btn-secondary-border: #cbd5e1;
-    --btn-secondary-hover: #f1f5f9;
-    --stat-num:     #0891b2;
+    --text-dim:     #64748b;
+    --text-3:       #94a3b8;
+    --accent:       #0284c7;
+    --accent-dim:   #bae6fd;
+    --accent-glow:  rgba(2, 132, 199, 0.1);
+    --green:        #059669;
+    --green-dim:    #d1fae5;
+    --amber:        #d97706;
+    --amber-dim:    #fef3c7;
+    --red:          #dc2626;
+    --red-dim:      #fee2e2;
+    --gene-color:   #0d7c4e;
+    --mutation-badge-bg:     rgba(5, 150, 105, 0.1);
+    --mutation-badge-text:   #059669;
+    --mutation-badge-border: rgba(5, 150, 105, 0.3);
+    --nav-bg:                #ffffff;
+    --btn-primary-bg:        #0f172a;
+    --btn-primary-text:      #ffffff;
+    --btn-secondary-bg:      transparent;
+    --btn-secondary-text:    #334155;
+    --btn-secondary-border:  #d1d9e0;
+    --btn-secondary-hover:   #f1f5f9;
+    --stat-num:              #0284c7;
+    --surface:               #ffffff;
+    --surface-2:             #f8fafc;
 }
 
 /* ── Reset ─────────────────────────────────────────────── */
@@ -353,6 +371,211 @@ a {
     .search-container input {
         width: 100% !important;
     }
+}
+
+/* ── Light mode hardcoded color overrides ──────────────── */
+[data-theme="light"] .gene-name,
+[data-theme="light"] .mutation-gene,
+[data-theme="light"] .target-gene,
+[data-theme="light"] .gene-title,
+[data-theme="light"] .mut-code {
+    color: var(--gene-color);
+}
+
+[data-theme="light"] .confirmed-tick,
+[data-theme="light"] .confirmed-badge {
+    color: var(--green);
+    background: var(--green-dim);
+    border-color: rgba(5, 150, 105, 0.3);
+}
+
+[data-theme="light"] .mut-chip {
+    background: var(--bg-2);
+    border-color: var(--border);
+    color: var(--text-muted);
+}
+
+[data-theme="light"] .mut-chip.on-target {
+    background: rgba(2, 132, 199, 0.08);
+    border-color: rgba(2, 132, 199, 0.3);
+    color: var(--accent);
+}
+
+[data-theme="light"] .mut-chip.off-target {
+    background: rgba(217, 119, 6, 0.08);
+    border-color: rgba(217, 119, 6, 0.3);
+    color: var(--amber);
+}
+
+[data-theme="light"] .mut-ref-count {
+    background: var(--border);
+    color: var(--text-muted);
+}
+
+[data-theme="light"] .target-pill {
+    background: var(--bg-2);
+    border-color: var(--border);
+    color: var(--text-muted);
+}
+
+[data-theme="light"] .target-pill:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+[data-theme="light"] .target-pill.confirmed {
+    border-color: rgba(5, 150, 105, 0.4);
+}
+
+[data-theme="light"] .class-badge {
+    color: var(--accent);
+    border-color: var(--border-2);
+}
+
+[data-theme="light"] .mutation-badge {
+    background: var(--mutation-badge-bg);
+    color: var(--mutation-badge-text);
+    border-color: var(--mutation-badge-border);
+}
+
+[data-theme="light"] .pdb-code,
+[data-theme="light"] .uniprot-id,
+[data-theme="light"] .drugbank-id {
+    color: var(--accent);
+}
+
+[data-theme="light"] .viewer-pdb {
+    color: var(--accent);
+}
+
+[data-theme="light"] .chip-value {
+    color: var(--accent);
+}
+
+[data-theme="light"] .stat-num {
+    color: var(--accent);
+}
+
+[data-theme="light"] .pmid-badge {
+    background: var(--bg-2);
+    border-color: var(--border);
+    color: var(--text-muted);
+}
+
+[data-theme="light"] .pmid-badge:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+[data-theme="light"] .source-badge {
+    background: var(--bg-2);
+    border-color: var(--border);
+    color: var(--text-muted);
+}
+
+[data-theme="light"] .hint-chip {
+    background: var(--bg-2);
+    border-color: var(--border);
+    color: var(--text-muted);
+}
+
+[data-theme="light"] .hint-chip:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+[data-theme="light"] .suggestion-chip {
+    background: var(--bg-2);
+    border-color: var(--border);
+    color: var(--text-muted);
+}
+
+[data-theme="light"] .suggestion-chip:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+[data-theme="light"] .drug-item {
+    background: var(--bg-2);
+    border-color: var(--border);
+}
+
+[data-theme="light"] .drug-item:hover {
+    border-color: var(--accent);
+    background: var(--bg-card);
+}
+
+[data-theme="light"] .example-item {
+    background: var(--bg-2);
+    border-color: var(--border);
+    color: var(--text-muted);
+}
+
+[data-theme="light"] .example-item:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+[data-theme="light"] .smiles-string {
+    background: var(--bg-2);
+    border-color: var(--border);
+    color: var(--text-muted);
+}
+
+[data-theme="light"] #molstar-viewer {
+    background: #e8f0f8;
+}
+
+[data-theme="light"] .no-structure {
+    background: #e8f0f8;
+    color: var(--text-dim);
+}
+
+[data-theme="light"] .viewer-header,
+[data-theme="light"] .viewer-controls {
+    background: var(--bg-2);
+}
+
+[data-theme="light"] .pdb-select {
+    background: var(--bg-card);
+    border-color: var(--border);
+    color: var(--text);
+}
+
+[data-theme="light"] .section-title {
+    border-color: var(--border);
+    color: var(--text-dim);
+}
+
+[data-theme="light"] .info-card-title {
+    color: var(--text-dim);
+}
+
+[data-theme="light"] .card-title {
+    color: var(--text-dim);
+}
+
+[data-theme="light"] .nav-brand .dot {
+    background: var(--accent);
+    box-shadow: 0 0 8px var(--accent);
+}
+
+[data-theme="light"] .chat-send-btn {
+    background: var(--accent);
+    color: #fff;
+}
+
+[data-theme="light"] .chat-send-btn:hover {
+    background: #0369a1;
+}
+
+[data-theme="light"] .msg-bubble.user {
+    background: var(--accent);
+    color: #fff;
+}
+
+[data-theme="light"] .thinking-dots span {
+    background: var(--accent);
 }
 /* ── Responsive ────────────────────────────────────────── */
 @media (max-width: 900px) {
