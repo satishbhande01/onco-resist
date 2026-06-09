@@ -176,6 +176,10 @@
                     </svg>
                     Click a chip to highlight in viewer
                 </span>
+                <button class="btn secondary" id="downloadMutBtn" onclick="downloadMutatedStructure()"
+                    style="display:none; padding:0.25rem 0.75rem; font-size:0.75rem;">
+                    ⬇ Download Mutated PDB
+                </button>
                 <button class="btn secondary" id="clearMutBtn" onclick="clearMutations()"
                     style="display:none; padding:0.25rem 0.75rem; font-size:0.75rem;">
                     Clear
@@ -461,26 +465,56 @@
     function parseMutationCode(mutationAA) {
         if (!mutationAA) return null;
         const code = mutationAA.startsWith('p.') ? mutationAA.slice(2) : mutationAA;
-        const match = code.match(/(\d+)/);
-        return match ? parseInt(match[1]) : null;
+        const match = code.match(/^([A-Z])(\d+)([A-Z*])$/);
+        if (!match) {
+            // Handle deletions/insertions — just get position
+            const numMatch = code.match(/(\d+)/);
+            return numMatch ? { pos: parseInt(numMatch[1]), new_aa: null } : null;
+        }
+        return {
+            pos: parseInt(match[2]),
+            new_aa: match[3] === '*' ? null : match[3],
+        };
     }
 
+    // Store full mutation data for download
+    const highlightedMutationData = new Map();  // pos → {uniprot_pos, new_aa, mutation_aa}
+
     function toggleMutation(mutationAA, chipElement) {
-        const residueNum = parseMutationCode(mutationAA);
-        if (!residueNum) return;
+        const parsed = parseMutationCode(mutationAA);
+        if (!parsed || !parsed.pos) return;
+
+        const residueNum = parsed.pos;
+
+        // Hide hint on first click
+        const hint = document.getElementById('mutationHint');
+        if (hint) hint.classList.add('hidden');
 
         if (highlightedMutations.has(residueNum)) {
             highlightedMutations.delete(residueNum);
+            highlightedMutationData.delete(residueNum);
             chipElement.classList.remove('selected');
         } else {
             highlightedMutations.add(residueNum);
+            highlightedMutationData.set(residueNum, {
+                uniprot_pos: residueNum,
+                new_aa: parsed.new_aa,
+                mutation_aa: mutationAA,
+            });
             chipElement.classList.add('selected');
         }
 
         const clearBtn = document.getElementById('clearMutBtn');
-        if (clearBtn) {
-            clearBtn.style.display =
-                highlightedMutations.size > 0 ? 'inline-flex' : 'none';
+        const downloadBtn = document.getElementById('downloadMutBtn');
+
+        if (highlightedMutations.size > 0) {
+            if (clearBtn) clearBtn.style.display = 'inline-flex';
+            if (downloadBtn) downloadBtn.style.display = 'inline-flex';
+            if (hint) hint.classList.add('hidden');
+        } else {
+            if (clearBtn) clearBtn.style.display = 'none';
+            if (downloadBtn) downloadBtn.style.display = 'none';
+            if (hint) hint.classList.remove('hidden');
         }
 
         loadStructure(currentPdbId, Array.from(highlightedMutations));
@@ -490,9 +524,66 @@
         document.querySelectorAll('.mut-chip.selected')
             .forEach(c => c.classList.remove('selected'));
         highlightedMutations.clear();
+        highlightedMutationData.clear();
+
         const clearBtn = document.getElementById('clearMutBtn');
+        const downloadBtn = document.getElementById('downloadMutBtn');
+        const hint = document.getElementById('mutationHint');
+
         if (clearBtn) clearBtn.style.display = 'none';
+        if (downloadBtn) downloadBtn.style.display = 'none';
+        if (hint) hint.classList.remove('hidden');
+
         loadStructure(currentPdbId, []);
+    }
+    async function downloadMutatedStructure() {
+        const btn = document.getElementById('downloadMutBtn');
+        if (btn) {
+            btn.textContent = 'Generating…';
+            btn.disabled = true;
+        }
+
+        const uniprot = pdbToUniprot[currentPdbId.toLowerCase()] || '';
+        const mutations = Array.from(highlightedMutationData.values());
+
+        try {
+            const resp = await fetch('/api/mutated-structure', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    pdb_id: currentPdbId,
+                    mutations: mutations,
+                    uniprot: uniprot,
+                }),
+            });
+
+            if (!resp.ok) {
+                const err = await resp.json();
+                showToast(err.error || 'Failed to generate structure', 'warning');
+                return;
+            }
+
+            // Trigger browser download
+            const blob = await resp.blob();
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            const filename = resp.headers.get('Content-Disposition')
+                ?.split('filename=')[1] || `${currentPdbId}_mutated.pdb`;
+            a.href = url;
+            a.download = filename;
+            a.click();
+            URL.revokeObjectURL(url);
+
+            showToast('Mutated structure downloaded successfully', 'info');
+
+        } catch (e) {
+            showToast('Download failed. Please try again.', 'warning');
+        } finally {
+            if (btn) {
+                btn.textContent = '⬇ Download Mutated PDB';
+                btn.disabled = false;
+            }
+        }
     }
 
     initViewer();

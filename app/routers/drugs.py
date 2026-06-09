@@ -5,6 +5,10 @@ from fastapi.responses import HTMLResponse
 from app.database import get_all_drugs, get_drug_by_id, get_drug_classes, get_cancer_types, get_sifts_mapping
 from fastapi.responses import JSONResponse
 import molviewspec as mvs
+from fastapi.responses import StreamingResponse
+import io
+import tempfile
+import os
 
 router = APIRouter()
 
@@ -238,3 +242,152 @@ def get_pdb_residues(pdb_id: str) -> set:
     except Exception as e:
         print(f"[RCSB] Residue fetch error: {e}")
         return set()
+
+@router.post("/api/mutated-structure")
+def generate_mutated_structure(payload: dict):
+    import traceback
+    import tempfile
+    import os
+    import io
+
+    try:
+        from Bio.PDB import PDBParser, PDBIO
+        print("[Mutant] BioPython imported OK")
+
+        pdb_id    = payload.get("pdb_id", "").upper()
+        mutations = payload.get("mutations", [])
+        uniprot   = payload.get("uniprot", "")
+
+        print(f"[Mutant] pdb_id={pdb_id}, mutations={mutations}, uniprot={uniprot}")
+
+        if not pdb_id:
+            return JSONResponse({"error": "pdb_id required"}, status_code=400)
+        if not mutations:
+            return JSONResponse({"error": "no mutations provided"}, status_code=400)
+
+        # Download PDB file
+        import requests as req
+        pdb_url  = f"https://files.rcsb.org/download/{pdb_id}.pdb"
+        pdb_resp = req.get(pdb_url, timeout=15)
+        print(f"[Mutant] PDB fetch status: {pdb_resp.status_code}")
+
+        if pdb_resp.status_code != 200:
+            return JSONResponse(
+                {"error": f"Could not fetch PDB file for {pdb_id}"},
+                status_code=404
+            )
+
+        # Write to temp file for BioPython
+        with tempfile.NamedTemporaryFile(
+            mode='w', suffix='.pdb', delete=False
+        ) as tmp:
+            tmp.write(pdb_resp.text)
+            tmp_path = tmp.name
+
+        # Parse structure
+        parser    = PDBParser(QUIET=True)
+        structure = parser.get_structure(pdb_id, tmp_path)
+        os.unlink(tmp_path)
+        print(f"[Mutant] Structure parsed OK")
+
+        # One letter to three letter code map
+        ONE_TO_THREE = {
+            'A': 'ALA', 'R': 'ARG', 'N': 'ASN', 'D': 'ASP',
+            'C': 'CYS', 'E': 'GLU', 'Q': 'GLN', 'G': 'GLY',
+            'H': 'HIS', 'I': 'ILE', 'L': 'LEU', 'K': 'LYS',
+            'M': 'MET', 'F': 'PHE', 'P': 'PRO', 'S': 'SER',
+            'T': 'THR', 'W': 'TRP', 'Y': 'TYR', 'V': 'VAL',
+        }
+
+        applied   = []
+        not_found = []
+
+        for mut in mutations:
+            uniprot_pos = mut.get("uniprot_pos")
+            new_aa_1    = mut.get("new_aa")
+            mutation_aa = mut.get("mutation_aa")
+
+            if not uniprot_pos or not new_aa_1:
+                not_found.append(mutation_aa or str(uniprot_pos))
+                continue
+
+            # Use UniProt position directly — most PDB structures
+            # use author numbering which matches UniProt positions
+            pdb_pos = uniprot_pos
+            print(f"[Mutant] Using position {pdb_pos} directly")
+
+            new_resname = ONE_TO_THREE.get(new_aa_1.upper())
+            if not new_resname:
+                not_found.append(mutation_aa)
+                continue
+
+            # Find and mutate the residue
+            mutated = False
+            for model in structure:
+                for chain in model:
+                    for residue in chain:
+                        res_id = residue.get_id()[1]
+                        if res_id == pdb_pos:
+                            old_resname = residue.resname
+                            residue.resname = new_resname
+                            backbone = {'N', 'CA', 'C', 'O', 'CB'}
+                            atoms_to_remove = [
+                                atom.get_id()
+                                for atom in residue
+                                if atom.get_id() not in backbone
+                            ]
+                            for atom_id in atoms_to_remove:
+                                residue.detach_child(atom_id)
+                            print(f"[Mutant] Mutated {res_id}: {old_resname} → {new_resname}")
+                            mutated = True
+                            applied.append(mutation_aa or f"pos{pdb_pos}{new_aa_1}")
+                            break
+                    if mutated:
+                        break
+                if mutated:
+                    break
+
+            if not mutated:
+                print(f"[Mutant] Residue {pdb_pos} not found in structure")
+                not_found.append(mutation_aa or str(uniprot_pos))
+
+                print(f"[Mutant] Applied: {applied}, Not found: {not_found}")
+
+                if not applied:
+                    return JSONResponse(
+                        {"error": "No mutations could be applied to this structure."},
+                        status_code=400
+                    )
+
+        # Write mutated structure to bytes
+        output = io.StringIO()
+        io_obj = PDBIO()
+        io_obj.set_structure(structure)
+        io_obj.save(output)
+        pdb_bytes = output.getvalue().encode('utf-8')
+
+        # Build filename
+        mut_str  = "_".join(
+            m.replace("p.", "").replace("*", "X")
+            for m in applied
+        )
+        filename = f"{pdb_id}_{mut_str}_mutated.pdb"
+        print(f"[Mutant] Returning file: {filename}")
+
+        return StreamingResponse(
+            io.BytesIO(pdb_bytes),
+            media_type="chemical/x-pdb",
+            headers={
+                "Content-Disposition": f"attachment; filename={filename}",
+                "X-Applied-Mutations":  ",".join(applied),
+                "X-Not-Found":          ",".join(not_found),
+            }
+        )
+
+    except Exception as e:
+        print(f"[Mutant] Error: {e}")
+        traceback.print_exc()
+        return JSONResponse(
+            {"error": f"Failed to generate mutated structure: {str(e)}"},
+            status_code=500
+        )

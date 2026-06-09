@@ -15,3 +15,4 @@ anyio==4.13.0
 starlette==0.37.2
 aiofiles==23.2.1
 python-dateutil==2.9.0.post0
+biopython==1.87
