@@ -45,6 +45,11 @@
                         Chat
                     </a>
                 </li>
+                <li class="nav-pages">
+                    <a href="/about" class="{% if request.url.path == '/about' %}active{% endif %}">
+                        About
+                    </a>
+                </li>
             </ul>
 
             <div class="search-container">
@@ -80,21 +85,21 @@
     </script>
     <script src="/static/js/chat.js"></script>
     <script>
-    function toggleMenu() {
-        const nav = document.getElementById('navList');
-        const btn = document.getElementById('hamburgerBtn');
-        nav.classList.toggle('open');
-        btn.classList.toggle('open');
-    }
+        function toggleMenu() {
+            const nav = document.getElementById('navList');
+            const btn = document.getElementById('hamburgerBtn');
+            nav.classList.toggle('open');
+            btn.classList.toggle('open');
+        }
 
-    // Close menu when a nav link is clicked
-    document.querySelectorAll('.nav-pages a').forEach(link => {
-        link.addEventListener('click', () => {
-            document.getElementById('navList').classList.remove('open');
-            document.getElementById('hamburgerBtn').classList.remove('open');
+        // Close menu when a nav link is clicked
+        document.querySelectorAll('.nav-pages a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('navList').classList.remove('open');
+                document.getElementById('hamburgerBtn').classList.remove('open');
+            });
         });
-    });
-</script>
+    </script>
     {% block extra_scripts %}{% endblock %}
 </body>
 

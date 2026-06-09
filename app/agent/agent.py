@@ -112,7 +112,7 @@ def run_agent(
             messages=messages,
             tools=TOOL_SCHEMAS,
             # After 3 tool calls switch to auto to let model wrap up
-            tool_choice="auto" if round_num >= 3 else "auto",
+            tool_choice="required" if round_num == 0 else "auto",
             max_tokens=2048,
             temperature=0.1,
         )
