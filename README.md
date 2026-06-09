@@ -7,14 +7,10 @@
 
 OncoResist integrates resistance mutation data, protein target annotations,
 3D structural visualization, and an AI research assistant into a single portal.
-<<<<<<< HEAD
-Designed for researchers, clinicians, and students who need fast, reliable
-=======
 The assistant uses a hybrid RAG architecture — structured SQLite tool calls
 for factual drug and mutation data, combined with ChromaDB semantic search
 over 871 indexed PubMed abstracts for literature grounding. Designed for
 researchers, clinicians, and students who need fast, reliable, citation-backed
->>>>>>> 7df0b6b (Added ADMET charts and README)
 answers about how cancer cells develop resistance to targeted therapies.
 
 **Live portal:** https://onco-resist.up.railway.app/
@@ -53,8 +49,6 @@ answers about how cancer cells develop resistance to targeted therapies.
 - Inline PubMed citations from 871 indexed abstracts via ChromaDB
 - ADMET comparison of two drugs on demand
 
-<<<<<<< HEAD
-=======
 ### Literature-Grounded RAG Pipeline
 - 871 PubMed abstracts fetched via Europe PMC and indexed in ChromaDB
 - Abstracts linked to specific resistance mutations and drugs in the database
@@ -64,7 +58,6 @@ answers about how cancer cells develop resistance to targeted therapies.
 - Hybrid retrieval architecture — structured SQLite queries for facts,
   vector search for supporting evidence
 
->>>>>>> 7df0b6b (Added ADMET charts and README)
 ### Cross-Drug Relationships
 - Find drugs sharing protein targets
 - Identify pan-resistant mutations affecting multiple drugs
