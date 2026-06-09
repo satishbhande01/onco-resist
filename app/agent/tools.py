@@ -709,3 +709,23 @@ def _admet_comparison_notes(r1: dict, r2: dict) -> list:
         notes.append(f"{r1['drug_name']} violates Lipinski rules")
 
     return notes
+
+def search_literature(query: str) -> dict:
+    """
+    Search PubMed literature in ChromaDB for relevant passages.
+    """
+    from app.agent.literature import search_literature as _search
+    results = _search(query, n_results=5)
+
+    if not results:
+        return {"error": "No relevant literature found.", "results": []}
+
+    return {
+        "query":   query,
+        "results": results,
+        "total":   len(results),
+    }
+
+# Alias for the agent — Llama handles this name better
+def find_literature(query: str) -> dict:
+    return search_literature(query)

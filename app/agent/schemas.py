@@ -270,6 +270,29 @@ TOOL_SCHEMAS = [
             }
         }
     },
+    {
+        "type": "function",
+        "function": {
+            "name": "search_literature",
+            "description": (
+                "Search PubMed literature for evidence supporting claims about "
+                "resistance mutations, drug mechanisms, or oncology targets. "
+                "Use this when asked for evidence, citations, or when you need "
+                "to support a specific claim with literature. Returns relevant "
+                "paper titles, snippets, and PMIDs."
+            ),
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "query": {
+                        "type": "string",
+                        "description": "Search query e.g. 'T315I imatinib resistance mechanism'"
+                    }
+                },
+                "required": ["query"]
+            }
+        }
+    },
     
 ]
 
@@ -287,4 +310,5 @@ TOOL_REGISTRY = {
     "find_pan_resistant_mutations": "find_pan_resistant_mutations",
     "compute_admet":             "compute_admet",
     "compare_admet":             "compare_admet",
+    "search_literature": "search_literature",
 }

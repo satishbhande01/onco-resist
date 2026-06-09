@@ -7,6 +7,7 @@ executes tool calls, feeds results back, gets final response.
 """
 
 import json
+import re
 import os
 from dotenv import load_dotenv
 from groq import Groq
@@ -107,20 +108,87 @@ def run_agent(
     for round_num in range(MAX_TOOL_ROUNDS):
         try:
             response = client.chat.completions.create(
-                model=MODEL,
-                messages=messages,
-                tools=TOOL_SCHEMAS,
-                tool_choice="auto",
-                max_tokens=2048,
-                temperature=0.1,
-            )
+            model=MODEL,
+            messages=messages,
+            tools=TOOL_SCHEMAS,
+            # After 3 tool calls switch to auto to let model wrap up
+            tool_choice="auto" if round_num >= 3 else "auto",
+            max_tokens=2048,
+            temperature=0.1,
+        )
+
+
         except Exception as e:
-            print(f"[Agent] Groq error: {e}")  # ← add this
-            return {
-                "answer": "I encountered an error processing your request. Please try again.",
-                "history": [],
-                "tools_used": tools_used,
-            }
+            error_str = str(e)
+            print(f"[Agent] Groq error: {e}")
+
+            if "tool_use_failed" in error_str:
+                # Try to parse and execute the malformed tool call
+                match = re.search(
+                    r'<function=(\w+)\s*({.*?})\s*</function>',
+                    error_str,
+                    re.DOTALL
+                )
+
+                if match:
+                    tool_name = match.group(1)
+                    try:
+                        tool_args  = json.loads(match.group(2))
+                        print(f"[Agent] Recovering malformed call: {tool_name}({tool_args})")
+                        tool_result = execute_tool(tool_name, tool_args)
+                        tools_used.append(tool_name)
+
+                        # Add a fake assistant message acknowledging the tool call
+                        messages.append({
+                            "role":    "assistant",
+                            "content": "",
+                            "tool_calls": [{
+                                "id":       f"recovered_{round_num}",
+                                "type":     "function",
+                                "function": {
+                                    "name":      tool_name,
+                                    "arguments": json.dumps(tool_args),
+                                }
+                            }]
+                        })
+
+                        # Add the tool result
+                        messages.append({
+                            "role":         "tool",
+                            "tool_call_id": f"recovered_{round_num}",
+                            "content":      tool_result,
+                        })
+
+                        print(f"[Agent] Recovery successful, continuing loop")
+                        continue   # ← go to next round with the result
+
+                    except Exception as parse_err:
+                        print(f"[Agent] Recovery failed: {parse_err}")
+
+                # If recovery failed, retry without tools
+                print(f"[Agent] Retrying without tools...")
+                try:
+                    messages.append({
+                        "role":    "user",
+                        "content": "Answer based on what you have so far. Do not call any more tools."
+                    })
+                    retry_response = client.chat.completions.create(
+                        model=MODEL,
+                        messages=messages,
+                        max_tokens=2048,
+                        temperature=0.1,
+                    )
+                    answer = retry_response.choices[0].message.content or ""
+                    break
+                except Exception as e2:
+                    print(f"[Agent] Retry failed: {e2}")
+                    answer = "I encountered an error. Please rephrase your question."
+                    break
+
+            else:
+                print(f"[Agent] Non-tool error: {e}")
+                answer = "I encountered an error processing your request."
+                break
 
         choice  = response.choices[0]
         message_obj = choice.message
@@ -180,8 +248,9 @@ def run_agent(
     # ── Build updated history for next turn ───────────────
     # Store only user/assistant turns (not tool results)
     # to keep history manageable
+    # Build history from whatever messages were accumulated
     updated_history = []
-    for msg in messages[1:]:   # skip system message
+    for msg in messages[1:]:  # skip system
         if msg.get("role") in ("user", "assistant"):
             updated_history.append({
                 "role":    msg["role"],
@@ -190,6 +259,6 @@ def run_agent(
 
     return {
         "answer":     answer,
-        "history":    updated_history,
+        "history":    updated_history,  # ← preserve what we have
         "tools_used": tools_used,
     }
