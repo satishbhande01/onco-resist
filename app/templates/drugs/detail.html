@@ -309,6 +309,27 @@
     </div>
 </div>
 
+<!-- ── ADMET Profile ─────────────────────────────────── -->
+{% if drug.smiles %}
+<div class="admet-section">
+    <div class="info-card">
+        <div class="info-card-title">ADMET Profile</div>
+        <div class="admet-layout">
+
+            <!-- Radar chart -->
+            <div class="admet-chart-wrap">
+                <canvas id="admetRadar" width="280" height="280"></canvas>
+            </div>
+
+            <!-- Properties table -->
+            <div class="admet-props" id="admetProps">
+                <div class="admet-loading">Computing properties…</div>
+            </div>
+
+        </div>
+    </div>
+</div>
+{% endif %}
 
 <!-- ── References ───────────────────────────────────── -->
 {% if drug.pubmed_ids %}
@@ -341,7 +362,177 @@
         event.target.style.display = 'none';
     }
 </script>
+{% if drug.smiles %}
+<script>
+    /* ── ADMET Radar Chart ────────────────────────────────── */
+    (async function initADMET() {
+        const canvas = document.getElementById('admetRadar');
+        if (!canvas) return;
 
+        try {
+            const resp = await fetch('/api/admet/{{ drug.drugbank_id }}');
+            const data = await resp.json();
+
+            if (data.error) {
+                document.getElementById('admetProps').innerHTML =
+                    `<div class="admet-error">${data.error}</div>`;
+                return;
+            }
+
+            const n = data.normalized;
+            const p = data.properties;
+            const dl = data.drug_likeness;
+
+            // Draw radar chart using Chart.js
+            const script = document.createElement('script');
+            script.src = 'https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js';
+            script.onload = () => {
+
+                const isDark = document.documentElement
+                    .getAttribute('data-theme') !== 'light';
+
+                const gridColor = isDark
+                    ? 'rgba(255,255,255,0.08)'
+                    : 'rgba(0,0,0,0.08)';
+                const labelColor = isDark ? '#94a3b8' : '#64748b';
+                const fillColor = isDark
+                    ? 'rgba(0,212,255,0.15)'
+                    : 'rgba(2,132,199,0.12)';
+                const lineColor = isDark
+                    ? 'rgba(0,212,255,0.8)'
+                    : 'rgba(2,132,199,0.8)';
+
+                new Chart(canvas, {
+                    type: 'radar',
+                    data: {
+                        labels: ['MW', 'logP', 'TPSA', 'HBD', 'HBA', 'RotB'],
+                        datasets: [{
+                            label: '{{ drug.name }}',
+                            data: [
+                                n.mw, n.logp, n.tpsa,
+                                n.hbd, n.hba, n.rotb
+                            ],
+                            backgroundColor: fillColor,
+                            borderColor: lineColor,
+                            borderWidth: 2,
+                            pointBackgroundColor: lineColor,
+                            pointRadius: 4,
+                            pointHoverRadius: 6,
+                        }]
+                    },
+                    options: {
+                        responsive: false,
+                        maintainAspectRatio: true,
+                        scales: {
+                            r: {
+                                min: 0,
+                                max: 1,
+                                ticks: {
+                                    display: false,
+                                    stepSize: 0.25,
+                                },
+                                grid: {
+                                    color: gridColor,
+                                },
+                                angleLines: {
+                                    color: gridColor,
+                                },
+                                pointLabels: {
+                                    color: labelColor,
+                                    font: { size: 12, weight: '600' },
+                                },
+                            }
+                        },
+                        plugins: {
+                            legend: { display: false },
+                            tooltip: {
+                                callbacks: {
+                                    label: (ctx) => {
+                                        const labels = {
+                                            MW: `${p.molecular_weight} Da`,
+                                            logP: `${p.logP}`,
+                                            TPSA: `${p.TPSA} Å²`,
+                                            HBD: `${p.HBD}`,
+                                            HBA: `${p.HBA}`,
+                                            RotB: `${p.rotatable_bonds}`,
+                                        };
+                                        return labels[ctx.label] || ctx.formattedValue;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                });
+
+                // Render properties panel
+                const passColor = isDark ? '#00d4ff' : '#0284c7';
+                const failColor = isDark ? '#ffb340' : '#d97706';
+
+                document.getElementById('admetProps').innerHTML = `
+                <div class="admet-prop-list">
+                    <div class="admet-prop">
+                        <span class="admet-prop-label">Molecular Weight</span>
+                        <span class="admet-prop-value mono">${p.molecular_weight} Da</span>
+                    </div>
+                    <div class="admet-prop">
+                        <span class="admet-prop-label">logP</span>
+                        <span class="admet-prop-value mono">${p.logP}</span>
+                    </div>
+                    <div class="admet-prop">
+                        <span class="admet-prop-label">TPSA</span>
+                        <span class="admet-prop-value mono">${p.TPSA} Å²</span>
+                    </div>
+                    <div class="admet-prop">
+                        <span class="admet-prop-label">HBD / HBA</span>
+                        <span class="admet-prop-value mono">${p.HBD} / ${p.HBA}</span>
+                    </div>
+                    <div class="admet-prop">
+                        <span class="admet-prop-label">Rotatable Bonds</span>
+                        <span class="admet-prop-value mono">${p.rotatable_bonds}</span>
+                    </div>
+                    <div class="admet-prop">
+                        <span class="admet-prop-label">Rings</span>
+                        <span class="admet-prop-value mono">${p.rings}</span>
+                    </div>
+                </div>
+
+                <div class="admet-rules">
+                    <div class="admet-rule">
+                        <span class="admet-rule-dot"
+                              style="background:${dl.lipinski_pass ? passColor : failColor}">
+                        </span>
+                        <span>Lipinski Rule of Five —
+                            ${dl.lipinski_pass
+                        ? `Pass (${dl.lipinski_violations} violation${dl.lipinski_violations !== 1 ? 's' : ''})`
+                        : `Fail (${dl.lipinski_violations} violations)`
+                    }
+                        </span>
+                    </div>
+                    <div class="admet-rule">
+                        <span class="admet-rule-dot"
+                              style="background:${dl.veber_pass ? passColor : failColor}">
+                        </span>
+                        <span>Veber Rules —
+                            ${dl.veber_pass ? 'Pass' : 'Fail'}
+                        </span>
+                    </div>
+                </div>
+
+                <div class="admet-note">
+                    Radar axes normalized to Lipinski limits.
+                    Smaller area = more drug-like.
+                </div>
+            `;
+            };
+            document.head.appendChild(script);
+
+        } catch (e) {
+            console.warn('ADMET load error:', e);
+        }
+    })();
+
+</script>
+{% endif %}
 {% if viewer_pdb_id %}
 <!-- PDB to UniProt mapping — must be before viewer script -->
 <script>

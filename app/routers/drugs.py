@@ -2,7 +2,7 @@ from pathlib import Path
 from fastapi import APIRouter, Request, HTTPException
 from fastapi.templating import Jinja2Templates
 from fastapi.responses import HTMLResponse
-from app.database import get_all_drugs, get_drug_by_id, get_drug_classes, get_cancer_types, get_sifts_mapping
+from app.database import get_all_drugs, get_drug_by_id, get_drug_classes, get_cancer_types, get_sifts_mapping, get_conn
 from fastapi.responses import JSONResponse
 import molviewspec as mvs
 from fastapi.responses import StreamingResponse
@@ -391,3 +391,48 @@ def generate_mutated_structure(payload: dict):
             {"error": f"Failed to generate mutated structure: {str(e)}"},
             status_code=500
         )
+
+@router.get("/api/admet/{drugbank_id}")
+def get_admet(drugbank_id: str):
+    """
+    Compute ADMET properties for a drug and return
+    normalized values for radar chart rendering.
+    """
+    from app.agent.tools import compute_admet
+
+    # Get drug name from database
+    conn = get_conn()
+    row  = conn.execute(
+        "SELECT name FROM drugs WHERE drugbank_id = ?",
+        (drugbank_id,)
+    ).fetchone()
+    conn.close()
+
+    if not row:
+        return JSONResponse({"error": "Drug not found"}, status_code=404)
+
+    result = compute_admet(row["name"])
+
+    if "error" in result:
+        return JSONResponse({"error": result["error"]}, status_code=400)
+
+    props = result["properties"]
+    dl    = result["drug_likeness"]
+
+    # Normalize each property to 0-1 scale for radar chart
+    # 1.0 = at the limit, 0.0 = ideal
+    normalized = {
+        "mw":   min(props["molecular_weight"] / 500, 1.0),
+        "logp": min(max((props["logP"] + 2) / 9, 0), 1.0),
+        "tpsa": min(props["TPSA"] / 140, 1.0),
+        "hbd":  min(props["HBD"] / 5, 1.0),
+        "hba":  min(props["HBA"] / 10, 1.0),
+        "rotb": min(props["rotatable_bonds"] / 10, 1.0),
+    }
+
+    return {
+        "drug_name":   result["drug_name"],
+        "properties":  props,
+        "normalized":  normalized,
+        "drug_likeness": dl,
+    }

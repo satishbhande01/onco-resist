@@ -557,6 +557,111 @@
     color: var(--accent);
 }
 
+/* ── ADMET section ─────────────────────────────────────── */
+.admet-section {
+    margin-bottom: 1.5rem;
+}
+
+.admet-layout {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.admet-chart-wrap {
+    flex-shrink: 0;
+    width: 280px;
+    height: 280px;
+}
+
+.admet-props {
+    flex: 1;
+    min-width: 220px;
+}
+
+.admet-loading {
+    color: var(--text-dim);
+    font-size: 0.85rem;
+}
+
+.admet-error {
+    color: var(--text-dim);
+    font-size: 0.85rem;
+}
+
+.admet-prop-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1.25rem;
+}
+
+.admet-prop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.35rem 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 0.85rem;
+}
+
+.admet-prop:last-child {
+    border-bottom: none;
+}
+
+.admet-prop-label {
+    color: var(--text-muted);
+}
+
+.admet-prop-value {
+    color: var(--text);
+    font-weight: 500;
+}
+
+.admet-rules {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.admet-rule {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.82rem;
+    color: var(--text-muted);
+}
+
+.admet-rule-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.admet-note {
+    font-size: 0.72rem;
+    color: var(--text-dim);
+    line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+    .admet-layout {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .admet-chart-wrap {
+        width: 240px;
+        height: 240px;
+    }
+
+    .admet-props {
+        width: 100%;
+    }
+}
 /* ── Mobile / Tablet ───────────────────────────────────── */
 @media (max-width: 900px) {
     .detail-grid    { grid-template-columns: 1fr; }
