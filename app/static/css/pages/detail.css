@@ -475,6 +475,20 @@
     font-family: var(--font-body, sans-serif);
 }
 
+.mutation-hint-inline {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-size: 0.75rem;
+    color: var(--text-dim);
+    font-weight: 400;
+    text-transform: none;
+    letter-spacing: 0;
+}
+
+.mutation-hint-inline.hidden {
+    display: none;
+}
 /* ── References ────────────────────────────────────────── */
 .references-section {
     background: var(--bg-card);

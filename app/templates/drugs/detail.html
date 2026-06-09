@@ -166,15 +166,26 @@
                 </span>
                 {% endif %}
             </div>
-            <button class="btn secondary" id="clearMutBtn" onclick="clearMutations()"
-                style="display:none; padding:0.25rem 0.75rem; font-size:0.75rem;">
-                Clear
-            </button>
+            <div style="display:flex; align-items:center; gap:0.5rem;">
+                <span class="mutation-hint-inline" id="mutationHint">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <line x1="12" y1="8" x2="12" y2="12"></line>
+                        <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                    </svg>
+                    Click a chip to highlight in viewer
+                </span>
+                <button class="btn secondary" id="clearMutBtn" onclick="clearMutations()"
+                    style="display:none; padding:0.25rem 0.75rem; font-size:0.75rem;">
+                    Clear
+                </button>
+            </div>
         </div>
+        <!-- ↑ mutations-section stays open here — no closing div -->
 
         {% set ns = namespace(current_gene=None) %}
         {% for mut in drug.resistance_mutations %}
-
         {% if mut.gene_symbol != ns.current_gene %}
         {% if ns.current_gene != None %}
     </div>
@@ -208,6 +219,7 @@
     <span style="color:#ffb340;">Amber</span> = off-target ·
     numbered badge = PubMed references for that mutation
 </p>
+
 </div>
 {% endif %}
 <!-- ── Details — full width below grid ───────────────── -->

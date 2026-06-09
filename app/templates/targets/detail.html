@@ -224,33 +224,43 @@
 
     async function loadStructure(pdbId) {
         if (!viewer) return;
-        const url = `https://files.rcsb.org/download/${pdbId.toUpperCase()}.cif`;
-        const element = document.getElementById('molstar-viewer');
-        element.innerHTML = '';
-        viewer = null;
-        const { Viewer } = molstar;
-        viewer = await Viewer.create(element, {
-            layoutIsExpanded: false,
-            layoutShowControls: false,
-            layoutShowRemoteState: false,
-            layoutShowSequence: false,
-            layoutShowLog: false,
-            layoutShowLeftPanel: false,
-            viewportShowExpand: false,
-            viewportShowAnimation: false,
-        });
-        await viewer.loadStructureFromUrl(url, 'mmcif', false);
 
-        // Update RCSB link
+        const resp = await fetch('/api/molview/target', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ pdb_id: pdbId })
+        });
+
+        const data = await resp.json();
+
+        try {
+            const mvsData = molstar.PluginExtensions.mvs.MVSData.fromMVSJ(
+                JSON.stringify(data)
+            );
+            await molstar.PluginExtensions.mvs.loadMVS(
+                viewer.plugin,
+                mvsData,
+                { replaceExisting: true, sanityChecks: false, appendSnapshots: false }
+            );
+
+            // Clear snapshot timeline
+            try {
+                viewer.plugin.managers.snapshot.clear();
+            } catch (e) { }
+
+        } catch (e) {
+            console.warn('MVS load error:', e);
+            // Fallback to direct load
+            await viewer.loadStructureFromUrl(
+                `https://files.rcsb.org/download/${pdbId.toUpperCase()}.cif`,
+                'mmcif',
+                false
+            );
+        }
+
         const rcsbLink = document.getElementById('rcsbLink');
         if (rcsbLink) {
             rcsbLink.href = `https://www.rcsb.org/structure/${pdbId.toUpperCase()}`;
-        }
-
-        // Update PDB label in header
-        const pdbLabel = document.querySelector('.viewer-pdb');
-        if (pdbLabel) {
-            pdbLabel.textContent = `PDB: ${pdbId.toUpperCase()}`;
         }
     }
 

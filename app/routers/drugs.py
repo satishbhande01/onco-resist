@@ -87,13 +87,12 @@ def api_drug_detail(drugbank_id: str):
 @router.post("/api/molview")
 def build_molview(payload: dict):
     pdb_id    = payload.get("pdb_id", "").upper()
-    mutations = payload.get("mutations", [])      # UniProt residue numbers
-    uniprot   = payload.get("uniprot", "")        # UniProt accession
+    mutations = payload.get("mutations", [])
+    uniprot   = payload.get("uniprot", "")
 
     if not pdb_id:
         return JSONResponse({"error": "pdb_id required"}, status_code=400)
 
-    # Get SIFTS mapping — UniProt position → PDB residue number
     sifts = {}
     if uniprot:
         sifts = get_sifts_mapping(pdb_id, uniprot)
@@ -109,7 +108,6 @@ def build_molview(payload: dict):
             else:
                 not_found.append(uniprot_pos)
         else:
-            # No SIFTS data — use position directly as fallback
             found.append(uniprot_pos)
 
     builder   = mvs.create_builder()
@@ -120,6 +118,7 @@ def build_molview(payload: dict):
         .model_structure()
     )
 
+    # Protein — cartoon, dark blue, no solvent
     (
         structure
         .component(selector="polymer")
@@ -127,13 +126,15 @@ def build_molview(payload: dict):
         .color(color="#1a3a6b")
     )
 
+    # Ligand — ball and stick, coral orange (complementary to dark blue)
     (
         structure
         .component(selector="ligand")
         .representation(type="ball_and_stick")
-        .color(color="#ffdd00")
+        .color(color="#ff6b35")
     )
 
+    # Highlighted mutation residues — red ball and stick
     for pdb_pos in found:
         (
             structure
@@ -149,6 +150,43 @@ def build_molview(payload: dict):
         "not_found": not_found,
         "found":     found,
     }
+
+@router.post("/api/molview/target")
+def build_molview_target(payload: dict):
+    """
+    MolViewSpec scene for target detail page.
+    No mutations — just clean protein + ligand.
+    """
+    pdb_id = payload.get("pdb_id", "").upper()
+
+    if not pdb_id:
+        return JSONResponse({"error": "pdb_id required"}, status_code=400)
+
+    builder   = mvs.create_builder()
+    structure = (
+        builder
+        .download(url=f"https://files.rcsb.org/download/{pdb_id}.cif")
+        .parse(format="mmcif")
+        .model_structure()
+    )
+
+    # Protein — cartoon, dark blue, no solvent
+    (
+        structure
+        .component(selector="polymer")
+        .representation(type="cartoon")
+        .color(color="#1a3a6b")
+    )
+
+    # Ligand — ball and stick, coral orange
+    (
+        structure
+        .component(selector="ligand")
+        .representation(type="ball_and_stick")
+        .color(color="#ff6b35")
+    )
+
+    return builder.get_state().to_dict()
 
 def get_pdb_residues(pdb_id: str) -> set:
     """

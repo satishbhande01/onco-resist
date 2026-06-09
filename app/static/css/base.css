@@ -577,6 +577,12 @@ a {
 [data-theme="light"] .thinking-dots span {
     background: var(--accent);
 }
+
+[data-theme="light"] .mut-chip.selected {
+    background: rgba(220, 38, 38, 0.1);
+    border-color: #dc2626;
+    color: #dc2626;
+}
 /* ── Responsive ────────────────────────────────────────── */
 @media (max-width: 900px) {
     .navbar-content { padding: 0 1.5rem; }
